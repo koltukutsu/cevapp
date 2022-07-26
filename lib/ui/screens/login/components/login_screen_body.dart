@@ -138,7 +138,7 @@ class LoginScreenBody extends StatelessWidget {
       ),
 
       onSubmitAnimationCompleted: () {
-        Navigator.of(context).popAndPushNamed(ROUTE_MAIN);
+        // Navigator.of(context).popAndPushNamed(ROUTE_MAIN);
       },
     );
   }
