@@ -78,6 +78,7 @@ class LoginScreenBody extends StatelessWidget {
           decoration: TextDecoration.underline,
         ),
         textFieldStyle: const TextStyle(
+          fontFamily: "Bright",
           color: Colors.orange,
           shadows: [Shadow(color: Colors.yellow, blurRadius: 2)],
         ),
