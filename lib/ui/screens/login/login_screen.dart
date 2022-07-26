@@ -1,21 +1,19 @@
 import 'package:cevapp/ui/screens/login/components/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
-class StudentLoginScreen extends StatefulWidget {
-  const StudentLoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<StudentLoginScreen> createState() => _StudentLoginScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _StudentLoginScreenState extends State<StudentLoginScreen> {
-
-
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       resizeToAvoidBottomInset: true,
-      body: LoginScreen(),
+      body: LoginScreenBody(),
     );
   }
 }

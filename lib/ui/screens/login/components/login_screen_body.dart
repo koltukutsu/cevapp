@@ -1,8 +1,10 @@
+import 'package:cevapp/ui/constants/borders.dart';
+import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginScreenBody extends StatelessWidget {
+  const LoginScreenBody({Key? key}) : super(key: key);
 
   Duration get loginTime => const Duration(milliseconds: 1250);
 
@@ -29,7 +31,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: "BlanK",
+      title: "cevapp",
       // logo: AssetImage('assets/images/ecorp-lightblue.png'),
       logo: null,
       userType: LoginUserType.name,
@@ -40,7 +42,9 @@ class LoginScreen extends StatelessWidget {
         return null; // no need to set rules, the passwords will be provided
       },
 
-      onLogin: (data) {},
+      onLogin: (data) {
+        return null;
+      },
       onSignup: _signupUser,
       onRecoverPassword: _recoverPassword,
 
@@ -61,14 +65,80 @@ class LoginScreen extends StatelessWidget {
       hideForgotPasswordButton: false,
       // hideSignUpButton: true, chaned it in the source code
       theme: LoginTheme(
-          // buttonTheme: LoginButtonTheme(),
-          // titleStyle: const TextStyle(color: AppColors.white, fontSize: 30),
-          // cardTheme: const CardTheme(color: AppColors.primaryBlue),
-          // pageColorDark: AppColors.primaryBlue,
-          // buttonStyle: const TextStyle(color: AppColors.primaryBlue)
+        primaryColor: Colors.teal,
+        accentColor: Colors.yellow,
+        errorColor: Colors.deepOrange,
+        titleStyle: const TextStyle(
+          color: Colors.greenAccent,
+          fontFamily: 'Quicksand',
+          letterSpacing: 4,
+        ),
+        bodyStyle: const TextStyle(
+          fontStyle: FontStyle.italic,
+          decoration: TextDecoration.underline,
+        ),
+        textFieldStyle: const TextStyle(
+          color: Colors.orange,
+          shadows: [Shadow(color: Colors.yellow, blurRadius: 2)],
+        ),
+        buttonStyle: const TextStyle(
+          fontWeight: FontWeight.w800,
+          color: Colors.yellow,
+        ),
+        cardTheme: CardTheme(
+          color: Colors.yellow.shade100,
+          elevation: 5,
+          margin: const EdgeInsets.only(top: 15),
+          shape: ContinuousRectangleBorder(
+              borderRadius: BorderRadius.circular(100.0)),
+        ),
+        inputTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.purple.withOpacity(.1),
+          contentPadding: EdgeInsets.zero,
+          errorStyle: const TextStyle(
+            backgroundColor: Colors.orange,
+            color: Colors.white,
+          ),
+          labelStyle: const TextStyle(fontSize: 12),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.blue.shade700, width: 4),
+            borderRadius: inputBorder,
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.blue.shade400, width: 5),
+            borderRadius: inputBorder,
+          ),
+          errorBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.red.shade700, width: 7),
+            borderRadius: inputBorder,
+          ),
+          focusedErrorBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.red.shade400, width: 8),
+            borderRadius: inputBorder,
+          ),
+          disabledBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey, width: 5),
+            borderRadius: inputBorder,
+          ),
+        ),
+        buttonTheme: LoginButtonTheme(
+          splashColor: Colors.purple,
+          backgroundColor: Colors.pinkAccent,
+          highlightColor: Colors.lightGreen,
+          elevation: 9.0,
+          highlightElevation: 6.0,
+          shape: BeveledRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          // shape: CircleBorder(side: BorderSide(color: Colors.green)),
+          // shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(55.0)),
+        ),
       ),
+
       onSubmitAnimationCompleted: () {
-        // Navigator.of(context).pushReplacementNamed(ROUTE_MAIN);
+        Navigator.of(context).popAndPushNamed(ROUTE_MAIN);
       },
     );
   }
