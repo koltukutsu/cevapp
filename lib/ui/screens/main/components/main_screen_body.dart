@@ -10,6 +10,8 @@ class MainScreenBody extends StatefulWidget {
 class _MainScreenBodyState extends State<MainScreenBody> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      color: Colors.green,
+    );
   }
 }

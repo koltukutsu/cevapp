@@ -45,6 +45,7 @@ class MainApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       initialRoute: ROUTE_LOGIN,
+
       routes: {
         ROUTE_LOGIN: (context) => const LoginScreen(),
         ROUTE_MAIN: (context) => const MainScreen()
