@@ -1,3 +1,4 @@
+import 'package:cevapp/ui/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenBody extends StatefulWidget {
@@ -11,7 +12,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: AppColors.,
     );
   }
 }

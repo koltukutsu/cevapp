@@ -2,6 +2,7 @@ import 'package:cevapp/ui/constants/borders.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({Key? key}) : super(key: key);
@@ -10,19 +11,19 @@ class LoginScreenBody extends StatelessWidget {
 
   Future<String?> _authUser(LoginData data, BuildContext context) async {
     return Future.delayed(loginTime).then((_) {
-      return "Kullanıcı Bulunamadı";
+      return "User is not found";
     });
   }
 
   Future<String?> _signupUser(var data) {
-    debugPrint('Kullanıcı Adı: ${data.name!}, Şifri: ${data.password}');
+    debugPrint('Username: ${data.name!}, Password: ${data.password}');
     return Future.delayed(loginTime).then((_) {
       return null;
     });
   }
 
   Future<String?> _recoverPassword(String name) {
-    debugPrint('Ad: $name');
+    debugPrint('Username: $name');
     return Future.delayed(loginTime).then((_) {
       return null;
     });
@@ -49,20 +50,63 @@ class LoginScreenBody extends StatelessWidget {
       onRecoverPassword: _recoverPassword,
 
       messages: LoginMessages(
-          userHint: "Kullanıcı Adı",
-          passwordHint: "Şifre",
-          loginButton: "Giriş Yap",
-          forgotPasswordButton: 'Şifreni mi unuttun? Bizimle iletişime geç',
+          userHint: "E-mail",
+          passwordHint: "Password",
+          loginButton: "Sign In",
+          forgotPasswordButton: 'Did you forgot your password? Reach to us!',
           recoverPasswordDescription:
-              "Kullanıcı adını yazarsan, sana bir email yollayacağız",
-          recoverPasswordButton: "Kurtar",
-          recoverPasswordIntro: "Şifreni tazele",
-          flushbarTitleError: "Hata",
-          flushbarTitleSuccess: "Tamamdır",
-          goBackButton: "Geri",
+              "We will send you an e-mail if you enter your Username",
+          recoverPasswordButton: "Save Account",
+          recoverPasswordIntro: "Refresh Your Password",
+          flushbarTitleError: "Error",
+          flushbarTitleSuccess: "Success",
+          goBackButton: "Back",
           recoverPasswordSuccess:
-              "Bildirimin tarafımıza ulaştı. En kısa sürede seninle iletişime geçeceğiz"),
+              "Your problem has reached to us. As fast as possible we are going to give you a response e-mail"),
       hideForgotPasswordButton: false,
+      loginProviders: <LoginProvider>[
+        LoginProvider(
+          icon: FontAwesomeIcons.google,
+          // label: 'Google',
+          callback: () async {
+            debugPrint('start google sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop google sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.facebookF,
+          // label: 'Facebook',
+          callback: () async {
+            debugPrint('start facebook sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop facebook sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.linkedinIn,
+          // label: "LinkedIn",
+          callback: () async {
+            debugPrint('start linkdin sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop linkdin sign in');
+            return null;
+          },
+        ),
+        LoginProvider(
+          icon: FontAwesomeIcons.githubAlt,
+          // label: "Github",
+          callback: () async {
+            debugPrint('start github sign in');
+            await Future.delayed(loginTime);
+            debugPrint('stop github sign in');
+            return null;
+          },
+        ),
+      ],
+
       // hideSignUpButton: true, chaned it in the source code
       theme: LoginTheme(
         primaryColor: Colors.teal,
@@ -70,16 +114,18 @@ class LoginScreenBody extends StatelessWidget {
         errorColor: Colors.deepOrange,
         titleStyle: const TextStyle(
           color: Colors.greenAccent,
-          fontFamily: 'Quicksand',
+          fontFamily: 'Bright',
           letterSpacing: 4,
         ),
         bodyStyle: const TextStyle(
           fontStyle: FontStyle.italic,
           decoration: TextDecoration.underline,
+          // fontSize: 18,
         ),
         textFieldStyle: const TextStyle(
           fontFamily: "Bright",
           color: Colors.orange,
+          fontSize: 18,
           shadows: [Shadow(color: Colors.yellow, blurRadius: 2)],
         ),
         buttonStyle: const TextStyle(
@@ -87,11 +133,14 @@ class LoginScreenBody extends StatelessWidget {
           color: Colors.yellow,
         ),
         cardTheme: CardTheme(
-          color: Colors.yellow.shade100,
+          color: Colors.white,
           elevation: 5,
           margin: const EdgeInsets.only(top: 15),
           shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(100.0)),
+            borderRadius: BorderRadius.circular(25)
+          ) 
+          // shape: ContinuousRectangleBorder(
+          //     borderRadius: BorderRadius.circular(100.0)),
         ),
         inputTheme: InputDecorationTheme(
           filled: true,
@@ -101,7 +150,9 @@ class LoginScreenBody extends StatelessWidget {
             backgroundColor: Colors.orange,
             color: Colors.white,
           ),
-          labelStyle: const TextStyle(fontSize: 12),
+          // hintStyle: const TextStyle(),
+
+          labelStyle: const TextStyle(fontSize: 18, fontFamily: "Bright"),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.blue.shade700, width: 4),
             borderRadius: inputBorder,
