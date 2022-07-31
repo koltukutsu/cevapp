@@ -1,5 +1,5 @@
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/paths.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
@@ -8,8 +8,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ButtonsSection extends StatelessWidget {
   final void Function(bool) crossFadeStateChangerFunction;
+  final Future<void> Function(String) onSoundProcesses;
 
-  const ButtonsSection({Key? key, required this.crossFadeStateChangerFunction})
+  const ButtonsSection(
+      {Key? key,
+      required this.crossFadeStateChangerFunction,
+      required this.onSoundProcesses})
       : super(key: key);
 
   @override
@@ -40,7 +44,10 @@ class ButtonsSection extends StatelessWidget {
         CustomButtonAnimated(
           label: "record",
           postFixIconAsImagePath: AppPaths.recordIconPath,
-          onPressed: (){crossFadeStateChangerFunction(true);},
+          onPressed: () {
+            crossFadeStateChangerFunction(true);
+            onSoundProcesses("start_record");
+            },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,
           height: MediaQuery.of(context).size.height *
