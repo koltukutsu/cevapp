@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cevapp/ui/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:talebe_app/ui/theme/colors.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
@@ -29,7 +29,8 @@ class CustomText extends StatelessWidget {
           color: textColor,
           fontSize: fontSize,
           fontWeight: fontWeight,
-          fontFamily: fontFamily),
+          fontFamily: fontFamily,
+      fontStyle: FontStyle.italic),
     );
   }
 }

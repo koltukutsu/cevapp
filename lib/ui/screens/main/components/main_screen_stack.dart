@@ -1,5 +1,6 @@
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
 import 'package:cevapp/ui/theme/colors.dart';
+import 'package:cevapp/ui/widgets/molecules/custom_swipe_dock.dart';
 import 'package:cevapp/ui/widgets/organisms/records.dart';
 import 'package:flutter/material.dart';
 
@@ -25,10 +26,10 @@ class _MainScreenStackState extends State<MainScreenStack> {
                   context: context,
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(25.0),
+                      top: Radius.circular(60.0),
                     ),
                   ),
-                  backgroundColor: AppColors.white,
+                  // backgroundColor: AppColors.swipeDockColor,
                   // <-- SEE HERE
                   builder: (context) {
                     // bottom swipe drawer
@@ -39,16 +40,7 @@ class _MainScreenStackState extends State<MainScreenStack> {
               alignment: Alignment.bottomCenter,
               child: Flex(
                 direction: Axis.horizontal,
-                children: [
-                  Expanded(
-                      child: Container(
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    decoration: const BoxDecoration(
-                        color: AppColors.white,
-                        borderRadius:
-                            BorderRadius.vertical(top: Radius.circular(25))),
-                  ))
-                ],
+                children: const [Expanded(child: SwipeDock())],
               ),
             ))
     ]);
