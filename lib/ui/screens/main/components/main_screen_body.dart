@@ -1,10 +1,10 @@
-import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
-import 'package:cevapp/ui/widgets/atoms/custom_text_field.dart';
+import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
+import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class MainScreenBody extends StatefulWidget {
   const MainScreenBody({Key? key}) : super(key: key);
@@ -24,9 +24,16 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.1,
-          ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height * 0.1,
+          // ),
+          Align(
+              alignment: Alignment.topRight,
+              child: CustomNeumorphicButton(
+                  imagePath: "assets/images/user.png",
+                  width: 41,
+                  height: 41,
+                  function: () {})),
           const CustomText(
             text: "cevapp",
             fontFamily: "Montserrat",
@@ -51,7 +58,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           //       labelFontFamily: "Roboto",
           //       labelFontWeight: FontWeight.normal),
           // ),
-          const ButtonsSection()
+          const ButtonsSection(),
+          const ButtonsDuringRecord()
         ],
       ),
     );
