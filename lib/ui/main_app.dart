@@ -1,3 +1,4 @@
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/screens/login/login_screen.dart';
 import 'package:cevapp/ui/screens/main/main_screen.dart';
@@ -40,17 +41,22 @@ class MainApp extends StatelessWidget {
     //     },
     //   )
     // );
-    return MaterialApp(
-      // theme: darkTheme,
-      themeMode: ThemeMode.system,
-      debugShowCheckedModeBanner: false,
-      initialRoute: ROUTE_LOGIN,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => ShuffleCubit())
+      ],
+      child: MaterialApp(
+        // theme: darkTheme,
+        themeMode: ThemeMode.system,
+        debugShowCheckedModeBanner: false,
+        initialRoute: ROUTE_MAIN,
 
-      routes: {
-        ROUTE_LOGIN: (context) => const LoginScreen(),
-        ROUTE_MAIN: (context) => const MainScreen()
-        // ROUTE_MAIN: (context) => const SecondScreen(),
-      },
+        routes: {
+          ROUTE_LOGIN: (context) => const LoginScreen(),
+          ROUTE_MAIN: (context) => const MainScreen()
+          // ROUTE_MAIN: (context) => const SecondScreen(),
+        },
+      ),
     );
   }
 }

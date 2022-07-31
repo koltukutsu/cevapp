@@ -3,6 +3,7 @@ import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text_field.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
+import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenBody extends StatefulWidget {
@@ -36,19 +37,20 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.08,
           ),
-          SizedBox(
-            // height: ,
-            width: MediaQuery.of(context).size.width *
-                AppRatios.questionFieldWidthRatio,
-            child: CustomTextField(
-                controller: _controller,
-                labelColor: AppColors.black,
-                labelFontSize: 20,
-                height: MediaQuery.of(context).size.height *
-                    AppRatios.questionFieldHeightRatio,
-                labelFontFamily: "Roboto",
-                labelFontWeight: FontWeight.normal),
-          ),
+          const CustomNeumorphicTextField(),
+          // SizedBox(
+          //   // height: ,
+          //   width: MediaQuery.of(context).size.width *
+          //       AppRatios.questionFieldWidthRatio,
+          //   child: CustomTextField(
+          //       controller: _controller,
+          //       labelColor: AppColors.black,
+          //       labelFontSize: 20,
+          //       height: MediaQuery.of(context).size.height *
+          //           AppRatios.questionFieldHeightRatio,
+          //       labelFontFamily: "Roboto",
+          //       labelFontWeight: FontWeight.normal),
+          // ),
           const ButtonsSection()
         ],
       ),

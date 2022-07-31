@@ -9,13 +9,15 @@ class CustomText extends StatelessWidget {
   final FontWeight fontWeight;
   final String fontFamily;
   final int fontMaxLines;
+  final bool italicEnable;
 
   const CustomText(
       {Key? key,
       required this.text,
+      this.italicEnable = true,
       this.textColor = AppColors.white,
       this.fontSize = 19,
-        this.fontMaxLines = 1,
+      this.fontMaxLines = 1,
       this.fontWeight = FontWeight.normal,
       this.fontFamily = "Inter"})
       : super(key: key);
@@ -30,7 +32,7 @@ class CustomText extends StatelessWidget {
           fontSize: fontSize,
           fontWeight: fontWeight,
           fontFamily: fontFamily,
-      fontStyle: FontStyle.italic),
+          fontStyle: italicEnable ? FontStyle.italic : null),
     );
   }
 }

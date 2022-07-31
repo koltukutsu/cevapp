@@ -1,5 +1,4 @@
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
-import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_swipe_dock.dart';
 import 'package:cevapp/ui/widgets/organisms/records.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +20,6 @@ class _MainScreenStackState extends State<MainScreenStack> {
             onHorizontalDragUpdate: (details) {
               showModalBottomSheet(
                   isScrollControlled: true,
-                  // TODO; test this feature
                   elevation: 8,
                   context: context,
                   shape: const RoundedRectangleBorder(
@@ -29,11 +27,8 @@ class _MainScreenStackState extends State<MainScreenStack> {
                       top: Radius.circular(60.0),
                     ),
                   ),
-                  // backgroundColor: AppColors.swipeDockColor,
-                  // <-- SEE HERE
                   builder: (context) {
-                    // bottom swipe drawer
-                    return const RecordsScreen();
+                    return const Expanded(child: RecordsScreen());
                   });
             },
             child: Align(
