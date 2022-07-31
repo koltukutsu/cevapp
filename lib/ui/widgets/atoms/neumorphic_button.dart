@@ -11,6 +11,7 @@ class CustomNeumorphicButton extends StatelessWidget {
   final double bottomMargin;
   final double leftMargin;
   final double rightMargin;
+  final double paddingAllAsDouble;
 
   const CustomNeumorphicButton({
     Key? key,
@@ -22,6 +23,7 @@ class CustomNeumorphicButton extends StatelessWidget {
     this.bottomMargin = 0,
     this.leftMargin = 0,
     this.rightMargin = 6,
+    this.paddingAllAsDouble = 8,
   }) : super(key: key);
 
   @override
@@ -38,7 +40,7 @@ class CustomNeumorphicButton extends StatelessWidget {
           shadowLightColor: AppColors.transparent,
           boxShape: NeumorphicBoxShape.circle(),
         ),
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(paddingAllAsDouble),
         child: Image(
           image: AssetImage(imagePath),
           width: width,

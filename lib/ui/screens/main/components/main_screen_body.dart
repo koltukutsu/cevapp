@@ -14,8 +14,21 @@ class MainScreenBody extends StatefulWidget {
 }
 
 class _MainScreenBodyState extends State<MainScreenBody> {
-  final _controller = TextEditingController(text: "Give a response to cevapp");
+  CrossFadeState _crossFadeState = CrossFadeState.showFirst;
 
+  void onChangedButtonChangeCrossFadeState(bool isRecordPressed){
+    if (isRecordPressed) {
+      print(1);
+      setState((){
+        _crossFadeState = CrossFadeState.showSecond;
+      });
+    } else {
+      print(2);
+      setState((){
+        _crossFadeState = CrossFadeState.showFirst;
+      });
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +46,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                   imagePath: "assets/images/user.png",
                   width: 41,
                   height: 41,
-                  function: () {})),
+                  function: () {
+
+                  })),
           const CustomText(
             text: "cevapp",
             fontFamily: "Montserrat",
@@ -45,21 +60,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
             height: MediaQuery.of(context).size.height * 0.08,
           ),
           const CustomNeumorphicTextField(),
-          // SizedBox(
-          //   // height: ,
-          //   width: MediaQuery.of(context).size.width *
-          //       AppRatios.questionFieldWidthRatio,
-          //   child: CustomTextField(
-          //       controller: _controller,
-          //       labelColor: AppColors.black,
-          //       labelFontSize: 20,
-          //       height: MediaQuery.of(context).size.height *
-          //           AppRatios.questionFieldHeightRatio,
-          //       labelFontFamily: "Roboto",
-          //       labelFontWeight: FontWeight.normal),
-          // ),
-          const ButtonsSection(),
-          // const ButtonsDuringRecord()
+          AnimatedCrossFade(
+            crossFadeState: _crossFadeState,
+            duration: const Duration(milliseconds: 250),
+            firstCurve: Curves.easeOut,
+            secondCurve: Curves.easeIn,
+            firstChild: ButtonsSection(crossFadeStateChangerFunction: onChangedButtonChangeCrossFadeState),
+            secondChild: ButtonsDuringRecord(crossFadeStateChangerFunction: onChangedButtonChangeCrossFadeState),
+          ),
         ],
       ),
     );
