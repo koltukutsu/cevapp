@@ -49,7 +49,7 @@ class MainApp extends StatelessWidget {
         // theme: darkTheme,
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        initialRoute: ROUTE_MAIN,
+        initialRoute: ROUTE_LOGIN,
 
         routes: {
           ROUTE_LOGIN: (context) => const LoginScreen(),

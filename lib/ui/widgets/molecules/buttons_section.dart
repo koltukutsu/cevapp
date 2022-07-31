@@ -1,4 +1,5 @@
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
+import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
@@ -16,7 +17,7 @@ class ButtonsSection extends StatelessWidget {
       children: [
         CustomButtonAnimated(
           label: "shuffle",
-          postFixIconAsImagePath: "assets/images/shuffle_second.png",
+          postFixIconAsImagePath: AppPaths.shuffleIconPath,
           onPressed: () {
             context.read<ShuffleCubit>().getText();
           },
@@ -35,7 +36,7 @@ class ButtonsSection extends StatelessWidget {
         ),
         CustomButtonAnimated(
           label: "record",
-          postFixIconAsImagePath: "assets/images/record.png",
+          postFixIconAsImagePath: AppPaths.recordIconPath,
           onPressed: () {},
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,

@@ -59,7 +59,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           //       labelFontWeight: FontWeight.normal),
           // ),
           const ButtonsSection(),
-          const ButtonsDuringRecord()
+          // const ButtonsDuringRecord()
         ],
       ),
     );

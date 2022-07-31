@@ -14,7 +14,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     emit(GettingText());
     final randomSeed = Random();
     shuffledQuestion = questionsList[randomSeed.nextInt(questionsList.length)];
-    print(shuffledQuestion);
+    // print(shuffledQuestion);
     emit(const GotText());
     // print(state.number);
   }

@@ -1,3 +1,4 @@
+import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:flutter/material.dart';
 
@@ -11,17 +12,17 @@ class ButtonsDuringRecord extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CustomNeumorphicButton(
-            imagePath: "assets/images/accept.png",
+            imagePath: AppPaths.acceptIconPath,
             width: 93,
             height: 93,
             function: () {}),
         CustomNeumorphicButton(
-            imagePath: "assets/images/pause.png",
+            imagePath: AppPaths.pauseIconPath,
             width: 93,
             height: 93,
             function: () {}),
         CustomNeumorphicButton(
-            imagePath: "assets/images/cross.png",
+            imagePath: AppPaths.removetIconPath,
             width: 93,
             height: 93,
             function: () {})
