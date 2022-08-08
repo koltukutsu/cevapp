@@ -7,6 +7,8 @@ import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter_sound/flutter_sound.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class MainScreenBody extends StatefulWidget {
   const MainScreenBody({Key? key}) : super(key: key);
@@ -17,19 +19,24 @@ class MainScreenBody extends StatefulWidget {
 
 class _MainScreenBodyState extends State<MainScreenBody> {
   CrossFadeState _crossFadeState = CrossFadeState.showFirst;
+  final recorder = FlutterSoundRecorder();
+  late final status;
 
-  void onChangedButtonChangeCrossFadeState(bool isRecordPressed) {
-    if (isRecordPressed) {
-      print(1);
-      setState(() {
-        _crossFadeState = CrossFadeState.showSecond;
-      });
-    } else {
-      print(2);
-      setState(() {
-        _crossFadeState = CrossFadeState.showFirst;
-      });
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    status = Permission.microphone.request();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    if (recorder != null) {
+      recorder.closeRecorder();
+      // recorder = null;
     }
+    super.dispose();
   }
 
   @override
@@ -63,20 +70,74 @@ class _MainScreenBodyState extends State<MainScreenBody> {
             height: MediaQuery.of(context).size.height * 0.08,
           ),
           const CustomNeumorphicTextField(),
-          AnimatedCrossFade(
-            crossFadeState: _crossFadeState,
-            duration: const Duration(milliseconds: 300),
-            firstCurve: Curves.easeIn,
-            secondCurve: Curves.easeOut,
-            firstChild: ButtonsSection(
-                crossFadeStateChangerFunction:
-                    onChangedButtonChangeCrossFadeState),
-            secondChild: ButtonsDuringRecord(
-                crossFadeStateChangerFunction:
-                    onChangedButtonChangeCrossFadeState),
-          ),
+          // recording time live
+          StreamBuilder<RecordingDisposition>(
+              stream: recorder.onProgress,
+              builder: (context, snapshot) {
+                final duration =
+                    snapshot.hasData ? snapshot.data!.duration : Duration.zero;
+                return AnimatedCrossFade(
+                  crossFadeState: _crossFadeState,
+                  duration: const Duration(milliseconds: 300),
+                  firstCurve: Curves.easeIn,
+                  secondCurve: Curves.easeOut,
+                  firstChild: ButtonsSection(
+                      crossFadeStateChangerFunction:
+                          onChangedButtonChangeCrossFadeState),
+                  secondChild: ButtonsDuringRecord(
+                    // recordFunction:
+                      crossFadeStateChangerFunction:
+                          onChangedButtonChangeCrossFadeState,
+                      takenTime: "${duration.inSeconds}"),
+                );
+              }),
         ],
       ),
     );
+  }
+
+  void onChangedButtonChangeCrossFadeState(bool isRecordPressed) {
+    if (isRecordPressed) {
+      setState(() {
+        _crossFadeState = CrossFadeState.showSecond;
+      });
+    } else {
+      setState(() {
+        _crossFadeState = CrossFadeState.showFirst;
+      });
+    }
+  }
+
+  // sound related functions
+  Future<void> onSoundProcesses(String mode) async {
+    const String path = "/storage/Download/first";
+    if (status == PermissionStatus.granted) {
+      await recorder.openRecorder();
+      recorder.setSubscriptionDuration(const Duration(milliseconds: 500));
+      // start
+      if (mode == "start") {
+        recorder.startRecorder(toFile: "audio");
+      }
+      // stop succesfully
+      else if (mode == "finish" && recorder.isRecording) {
+        final path = await recorder.stopRecorder();
+        // final audioFile = File(path!);
+        // print("Recorder audio: $audioFile");
+      }
+      // pause
+      else if (mode == "pause" && recorder.isRecording) {
+        recorder.pauseRecorder();
+      }
+      // continue
+      else if (mode == "continue" && recorder.isPaused == true) {
+        recorder.resumeRecorder();
+      }
+      // remove
+      else if (mode == "remove" && recorder.isRecording) {
+        recorder.closeRecorder();
+      }
+    } else {
+      throw 'Microphone Permission is not granted';
+    }
   }
 }

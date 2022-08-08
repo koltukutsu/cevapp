@@ -42,6 +42,9 @@ dependencies:
   flutter_launcher_icons: ^0.9.3
   flutter_neumorphic: ^3.2.0
   equatable: ^2.0.3
+  flutter_sound: ^9.2.13
+  assets_audio_player: ^3.0.5
+  permission_handler: ^10.0.0
 
 dev_dependencies:
   flutter_test:
