@@ -16,19 +16,20 @@ class MainScreenBody extends StatefulWidget {
 class _MainScreenBodyState extends State<MainScreenBody> {
   CrossFadeState _crossFadeState = CrossFadeState.showFirst;
 
-  void onChangedButtonChangeCrossFadeState(bool isRecordPressed){
+  void onChangedButtonChangeCrossFadeState(bool isRecordPressed) {
     if (isRecordPressed) {
       print(1);
-      setState((){
+      setState(() {
         _crossFadeState = CrossFadeState.showSecond;
       });
     } else {
       print(2);
-      setState((){
+      setState(() {
         _crossFadeState = CrossFadeState.showFirst;
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,9 +47,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                   imagePath: "assets/images/user.png",
                   width: 41,
                   height: 41,
-                  function: () {
-
-                  })),
+                  function: () {})),
           const CustomText(
             text: "cevapp",
             fontFamily: "Montserrat",
@@ -62,11 +61,15 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           const CustomNeumorphicTextField(),
           AnimatedCrossFade(
             crossFadeState: _crossFadeState,
-            duration: const Duration(milliseconds: 250),
-            firstCurve: Curves.easeOut,
-            secondCurve: Curves.easeIn,
-            firstChild: ButtonsSection(crossFadeStateChangerFunction: onChangedButtonChangeCrossFadeState),
-            secondChild: ButtonsDuringRecord(crossFadeStateChangerFunction: onChangedButtonChangeCrossFadeState),
+            duration: const Duration(milliseconds: 300),
+            firstCurve: Curves.easeIn,
+            secondCurve: Curves.easeOut,
+            firstChild: ButtonsSection(
+                crossFadeStateChangerFunction:
+                    onChangedButtonChangeCrossFadeState),
+            secondChild: ButtonsDuringRecord(
+                crossFadeStateChangerFunction:
+                    onChangedButtonChangeCrossFadeState),
           ),
         ],
       ),
