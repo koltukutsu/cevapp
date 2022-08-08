@@ -8,8 +8,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ButtonsSection extends StatelessWidget {
   final void Function(bool) crossFadeStateChangerFunction;
+  final Future<void> Function(String) recordFunction;
 
-  const ButtonsSection({Key? key, required this.crossFadeStateChangerFunction})
+  const ButtonsSection(
+      {Key? key,
+      required this.crossFadeStateChangerFunction,
+      required this.recordFunction})
       : super(key: key);
 
   @override
@@ -40,7 +44,10 @@ class ButtonsSection extends StatelessWidget {
         CustomButtonAnimated(
           label: "record",
           postFixIconAsImagePath: AppPaths.recordIconPath,
-          onPressed: (){crossFadeStateChangerFunction(true);},
+          onPressed: () {
+            crossFadeStateChangerFunction(true);
+            recordFunction("start");
+          },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,
           height: MediaQuery.of(context).size.height *

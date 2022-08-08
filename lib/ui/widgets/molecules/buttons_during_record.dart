@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 
 class ButtonsDuringRecord extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
-  final Future<void> Function(bool)? recordFunction;
+  final Future<void> Function(String) recordFunction;
   final String takenTime;
 
   const ButtonsDuringRecord(
-      {Key? key, required this.crossFadeStateChangerFunction, required this.takenTime,
-       this.recordFunction})
+      {Key? key,
+      required this.crossFadeStateChangerFunction,
+      required this.takenTime,
+      required this.recordFunction})
       : super(key: key);
 
   @override
@@ -36,14 +38,8 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: MediaQuery
-              .of(context)
-              .size
-              .width * 0.025,
-          top: MediaQuery
-              .of(context)
-              .size
-              .height * 0.025),
+          left: MediaQuery.of(context).size.width * 0.025,
+          top: MediaQuery.of(context).size.height * 0.025),
       child: Column(
         children: [
           Row(
@@ -58,6 +54,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                   function: () {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
+                    widget.recordFunction("finish");
                   }),
               AnimatedCrossFade(
                 crossFadeState: _crossFadeStateSecond,
@@ -71,6 +68,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     paddingAllAsDouble: 0,
                     function: () {
                       onChangePauseAndContinueButton(true);
+                      widget.recordFunction("pause");
                       // widget.onSoundProcesses("pause_record");
                     }),
                 secondChild: CustomNeumorphicButton(
@@ -80,6 +78,8 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     paddingAllAsDouble: 0,
                     function: () {
                       onChangePauseAndContinueButton(false);
+                      widget.recordFunction("continue");
+
                       // widget.onSoundProcesses("continue_record");
                     }),
               ),
@@ -91,15 +91,13 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                   function: () {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
+                    widget.recordFunction("delete");
                   })
             ],
           ),
           Padding(
-            padding:
-            EdgeInsets.only(top: MediaQuery
-                .of(context)
-                .size
-                .height * 0.025),
+            padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.025),
             child: CustomText(
               text: widget.takenTime,
               fontWeight: FontWeight.bold,

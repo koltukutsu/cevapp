@@ -82,10 +82,11 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                   firstCurve: Curves.easeIn,
                   secondCurve: Curves.easeOut,
                   firstChild: ButtonsSection(
+                    recordFunction: onSoundProcesses,
                       crossFadeStateChangerFunction:
                           onChangedButtonChangeCrossFadeState),
                   secondChild: ButtonsDuringRecord(
-                    // recordFunction:
+                      recordFunction: onSoundProcesses,
                       crossFadeStateChangerFunction:
                           onChangedButtonChangeCrossFadeState,
                       takenTime: "${duration.inSeconds}"),
@@ -133,7 +134,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         recorder.resumeRecorder();
       }
       // remove
-      else if (mode == "remove" && recorder.isRecording) {
+      else if (mode == "delete" && recorder.isRecording) {
         recorder.closeRecorder();
       }
     } else {
