@@ -7,4 +7,7 @@ class AppPaths {
 
   static const String shuffleIconPath = "assets/images/shuffle_second.png";
   static const String recordIconPath = "assets/images/record.png";
+
+  static const String homePath = "assets/images/home_3.png";
+  static const String userPath = "assets/images/user.png";
 }

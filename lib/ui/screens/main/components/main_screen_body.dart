@@ -1,3 +1,5 @@
+import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
@@ -44,10 +46,12 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           Align(
               alignment: Alignment.topRight,
               child: CustomNeumorphicButton(
-                  imagePath: "assets/images/user.png",
+                  imagePath: AppPaths.userPath,
                   width: 41,
                   height: 41,
-                  function: () {})),
+                  function: () {
+                    Navigator.of(context).pushNamed(ROUTE_PROFILE_SCREEN);
+                  })),
           const CustomText(
             text: "cevapp",
             fontFamily: "Montserrat",
