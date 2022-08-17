@@ -23,8 +23,11 @@ class AppColors {
   static const Color rightGradientButtonColor = Color(0xFF56CCF2);
 
   // buttons of
-  static const Color playButtonColor = Color(0xFF);
-  static const Color deleteButtonColor = Color(0xFF);
+  static const Color playButtonColor = Color(0xFFFFFFFF);
+  static const Color deleteButtonColor = Color(0xFFFFFFFF);
+
+  static const Color playButtonLabelColor = Color(0xFF48bf53);
+  static const Color deleteButtonLabelColor = Color(0xFFEA4335);
 
   // SECOND - from previous
   // primary colors

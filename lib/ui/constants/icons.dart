@@ -12,5 +12,5 @@ class AppPaths {
   static const String userPath = "assets/images/user.png";
 
   static const String deleteButton = "assets/images/delete.png";
-  static const String playButton = "assets/images/delete.png";
+  static const String playButton = "assets/images/play.png";
 }

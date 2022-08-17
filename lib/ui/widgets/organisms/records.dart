@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_column_linear_gradient_filled.dart';
+import 'package:cevapp/ui/widgets/molecules/record_row.dart';
 import 'package:flutter/material.dart';
 
 class RecordsScreen extends StatefulWidget {
@@ -28,6 +29,8 @@ class _RecordsScreenState extends State<RecordsScreen> {
     setState(() {
       pathLists = results;
     });
+    print("uzunluk");
+    print(pathLists.length);
     print(pathLists[0]);
   }
 
@@ -57,8 +60,12 @@ class _RecordsScreenState extends State<RecordsScreen> {
             padding: EdgeInsets.only(top: 28.0),
             child: CustomColumnLinearGradientFilled(),
           ),
-          if(pathLists.isNotEmpty)
-            ...List.generate(pathLists.length, (index) => pathLists[index],)
+          if (pathLists.isNotEmpty)
+            ...List.generate(
+              pathLists.length,
+              (index) => RecordRow(
+                  path: pathLists[index].toString(), question: "say something"),
+            )
         ],
       ),
     );

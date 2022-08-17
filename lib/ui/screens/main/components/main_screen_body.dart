@@ -22,6 +22,7 @@ class MainScreenBody extends StatefulWidget {
 class _MainScreenBodyState extends State<MainScreenBody> {
   CrossFadeState _crossFadeState = CrossFadeState.showFirst;
   final recorder = FlutterSoundRecorder();
+
   // late final status;
   var stateOfRecorder = 0;
   final String path = "temp.aac";
@@ -89,14 +90,15 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                   firstCurve: Curves.easeIn,
                   secondCurve: Curves.easeOut,
                   firstChild: ButtonsSection(
-                    recordFunction: onSoundProcesses,
+                      recordFunction: onSoundProcesses,
                       crossFadeStateChangerFunction:
                           onChangedButtonChangeCrossFadeState),
                   secondChild: ButtonsDuringRecord(
                       recordFunction: onSoundProcesses,
                       crossFadeStateChangerFunction:
                           onChangedButtonChangeCrossFadeState,
-                      takenTime: "${minutes<10?'0$minutes':'$minutes'}:${seconds<10?'0$seconds':'$seconds'}"),
+                      takenTime:
+                          "${minutes < 10 ? '0$minutes' : '$minutes'}:${seconds < 10 ? '0$seconds' : '$seconds'}"),
                 );
               }),
         ],
@@ -128,7 +130,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       }
       // start
       if (mode == "start") {
-        recorder.startRecorder(toFile: path);
+        var now = DateTime.now();
+        final String nowCurrentDate = DateTime.parse(now.toString()).toString();
+        recorder.startRecorder(toFile: "$nowCurrentDate.aac");
         setState(() {
           recorder;
         });
@@ -141,7 +145,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         final audioFile = File(path!);
         print("Recorder audio: $audioFile");
         print(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
-        final dir = Directory(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
+        final dir = Directory(
+            path.split("/").sublist(0, path.split("/").length - 1).join("/"));
         final List<FileSystemEntity> entities = await dir.list().toList();
         print(entities);
         // recorder.closeRecorder();
