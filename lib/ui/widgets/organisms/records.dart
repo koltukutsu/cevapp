@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_column_linear_gradient_filled.dart';
@@ -11,6 +13,24 @@ class RecordsScreen extends StatefulWidget {
 }
 
 class _RecordsScreenState extends State<RecordsScreen> {
+  final String path = '/data/user/0/com.example.cevapp/cache';
+  var pathLists = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getPaths();
+  }
+
+  Future<void> getPaths() async {
+    var results = await Directory(path).list().toList();
+    setState(() {
+      pathLists = results;
+    });
+    print(pathLists[0]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,11 +52,17 @@ class _RecordsScreenState extends State<RecordsScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         // mainAxisSize: MainAxisSize.min,
-        children: const <Widget>[
-          Padding(
+        children: <Widget>[
+          const Padding(
             padding: EdgeInsets.only(top: 28.0),
             child: CustomColumnLinearGradientFilled(),
-          )
+          ),
+          if(pathLists.isNotEmpty)
+              Column(
+                children: [
+                  Text("${pathLists.toString()}"),
+                ],
+              )
         ],
       ),
     );

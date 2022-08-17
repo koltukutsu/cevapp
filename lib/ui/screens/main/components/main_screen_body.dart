@@ -140,11 +140,11 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         print("it's finished");
         final audioFile = File(path!);
         print("Recorder audio: $audioFile");
-        // print(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
-        // final dir = Directory(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
-        // final List<FileSystemEntity> entities = await dir.list().toList();
-        // print(entities);
-        recorder.closeRecorder();
+        print(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
+        final dir = Directory(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
+        final List<FileSystemEntity> entities = await dir.list().toList();
+        print(entities);
+        // recorder.closeRecorder();
 
       }
       // pause
