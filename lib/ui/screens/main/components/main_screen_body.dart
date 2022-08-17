@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -20,13 +22,15 @@ class MainScreenBody extends StatefulWidget {
 class _MainScreenBodyState extends State<MainScreenBody> {
   CrossFadeState _crossFadeState = CrossFadeState.showFirst;
   final recorder = FlutterSoundRecorder();
-  late final status;
+  // late final status;
+  var stateOfRecorder = 0;
+  final String path = "temp.aac";
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    status = Permission.microphone.request();
+    // status = Permission.microphone.request();
   }
 
   @override
@@ -76,6 +80,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
               builder: (context, snapshot) {
                 final duration =
                     snapshot.hasData ? snapshot.data!.duration : Duration.zero;
+                final int minutes = duration.inSeconds ~/ 60;
+                final int seconds = duration.inSeconds % 60;
+                debugPrint(duration.toString());
                 return AnimatedCrossFade(
                   crossFadeState: _crossFadeState,
                   duration: const Duration(milliseconds: 300),
@@ -89,7 +96,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                       recordFunction: onSoundProcesses,
                       crossFadeStateChangerFunction:
                           onChangedButtonChangeCrossFadeState,
-                      takenTime: "${duration.inSeconds}"),
+                      takenTime: "${minutes<10?'0$minutes':'$minutes'}:${seconds<10?'0$seconds':'$seconds'}"),
                 );
               }),
         ],
@@ -111,30 +118,48 @@ class _MainScreenBodyState extends State<MainScreenBody> {
 
   // sound related functions
   Future<void> onSoundProcesses(String mode) async {
-    const String path = "/storage/Download/first";
+    PermissionStatus status = await Permission.microphone.request();
+
     if (status == PermissionStatus.granted) {
-      await recorder.openRecorder();
-      recorder.setSubscriptionDuration(const Duration(milliseconds: 500));
+      if (stateOfRecorder == 0) {
+        await recorder.openRecorder();
+        recorder.setSubscriptionDuration(const Duration(milliseconds: 100));
+        stateOfRecorder = 1;
+      }
       // start
       if (mode == "start") {
-        recorder.startRecorder(toFile: "audio");
+        recorder.startRecorder(toFile: path);
+        setState(() {
+          recorder;
+        });
       }
       // stop succesfully
       else if (mode == "finish" && recorder.isRecording) {
         final path = await recorder.stopRecorder();
-        // final audioFile = File(path!);
-        // print("Recorder audio: $audioFile");
+        stateOfRecorder = 0;
+        print("it's finished");
+        final audioFile = File(path!);
+        print("Recorder audio: $audioFile");
+        // print(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
+        // final dir = Directory(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
+        // final List<FileSystemEntity> entities = await dir.list().toList();
+        // print(entities);
+        recorder.closeRecorder();
+
       }
       // pause
       else if (mode == "pause" && recorder.isRecording) {
-        recorder.pauseRecorder();
+        // recorder.pauseRecorder();
       }
       // continue
       else if (mode == "continue" && recorder.isPaused == true) {
-        recorder.resumeRecorder();
+        // recorder.resumeRecorder();
       }
       // remove
       else if (mode == "delete" && recorder.isRecording) {
+        // recorder.stopRecorder();
+        stateOfRecorder = 0;
+        recorder.deleteRecord(fileName: path);
         recorder.closeRecorder();
       }
     } else {
