@@ -10,4 +10,12 @@ class AppRatios {
 
   static const double columnHeight = 17;
   static const double columnWidth = 180;
+
+  static const double deleteButtonWidthRatio = 0.08;
+  static const double deleteButtonHeightRatio = 0.05;
+
+  static const double playButtonWidthRatio = 0.08;
+  static const double playButtonHeightRatio = 0.05;
+
+
 }

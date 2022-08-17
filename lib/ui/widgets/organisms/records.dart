@@ -58,11 +58,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
             child: CustomColumnLinearGradientFilled(),
           ),
           if(pathLists.isNotEmpty)
-              Column(
-                children: [
-                  Text("${pathLists.toString()}"),
-                ],
-              )
+            ...List.generate(pathLists.length, (index) => pathLists[index],)
         ],
       ),
     );
