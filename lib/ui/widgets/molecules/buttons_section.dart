@@ -6,7 +6,7 @@ import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ButtonsSection extends StatelessWidget {
+class ButtonsSection extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
   final Future<void> Function(String) recordFunction;
 
@@ -15,6 +15,13 @@ class ButtonsSection extends StatelessWidget {
       required this.crossFadeStateChangerFunction,
       required this.recordFunction})
       : super(key: key);
+
+  @override
+  State<ButtonsSection> createState() => _ButtonsSectionState();
+}
+
+class _ButtonsSectionState extends State<ButtonsSection> {
+  var isShuffleButtonClicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +52,8 @@ class ButtonsSection extends StatelessWidget {
           label: "record",
           postFixIconAsImagePath: AppPaths.recordIconPath,
           onPressed: () {
-            crossFadeStateChangerFunction(true);
-            recordFunction("start");
+            widget.crossFadeStateChangerFunction(true);
+            widget.recordFunction("start");
           },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,

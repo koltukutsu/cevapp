@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/ui/constants/icons.dart';
@@ -9,8 +8,6 @@ import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_sound/flutter_sound.dart';
-import 'package:flutter_sound/public/flutter_sound_player.dart';
 
 class RecordRow extends StatefulWidget {
   final String index;
@@ -30,6 +27,48 @@ class RecordRow extends StatefulWidget {
 
 class _RecordRowState extends State<RecordRow> {
   final audioPlayer = AudioPlayer();
+  bool isPlaying = false;
+  Duration duration = Duration.zero;
+  Duration position = Duration.zero;
+  late var _tapPosition;
+
+  void _storePosition(TapDownDetails details) {
+    _tapPosition = details.globalPosition;
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setAudio();
+
+    audioPlayer.onPlayerStateChanged.listen((state) {
+      setState(() {
+        isPlaying = state == PlayerState.playing;
+      });
+    });
+
+    audioPlayer.onDurationChanged.listen((newDuration) {
+      setState(() {
+        duration = newDuration;
+      });
+    });
+
+    audioPlayer.onDurationChanged.listen((newPosition) {
+      setState(() {
+        position = newPosition;
+      });
+    });
+  }
+
+  Future<void> setAudio() async {
+    // repeat the song when completed
+    audioPlayer.setReleaseMode(ReleaseMode.loop);
+
+    audioPlayer.setSourceDeviceFile(widget.path.path);
+    // audioPlayer.setSourceAsset(widget.path.path);
+    // audioPlayer.setSource(widget.path.path);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,14 +93,37 @@ class _RecordRowState extends State<RecordRow> {
                   fontWeight: FontWeight.bold,
                   italicEnable: false),
               GestureDetector(
-                onLongPress: (){
-                  // showMenu(context: context, position: position, items: items);
+                onTapDown: _storePosition,
+                onTap: () async {
+                  final RenderBox overlay = Overlay.of(context)!
+                      .context
+                      .findRenderObject() as RenderBox;
+
+                  await showMenu(
+                    context: context,
+                    position: RelativeRect.fromRect(
+                        _tapPosition & const Size(40, 40),
+                        // smaller rect, the touch area
+                        Offset.zero &
+                            overlay.size // Bigger rect, the entire screen
+                        ),
+                    items: [
+                      PopupMenuItem<String>(
+                        child: Text(widget.question),
+                      ),
+                    ],
+                    elevation: 8.0,
+                  );
+
+                  // widget.onItemSelected(value);
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
                   child: CustomText(
-                      text: widget.question,
-                      textColor: AppColors.black,
+                      text: widget.question.length > 23
+                          ? "${widget.question.substring(0, 23)}..."
+                          : widget.question,
+                      textColor: AppColors.white,
                       fontSize: 16,
                       fontFamily: "Montserrat",
                       fontWeight: FontWeight.normal,
@@ -73,28 +135,29 @@ class _RecordRowState extends State<RecordRow> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              // Slider(
+              //   min: 0,
+              //   max: duration.inSeconds.toDouble(),
+              //   value: position.inSeconds.toDouble(),
+              //   onChanged: (value) async {
+              //     final position = Duration(seconds: value.toInt());
+              //     await audioPlayer.seek(position);
+              //     // can be changed to not resume
+              //     await audioPlayer.resume();
+              //   },
+              // ),
+              // CustomText(text: position.toString()),
+              // CustomText(text: (duration - position).toString()),
               CustomButtonAnimated(
                 label: "play",
                 postFixIconAsImagePath: AppPaths.playButton,
                 onPressed: () async {
-                  // TODO; solve that
-                  FlutterSoundPlayer? myPlayer = FlutterSoundPlayer();
-                  myPlayer = await FlutterSoundPlayer().openPlayer();
-                  if (myPlayer != null) {
-                    Duration? d = await myPlayer.startPlayer(
-                      fromURI:
-                          "https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3",
-                      codec: Codec.mp3,
-                      whenFinished: () {
-                        print('I hope you enjoyed listening to this song');
-                      },
-                    );
+                  if (isPlaying) {
+                    audioPlayer.stop();
                   } else {
-                    print("probleeeeeemsss");
+                    // await audioPlayer.play(widget.path.path);
+                    audioPlayer.resume();
                   }
-
-                  // print("the recording is being played now: ${widget.path.path}");
-                  // await audioPlayer.play(DeviceFileSource(widget.path.path));
                 },
                 fontSize: 18,
                 iconWidth: 20,
@@ -104,8 +167,6 @@ class _RecordRowState extends State<RecordRow> {
                     AppRatios.playButtonHeightRatio,
                 buttonColor: AppColors.playButtonColor,
                 labelColor: AppColors.playButtonLabelColor,
-
-                // labelColor: AppColors.black,
                 // fontFamily: "Montserrat",
                 filled: true,
                 iconPaddingLeft: 5,
@@ -118,6 +179,8 @@ class _RecordRowState extends State<RecordRow> {
                 label: "delete",
                 postFixIconAsImagePath: AppPaths.deleteButton,
                 onPressed: () {
+                  audioPlayer.stop();
+                  audioPlayer.dispose();
                   widget.path.delete();
                   context.read<RecordsCubit>().GetCurrentRecords();
                 },
@@ -137,24 +200,15 @@ class _RecordRowState extends State<RecordRow> {
               ),
             ],
           ),
-          // CustomButtonAnimated(
-          //   label: "play",
-          //   postFixIconAsImagePath: AppPaths.playButton,
-          //   onPressed: () {
-          //   },
-          //   fontSize: 48,
-          //   widthRatio: AppRatios.playButtonWidthRatio,
-          //   height: MediaQuery.of(context).size.height *
-          //       AppRatios.playButtonHeightRatio,
-          //   buttonColor: AppColors.playButtonColor,
-          //   // labelColor: AppColors.black,
-          //   // fontFamily: "Montserrat",
-          //   filled: true,
-          //   iconPaddingLeft: 5,
-          //   insets: 7,
-          // )
         ],
       ),
     );
   }
 }
+
+// Clipboard.setData(
+// ClipboardData(text: widget.question));
+// _showDialogSuccess(
+// context,
+// AppColors.swipeDockColor,
+// "${widget.index}. question is copied");

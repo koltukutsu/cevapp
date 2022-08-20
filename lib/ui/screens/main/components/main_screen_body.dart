@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -8,6 +9,7 @@ import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -31,6 +33,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    context.read<RecordsCubit>().GetCurrentRecords();
     // status = Permission.microphone.request();
   }
 
@@ -132,7 +135,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       if (mode == "start") {
         var now = DateTime.now();
         final String nowCurrentDate = DateTime.parse(now.toString()).toString();
-        recorder.startRecorder(toFile: "$nowCurrentDate.aac", codec: Codec.aacADTS);
+        recorder.startRecorder(toFile: "first.aac", codec: Codec.aacMP4);
         setState(() {
           recorder;
         });

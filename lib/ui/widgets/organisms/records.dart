@@ -70,7 +70,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
                     (index) => RecordRow(
                         index: index.toString(),
                         path: state.recordPathsAsFileList[index],
-                        question: "say something"),
+                        question: "Say something that I love to show you my loveee"),
                   )
                 else
                   Padding(
