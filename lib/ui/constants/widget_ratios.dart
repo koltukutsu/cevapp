@@ -6,7 +6,7 @@ class AppRatios {
   static const double swipeDockWidthRatio = 387 / 413; // 0.455
   // static const double swipeDockHeightRatio = 180 / 849; // 0.455
   static const double swipeDockHeightRatio = 120 / 849; // 0.455
-  static const double swipdeDockFullHeightRatio = 0.85;
+  static const double swipdeDockFullHeightRatio = 0.72;
 
   static const double columnHeight = 17;
   static const double columnWidth = 180;
@@ -20,5 +20,5 @@ class AppRatios {
   static const double recordRowHeightRatio = 0.08;
   static const double recordRowWidthRatio = 0.95;
 
-
+  static const double swipeDockMiddleTextPosition = 0.13;
 }

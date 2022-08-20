@@ -1,7 +1,9 @@
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ButtonsDuringRecord extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
@@ -55,6 +57,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
                     widget.recordFunction("finish");
+                    context.read<RecordsCubit>().GetCurrentRecords();
                   }),
               AnimatedCrossFade(
                 crossFadeState: _crossFadeStateSecond,

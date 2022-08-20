@@ -15,29 +15,16 @@ class RecordsScreen extends StatefulWidget {
 }
 
 class _RecordsScreenState extends State<RecordsScreen> {
-  final String path = '/data/user/0/com.example.cevapp/cache';
-  var pathLists = [];
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    context.read<RecordsCubit>().GetCurrentRecords();
   }
-
-  // Future<void> getPaths() async {
-  //   var results = await Directory(path).list().toList();
-  //   setState(() {
-  //     pathLists = results;
-  //   });
-  //   print("uzunluk");
-  //   print(pathLists.length);
-  //   print(pathLists[0]);
-  // }
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      // margin: const EdgeInsets.only(right: 2, left: 2),
       decoration: const BoxDecoration(
           color: AppColors.swipeDockColor,
           gradient: LinearGradient(
@@ -50,8 +37,8 @@ class _RecordsScreenState extends State<RecordsScreen> {
             tileMode: TileMode.mirror,
           ),
           borderRadius: BorderRadius.vertical(top: Radius.circular(60))),
-      height: MediaQuery.of(context).size.height *
-          AppRatios.swipdeDockFullHeightRatio,
+      // height: MediaQuery.of(context).size.height *
+      //     AppRatios.swipdeDockFullHeightRatio,
       child: BlocBuilder<RecordsCubit, RecordsState>(
         builder: (context, state) {
           if (state is GetRecords) {
@@ -70,12 +57,13 @@ class _RecordsScreenState extends State<RecordsScreen> {
                     (index) => RecordRow(
                         index: index.toString(),
                         path: state.recordPathsAsFileList[index],
-                        question: "Say something that I love to show you my loveee"),
+                        question:
+                            "Say something that I love to show you my loveee"),
                   )
                 else
                   Padding(
                     padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.2),
+                        top: MediaQuery.of(context).size.height * AppRatios.swipeDockMiddleTextPosition),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +76,14 @@ class _RecordsScreenState extends State<RecordsScreen> {
                           fontSize: 82,
                         ),
                         CustomText(
-                          text: "record",
+                          text: "bullsh*t",
+                          textColor: AppColors.white,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 82,
+                        ),
+                        CustomText(
+                          text: "yet",
                           textColor: AppColors.white,
                           fontFamily: "Montserrat",
                           fontWeight: FontWeight.bold,
@@ -106,7 +101,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
               // mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const Padding(
-                  padding: EdgeInsets.only(top: 28.0),
+                  padding: EdgeInsets.only(top: 28.0, bottom: 18),
                   child: CustomColumnLinearGradientFilled(),
                 ),
                 Column(

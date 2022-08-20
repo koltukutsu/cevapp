@@ -46,6 +46,8 @@ dependencies:
   assets_audio_player: ^3.0.5
   permission_handler: ^10.0.0
   audioplayers: ^1.0.1
+  sliding_up_panel: ^2.0.0+1
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

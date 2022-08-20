@@ -12,6 +12,7 @@ import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
+import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MainScreenBody extends StatefulWidget {
@@ -134,8 +135,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // start
       if (mode == "start") {
         var now = DateTime.now();
-        final String nowCurrentDate = DateTime.parse(now.toString()).toString();
-        recorder.startRecorder(toFile: "first.aac", codec: Codec.aacMP4);
+        final DateTime nowCurrentDate = DateTime.parse(now.toString());
+        final String formattedDate = DateFormat('yyyy-MM-dd').format(nowCurrentDate);
+        recorder.startRecorder(toFile: "$formattedDate.aac", codec: Codec.aacMP4);
         setState(() {
           recorder;
         });
