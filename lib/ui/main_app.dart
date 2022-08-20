@@ -6,6 +6,8 @@ import 'package:cevapp/ui/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../cubit/records/record_cubit.dart';
+
 class MainApp extends StatelessWidget {
   const MainApp({Key? key}) : super(key: key);
 
@@ -44,7 +46,8 @@ class MainApp extends StatelessWidget {
     // );
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => ShuffleCubit())
+        BlocProvider(create: (context) => ShuffleCubit()),
+        BlocProvider(create: (context) => RecordsCubit())
       ],
       child: MaterialApp(
         // theme: darkTheme,

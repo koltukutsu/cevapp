@@ -132,7 +132,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       if (mode == "start") {
         var now = DateTime.now();
         final String nowCurrentDate = DateTime.parse(now.toString()).toString();
-        recorder.startRecorder(toFile: "$nowCurrentDate.aac");
+        recorder.startRecorder(toFile: "$nowCurrentDate.aac", codec: Codec.aacADTS);
         setState(() {
           recorder;
         });
