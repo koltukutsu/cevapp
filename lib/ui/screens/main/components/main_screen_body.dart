@@ -29,7 +29,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
 
   // late final status;
   var stateOfRecorder = 0;
-  final String path = "temp.aac";
+  var path = "temp.aac";
 
   @override
   void initState() {
@@ -142,25 +142,30 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         context.read<ShuffleCubit>().recordedQuestions.addAll({
           formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
         });
+        path = formattedDate;
         // record start & create file
-        recorder.startRecorder(
-            toFile: "$formattedDate.aac", codec: Codec.aacMP4);
+        recorder.startRecorder(toFile: "$path.aac", codec: Codec.aacMP4);
         setState(() {
           recorder;
         });
       }
       // stop succesfully
       else if (mode == "finish" && recorder.isRecording) {
-        final path = await recorder.stopRecorder();
+        final pathFinished = await recorder.stopRecorder();
         stateOfRecorder = 0;
         print("it's finished");
-        final audioFile = File(path!);
+        final audioFile = File(pathFinished!);
         print("Recorder audio: $audioFile");
-        print(path.split("/").sublist(0, path.split("/").length - 1).join("/"));
-        final dir = Directory(
-            path.split("/").sublist(0, path.split("/").length - 1).join("/"));
-        final List<FileSystemEntity> entities = await dir.list().toList();
-        print(entities);
+        print(pathFinished
+            .split("/")
+            .sublist(0, pathFinished.split("/").length - 1)
+            .join("/"));
+        // final dir = Directory(pathFinished
+        //     .split("/")
+        //     .sublist(0, pathFinished.split("/").length - 1)
+        //     .join("/"));
+        // final List<FileSystemEntity> entities = await dir.list().toList();
+        // print(entities);
         // recorder.closeRecorder();
       }
       // pause

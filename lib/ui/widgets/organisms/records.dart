@@ -52,6 +52,11 @@ class _RecordsScreenState extends State<RecordsScreen> {
                   padding: EdgeInsets.only(top: 28.0),
                   child: CustomColumnLinearGradientFilled(),
                 ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height *
+                      AppRatios
+                          .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar,
+                ),
                 if (state.recordPathsAsFileList.isNotEmpty)
                   ...List.generate(
                     state.recordPathsAsFileList.length,
@@ -112,7 +117,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
               // mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const Padding(
-                  padding: EdgeInsets.only(top: 28.0, bottom: 18),
+                  padding: EdgeInsets.only(top: 28.0),
                   child: CustomColumnLinearGradientFilled(),
                 ),
                 Column(
