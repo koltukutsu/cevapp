@@ -1,4 +1,5 @@
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_column_linear_gradient_filled.dart';
@@ -57,13 +58,23 @@ class _RecordsScreenState extends State<RecordsScreen> {
                     (index) => RecordRow(
                         index: index.toString(),
                         path: state.recordPathsAsFileList[index],
-                        question:
-                            "Say something that I love to show you my loveee"),
+                        question: context
+                            .read<ShuffleCubit>()
+                            .recordedQuestions[state
+                                .recordPathsAsFileList[index].path
+                                .split("/")[state
+                                        .recordPathsAsFileList[index].path
+                                        .split("/")
+                                        .length -
+                                    1]
+                                .split(".aac")[0]]!
+                            .toString()),
                   )
                 else
                   Padding(
                     padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * AppRatios.swipeDockMiddleTextPosition),
+                        top: MediaQuery.of(context).size.height *
+                            AppRatios.swipeDockMiddleTextPosition),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,

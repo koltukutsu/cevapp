@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -136,8 +137,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       if (mode == "start") {
         var now = DateTime.now();
         final DateTime nowCurrentDate = DateTime.parse(now.toString());
-        final String formattedDate = DateFormat('yyyy-MM-dd').format(nowCurrentDate);
-        recorder.startRecorder(toFile: "$formattedDate.aac", codec: Codec.aacMP4);
+        final String formattedDate =
+            nowCurrentDate.toString(); // TODO: can be changed
+        context.read<ShuffleCubit>().recordedQuestions.addAll({
+          formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
+        });
+        // record start & create file
+        recorder.startRecorder(
+            toFile: "$formattedDate.aac", codec: Codec.aacMP4);
         setState(() {
           recorder;
         });
@@ -155,7 +162,6 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         final List<FileSystemEntity> entities = await dir.list().toList();
         print(entities);
         // recorder.closeRecorder();
-
       }
       // pause
       else if (mode == "pause" && recorder.isRecording) {

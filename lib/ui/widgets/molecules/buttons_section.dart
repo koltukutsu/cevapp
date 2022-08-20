@@ -34,6 +34,9 @@ class _ButtonsSectionState extends State<ButtonsSection> {
           postFixIconAsImagePath: AppPaths.shuffleIconPath,
           onPressed: () {
             context.read<ShuffleCubit>().getText();
+            setState(() {
+              isShuffleButtonClicked = true;
+            });
           },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,
@@ -48,24 +51,25 @@ class _ButtonsSectionState extends State<ButtonsSection> {
           iconPaddingLeft: 10,
           insets: 30,
         ),
-        CustomButtonAnimated(
-          label: "record",
-          postFixIconAsImagePath: AppPaths.recordIconPath,
-          onPressed: () {
-            widget.crossFadeStateChangerFunction(true);
-            widget.recordFunction("start");
-          },
-          fontSize: 48,
-          widthRatio: AppRatios.shuffleButtonWidthRatio,
-          height: MediaQuery.of(context).size.height *
-              AppRatios.shuffleButtonHeightRatio,
-          buttonColor: AppColors.recordButtonColor,
-          labelColor: AppColors.black,
-          fontFamily: "Montserrat",
-          filled: true,
-          iconPaddingLeft: 5,
-          insets: 7,
-        )
+        if (isShuffleButtonClicked)
+          CustomButtonAnimated(
+            label: "record",
+            postFixIconAsImagePath: AppPaths.recordIconPath,
+            onPressed: () {
+              widget.crossFadeStateChangerFunction(true);
+              widget.recordFunction("start");
+            },
+            fontSize: 48,
+            widthRatio: AppRatios.shuffleButtonWidthRatio,
+            height: MediaQuery.of(context).size.height *
+                AppRatios.shuffleButtonHeightRatio,
+            buttonColor: AppColors.recordButtonColor,
+            labelColor: AppColors.black,
+            fontFamily: "Montserrat",
+            filled: true,
+            iconPaddingLeft: 5,
+            insets: 7,
+          )
       ],
     );
   }

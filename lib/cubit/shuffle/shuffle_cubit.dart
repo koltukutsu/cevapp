@@ -9,7 +9,7 @@ part "shuffle_state.dart";
 class ShuffleCubit extends Cubit<ShuffleState> {
   ShuffleCubit() : super(IdleState());
   var shuffledQuestion = "";
-
+  var recordedQuestions = {}; //<dates to questions>
   getText() async {
     emit(GettingText());
     final randomSeed = Random();
@@ -17,5 +17,9 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     // print(shuffledQuestion);
     emit(const GotText());
     // print(state.number);
+  }
+
+  getRecordText() async {
+
   }
 }
