@@ -68,7 +68,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
                   ...List.generate(
                     state.recordPathsAsFileList.length,
                     (index) => RecordRow(
-                      index: index.toString(),
+                        index: index.toString(),
                         path: state.recordPathsAsFileList[index],
                         question: "say something"),
                   )
@@ -76,15 +76,25 @@ class _RecordsScreenState extends State<RecordsScreen> {
                   Padding(
                     padding: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height * 0.2),
-                    child: const Align(
-                      alignment: Alignment.bottomCenter,
-                      child: CustomText(
-                        text: "no records yet",
-                        textColor: AppColors.white,
-                        fontFamily: "Montserrat",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 82,
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        CustomText(
+                          text: "no",
+                          textColor: AppColors.white,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 82,
+                        ),
+                        CustomText(
+                          text: "record",
+                          textColor: AppColors.white,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 82,
+                        ),
+                      ],
                     ),
                   )
               ],
@@ -94,20 +104,30 @@ class _RecordsScreenState extends State<RecordsScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               // mainAxisSize: MainAxisSize.min,
-              children: const <Widget>[
-                Padding(
+              children: <Widget>[
+                const Padding(
                   padding: EdgeInsets.only(top: 28.0),
                   child: CustomColumnLinearGradientFilled(),
                 ),
-                Align(
-                  alignment: Alignment.center,
-                  child: CustomText(
-                    text: "no records yet",
-                    textColor: AppColors.white,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 82,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    CustomText(
+                      text: "no",
+                      textColor: AppColors.white,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 82,
+                    ),
+                    CustomText(
+                      text: "record",
+                      textColor: AppColors.white,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 82,
+                    ),
+                  ],
                 )
               ],
             );
