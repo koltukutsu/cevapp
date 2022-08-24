@@ -24,5 +24,6 @@ class AppRatios {
 
   static const double swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar = 0.02;
 
-  // yeni degisiklikler, to show on github
+// yeni degisiklikler, to show on github
+// yeni degisiklikler, to show on github
 }
