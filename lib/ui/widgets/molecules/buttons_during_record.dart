@@ -95,6 +95,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
                     widget.recordFunction("delete");
+                    context.read<RecordsCubit>().GetCurrentRecords();
                   })
             ],
           ),

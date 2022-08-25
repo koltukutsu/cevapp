@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/icons.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -183,6 +184,7 @@ class _RecordRowState extends State<RecordRow> {
                   audioPlayer.dispose();
                   widget.path.delete();
                   context.read<RecordsCubit>().GetCurrentRecords();
+                  context.read<ShuffleCubit>().updateDeletedQuestionsObject(timeStamp: DateTime.now());
                 },
                 fontSize: 18,
                 iconHeight: 20,

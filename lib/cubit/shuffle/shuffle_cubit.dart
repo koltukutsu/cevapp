@@ -18,46 +18,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   var recordedQuestions = []; //<dates to questions>
   var deletedQuestions = [];
   var unTouchedQuestions = [];
-
-  // Future<bool> getUserLoginData() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final bool? userLoggedIn = prefs.getBool("userLoggedIn");
-  //
-  //   if (userLoggedIn != null) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-
-  // setFirstQuestions() async {
-  //   final bool isUserLoggedInBefore = await getUserLoginData();
-  //   if (isUserLoggedInBefore) {
-  //     // I should not set the first conditions
-  //
-  //   } else {
-  //     // I should set the first conditions, need to initiate the starting states
-  //     final prefs = await SharedPreferences.getInstance();
-  //     prefs.setBool("userLoggedIn", true);
-  //     final String questionsPath =
-  //         await rootBundle.loadString("assets/data/questions.json");
-  //     final AllQuestionsRelatedObject allQuestionsRelatedObject =
-  //         await json.decode(questionsPath);
-  //
-  //     unTouchedQuestions = allQuestionsRelatedObject.untouched;
-  //     recordedQuestions = allQuestionsRelatedObject.recorded;
-  //     deletedQuestions = allQuestionsRelatedObject.deleted;
-  //
-  //     // for (var question in questionsList) {
-  //     //   final uuid = const Uuid().v1();
-  //     //   final QuestionObject questionObject =
-  //     //       QuestionObject(id: uuid, question: question);
-  //     //   unTouchedQuestions.add(questionObject);
-  //     // }
-  //
-  //   }
-  // }
+  var shuffledQuestions = [];
 
   setQuestionObjectsState() async {
     final String questionsPath =
@@ -70,35 +31,50 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   }
 
   getQuestion() async {
+    // print(unTouchedQuestions);
+
     emit(GettingText());
     final randomSeed = Random();
     final int randomValueFromTheLength =
         randomSeed.nextInt(unTouchedQuestions.length);
-    // final QuestionObject shuffled = unTouchedQuestions[0];
-    print(unTouchedQuestions.length);
 
     shuffledQuestion = QuestionObject(
         id: unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
         question:
             unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]);
+
+    updateShuffledQuestionsObject();
+    print(unTouchedQuestions.length);
     emit(const GotText());
-    // print(state.number);
   }
 
   updateUntouchedQuestionsObject({required String id}) async {
-    unTouchedQuestions.removeWhere((element) => element.id == id);
-  }
 
-  updateRecordedQuestionsObject({required DateTime timeStamp}) {
-    shuffledQuestion.timeStamp = timeStamp;
+    unTouchedQuestions.removeWhere((element) => element["id"] == id);
+    if (unTouchedQuestions.isEmpty){
+      unTouchedQuestions.add({"id": DateTime.now().toString(), "question": "We ran out of questions :DD"});
+    }
+  }
+  updateShuffledQuestionsObject() async {
     updateUntouchedQuestionsObject(id: shuffledQuestion.id);
+    shuffledQuestion.timeStamp = DateTime.now();
+    shuffledQuestions.add(shuffledQuestion);
+
+  }
+  updateRecordedQuestionsObject({required DateTime timeStamp}) async {
+    shuffledQuestion.timeStamp = timeStamp;
+    // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
     recordedQuestions.add(shuffledQuestion);
+    print(unTouchedQuestions.length);
+    print(recordedQuestions.length);
   }
 
   updateDeletedQuestionsObject({required DateTime timeStamp}) async {
     shuffledQuestion.timeStamp = timeStamp;
-    updateUntouchedQuestionsObject(id: shuffledQuestion.id);
+    // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
     deletedQuestions.add(shuffledQuestion);
+    print(unTouchedQuestions.length);
+    print(deletedQuestions.length);
   }
 
   updateAllQuestionsRelatedObjectsWithJson() async {}

@@ -144,7 +144,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         //   formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
         // });
 
-        path = formattedDate;
+        path = context.read<ShuffleCubit>().shuffledQuestion.id;
         // record start & create file
         recorder.startRecorder(toFile: "$path.aac", codec: Codec.aacMP4);
         setState(() {
@@ -154,6 +154,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // stop succesfully
       else if (mode == "finish" && recorder.isRecording) {
         final pathFinished = await recorder.stopRecorder();
+        context.read<ShuffleCubit>().updateRecordedQuestionsObject(timeStamp: DateTime.now());
         stateOfRecorder = 0;
         print("it's finished");
         final audioFile = File(pathFinished!);
@@ -162,13 +163,6 @@ class _MainScreenBodyState extends State<MainScreenBody> {
             .split("/")
             .sublist(0, pathFinished.split("/").length - 1)
             .join("/"));
-        // final dir = Directory(pathFinished
-        //     .split("/")
-        //     .sublist(0, pathFinished.split("/").length - 1)
-        //     .join("/"));
-        // final List<FileSystemEntity> entities = await dir.list().toList();
-        // print(entities);
-        // recorder.closeRecorder();
       }
       // pause
       else if (mode == "pause" && recorder.isRecording) {
