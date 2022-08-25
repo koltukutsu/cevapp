@@ -33,7 +33,9 @@ class _ButtonsSectionState extends State<ButtonsSection> {
           label: "shuffle",
           postFixIconAsImagePath: AppPaths.shuffleIconPath,
           onPressed: () {
-            context.read<ShuffleCubit>().getText();
+            // context.read<ShuffleCubit>().getText();
+            context.read<ShuffleCubit>().getQuestion();
+            // context.read<ShuffleCubit>
             setState(() {
               isShuffleButtonClicked = true;
             });

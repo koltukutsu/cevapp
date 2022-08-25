@@ -139,9 +139,11 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         final DateTime nowCurrentDate = DateTime.parse(now.toString());
         final String formattedDate =
             nowCurrentDate.toString(); // TODO: can be changed
-        context.read<ShuffleCubit>().recordedQuestions.addAll({
-          formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
-        });
+
+        // context.read<ShuffleCubit>().recordedQuestions.addAll({
+        //   formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
+        // });
+
         path = formattedDate;
         // record start & create file
         recorder.startRecorder(toFile: "$path.aac", codec: Codec.aacMP4);

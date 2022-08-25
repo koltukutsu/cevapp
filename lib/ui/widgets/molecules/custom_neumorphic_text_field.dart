@@ -50,7 +50,7 @@ class CustomNeumorphicTextField extends StatelessWidget {
                     );
                   } else if (state is GotText || true) {
                     return CustomText(
-                      text: context.read<ShuffleCubit>().shuffledQuestion,
+                      text: context.read<ShuffleCubit>().shuffledQuestion.question,
                       fontFamily: "Roboto",
                       fontWeight: FontWeight.normal,
                       fontSize: 20,

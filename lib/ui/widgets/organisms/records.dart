@@ -65,16 +65,21 @@ class _RecordsScreenState extends State<RecordsScreen> {
                         index: index.toString(),
                         path: state.recordPathsAsFileList[index],
                         question: context
-                            .read<ShuffleCubit>()
-                            .recordedQuestions[state
-                                .recordPathsAsFileList[index].path
-                                .split("/")[state
-                                        .recordPathsAsFileList[index].path
-                                        .split("/")
-                                        .length -
-                                    1]
-                                .split(".aac")[0]]!
-                            .toString()),
+                                .read<ShuffleCubit>()
+                                .recordedQuestions
+                                .isNotEmpty
+                            ? context
+                                .read<ShuffleCubit>()
+                                .recordedQuestions[state
+                                    .recordPathsAsFileList[index].path
+                                    .split("/")[state
+                                            .recordPathsAsFileList[index].path
+                                            .split("/")
+                                            .length -
+                                        1]
+                                    .split(".aac")[0]]!
+                                .toString()
+                            : "Delete this :D"),
                   )
                 else
                   Padding(

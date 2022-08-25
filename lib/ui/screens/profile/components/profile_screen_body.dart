@@ -34,7 +34,7 @@ class ProfileScreenBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CustomGeneralUseNeumorphicTextField(
-                  text: "First",
+                  text: "STERN LOOKING OWL",
                   useImage: AppPaths.sternLookingOwl,
                   neumorphicBoxShape:
                       NeumorphicBoxShape.roundRect(BorderRadius.circular(50)),

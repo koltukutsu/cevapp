@@ -48,6 +48,8 @@ dependencies:
   audioplayers: ^1.0.1
   sliding_up_panel: ^2.0.0+1
   intl: ^0.17.0
+  shared_preferences: ^2.0.15
+  uuid: ^3.0.6
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +82,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/github_images/
+    - assets/data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
