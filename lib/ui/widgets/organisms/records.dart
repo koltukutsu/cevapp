@@ -5,6 +5,7 @@ import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_column_linear_gradient_filled.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/molecules/record_row.dart';
+import 'package:cevapp/ui/widgets/molecules/record_row_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,9 +28,9 @@ class _RecordsScreenState extends State<RecordsScreen> {
     return Container(
       // margin: const EdgeInsets.only(right: 2, left: 2),
       decoration: const BoxDecoration(
-          color: AppColors.swipeDockColor,
+          // color: AppColors.swipeDockColor,
           gradient: LinearGradient(
-            begin: Alignment.bottomLeft,
+            begin: Alignment.topLeft,
             end: Alignment.topRight,
             colors: <Color>[
               AppColors.leftSwipeDockColor,
@@ -54,8 +55,8 @@ class _RecordsScreenState extends State<RecordsScreen> {
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height *
-                      AppRatios
-                          .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar,
+                      (AppRatios
+                          .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar),
                 ),
                 if (state.recordPathsAsFileList.isNotEmpty)
                   ...List.generate(

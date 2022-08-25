@@ -22,7 +22,7 @@ class AppRatios {
 
   static const double swipeDockMiddleTextPosition = 0.13;
 
-  static const double swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar = 0.02;
+  static const double swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar = 0.045;
 
 // yeni degisiklikler, to show on github
 // yeni degisiklikler, to show on github

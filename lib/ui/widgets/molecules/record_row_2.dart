@@ -136,7 +136,7 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
           ),
           Column(
             children: [
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   isPlaying

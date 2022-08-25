@@ -188,3 +188,21 @@ class _MainScreenBodyState extends State<MainScreenBody> {
     }
   }
 }
+
+
+_showDialogSuccess(BuildContext context, Color color, String text) {
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Container(
+          child: Row(
+            children: [
+              Icon(
+                Icons.verified,
+                color: color,
+              ),
+              SizedBox(
+                width: 25,
+              ),
+              Text(text),
+            ],
+          ))));
+}
