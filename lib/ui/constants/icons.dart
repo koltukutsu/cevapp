@@ -13,4 +13,6 @@ class AppPaths {
 
   static const String deleteButton = "assets/images/delete.png";
   static const String playButton = "assets/images/play.png";
+
+  static const String sternLookingOwl = "assets/images/stern-looking-owl.jpeg";
 }
