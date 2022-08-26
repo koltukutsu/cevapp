@@ -105,3 +105,19 @@ flutter_icons:
   android: "cevapp"
   ios: true
   image_path: "assets/icons/logo.png"
+
+flutter_native_splash:
+  color: "#48B0B9"
+  image: assets/images/cevapp_splash.png
+  branding: assets/icons/logo.png
+  color_dark: "#48B0B9"
+  image_dark: assets/images/cevapp_splash.png
+  branding_dark: assets/icons/logo.png
+
+  android_12:
+    image: assets/images/cevapp_splash.png
+    icon_background_color: "#48B0B9"
+    image_dark: assets/images/cevapp_splash.png
+    icon_background_color_dark: "#48B0B9"
+
+  web: false
