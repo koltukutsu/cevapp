@@ -65,7 +65,7 @@ class _RecordRowState extends State<RecordRow> {
   Future<void> setAudio() async {
     // repeat the song when completed
     audioPlayer.setReleaseMode(ReleaseMode.loop);
-
+    debugPrint("what is this: ${widget.path}");
     audioPlayer.setSourceDeviceFile(widget.path.path);
     // audioPlayer.setSourceAsset(widget.path.path);
     // audioPlayer.setSource(widget.path.path);
@@ -150,8 +150,8 @@ class _RecordRowState extends State<RecordRow> {
               // CustomText(text: position.toString()),
               // CustomText(text: (duration - position).toString()),
               CustomButtonAnimated(
-                label: "play",
-                postFixIconAsImagePath: AppPaths.playButton,
+                label: !isPlaying ?"play": "stop",
+                postFixIconAsImagePath: !isPlaying?AppPaths.playButton:AppPaths.pauseIconPath,
                 onPressed: () async {
                   if (isPlaying) {
                     audioPlayer.stop();
@@ -167,7 +167,7 @@ class _RecordRowState extends State<RecordRow> {
                 height: MediaQuery.of(context).size.height *
                     AppRatios.playButtonHeightRatio,
                 buttonColor: AppColors.playButtonColor,
-                labelColor: AppColors.playButtonLabelColor,
+                labelColor: !isPlaying?AppColors.playButtonLabelColor:AppColors.pauseColor,
                 // fontFamily: "Montserrat",
                 filled: true,
                 iconPaddingLeft: 5,

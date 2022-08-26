@@ -178,7 +178,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     // print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);
     // print(allQuestionsRelatedObjectsInOneObjectForUpdate["recorded"]);
     // print(allQuestionsRelatedObjectsInOneObjectForUpdate["deleted"]);
-    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["shuffled"]);
+    print(allQuestionsRelatedObjectsInOneObjectForUpdate["shuffled"]);
 
     final String allJsonString =
         json.encode(allQuestionsRelatedObjectsInOneObjectForUpdate);

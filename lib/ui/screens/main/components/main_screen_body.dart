@@ -124,7 +124,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   }
 
   // sound related functions
-  Future<void> onSoundProcesses(String mode) async {
+  Future<void> onSoundProcesses(String mode,
+      {bool preventAddToShuffledQuestions = false}) async {
     PermissionStatus status = await Permission.microphone.request();
 
     if (status == PermissionStatus.granted) {
@@ -140,12 +141,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         final String formattedDate =
             nowCurrentDate.toString(); // TODO: can be changed
 
-        // context.read<ShuffleCubit>().recordedQuestions.addAll({
-        //   formattedDate: await context.read<ShuffleCubit>().shuffledQuestion
-        // });
-
         path = context.read<ShuffleCubit>().shuffledQuestion.id;
-        // record start & create file
+
         recorder.startRecorder(toFile: "$path.aac", codec: Codec.aacMP4);
         setState(() {
           recorder;
@@ -154,7 +151,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // stop succesfully
       else if (mode == "finish" && recorder.isRecording) {
         final pathFinished = await recorder.stopRecorder();
-        context.read<ShuffleCubit>().updateRecordedQuestionsObject(timeStamp: DateTime.now());
+        context
+            .read<ShuffleCubit>()
+            .updateRecordedQuestionsObject(timeStamp: DateTime.now());
         stateOfRecorder = 0;
         print("it's finished");
         final audioFile = File(pathFinished!);
@@ -185,20 +184,19 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   }
 }
 
-
 _showDialogSuccess(BuildContext context, Color color, String text) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Container(
           child: Row(
-            children: [
-              Icon(
-                Icons.verified,
-                color: color,
-              ),
-              SizedBox(
-                width: 25,
-              ),
-              Text(text),
-            ],
-          ))));
+    children: [
+      Icon(
+        Icons.verified,
+        color: color,
+      ),
+      SizedBox(
+        width: 25,
+      ),
+      Text(text),
+    ],
+  ))));
 }
