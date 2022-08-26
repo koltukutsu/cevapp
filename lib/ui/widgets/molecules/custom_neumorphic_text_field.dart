@@ -38,7 +38,7 @@ class CustomNeumorphicTextField extends StatelessWidget {
                       fontMaxLines: 5,
                       italicEnable: true,
                     );
-                  } else if (state is GettingText) {
+                  } else if (state is GettingQuestion) {
                     return const CustomText(
                       text: "C'mon, Let's shuffle!",
                       fontFamily: "Roboto",
@@ -48,7 +48,7 @@ class CustomNeumorphicTextField extends StatelessWidget {
                       fontMaxLines: 5,
                       italicEnable: true,
                     );
-                  } else if (state is GotText || true) {
+                  } else if (state is GotQuestion || true) { // TODO: control this condition
                     return CustomText(
                       text: context.read<ShuffleCubit>().shuffledQuestion.question,
                       fontFamily: "Roboto",

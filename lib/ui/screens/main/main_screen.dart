@@ -15,12 +15,9 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    initiateQuestionsStates();
+    context.read<ShuffleCubit>().setQuestionObjectsState();
   }
 
-  Future<void> initiateQuestionsStates() async {
-    await context.read<ShuffleCubit>().setQuestionObjectsState();
-  }
 
   @override
   Widget build(BuildContext context) {

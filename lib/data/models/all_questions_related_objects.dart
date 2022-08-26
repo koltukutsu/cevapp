@@ -1,8 +1,11 @@
 import 'package:cevapp/data/models/questionObject.dart';
 
 class AllQuestionsRelatedObject {
-  final List<QuestionObject> untouched, recorded, deleted;
+  final List<dynamic> untouched, recorded, deleted, shuffled;
 
   const AllQuestionsRelatedObject(
-      {required this.untouched, required this.recorded, required this.deleted});
+      {required this.untouched,
+      required this.recorded,
+      required this.deleted,
+      required this.shuffled});
 }

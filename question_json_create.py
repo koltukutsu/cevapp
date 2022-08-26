@@ -5,7 +5,8 @@ from questions import questionsList
 questionsObject = {
         "untouched": [],
         "shuffled": [],
-        "deleted": []
+        "deleted": [],
+        "recorded": []
         }
 
 for item in questionsList:
