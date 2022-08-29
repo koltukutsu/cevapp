@@ -7,11 +7,12 @@ part "avatar_state.dart";
 
 class AvatarCubit extends Cubit<AvatarState> {
   AvatarCubit() : super(IdleState());
-  var avatarType = "";
+  var avatarType = "unchosen";
 
   getUserCondition() async {
     final prefs = await SharedPreferences.getInstance();
     final didUserChoseAnAvatar = prefs.getBool('didUserChoseAnAvatar');
+    print("did chose an avatar: ${didUserChoseAnAvatar}");
     print('inside');
     if (didUserChoseAnAvatar == null) {
       print('inside1');
@@ -27,5 +28,14 @@ class AvatarCubit extends Cubit<AvatarState> {
   getUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString("avatarType", type);
+    avatarType = type;
+    print(avatarType);
+    // emit(GotAvatars());
+  }
+
+  setUserAvatar()async{
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool("didUserChoseAnAvatar", true);
+    emit(GotAvatars());
   }
 }

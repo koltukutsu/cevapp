@@ -16,118 +16,126 @@ class AvatarScreenBody extends StatefulWidget {
 }
 
 class _AvatarScreenBodyState extends State<AvatarScreenBody> {
-  var type = null;
-
-  // context.read<AvatarCubit>().getUserAvatar();
-
-  void giveTypeItsType(String type) {
-    print(type);
-    setState(() {
-      type = type;
+  void onChange(){
+    setState((){
+      context.read<AvatarCubit>().avatarType;
     });
-    print(type);
   }
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      color: AppColors.mainBackgroundColor,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Align(
-              alignment: Alignment(0.0, -0.8),
-              child: CustomText(
-                  text: "Choose Your Avatar",
-                  italicEnable: false,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 45)),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AvatarButton(
+    return BlocBuilder<AvatarCubit, AvatarState>(builder: (context, state) {
+      return Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        color: AppColors.mainBackgroundColor,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            const Align(
+                alignment: Alignment(0.0, -0.8),
+                child: CustomText(
+                    text: "Choose Your Avatar",
+                    italicEnable: false,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 45)),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AvatarButton(
+                      triggerFunction: onChange,
                       imagePath: AppPaths.noviceLION,
                       type: "LION",
-                      giveTypeItsType: giveTypeItsType),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.05,
-                  ),
-                  AvatarButton(
-                    imagePath: AppPaths.noviceELEPHANT,
-                    type: "ELEPHANT",
-                    giveTypeItsType: giveTypeItsType,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AvatarButton(
+                      // giveTypeItsType: giveTypeItsType,
+
+                      pressed: context.read<AvatarCubit>().avatarType == "LION",
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.05,
+                    ),
+                    AvatarButton(
+                      triggerFunction: onChange,
+                      imagePath: AppPaths.noviceELEPHANT,
+                      type: "ELEPHANT",
+                      // giveTypeItsType: giveTypeItsType,
+                      pressed:
+                          context.read<AvatarCubit>().avatarType == "ELEPHANT",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AvatarButton(
+                      triggerFunction: onChange,
                       imagePath: AppPaths.noviceOWL,
                       type: "OWL",
-                      giveTypeItsType: giveTypeItsType),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.05,
-                  ),
-                  AvatarButton(
+                      // giveTypeItsType: giveTypeItsType,
+                      pressed: context.read<AvatarCubit>().avatarType == "OWL",
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.05,
+                    ),
+                    AvatarButton(
+                      triggerFunction: onChange,
                       imagePath: AppPaths.noviceBIRD,
                       type: "BIRD",
-                      giveTypeItsType: giveTypeItsType),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AvatarButton(
-                    imagePath: AppPaths.expertDRAGON,
-                    type: "DRAGON",
-                    giveTypeItsType: giveTypeItsType,
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Align(
-            alignment: const Alignment(0.9, 0.95),
-            child: NeumorphicButton(
-              style: type == null
-                  ? NeumorphicStyle(
-                      color: Colors.grey,
-                      border: NeumorphicBorder(isEnabled: type != null))
-                  : NeumorphicStyle(
-                  color: AppColors.white,
-                  border: NeumorphicBorder(isEnabled: type != null)),
-              onPressed: type == null
-                  ? () {
-                      if (type == null) {
-                        print("no right to go");
-                      } else {
-                        print("gooo!!!");
-                      }
-                    }
-                  : null,
-              child: const CustomText(
-                  text: "Skip",
-                  textColor: AppColors.black,
-                  fontWeight: FontWeight.bold),
+                      // giveTypeItsType: giveTypeItsType,
+                      pressed: context.read<AvatarCubit>().avatarType == "BIRD",
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AvatarButton(
+                      triggerFunction: onChange,
+                      imagePath: AppPaths.expertDRAGON,
+                      type: "DRAGON",
+                      // giveTypeItsType: giveTypeItsType,
+                      pressed:
+                          context.read<AvatarCubit>().avatarType == "DRAGON",
+                    ),
+                  ],
+                ),
+              ],
             ),
-          )
-        ],
-      ),
-    );
+            Align(
+              alignment: const Alignment(0.9, 0.95),
+              child: context.read<AvatarCubit> == "unchosen"
+                  ? CustomText(
+                      text: "Skip",
+                      textColor: Colors.grey.shade200,
+                      fontWeight: FontWeight.bold)
+                  : NeumorphicButton(
+                      onPressed: () {
+                        if (context.read<AvatarCubit> == "unchosen") {
+                          print("no right to go");
+                        } else {
+                          print("gooo!!!");
+                          context.read<AvatarCubit>().setUserAvatar();
+                        }
+                      },
+                      child: const CustomText(
+                          text: "Skip",
+                          textColor: AppColors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+            )
+          ],
+        ),
+      );
+    });
   }
 }
