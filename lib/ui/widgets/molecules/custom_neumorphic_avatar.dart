@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CustomNeumorphicAvatar extends StatelessWidget {
-  final String text;
+  final String? text;
   final Color textColor;
   final double widthRatio;
   final double heightRatio;
@@ -21,7 +21,7 @@ class CustomNeumorphicAvatar extends StatelessWidget {
   // final bool isPaddingGiven;
   const CustomNeumorphicAvatar({
     Key? key,
-    required this.text,
+    this.text = " ",
     this.textColor = AppColors.secondaryTextColor,
     this.widthRatio = AppRatios.questionFieldWidthRatio,
     this.heightRatio = AppRatios.questionFieldHeightRatio,
@@ -47,20 +47,10 @@ class CustomNeumorphicAvatar extends StatelessWidget {
           height: MediaQuery.of(context).size.height * heightRatio,
           width: MediaQuery.of(context).size.width * widthRatio,
           child: Center(
-            child: useImage != " "
-                ? Image(
+            child: Image(
               fit: BoxFit.fill,
               image: AssetImage(useImage),
             )
-                : CustomText(
-              text: text,
-              fontFamily: fontFamily,
-              fontWeight: FontWeight.normal,
-              fontSize: fontSize,
-              textColor: textColor,
-              fontMaxLines: 5,
-              italicEnable: italicEnable,
-            ),
           )),
     );
   }

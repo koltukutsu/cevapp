@@ -87,6 +87,12 @@ flutter:
     - assets/github_images/
     - assets/data/
     - assets/profile_images/
+    - assets/profile_images/BIRD/
+    - assets/profile_images/DOLPHIN/
+    - assets/profile_images/DRAGON/
+    - assets/profile_images/ELEPHANT/
+    - assets/profile_images/LION/
+    - assets/profile_images/OWL/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
