@@ -2,10 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:cevapp/cubit/shuffle/shuffle_questions.dart';
-import 'package:cevapp/data/models/all_questions_related_objects.dart';
-import 'package:cevapp/data/models/questionObject.dart';
-import 'package:cevapp/data/models/question_object_type_enumeration.dart';
+import 'package:cevapp/models/questionObject.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

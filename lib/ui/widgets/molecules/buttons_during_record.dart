@@ -1,5 +1,5 @@
 import 'package:cevapp/cubit/records/record_cubit.dart';
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:flutter/material.dart';

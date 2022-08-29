@@ -1,4 +1,3 @@
-import 'package:cevapp/data/models/questionObject.dart';
 
 class AllQuestionsRelatedObject {
   final List<dynamic> untouched, recorded, deleted, shuffled;

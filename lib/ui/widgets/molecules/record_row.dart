@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
@@ -120,15 +120,18 @@ class _RecordRowState extends State<RecordRow> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
-                  child: CustomText(
-                      text: widget.question.length > 23
-                          ? "${widget.question.substring(0, 23)}..."
-                          : widget.question,
-                      textColor: AppColors.white,
-                      fontSize: 16,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.normal,
-                      italicEnable: false),
+                  child: Container(
+                    color: AppColors.questionTextBackgroundColor,
+                    child: CustomText(
+                        text: widget.question.length > 20
+                            ? "${widget.question.substring(0, 23)}..."
+                            : widget.question,
+                        textColor: AppColors.white,
+                        fontSize: 16,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.normal,
+                        italicEnable: false),
+                  ),
                 ),
               ),
             ],

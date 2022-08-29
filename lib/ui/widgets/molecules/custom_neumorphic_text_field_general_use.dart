@@ -1,4 +1,4 @@
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
@@ -17,6 +17,9 @@ class CustomGeneralUseNeumorphicTextField extends StatelessWidget {
   final NeumorphicShape neumorphicShape;
   final NeumorphicBoxShape neumorphicBoxShape;
   final String useImage;
+  final FontWeight fontWeight;
+  final double leftPadding;
+  final double bottomPadding;
 
   const CustomGeneralUseNeumorphicTextField({
     Key? key,
@@ -31,6 +34,9 @@ class CustomGeneralUseNeumorphicTextField extends StatelessWidget {
     this.neumorphicShape = NeumorphicShape.concave,
     required this.neumorphicBoxShape,
     this.useImage = " ",
+    this.fontWeight = FontWeight.normal,
+    this.leftPadding = 23,
+    this.bottomPadding = 15,
   }) : super(key: key);
 
   @override
@@ -47,7 +53,8 @@ class CustomGeneralUseNeumorphicTextField extends StatelessWidget {
           width: MediaQuery.of(context).size.width * widthRatio,
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.only(left: 23.0, right: 10, bottom: 15),
+              padding:
+                  EdgeInsets.only(left: leftPadding, right: 10, bottom: bottomPadding),
               child: useImage != " "
                   ? Image(
                       image: AssetImage(useImage),
@@ -55,7 +62,7 @@ class CustomGeneralUseNeumorphicTextField extends StatelessWidget {
                   : CustomText(
                       text: text,
                       fontFamily: fontFamily,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: fontWeight,
                       fontSize: fontSize,
                       textColor: textColor,
                       fontMaxLines: 5,

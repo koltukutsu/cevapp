@@ -1,5 +1,5 @@
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';

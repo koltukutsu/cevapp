@@ -3,6 +3,7 @@ import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/screens/login/login_screen.dart';
 import 'package:cevapp/ui/screens/main/main_screen.dart';
 import 'package:cevapp/ui/screens/profile/profile_screen.dart';
+import 'package:cevapp/ui/snimated_splash_screen/cevapp_animted_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -53,12 +54,13 @@ class MainApp extends StatelessWidget {
         // theme: darkTheme,
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        initialRoute: ROUTE_MAIN,
+        initialRoute: ROUTE_ANIMATED_SPLASH_SCREEN,
 
         routes: {
           ROUTE_LOGIN: (context) => const LoginScreen(),
           ROUTE_MAIN: (context) => const MainScreen(),
-          ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen()
+          ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen(),
+          ROUTE_ANIMATED_SPLASH_SCREEN: (context) => const CevappAnimatedSplashScreen(),
           // ROUTE_MAIN: (context) => const SecondScreen(),
         },
       ),

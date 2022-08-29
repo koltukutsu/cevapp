@@ -73,4 +73,5 @@ class AppColors {
   static const Color focusedBorderColor = Color(0xFF171930);
 
   static const Color pauseColor = Color(0xFFffb242);
+  static Color questionTextBackgroundColor = Colors.grey.shade100;
 }
