@@ -1,12 +1,10 @@
 import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
-import 'package:cevapp/ui/screens/avatar/components/avatar_screen_body.dart';
 import 'package:cevapp/ui/screens/login/login_screen.dart';
 import 'package:cevapp/ui/screens/main/main_screen.dart';
 import 'package:cevapp/ui/screens/market/market_screen.dart';
 import 'package:cevapp/ui/screens/profile/profile_screen.dart';
-import 'package:cevapp/ui/screens/take_user_name/take_user_name_screen.dart';
 import 'package:cevapp/ui/snimated_splash_screen/cevapp_animted_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,17 +26,15 @@ class MainApp extends StatelessWidget {
         // theme: darkTheme,
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        initialRoute: ROUTE_TAKE_USER_NAME_SCREEN,
+        initialRoute: ROUTE_ANIMATED_SPLASH_SCREEN,
 
         routes: {
-          ROUTE_CHOOSE_AVATAR: (context) => const AvatarScreenBody(),
           ROUTE_MARKET: (context) => const MarketScreen(),
           ROUTE_LOGIN: (context) => const LoginScreen(),
           ROUTE_MAIN: (context) => const MainScreen(),
           ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen(),
           ROUTE_ANIMATED_SPLASH_SCREEN: (context) =>
               const CevappAnimatedSplashScreen(),
-          ROUTE_TAKE_USER_NAME_SCREEN: (context) => const TakeUserNameScreen(),
           // ROUTE_MAIN: (context) => const SecondScreen(),
         },
       ),

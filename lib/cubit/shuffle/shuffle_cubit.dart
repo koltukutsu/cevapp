@@ -172,11 +172,16 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       "deleted": deletedQuestions,
       "shuffled": shuffledQuestions.map((question) => question.toMap()).toList()
     };
-    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);
-    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["recorded"]);
-    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["deleted"]);
+    print("\nUNTOUCHED");
+    print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);
+    print("\nRECORDED");
+    print(allQuestionsRelatedObjectsInOneObjectForUpdate["recorded"]);
+    print("\nDELETED");
+    print(allQuestionsRelatedObjectsInOneObjectForUpdate["deleted"]);
+    print("\nSHUFFLED");
     print(allQuestionsRelatedObjectsInOneObjectForUpdate["shuffled"]);
-
+    print("\nALL");
+    print(allQuestionsRelatedObjectsInOneObjectForUpdate);
     final String allJsonString =
         json.encode(allQuestionsRelatedObjectsInOneObjectForUpdate);
 

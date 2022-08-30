@@ -1,3 +1,4 @@
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/screens/main/components/main_screen_stack.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class _MainScreenState extends State<MainScreen> {
     // TODO: implement initState
     super.initState();
     context.read<ShuffleCubit>().setQuestionObjectsState();
+    context.read<RecordsCubit>().GetCurrentRecords();
   }
 
 

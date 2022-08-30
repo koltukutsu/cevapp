@@ -58,9 +58,8 @@ class _RecordsScreenState extends State<RecordsScreen> {
                       (AppRatios
                           .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar),
                 ),
-                if (state.recordPathsAsFileList.isNotEmpty && context
-                    .read<ShuffleCubit>()
-                    .recordedQuestions.isNotEmpty)
+                if (state.recordPathsAsFileList.isNotEmpty &&
+                    context.read<ShuffleCubit>().recordedQuestions.isNotEmpty)
                   ...List.generate(
                     state.recordPathsAsFileList.length,
                     (index) => RecordRow(
@@ -68,7 +67,8 @@ class _RecordsScreenState extends State<RecordsScreen> {
                         path: state.recordPathsAsFileList[index],
                         question: context
                             .read<ShuffleCubit>()
-                            .recordedQuestions[index].question
+                            .recordedQuestions[index]
+                            .question
                             .toString()),
                   )
                 else

@@ -7,7 +7,9 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 class AvatarButton extends StatelessWidget {
   final String imagePath;
   final String type;
-  final VoidCallback triggerFunction;
+  final Function(String type) triggerFunction;
+  final double heightRatio;
+  final double widthRatio;
   // final double depth;
   final bool pressed;
   // final Function(String type) giveTypeItsType;
@@ -18,7 +20,9 @@ class AvatarButton extends StatelessWidget {
       required this.imagePath,
       required this.type,
       // required this.giveTypeItsType,
-      this.pressed = false})
+      this.pressed = true,
+      this.widthRatio = 0.35,
+      this.heightRatio = 0.35})
       : super(key: key);
 
   void chosenAvatarType(BuildContext context, {required String type}) {
@@ -29,22 +33,26 @@ class AvatarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return NeumorphicButton(
       onPressed: () {
-        if (context.read<AvatarCubit>().avatarType == type){
-          context.read<AvatarCubit>().getUserAvatar(type: "unchosen");
+        if (pressed){
+          // context.read<AvatarCubit>().getUserAvatar(type: "unchosen");
+          triggerFunction("unchosen");
         } else {
-          context.read<AvatarCubit>().getUserAvatar(type: type);
+          triggerFunction(type);
+          // context.read<AvatarCubit>().getUserAvatar(type: type);
 
         }
         // chosenAvatarType(context, type: type);
         // giveTypeItsType(type);
-        triggerFunction();
       },
+      margin: EdgeInsets.all(0),
+
       style: NeumorphicStyle(
-          depth: pressed ? -15 : 5, color: pressed ? AppColors.black : null),
+
+          depth: pressed ? -15 : 5, color: pressed ? AppColors.mainBackgroundColor : null),
       child: Image(
         image: AssetImage(imagePath),
-        height: 108,
-        width: 108,
+        height: MediaQuery.of(context).size.width * widthRatio,
+        // width: 128,
       ),
     );
   }

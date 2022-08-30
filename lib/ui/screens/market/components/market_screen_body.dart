@@ -31,7 +31,7 @@ class MarketScreenBody extends StatelessWidget {
                             // Navigator.of(context).pushNamed(ROUTE_MARKET);
                           }),
                       CustomNeumorphicButton(
-                          imagePath: AppPaths.homePath,
+                          imagePath: AppPaths.profilePath,
                           width: 41,
                           height: 41,
                           function: () {

@@ -6,60 +6,72 @@ part "avatar_state.dart";
 
 class AvatarCubit extends Cubit<AvatarState> {
   AvatarCubit() : super(IdleState());
-  var avatarType = "unchosen";
+  var avatarType = "first";
   var avatarName = "";
   var avatarSurname = "";
   var avatarMoney = 0;
   var avatarProperties = {};
+
   // so there are 4 states, I know i made it a bit complicated
-  // 1. noAvatars that triggers the initiation section
-  // 2. noName
-  // 3. gotName -> which passes to the avatar choosing screen
+  // 1. noName that triggers the initiation section
+  // 2. GOtName -> which passes to the avatar choosing screen
+  // 3. noAvatars
   // 4. gotAvatars
+
   getUserCondition() async {
     final prefs = await SharedPreferences.getInstance();
     final didUserChoseAnAvatar = prefs.getBool('didUserChoseAnAvatar');
 
     if (didUserChoseAnAvatar == null) {
-      emit(NoAvatars());
-
+      emit(NoUserName());
     } else if (didUserChoseAnAvatar == true) {
       final String? _avatarType = prefs.getString("avatarType");
+      final String? _avatarName = prefs.getString("userName");
+      final String? _avatarUsername = prefs.getString("userSurname");
       final int? _avatarMoney = prefs.getInt("avatarMoney");
 
       avatarType = _avatarType!;
+      avatarName = _avatarName!;
+      avatarSurname = _avatarUsername!;
       avatarMoney = _avatarMoney!;
-
-
 
       emit(GotAvatars());
     }
   }
 
+  setUserNames({required String userName, required String userSurname}) async {
+    print("set the USER NAMES");
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("userName", userName);
+    await prefs.setString("userSurname", userSurname);
+
+    emit(NoAvatars());
+  }
+
+  // I am using this for the avatar button in avatar screen
   getUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
-    await prefs.setInt("avatarMoney", 0);
+
     avatarType = type;
     print(avatarType);
 
     // emit(GotAvatars());
   }
 
-  setUserAvatar() async {
+  setUserAvatar({required String avatarType}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool("didUserChoseAnAvatar", true);
+    // final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("avatarType", avatarType);
+
+    avatarType = avatarType;
+    await prefs.setInt("avatarMoney", 0);
+
     emit(GotAvatars());
   }
 
   increaseMoney({required String}) async {}
 
   decreaseMoney({required String}) async {}
-
-  setUserNames({required String userName, required String userSurname}) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString("userName", userName);
-    await prefs.setString("userSurname", userSurname);
-  }
-
 }

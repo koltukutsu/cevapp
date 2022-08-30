@@ -24,7 +24,7 @@ class ProfileScreenBody extends StatefulWidget {
 class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   String userAvatarImagePath = AppPaths.sternLookingOwl;
   String userRank = "Novice";
-  final TextEditingController nameC = TextEditingController();
+  // final TextEditingController nameC = TextEditingController();
 
   @override
   void initState() {
@@ -278,6 +278,9 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
     final int userRecordedQuestions =
         context.read<ShuffleCubit>().recordedQuestions.length;
     final String userAvatarChoice = context.read<AvatarCubit>().avatarType;
+    print("set user avatar and rank");
+    print(userAvatarChoice);
+    print(userRecordedQuestions);
 
     if (userRecordedQuestions >= userRankLevels.unimagined) {
       setState(() {
@@ -316,6 +319,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
         userRank = userRanksObject["beginner$userAvatarChoice"]!.rank;
       });
     } else if (userRecordedQuestions >= userRankLevels.novice) {
+      print("state control");
+      print("novice$userAvatarChoice");
       setState(() {
         userAvatarImagePath =
             userRanksObject["novice$userAvatarChoice"]!.avatarPath;

@@ -14,9 +14,11 @@ class AvatarScreenBody extends StatefulWidget {
 }
 
 class _AvatarScreenBodyState extends State<AvatarScreenBody> {
-  void onChange() {
+  var avatarType = "";
+
+  void onChange(String type) {
     setState(() {
-      context.read<AvatarCubit>().avatarType;
+      avatarType = type;
     });
   }
 
@@ -30,17 +32,24 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
         alignment: Alignment.center,
         children: [
           const Align(
-              alignment: Alignment(0.0, -0.8),
+              alignment: Alignment(0.0, -0.88),
               child: CustomText(
-                  text: "Choose Your Avatar",
+                  text: "Set Your",
                   italicEnable: false,
                   fontWeight: FontWeight.bold,
-                  fontSize: 45)),
+                  fontSize: 60)),
+          const Align(
+              alignment: Alignment(0.0, -0.78),
+              child: CustomText(
+                  text: "Avatar",
+                  italicEnable: false,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 120)),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
+                height: MediaQuery.of(context).size.height * 0.15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +60,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     type: "LION",
                     // giveTypeItsType: giveTypeItsType,
 
-                    pressed: context.read<AvatarCubit>().avatarType == "LION",
+                    pressed: avatarType == "LION",
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.05,
@@ -61,8 +70,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     imagePath: AppPaths.noviceELEPHANT,
                     type: "ELEPHANT",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed:
-                        context.read<AvatarCubit>().avatarType == "ELEPHANT",
+                    pressed: avatarType == "ELEPHANT",
                   ),
                 ],
               ),
@@ -77,7 +85,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     imagePath: AppPaths.noviceOWL,
                     type: "OWL",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: context.read<AvatarCubit>().avatarType == "OWL",
+                    pressed: avatarType == "OWL",
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.05,
@@ -87,7 +95,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     imagePath: AppPaths.noviceBIRD,
                     type: "BIRD",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: context.read<AvatarCubit>().avatarType == "BIRD",
+                    pressed: avatarType == "BIRD",
                   ),
                 ],
               ),
@@ -102,7 +110,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     imagePath: AppPaths.expertDRAGON,
                     type: "DRAGON",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: context.read<AvatarCubit>().avatarType == "DRAGON",
+                    pressed: avatarType == "DRAGON",
                   ),
                 ],
               ),
@@ -110,7 +118,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
           ),
           Align(
             alignment: const Alignment(0.9, 0.95),
-            child: context.read<AvatarCubit>().avatarType == "unchosen"
+            child: avatarType == "unchosen"
                 ? Neumorphic(
                     style: const NeumorphicStyle(color: Colors.transparent),
                     child: SizedBox(
@@ -126,12 +134,12 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   )
                 : NeumorphicButton(
                     onPressed: () {
-                      if (context.read<AvatarCubit>().avatarType ==
+                      if (avatarType ==
                           "unchosen") {
                         print("no right to go");
                       } else {
                         print("gooo!!!");
-                        context.read<AvatarCubit>().setUserAvatar();
+                        context.read<AvatarCubit>().setUserAvatar(avatarType: avatarType);
                       }
                     },
                     child: const CustomText(

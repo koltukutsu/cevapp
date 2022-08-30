@@ -14,7 +14,8 @@ class RecordsCubit extends Cubit<RecordsState> {
     final List recordPathsAsFileList =
         await Directory(path).list().toList();
     currentLengthOfRecords = recordPathsAsFileList.length;
-    emit(GetRecords(recordPathsAsFileList: recordPathsAsFileList));
+
     print(recordPathsAsFileList);
+    emit(GetRecords(recordPathsAsFileList: recordPathsAsFileList));
   }
 }

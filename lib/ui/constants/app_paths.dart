@@ -9,7 +9,7 @@ class AppPaths {
   static const String recordIconPath = "assets/images/record.png";
 
   static const String homePath = "assets/images/home_3.png";
-  static const String userPath = "assets/images/user.png";
+  static const String profilePath = "assets/images/user.png";
 
   static const String deleteButton = "assets/images/delete.png";
   static const String playButton = "assets/images/play.png";

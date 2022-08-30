@@ -35,7 +35,6 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    context.read<RecordsCubit>().GetCurrentRecords();
     // status = Permission.microphone.request();
   }
 
@@ -63,7 +62,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           Align(
               alignment: Alignment.topRight,
               child: CustomNeumorphicButton(
-                  imagePath: AppPaths.userPath,
+                  imagePath: AppPaths.profilePath,
                   width: 41,
                   height: 41,
                   function: () {

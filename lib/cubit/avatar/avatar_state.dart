@@ -26,8 +26,8 @@ class NoUserName extends AvatarState {
   @override
   List<Object> get props => [];
 }
-
-class GotUserName extends AvatarState {
-  @override
-  List<Object> get props => [];
-}
+//
+// class GotUserName extends AvatarState {
+//   @override
+//   List<Object> get props => [];
+// }
