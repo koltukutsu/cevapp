@@ -39,7 +39,6 @@ class AvatarButton extends StatelessWidget {
         } else {
           triggerFunction(type);
           // context.read<AvatarCubit>().getUserAvatar(type: type);
-
         }
         // chosenAvatarType(context, type: type);
         // giveTypeItsType(type);

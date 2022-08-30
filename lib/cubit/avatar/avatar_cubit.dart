@@ -6,7 +6,7 @@ part "avatar_state.dart";
 
 class AvatarCubit extends Cubit<AvatarState> {
   AvatarCubit() : super(IdleState());
-  var avatarType = "first";
+  var avatarType = "unchosen";
   var avatarName = "";
   var avatarSurname = "";
   var avatarMoney = 0;
@@ -52,21 +52,25 @@ class AvatarCubit extends Cubit<AvatarState> {
   getUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
-
+    print("this is inside of the getUserAvatar: $type");
     avatarType = type;
     print(avatarType);
 
     // emit(GotAvatars());
   }
 
-  setUserAvatar({required String avatarType}) async {
+  setUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool("didUserChoseAnAvatar", true);
     // final prefs = await SharedPreferences.getInstance();
-    await prefs.setString("avatarType", avatarType);
+    await prefs.setString("avatarType", type);
 
-    avatarType = avatarType;
+    print("user's Avatar in Cubit: $avatarType");
+    print("got: $type");
+
+    avatarType = type;
     await prefs.setInt("avatarMoney", 0);
+    print("user's Avatar in Cubit: $avatarType");
 
     emit(GotAvatars());
   }

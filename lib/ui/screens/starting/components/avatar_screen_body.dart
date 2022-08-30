@@ -17,6 +17,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
   var avatarType = "";
 
   void onChange(String type) {
+    print("Taken Avatar is : $type");
     setState(() {
       avatarType = type;
     });
@@ -138,8 +139,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                           "unchosen") {
                         print("no right to go");
                       } else {
-                        print("gooo!!!");
-                        context.read<AvatarCubit>().setUserAvatar(avatarType: avatarType);
+                        print("gooo!!! $avatarType");
+                        context.read<AvatarCubit>().setUserAvatar(type: avatarType);
+                        print("getted: ${context.read<AvatarCubit>().avatarType}");
                       }
                     },
                     child: const CustomText(

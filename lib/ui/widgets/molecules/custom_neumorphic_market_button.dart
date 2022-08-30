@@ -16,7 +16,6 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
   final double rightMargin;
   final double paddingAllAsDouble;
 
-
   const CustomNeumorphicMarketButton({
     Key? key,
     required this.imagePath,
@@ -52,7 +51,15 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
               width: width,
               height: height,
             )),
-        CustomText(text: context.read<AvatarCubit>().avatarMoney.toString(), fontWeight: FontWeight.bold, italicEnable: false,  fontSize: 30,)
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: CustomText(
+            text: context.read<AvatarCubit>().avatarMoney.toString(),
+            fontWeight: FontWeight.bold,
+            italicEnable: false,
+            fontSize: 45,
+          ),
+        )
       ],
     );
   }
