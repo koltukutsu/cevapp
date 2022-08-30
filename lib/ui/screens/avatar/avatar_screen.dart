@@ -24,6 +24,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
         } else if (state is GotAvatars) {
           return const MainScreen();
         } else {
+          // context.read<AvatarCubit>().emit(NoAvatars());
           return Container(
             color: AppColors.magenta,
           );

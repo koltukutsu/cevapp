@@ -3,3 +3,5 @@ const String ROUTE_MAIN = "/main";
 const String ROUTE_PROFILE_SCREEN = "/profile_screen";
 const String ROUTE_ANIMATED_SPLASH_SCREEN = '/';
 const String ROUTE_CHOOSE_AVATAR = "/avatar";
+const String ROUTE_MARKET = "/market";
+const String ROUTE_TAKE_USER_NAME_SCREEN = '/user';

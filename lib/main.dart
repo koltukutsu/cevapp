@@ -4,32 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-// enum PageTransitionType {
-//   fade,
-//   rightToLeft,
-//   leftToRight,
-//   upToDown,
-//   downToUp,
-//   scale,
-//   rotate,
-//   size,
-//   rightToLeftWithFade,
-//   leftToRightWithFade,
-// }
-
-
 void main() {
   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   FlutterNativeSplash.remove();
 
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-  ));
+  // SystemChrome.setEnabledSystemUIOverlays([]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
+      overlays: [SystemUiOverlay.bottom]);
+  // SystemChrome.setEnabledSystemUIOverlays([
+  //   SystemUiOverlay.bottom, //This line is used for showing the bottom bar
+  // ]);
+  // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+  //   statusBarColor: Colors.transparent,
+  // ));
   //
-
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-
   runApp(const MainApp());
 }

@@ -18,6 +18,8 @@ class AppPaths {
       "assets/profile_images/stern-looking-owl.jpeg";
   static const String splashScreen = "assets/images/cevapp_splash.png";
 
+  static const String market = "assets/images/gemstone.png";
+
   // novice avatars
   static const String noviceLION =
       "assets/profile_images/LION/lion-novice.png";

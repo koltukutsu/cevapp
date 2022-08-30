@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
   final String labelFontFamily;
   final FontWeight labelFontWeight;
   final double height;
+  final VoidCallback onChangeFunction;
 
   const CustomTextField({
     Key? key,
@@ -20,13 +21,18 @@ class CustomTextField extends StatelessWidget {
     required this.labelFontSize,
     required this.labelFontFamily,
     required this.labelFontWeight,
+    required this.onChangeFunction,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      enabled: false,
+      enabled: true,
       controller: controller,
+      textAlign: TextAlign.center,
+      onChanged: (value){
+        onChangeFunction();
+      } ,
       // keyboardType: const TextInputType.numberWithOptions(decimal: true),
       decoration: InputDecoration(
         labelStyle: TextStyle(
@@ -38,14 +44,17 @@ class CustomTextField extends StatelessWidget {
         // focusedBorder:,
         disabledBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
-          borderSide: BorderSide(
-              color: AppColors.disabledBorderColor, width: 2),
+          borderSide:
+              BorderSide(color: AppColors.disabledBorderColor, width: 2),
         ),
         enabledBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
-          borderSide:
-          BorderSide(color: AppColors.enabledBorderColor, width: 2),
+          borderSide: BorderSide(color: AppColors.enabledBorderColor, width: 2),
         ),
+        focusedBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderSide:
+                BorderSide(color: AppColors.focusedBorderColor, width: 8)),
         // errorBorder:,
         // focusedErrorBorder: OutlineInputBorder(
         //   borderRadius: BorderRadius.circular(20.0),
@@ -53,8 +62,7 @@ class CustomTextField extends StatelessWidget {
         // ),
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
-          borderSide:
-          BorderSide(color: AppColors.borderColor, width: 2),
+          borderSide: BorderSide(color: AppColors.borderColor, width: 2),
         ),
         filled: true,
         fillColor: AppColors.white,

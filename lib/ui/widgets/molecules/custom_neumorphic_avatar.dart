@@ -44,7 +44,7 @@ class CustomNeumorphicAvatar extends StatelessWidget {
           lightSource: LightSource.bottom,
           color: neumorphicBackgroundColor),
       child: SizedBox(
-          height: MediaQuery.of(context).size.height * heightRatio,
+          // height: MediaQuery.of(context).size.height * heightRatio,
           width: MediaQuery.of(context).size.width * widthRatio,
           child: Center(
             child: Image(

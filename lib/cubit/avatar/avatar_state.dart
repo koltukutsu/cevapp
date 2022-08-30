@@ -21,3 +21,13 @@ class GotAvatars extends AvatarState {
   @override
   List<Object> get props => [];
 }
+
+class NoUserName extends AvatarState {
+  @override
+  List<Object> get props => [];
+}
+
+class GotUserName extends AvatarState {
+  @override
+  List<Object> get props => [];
+}
