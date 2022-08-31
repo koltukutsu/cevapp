@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
@@ -13,7 +12,6 @@ import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
-import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MainScreenBody extends StatefulWidget {

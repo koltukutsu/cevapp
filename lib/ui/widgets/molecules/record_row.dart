@@ -121,7 +121,7 @@ class _RecordRowState extends State<RecordRow> {
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
                   child: Container(
-                    color: AppColors.questionTextBackgroundColor,
+                    // color: AppColors.questionTextBackgroundColor,
                     child: CustomText(
                         text: widget.question.length > 20
                             ? "${widget.question.substring(0, 23)}..."
