@@ -135,10 +135,10 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       if (mode == "start") {
         var now = DateTime.now();
         final DateTime nowCurrentDate = DateTime.parse(now.toString());
-        final String formattedDate =
-            nowCurrentDate.toString(); // TODO: can be changed
+        // final String formattedDate =
+        //     nowCurrentDate.toString(); // TODO: can be changed
 
-        path = context.read<ShuffleCubit>().shuffledQuestion.id;
+        path = context.read<ShuffleCubit>().shuffledQuestion.id; // TODO: control
 
         recorder.startRecorder(toFile: "$path.aac", codec: Codec.aacMP4);
         setState(() {
@@ -150,7 +150,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         final pathFinished = await recorder.stopRecorder();
         context
             .read<ShuffleCubit>()
-            .updateRecordedQuestionsObject(timeStamp: DateTime.now());
+            .updateRecordedQuestionsObject(timeStamp: DateTime.now()); // TODO: take it inside
         stateOfRecorder = 0;
         // print("it's finished");
         final audioFile = File(pathFinished!);

@@ -1,4 +1,6 @@
+import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
@@ -57,7 +59,9 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
                     widget.recordFunction("finish");
+                    context.read<ShuffleCubit>().getQuestion(); // TODO: solve the problem
                     context.read<RecordsCubit>().GetCurrentRecords();
+                    context.read<AvatarCubit>().increaseMoney();
                   }),
               AnimatedCrossFade(
                 crossFadeState: _crossFadeStateSecond,
@@ -81,7 +85,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     paddingAllAsDouble: 0,
                     function: () {
                       onChangePauseAndContinueButton(false);
-                      widget.recordFunction("continue");
+                      // widget.recordFunction("continue");
 
                       // widget.onSoundProcesses("continue_record");
                     }),
