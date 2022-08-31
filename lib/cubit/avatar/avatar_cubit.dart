@@ -40,7 +40,7 @@ class AvatarCubit extends Cubit<AvatarState> {
   }
 
   setUserNames({required String userName, required String userSurname}) async {
-    print("set the USER NAMES");
+    // print("set the USER NAMES");
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("userName", userName);
     await prefs.setString("userSurname", userSurname);
@@ -55,9 +55,9 @@ class AvatarCubit extends Cubit<AvatarState> {
   getUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
-    print("this is inside of the getUserAvatar: $type");
+    // print("this is inside of the getUserAvatar: $type");
     avatarType = type;
-    print(avatarType);
+    // print(avatarType);
 
     // emit(GotAvatars());
   }
@@ -68,12 +68,12 @@ class AvatarCubit extends Cubit<AvatarState> {
     // final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
 
-    print("user's Avatar in Cubit: $avatarType");
-    print("got: $type");
+    // print("user's Avatar in Cubit: $avatarType");
+    // print("got: $type");
 
     avatarType = type;
     await prefs.setInt("avatarMoney", 0);
-    print("user's Avatar in Cubit: $avatarType");
+    // print("user's Avatar in Cubit: $avatarType");
 
     emit(GotAvatars());
   }

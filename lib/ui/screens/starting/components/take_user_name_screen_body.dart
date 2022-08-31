@@ -32,9 +32,9 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
   }
 
   changeAvatarNamesOnCubit() {
-    print("SETTING USER NAMES");
-    print("first: ${userNameController.text}");
-    print("second: ${userSurnameController.text}");
+    // print("SETTING USER NAMES");
+    // print("first: ${userNameController.text}");
+    // print("second: ${userSurnameController.text}");
     context.read<AvatarCubit>().setUserNames(
         userName: userNameController.text,
         userSurname: userSurnameController.text);

@@ -24,13 +24,17 @@ class ProfileScreenBody extends StatefulWidget {
 class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   String userAvatarImagePath = AppPaths.sternLookingOwl;
   String userRank = "Novice";
-  // final TextEditingController nameC = TextEditingController();
+
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController surnameController = TextEditingController();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     setUserAvatarAndRank();
+    nameController.text = context.read<AvatarCubit>().avatarName;
+    surnameController.text = context.read<AvatarCubit>().avatarSurname;
   }
 
   @override
@@ -99,26 +103,28 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     height: MediaQuery.of(context).size.height * 0.035,
                   ),
                   // CustomTextFieldNeumorphicForAvatarPage(
-                  //     controller: TextEditingController(),
+                  //     controller: nameController,
                   //     labelFontFamily: "Roboto",
                   //     labelFontWeight: FontWeight.bold,
                   //     labelColor: AppColors.black,
-                  //     labelFontSize: 30,
-                  //     height: 0.01),
+                  //     labelFontSize: 15,
+                  //     height: 1),
                   // SizedBox(
                   //   height: MediaQuery.of(context).size.height * 0.015,
                   // ),
                   // CustomTextFieldNeumorphicForAvatarPage(
-                  //     controller: TextEditingController(),
+                  //     controller: surnameController,
                   //     labelFontFamily: "Roboto",
                   //     labelFontWeight: FontWeight.bold,
                   //     labelColor: AppColors.black,
-                  //     labelFontSize: 30,
-                  //     height: 0.01),
+                  //     labelFontSize: 15,
+                  //     height: 1),
                   CustomGeneralUseNeumorphicTextField(
-                    text: context.read<AvatarCubit>().avatarName,
+                    text: context
+                        .read<AvatarCubit>()
+                        .avatarName,
                     neumorphicBoxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
+                    NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
@@ -127,12 +133,17 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     bottomPadding: 0,
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.015,
+                    height: MediaQuery
+                        .of(context)
+                        .size
+                        .height * 0.015,
                   ),
                   CustomGeneralUseNeumorphicTextField(
-                    text: context.read<AvatarCubit>().avatarSurname,
+                    text: context
+                        .read<AvatarCubit>()
+                        .avatarSurname,
                     neumorphicBoxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
+                    NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
@@ -141,7 +152,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     bottomPadding: 0,
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.075, //0.045
+                    height: MediaQuery.of(context).size.height * 0.075, //0.045 // 0.075
                   ),
                 ],
               )
@@ -282,9 +293,9 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
     final int userRecordedQuestions =
         context.read<ShuffleCubit>().recordedQuestions.length;
     final String userAvatarChoice = context.read<AvatarCubit>().avatarType;
-    print("set user avatar and rank");
-    print(userAvatarChoice);
-    print(userRecordedQuestions);
+    // print("set user avatar and rank");
+    // print(userAvatarChoice);
+    // print(userRecordedQuestions);
 
     if (userRecordedQuestions >= userRankLevels.unimagined) {
       setState(() {
@@ -323,8 +334,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
         userRank = userRanksObject["beginner$userAvatarChoice"]!.rank;
       });
     } else if (userRecordedQuestions >= userRankLevels.novice) {
-      print("state control");
-      print("novice$userAvatarChoice");
+      // print("state control");
+      // print("novice$userAvatarChoice");
       setState(() {
         userAvatarImagePath =
             userRanksObject["novice$userAvatarChoice"]!.avatarPath;

@@ -42,11 +42,11 @@ class AvatarButtonMarketPlaceHolder extends StatelessWidget {
       onPressed: enabled
           ? () {
               if (pressed) {
-                print('1');
+                // print('1');
                 triggerFunction("unchosen");
               } else {
-                print('2');
-                print(type);
+                // print('2');
+                // print(type);
                 triggerFunction(type);
               }
             }
@@ -60,14 +60,14 @@ class AvatarButtonMarketPlaceHolder extends StatelessWidget {
         child: Stack(
           children: [
             Image(
-              loadingBuilder: (context, child, loadingProgress) {
-                print(loadingProgress);
-                if (loadingProgress == null) {
-                  return child;
-                }
-                return const CircularProgressIndicator(
-                    color: AppColors.mainBackgroundColor);
-              },
+              // loadingBuilder: (context, child, loadingProgress) {
+              //   print(loadingProgress);
+              //   if (loadingProgress == null) {
+              //     return child;
+              //   }
+              //   return const CircularProgressIndicator(
+              //       color: AppColors.mainBackgroundColor);
+              // },
               image: AssetImage(imagePath),
               width: MediaQuery.of(context).size.width * widthRatio,
               height: MediaQuery.of(context).size.width * widthRatio,

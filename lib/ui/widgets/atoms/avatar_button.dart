@@ -60,7 +60,7 @@ class AvatarButton extends StatelessWidget {
         children: [
           Image(
             loadingBuilder: (context, child, loadingProgress) {
-              print(loadingProgress);
+              // print(loadingProgress);
               if (loadingProgress == null) {
                 return child;
               }

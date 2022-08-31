@@ -154,13 +154,13 @@ class _MainScreenBodyState extends State<MainScreenBody> {
             .read<ShuffleCubit>()
             .updateRecordedQuestionsObject(timeStamp: DateTime.now());
         stateOfRecorder = 0;
-        print("it's finished");
+        // print("it's finished");
         final audioFile = File(pathFinished!);
-        print("Recorder audio: $audioFile");
-        print(pathFinished
-            .split("/")
-            .sublist(0, pathFinished.split("/").length - 1)
-            .join("/"));
+        // print("Recorder audio: $audioFile");
+        // print(pathFinished
+        //     .split("/")
+        //     .sublist(0, pathFinished.split("/").length - 1)
+        //     .join("/"));
       }
       // pause
       else if (mode == "pause" && recorder.isRecording) {

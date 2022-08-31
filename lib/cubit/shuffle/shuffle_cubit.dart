@@ -37,7 +37,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   Future<File> writeJson(
       {required String jsonName, required String toBeWritten}) async {
     final file = await _localFile(fileName: jsonName);
-    print("$jsonName:  ${file.path}");
+    // print("$jsonName:  ${file.path}");
     // Write the file
     return file.writeAsString(toBeWritten);
   }
@@ -51,7 +51,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       // 2. use the loaded to iniate the question objects
       // 3. change your isUserLoggedInBefore as true so that never come back here again
       // 4. finally, initiate questions.json in temp dir and save the taken json from the assets
-      debugPrint("FIRST LOGIN");
+
+      // debugPrint("FIRST LOGIN");
 
       // 1.
       const String JSON_ASSETS_PATH = "assets/data/questions.json";
@@ -84,7 +85,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       // 1. read json from local temp path
       // 2. assign the json as map to a variable
       // 3. use the variable to update the objects
-      debugPrint("not FIRST LOGIN");
+
+      // debugPrint("not FIRST LOGIN");
 
       // 1.
       final File takenQuestionsFileJsonFromTempPath =
@@ -92,7 +94,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       // 2.
       var allQuestionRelatedObjectsTakenAsMap = await json
           .decode(takenQuestionsFileJsonFromTempPath.readAsStringSync());
-      debugPrint(allQuestionRelatedObjectsTakenAsMap.toString());
+      // debugPrint(allQuestionRelatedObjectsTakenAsMap.toString());
 
       // 3.
       unTouchedQuestions = allQuestionRelatedObjectsTakenAsMap["untouched"];
@@ -117,7 +119,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
             unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]);
 
     updateShuffledQuestionsObject();
-    print(unTouchedQuestions.length);
+    // print(unTouchedQuestions.length);
     emit(const GotQuestion());
   }
 
@@ -148,8 +150,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     shuffledQuestion.timeStamp = timeStamp;
     // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
     recordedQuestions.add(shuffledQuestion);
-    print(unTouchedQuestions.length);
-    print(recordedQuestions.length);
+    // print(unTouchedQuestions.length);
+    // print(recordedQuestions.length);
 
     updateAllQuestionsRelatedObjectsWithJson();
   }
@@ -159,8 +161,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     shuffledQuestion.timeStamp = timeStamp;
     // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
     deletedQuestions.add(shuffledQuestion);
-    print(unTouchedQuestions.length);
-    print(deletedQuestions.length);
+    // print(unTouchedQuestions.length);
+    // print(deletedQuestions.length);
 
     updateAllQuestionsRelatedObjectsWithJson();
   }
@@ -172,16 +174,16 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       "deleted": deletedQuestions,
       "shuffled": shuffledQuestions.map((question) => question.toMap()).toList()
     };
-    print("\nUNTOUCHED");
-    print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);
-    print("\nRECORDED");
-    print(allQuestionsRelatedObjectsInOneObjectForUpdate["recorded"]);
-    print("\nDELETED");
-    print(allQuestionsRelatedObjectsInOneObjectForUpdate["deleted"]);
-    print("\nSHUFFLED");
-    print(allQuestionsRelatedObjectsInOneObjectForUpdate["shuffled"]);
-    print("\nALL");
-    print(allQuestionsRelatedObjectsInOneObjectForUpdate);
+    // print("\nUNTOUCHED");
+    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);
+    // print("\nRECORDED");
+    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["recorded"]);
+    // print("\nDELETED");
+    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["deleted"]);
+    // print("\nSHUFFLED");
+    // print(allQuestionsRelatedObjectsInOneObjectForUpdate["shuffled"]);
+    // print("\nALL");
+    // print(allQuestionsRelatedObjectsInOneObjectForUpdate);
     final String allJsonString =
         json.encode(allQuestionsRelatedObjectsInOneObjectForUpdate);
 

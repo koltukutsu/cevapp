@@ -29,8 +29,6 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
   var onPressedMarketWidthRatio = 0.35;
   var smallMarketWidthRatio = 0.25;
 
-
-
   void onChange(String type) {
     setState(() {
       avatarType = type;

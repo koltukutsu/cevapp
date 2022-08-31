@@ -41,13 +41,6 @@ class CustomTextField extends StatelessWidget {
           fontFamily: labelFontFamily),
       // keyboardType: const TextInputType.numberWithOptions(decimal: true),
       decoration: const InputDecoration(
-        // labelStyle: TextStyle(
-        //     height: height,
-        //     color: labelColor,
-        //     fontSize: labelFontSize,
-        //     fontWeight: labelFontWeight,
-        //     fontFamily: labelFontFamily),
-
         // focusedBorder:,
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -62,11 +55,6 @@ class CustomTextField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(20)),
             borderSide:
                 BorderSide(color: AppColors.focusedBorderColor, width: 8)),
-        // errorBorder:,
-        // focusedErrorBorder: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(20.0),
-        //   borderSide: const BorderSide(color: AppColors.primary, width: 0),
-        // ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           borderSide: BorderSide(color: AppColors.borderColor, width: 2),

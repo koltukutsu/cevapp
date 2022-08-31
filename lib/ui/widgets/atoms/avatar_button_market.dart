@@ -61,14 +61,14 @@ class AvatarButtonMarket extends StatelessWidget {
           // fit: StackFit.expand,
           children: [
             Image(
-              loadingBuilder: (context, child, loadingProgress) {
-                print(loadingProgress);
-                if (loadingProgress == null) {
-                  return child;
-                }
-                return const CircularProgressIndicator(
-                    color: AppColors.mainBackgroundColor);
-              },
+              // loadingBuilder: (context, child, loadingProgress) {
+              //   print(loadingProgress);
+              //   if (loadingProgress == null) {
+              //     return child;
+              //   }
+              //   return const CircularProgressIndicator(
+              //       color: AppColors.mainBackgroundColor);
+              // },
               image: AssetImage(imagePath),
               width: MediaQuery.of(context).size.width * widthRatio,
               height: MediaQuery.of(context).size.width * widthRatio,

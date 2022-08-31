@@ -20,13 +20,13 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    print("control");
-    print(context.read<AvatarCubit>().avatarName);
-    print(context.read<AvatarCubit>().avatarSurname);
+    // print("control");
+    // print(context.read<AvatarCubit>().avatarName);
+    // print(context.read<AvatarCubit>().avatarSurname);
   }
 
   void onChange(String type) {
-    print("Taken Avatar is : $type");
+    // print("Taken Avatar is : $type");
     setState(() {
       avatarType = type;
     });
@@ -163,14 +163,14 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                 : NeumorphicButton(
                     onPressed: () {
                       if (avatarType == "unchosen") {
-                        print("no right to go");
+                        // print("no right to go");
                       } else {
-                        print("gooo!!! $avatarType");
+                        // print("gooo!!! $avatarType");
                         context
                             .read<AvatarCubit>()
                             .setUserAvatar(type: avatarType);
-                        print(
-                            "getted: ${context.read<AvatarCubit>().avatarType}");
+                        // print(
+                        //     "getted: ${context.read<AvatarCubit>().avatarType}");
                       }
                     },
                     child: const CustomText(

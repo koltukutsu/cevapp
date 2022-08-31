@@ -38,14 +38,14 @@ class CustomTextFieldNeumorphicForAvatarPage extends StatelessWidget {
           textAlign: TextAlign.center,
           enabled: true,
           controller: controller,
+          style: TextStyle(
+              height: height,
+              color: labelColor,
+              fontSize: labelFontSize,
+              fontWeight: labelFontWeight,
+              fontFamily: labelFontFamily),
           // keyboardType: const TextInputType.numberWithOptions(decimal: true),
           decoration: InputDecoration(
-            labelStyle: TextStyle(
-                height: height,
-                color: labelColor,
-                fontSize: 60,
-                fontWeight: labelFontWeight,
-                fontFamily: labelFontFamily),
             // focusedBorder:,
             disabledBorder: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),

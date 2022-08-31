@@ -19,7 +19,7 @@ class _StartingScreenState extends State<StartingScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<AvatarCubit, AvatarState>(
       builder: (context, state) {
-        print(state);
+        // print(state);
         if (state is NoUserName){
           return const TakeUserNameScreenBody();
         }
