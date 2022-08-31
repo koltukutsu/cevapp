@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class AvatarButton extends StatelessWidget {
+class AvatarButtonMarket extends StatelessWidget {
   final String imagePath;
   final String type;
   final Function(String type) triggerFunction;
@@ -19,7 +19,7 @@ class AvatarButton extends StatelessWidget {
 
   // final Function(String type) giveTypeItsType;
 
-  const AvatarButton(
+  const AvatarButtonMarket(
       {Key? key,
       required this.triggerFunction,
       required this.imagePath,
@@ -37,7 +37,7 @@ class AvatarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NeumorphicButton(
+    return MaterialButton(
       onPressed: enabled
           ? () {
               if (pressed) {
@@ -52,38 +52,42 @@ class AvatarButton extends StatelessWidget {
             }
           : null,
       // margin: EdgeInsets.all(0),
-      style: NeumorphicStyle(
-          depth: pressed ? -15 : 5,
-          color: pressed ? AppColors.mainBackgroundColor : null),
-      child: Stack(
-        // fit: StackFit.expand,
-        children: [
-          Image(
-            loadingBuilder: (context, child, loadingProgress) {
-              print(loadingProgress);
-              if (loadingProgress == null) {
-                return child;
-              }
-              return const CircularProgressIndicator(
-                  color: AppColors.mainBackgroundColor);
-            },
-            image: AssetImage(imagePath),
-            width: MediaQuery.of(context).size.width * widthRatio,
-            // height: MediaQuery.of(context).size.height * heightRatio ,
-          ),
-          if (!enabled)
-            ClipRect(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  width: MediaQuery.of(context).size.width * widthRatio,
-                  height: MediaQuery.of(context).size.width * widthRatio,
-                  decoration:
-                      BoxDecoration(color: Colors.grey.withOpacity(0.1)),
+      child: Neumorphic(
+        style: NeumorphicStyle(
+            depth: !pressed ? 0 : 10,
+            border: NeumorphicBorder(
+                color: !pressed ? AppColors.black : AppColors.white, width: 3)),
+        child: Stack(
+          // fit: StackFit.expand,
+          children: [
+            Image(
+              loadingBuilder: (context, child, loadingProgress) {
+                print(loadingProgress);
+                if (loadingProgress == null) {
+                  return child;
+                }
+                return const CircularProgressIndicator(
+                    color: AppColors.mainBackgroundColor);
+              },
+              image: AssetImage(imagePath),
+              width: MediaQuery.of(context).size.width * widthRatio,
+              height: MediaQuery.of(context).size.width * widthRatio,
+              // height: MediaQuery.of(context).size.height * heightRatio ,
+            ),
+            if (!enabled)
+              ClipRect(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * widthRatio,
+                    height: MediaQuery.of(context).size.width * widthRatio,
+                    decoration:
+                        BoxDecoration(color: Colors.grey.withOpacity(0.1)),
+                  ),
                 ),
-              ),
-            )
-        ],
+              )
+          ],
+        ),
       ),
     );
   }

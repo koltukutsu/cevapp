@@ -1,5 +1,7 @@
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
+import 'package:cevapp/ui/theme/colors.dart';
+import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_swipe_dock.dart';
 import 'package:cevapp/ui/widgets/organisms/records.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,6 @@ class MainScreenStack extends StatefulWidget {
 }
 
 class _MainScreenStackState extends State<MainScreenStack> {
-
   @override
   Widget build(BuildContext context) {
     // return Stack(children: [
@@ -44,8 +45,11 @@ class _MainScreenStackState extends State<MainScreenStack> {
     // ]);
     return SlidingUpPanel(
       maxHeight: MediaQuery.of(context).size.height *
-              AppRatios.swipdeDockFullHeightRatio,
+          AppRatios.swipdeDockFullHeightRatio,
       renderPanelSheet: false,
+      backdropEnabled: true,
+      // backdropColor: AppColors.mainBackgroundColor,
+      parallaxEnabled: true,
       body: const MainScreenBody(),
       collapsed: const SwipeDock(),
       panel: const RecordsScreen(),

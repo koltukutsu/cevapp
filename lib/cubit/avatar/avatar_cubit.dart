@@ -45,6 +45,9 @@ class AvatarCubit extends Cubit<AvatarState> {
     await prefs.setString("userName", userName);
     await prefs.setString("userSurname", userSurname);
 
+    avatarName = userName;
+    avatarSurname = userSurname;
+
     emit(NoAvatars());
   }
 

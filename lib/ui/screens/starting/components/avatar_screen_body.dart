@@ -14,7 +14,16 @@ class AvatarScreenBody extends StatefulWidget {
 }
 
 class _AvatarScreenBodyState extends State<AvatarScreenBody> {
-  var avatarType = "";
+  var avatarType = "unchosen";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("control");
+    print(context.read<AvatarCubit>().avatarName);
+    print(context.read<AvatarCubit>().avatarSurname);
+  }
 
   void onChange(String type) {
     print("Taken Avatar is : $type");
@@ -76,7 +85,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -101,7 +110,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                 ],
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -113,10 +122,28 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                     // giveTypeItsType: giveTypeItsType,
                     pressed: avatarType == "DRAGON",
                   ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  AvatarButton(
+                    triggerFunction: onChange,
+                    imagePath: AppPaths.noviceDOLPHIN,
+                    type: "DOLPHIN",
+                    // giveTypeItsType: giveTypeItsType,
+                    pressed: avatarType == "DOLPHIN",
+                  ),
                 ],
               ),
             ],
           ),
+          // Align(
+          //     alignment: const Alignment(-0.7, 0.98),
+          //     child: CustomText(
+          //         text: avatarType == "unchosen" ? "" : avatarType,
+          //         textColor: AppColors.white,
+          //         italicEnable: false,
+          //         fontWeight: FontWeight.bold,
+          //         fontSize: 60)),
           Align(
             alignment: const Alignment(0.9, 0.95),
             child: avatarType == "unchosen"
@@ -135,13 +162,15 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   )
                 : NeumorphicButton(
                     onPressed: () {
-                      if (avatarType ==
-                          "unchosen") {
+                      if (avatarType == "unchosen") {
                         print("no right to go");
                       } else {
                         print("gooo!!! $avatarType");
-                        context.read<AvatarCubit>().setUserAvatar(type: avatarType);
-                        print("getted: ${context.read<AvatarCubit>().avatarType}");
+                        context
+                            .read<AvatarCubit>()
+                            .setUserAvatar(type: avatarType);
+                        print(
+                            "getted: ${context.read<AvatarCubit>().avatarType}");
                       }
                     },
                     child: const CustomText(

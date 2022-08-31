@@ -28,7 +28,7 @@ class AppColors {
 
   static const Color playButtonLabelColor = Color(0xFF48bf53);
   static const Color deleteButtonLabelColor = Color(0xFFEA4335);
-
+  static const Color marketMiddleSeparatorColumnColor = Colors.black;
   // SECOND - from previous
   // primary colors
   static const Color primary = Colors.white;

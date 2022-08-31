@@ -30,28 +30,35 @@ class CustomTextField extends StatelessWidget {
       enabled: true,
       controller: controller,
       textAlign: TextAlign.center,
-      onChanged: (value){
+      onChanged: (value) {
         onChangeFunction();
-      } ,
+      },
+      style: TextStyle(
+          height: height,
+          color: labelColor,
+          fontSize: labelFontSize,
+          fontWeight: labelFontWeight,
+          fontFamily: labelFontFamily),
       // keyboardType: const TextInputType.numberWithOptions(decimal: true),
-      decoration: InputDecoration(
-        labelStyle: TextStyle(
-            height: height,
-            color: labelColor,
-            fontSize: labelFontSize,
-            fontWeight: labelFontWeight,
-            fontFamily: labelFontFamily),
+      decoration: const InputDecoration(
+        // labelStyle: TextStyle(
+        //     height: height,
+        //     color: labelColor,
+        //     fontSize: labelFontSize,
+        //     fontWeight: labelFontWeight,
+        //     fontFamily: labelFontFamily),
+
         // focusedBorder:,
-        disabledBorder: const OutlineInputBorder(
+        disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           borderSide:
               BorderSide(color: AppColors.disabledBorderColor, width: 2),
         ),
-        enabledBorder: const OutlineInputBorder(
+        enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           borderSide: BorderSide(color: AppColors.enabledBorderColor, width: 2),
         ),
-        focusedBorder: const OutlineInputBorder(
+        focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20)),
             borderSide:
                 BorderSide(color: AppColors.focusedBorderColor, width: 8)),
@@ -60,7 +67,7 @@ class CustomTextField extends StatelessWidget {
         //   borderRadius: BorderRadius.circular(20.0),
         //   borderSide: const BorderSide(color: AppColors.primary, width: 0),
         // ),
-        border: const OutlineInputBorder(
+        border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           borderSide: BorderSide(color: AppColors.borderColor, width: 2),
         ),

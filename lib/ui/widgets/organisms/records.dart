@@ -81,18 +81,18 @@ class _RecordsScreenState extends State<RecordsScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         CustomText(
-                          text: "no",
+                          text: "nothing",
                           textColor: AppColors.white,
                           fontFamily: "Montserrat",
                           fontWeight: FontWeight.bold,
-                          fontSize: 82,
+                          fontSize: 52,
                         ),
                         CustomText(
-                          text: "bullsh*t",
+                          text: "said",
                           textColor: AppColors.white,
                           fontFamily: "Montserrat",
                           fontWeight: FontWeight.bold,
-                          fontSize: 82,
+                          fontSize: 152,
                         ),
                         CustomText(
                           text: "yet",

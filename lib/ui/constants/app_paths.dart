@@ -14,6 +14,8 @@ class AppPaths {
   static const String deleteButton = "assets/images/delete.png";
   static const String playButton = "assets/images/play.png";
 
+  static const String questionMark = "assets/images/question-mark.png";
+
   static const String sternLookingOwl =
       "assets/profile_images/stern-looking-owl.jpeg";
   static const String splashScreen = "assets/images/cevapp_splash.png";
@@ -21,16 +23,13 @@ class AppPaths {
   static const String market = "assets/images/gemstone.png";
 
   // novice avatars
-  static const String noviceLION =
-      "assets/profile_images/LION/lion-novice.png";
-  static const String noviceOWL =
-      "assets/profile_images/OWL/owl-novice.png";
+  static const String noviceLION = "assets/profile_images/LION/lion-novice.png";
+  static const String noviceOWL = "assets/profile_images/OWL/owl-novice.png";
   static const String noviceDOLPHIN =
       "assets/profile_images/DOLPHIN/dolphin-novice.png";
   static const String noviceDRAGON =
       "assets/profile_images/DRAGON/dragon-novice.png";
-  static const String noviceBIRD =
-      "assets/profile_images/BIRD/bird-novice.png";
+  static const String noviceBIRD = "assets/profile_images/BIRD/bird-novice.png";
   static const String noviceELEPHANT =
       "assets/profile_images/ELEPHANT/elephant-novice.png";
 
@@ -50,17 +49,17 @@ class AppPaths {
 
   // competent avatars
   static const String competentLION =
-      "assets/profile_images/LION/lion-beginner.png";
+      "assets/profile_images/LION/lion-competent.png";
   static const String competentOWL =
-      "assets/profile_images/OWL/owl-beginner.png";
+      "assets/profile_images/OWL/owl-competent.png";
   static const String competentDOLPHIN =
-      "assets/profile_images/DOLPHIN/dolphin-beginner.png";
+      "assets/profile_images/DOLPHIN/dolphin-competent.png";
   static const String competentDRAGON =
-      "assets/profile_images/DRAGON/dragon-beginner.png";
+      "assets/profile_images/DRAGON/dragon-competent.png";
   static const String competentBIRD =
-      "assets/profile_images/BIRD/bird-beginner.png";
+      "assets/profile_images/BIRD/bird-competent.png";
   static const String competentELEPHANT =
-      "assets/profile_images/ELEPHANT/elephant-beginner.png";
+      "assets/profile_images/ELEPHANT/elephant-competent.png";
 
   // proficient avatars
   static const String proficientLION =
@@ -77,30 +76,24 @@ class AppPaths {
       "assets/profile_images/ELEPHANT/elephant-proficient.png";
 
   // expert avatars
-  static const String expertLION =
-      "assets/profile_images/LION/lion-expert.png";
-  static const String expertOWL =
-      "assets/profile_images/OWL/owl-expert.png";
+  static const String expertLION = "assets/profile_images/LION/lion-expert.png";
+  static const String expertOWL = "assets/profile_images/OWL/owl-expert.jpeg";
   static const String expertDOLPHIN =
       "assets/profile_images/DOLPHIN/dolphin-expert.png";
   static const String expertDRAGON =
       "assets/profile_images/DRAGON/dragon-expert.png";
-  static const String expertBIRD =
-      "assets/profile_images/BIRD/bird-expert.png";
+  static const String expertBIRD = "assets/profile_images/BIRD/bird-expert.png";
   static const String expertELEPHANT =
       "assets/profile_images/ELEPHANT/elephant-expert.png";
 
   // master avatars
-  static const String masterLION =
-      "assets/profile_images/LION/lion-master.png";
-  static const String masterOWL =
-      "assets/profile_images/OWL/owl-master.png";
+  static const String masterLION = "assets/profile_images/LION/lion-master.png";
+  static const String masterOWL = "assets/profile_images/OWL/owl-master.png";
   static const String masterDOLPHIN =
       "assets/profile_images/DOLPHIN/dolphin-master.png";
   static const String masterDRAGON =
       "assets/profile_images/DRAGON/dragon-master.png";
-  static const String masterBIRD =
-      "assets/profile_images/BIRD/bird-master.png";
+  static const String masterBIRD = "assets/profile_images/BIRD/bird-master.png";
   static const String masterELEPHANT =
       "assets/profile_images/ELEPHANT/elephant-master.png";
 

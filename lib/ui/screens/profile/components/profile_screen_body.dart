@@ -116,25 +116,29 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   //     labelFontSize: 30,
                   //     height: 0.01),
                   CustomGeneralUseNeumorphicTextField(
-                    text: "Mehmet Semih",
+                    text: context.read<AvatarCubit>().avatarName,
                     neumorphicBoxShape:
                         NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
                     italicEnable: false,
+                    leftPadding: 10,
+                    bottomPadding: 0,
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.015,
                   ),
                   CustomGeneralUseNeumorphicTextField(
-                    text: "BABACAN",
+                    text: context.read<AvatarCubit>().avatarSurname,
                     neumorphicBoxShape:
                         NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
                     italicEnable: false,
+                    leftPadding: 10,
+                    bottomPadding: 0,
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.075, //0.045

@@ -2,7 +2,8 @@ import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text_field.dart';
-import 'package:flutter/material.dart';
+
+// import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -21,12 +22,6 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // userNameController.text = "Mehmet Semih";
-    // userSurnameController.text = "Babacan";
-    // userSurnameController.value = userSurnameController.value.copyWith(
-    //   text: "Babacan",
-    //   selection: TextSelection.collapsed(offset: "Babacan".length),
-    // )
   }
 
   onChangeDo() {
@@ -37,6 +32,9 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
   }
 
   changeAvatarNamesOnCubit() {
+    print("SETTING USER NAMES");
+    print("first: ${userNameController.text}");
+    print("second: ${userSurnameController.text}");
     context.read<AvatarCubit>().setUserNames(
         userName: userNameController.text,
         userSurname: userSurnameController.text);
@@ -73,10 +71,10 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: CustomTextField(
                         onChangeFunction: onChangeDo,
-                        height: MediaQuery.of(context).size.height * 0.2,
+                        height: 1,
                         controller: userNameController,
                         labelColor: AppColors.black,
-                        labelFontSize: 40,
+                        labelFontSize: 30,
                         labelFontFamily: "Roboto",
                         labelFontWeight: FontWeight.w400),
                   ),
@@ -84,41 +82,46 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: CustomTextField(
                         onChangeFunction: onChangeDo,
-                        height: MediaQuery.of(context).size.height * 0.2,
+                        height: 1,
                         controller: userSurnameController,
                         labelColor: AppColors.black,
-                        labelFontSize: 40,
+                        labelFontSize: 30,
                         labelFontFamily: "Roboto",
                         labelFontWeight: FontWeight.w400),
                   ),
                 ],
               ),
-              Align(
-                alignment: const Alignment(0.9, 0.95),
-                child: userNameController.text.isEmpty ||
-                        userSurnameController.text.isEmpty
-                    ? Neumorphic(
-                        style: const NeumorphicStyle(color: Colors.transparent),
-                        child: SizedBox(
-                          width: 68,
-                          height: 40,
-                          child: Center(
-                            child: CustomText(
-                                text: "Skip",
-                                textColor: Colors.grey.shade200,
-                                fontWeight: FontWeight.bold),
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.bounceOut,
+                child: Align(
+                  alignment: const Alignment(0.9, 0.95),
+                  child: userNameController.text.isEmpty ||
+                          userSurnameController.text.isEmpty
+                      ? Neumorphic(
+                          style:
+                              const NeumorphicStyle(color: Colors.transparent),
+                          child: SizedBox(
+                            width: 68,
+                            height: 40,
+                            child: Center(
+                              child: CustomText(
+                                  text: "Skip",
+                                  textColor: Colors.grey.shade200,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
+                        )
+                      : NeumorphicButton(
+                          onPressed: () {
+                            changeAvatarNamesOnCubit();
+                          },
+                          child: const CustomText(
+                              text: "Skip",
+                              textColor: AppColors.black,
+                              fontWeight: FontWeight.bold),
                         ),
-                      )
-                    : NeumorphicButton(
-                        onPressed: () {
-                          changeAvatarNamesOnCubit();
-                        },
-                        child: const CustomText(
-                            text: "Skip",
-                            textColor: AppColors.black,
-                            fontWeight: FontWeight.bold),
-                      ),
+                ),
               )
             ],
           )),
