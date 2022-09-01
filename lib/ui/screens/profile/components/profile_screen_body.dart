@@ -38,6 +38,13 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   }
 
   @override
+  void dispose() {
+    nameController.dispose();
+    surnameController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.mainBackgroundColor,
@@ -120,11 +127,9 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   //     labelFontSize: 15,
                   //     height: 1),
                   CustomGeneralUseNeumorphicTextField(
-                    text: context
-                        .read<AvatarCubit>()
-                        .avatarName,
+                    text: context.read<AvatarCubit>().avatarName,
                     neumorphicBoxShape:
-                    NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
+                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
@@ -133,17 +138,12 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     bottomPadding: 0,
                   ),
                   SizedBox(
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height * 0.015,
+                    height: MediaQuery.of(context).size.height * 0.015,
                   ),
                   CustomGeneralUseNeumorphicTextField(
-                    text: context
-                        .read<AvatarCubit>()
-                        .avatarSurname,
+                    text: context.read<AvatarCubit>().avatarSurname,
                     neumorphicBoxShape:
-                    NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
+                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
                     widthRatio: 0.4,
                     heightRatio: 0.05,
                     fontWeight: FontWeight.bold,
@@ -152,7 +152,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     bottomPadding: 0,
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.075, //0.045 // 0.075
+                    height: MediaQuery.of(context).size.height *
+                        0.075, //0.045 // 0.075
                   ),
                 ],
               )

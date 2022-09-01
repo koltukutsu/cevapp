@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ButtonsSection extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
-  final Future<void> Function(String) recordFunction;
+  final Future<void> Function(String mode, {String? id}) recordFunction;
 
   const ButtonsSection(
       {Key? key,
@@ -57,7 +57,8 @@ class _ButtonsSectionState extends State<ButtonsSection> {
             postFixIconAsImagePath: AppPaths.recordIconPath,
             onPressed: () {
               widget.crossFadeStateChangerFunction(true);
-              widget.recordFunction("start");
+              widget.recordFunction("start",
+                  id: context.read<ShuffleCubit>().shuffledQuestion["id"]);
             },
             fontSize: 48,
             widthRatio: AppRatios.shuffleButtonWidthRatio,

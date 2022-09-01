@@ -23,6 +23,12 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
     // TODO: implement initState
     super.initState();
   }
+  @override
+  void dispose() {
+    userNameController.dispose();
+    userSurnameController.dispose();
+    super.dispose();
+  }
 
   onChangeDo() {
     setState(() {
@@ -32,9 +38,6 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
   }
 
   changeAvatarNamesOnCubit() {
-    // print("SETTING USER NAMES");
-    // print("first: ${userNameController.text}");
-    // print("second: ${userSurnameController.text}");
     context.read<AvatarCubit>().setUserNames(
         userName: userNameController.text,
         userSurname: userSurnameController.text);
@@ -70,6 +73,7 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: CustomTextField(
+                      hintText: "Your Name",
                         onChangeFunction: onChangeDo,
                         height: 1,
                         controller: userNameController,
@@ -81,6 +85,7 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: CustomTextField(
+                      hintText: "Your Nickname",
                         onChangeFunction: onChangeDo,
                         height: 1,
                         controller: userSurnameController,
@@ -106,7 +111,7 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                             height: 40,
                             child: Center(
                               child: CustomText(
-                                  text: "Skip",
+                                  text: "Next",
                                   textColor: Colors.grey.shade200,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -117,7 +122,7 @@ class _TakeUserNameScreenBodyState extends State<TakeUserNameScreenBody> {
                             changeAvatarNamesOnCubit();
                           },
                           child: const CustomText(
-                              text: "Skip",
+                              text: "Next",
                               textColor: AppColors.black,
                               fontWeight: FontWeight.bold),
                         ),

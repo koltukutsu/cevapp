@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ButtonsDuringRecord extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
-  final Future<void> Function(String) recordFunction;
+  final Future<void> Function(String mode, {String? id}) recordFunction;
   final String takenTime;
 
   const ButtonsDuringRecord(
@@ -59,9 +59,16 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
                     widget.recordFunction("finish");
-                    context.read<ShuffleCubit>().getQuestion(); // TODO: solve the problem
+                     // TODO: solve the problem
+                    context.read<ShuffleCubit>().printQuestion();
+                    context
+                        .read<ShuffleCubit>()
+                        .updateRecordedQuestionsObject();
                     context.read<RecordsCubit>().GetCurrentRecords();
                     context.read<AvatarCubit>().increaseMoney();
+                    context
+                        .read<ShuffleCubit>()
+                        .getQuestion();
                   }),
               AnimatedCrossFade(
                 crossFadeState: _crossFadeStateSecond,

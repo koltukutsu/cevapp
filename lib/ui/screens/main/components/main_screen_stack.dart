@@ -50,6 +50,8 @@ class _MainScreenStackState extends State<MainScreenStack> {
       backdropEnabled: true,
       // backdropColor: AppColors.mainBackgroundColor,
       parallaxEnabled: true,
+
+      backdropOpacity: 0.6,
       body: const MainScreenBody(),
       collapsed: const SwipeDock(),
       panel: const RecordsScreen(),

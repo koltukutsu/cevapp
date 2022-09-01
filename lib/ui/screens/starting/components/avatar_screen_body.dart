@@ -154,7 +154,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                       height: 40,
                       child: Center(
                         child: CustomText(
-                            text: "Skip",
+                            text: "Next",
                             textColor: Colors.grey.shade200,
                             fontWeight: FontWeight.bold),
                       ),
@@ -174,7 +174,7 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                       }
                     },
                     child: const CustomText(
-                        text: "Skip",
+                        text: "Next",
                         textColor: AppColors.black,
                         fontWeight: FontWeight.bold),
                   ),

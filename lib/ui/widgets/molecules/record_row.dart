@@ -187,7 +187,7 @@ class _RecordRowState extends State<RecordRow> {
                   audioPlayer.dispose();
                   widget.path.delete();
                   context.read<RecordsCubit>().GetCurrentRecords();
-                  context.read<ShuffleCubit>().updateDeletedQuestionsObject(timeStamp: DateTime.now());
+                  context.read<ShuffleCubit>().updateDeletedQuestionsObject();
                 },
                 fontSize: 18,
                 iconHeight: 20,

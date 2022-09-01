@@ -15,7 +15,7 @@ part "shuffle_state.dart";
 
 class ShuffleCubit extends Cubit<ShuffleState> {
   ShuffleCubit() : super(IdleState());
-  late QuestionObject shuffledQuestion;
+  late var shuffledQuestion;
   var recordedQuestions = []; //<dates to questions>
   var deletedQuestions = [];
   var unTouchedQuestions = [];
@@ -37,18 +37,20 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   Future<File> writeJson(
       {required String jsonName, required String toBeWritten}) async {
     final file = await _localFile(fileName: jsonName);
-    // print("$jsonName:  ${file.path}");
+
     // Write the file
     return file.writeAsString(toBeWritten);
   }
-
+  printQuestion() async{
+    print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
+  }
   setQuestionObjectsState() async {
     final prefs = await SharedPreferences.getInstance();
     final isUserLoggedInBefore = prefs.getBool('isUserLoggedInBefore');
 
     if (isUserLoggedInBefore == null) {
       // 1. load from the asset json
-      // 2. use the loaded to iniate the question objects
+      // 2. use the loaded to initiate the question objects
       // 3. change your isUserLoggedInBefore as true so that never come back here again
       // 4. finally, initiate questions.json in temp dir and save the taken json from the assets
 
@@ -113,13 +115,12 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     final int randomValueFromTheLength =
         randomSeed.nextInt(unTouchedQuestions.length);
 
-    shuffledQuestion = QuestionObject(
-        id: unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
-        question:
-            unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]);
+    shuffledQuestion = {
+        "id": unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
+        "question":
+            unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]};
 
     updateShuffledQuestionsObject();
-    // print(unTouchedQuestions.length);
     emit(const GotQuestion());
   }
 
@@ -138,31 +139,27 @@ class ShuffleCubit extends Cubit<ShuffleState> {
 
   updateShuffledQuestionsObject() async {
     // updates the shuffledQuestion list and saves all the objects to local json
-    updateUntouchedQuestionsObject(id: shuffledQuestion.id);
-    shuffledQuestion.timeStamp = DateTime.now();
+    updateUntouchedQuestionsObject(id: shuffledQuestion["id"]);
+    shuffledQuestion["timeStamp"] = DateTime.now().toString();
     shuffledQuestions.add(shuffledQuestion);
 
     updateAllQuestionsRelatedObjectsWithJson();
   }
 
-  updateRecordedQuestionsObject({required DateTime timeStamp}) async {
+  updateRecordedQuestionsObject() async {
+    final String timeStamp = DateTime.now().toString();
     // updates the recordedQuestion list and saves all the objects to local json
-    shuffledQuestion.timeStamp = timeStamp;
-    // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
+    shuffledQuestion["timeStamp"] = timeStamp;
     recordedQuestions.add(shuffledQuestion);
-    // print(unTouchedQuestions.length);
-    // print(recordedQuestions.length);
 
     updateAllQuestionsRelatedObjectsWithJson();
   }
 
-  updateDeletedQuestionsObject({required DateTime timeStamp}) async {
+  updateDeletedQuestionsObject() async {
+    var timeStamp = DateTime.now();
     // updates the deletedQuestions list and saves all the objects to local json
-    shuffledQuestion.timeStamp = timeStamp;
-    // updateUntouchedQuestionsObject(id: shuffledQuestion.id);
+    shuffledQuestion["timeStamp"] = timeStamp.toString();
     deletedQuestions.add(shuffledQuestion);
-    // print(unTouchedQuestions.length);
-    // print(deletedQuestions.length);
 
     updateAllQuestionsRelatedObjectsWithJson();
   }
@@ -172,7 +169,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       "untouched": unTouchedQuestions,
       "recorded": recordedQuestions,
       "deleted": deletedQuestions,
-      "shuffled": shuffledQuestions.map((question) => question.toMap()).toList()
+      "shuffled": shuffledQuestions
     };
     // print("\nUNTOUCHED");
     // print(allQuestionsRelatedObjectsInOneObjectForUpdate["untouched"]);

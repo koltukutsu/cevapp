@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
@@ -60,16 +62,60 @@ class _RecordsScreenState extends State<RecordsScreen> {
                 ),
                 if (state.recordPathsAsFileList.isNotEmpty &&
                     context.read<ShuffleCubit>().recordedQuestions.isNotEmpty)
-                  ...List.generate(
-                    state.recordPathsAsFileList.length,
-                    (index) => RecordRow(
-                        index: index.toString(),
-                        path: state.recordPathsAsFileList[index],
-                        question: context
-                            .read<ShuffleCubit>()
-                            .recordedQuestions[index]
-                            .question
-                            .toString()),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.625,
+                    child: SingleChildScrollView(
+                      child: ListView.builder(
+                        itemCount: state.recordPathsAsFileList.length,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemBuilder: (context, index) => RecordRow(
+                            index: index.toString(),
+                            path: state.recordPathsAsFileList[index],
+                            question: context
+                                .read<ShuffleCubit>()
+                                .recordedQuestions
+                                .firstWhere((element) {
+                              // debugPrint("\nCONTROL - $index");
+                              // debugPrint(
+                              //     "coming from recordedQuestions: ${element.toString()}");
+                              // debugPrint("state: ${state.recordPathsAsFileList}");
+
+                              final File indexFile =
+                                  state.recordPathsAsFileList[index];
+                              final String indexFilePath = indexFile.path;
+
+                              // debugPrint("state path indexed: $indexFile");
+                              // debugPrint("index file Path: $indexFilePath");
+
+                              final List<String> splittedIndexFilePath =
+                                  indexFilePath.split("/");
+
+                              // debugPrint(
+                              //     "splitted Index File Path: $splittedIndexFilePath");
+
+                              final String lastOfIt =
+                                  splittedIndexFilePath.last;
+
+                              // debugPrint("last of the splitted list: $lastOfIt");
+
+                              final String replacedAndFinalUUid =
+                                  lastOfIt.replaceFirst(".aac", "");
+
+                              // debugPrint(
+                              //     "final UUid from file directory: $replacedAndFinalUUid");
+                              // debugPrint(
+                              //     "uuid from the questionsRecord: ${element['id']}");
+                              //
+                              final bool theCondition =
+                                  element["id"] == replacedAndFinalUUid;
+
+                              debugPrint(
+                                  "and finally the RESULT: $theCondition");
+                              return theCondition;
+                            })["question"]),
+                      ),
+                    ),
                   )
                 else
                   Padding(
