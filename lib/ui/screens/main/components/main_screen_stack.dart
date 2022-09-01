@@ -1,7 +1,5 @@
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
-import 'package:cevapp/ui/theme/colors.dart';
-import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_swipe_dock.dart';
 import 'package:cevapp/ui/widgets/organisms/records.dart';
 import 'package:flutter/material.dart';

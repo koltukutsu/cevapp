@@ -6,7 +6,6 @@ import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
-import 'package:cevapp/ui/widgets/atoms/custom_text_field_neumorphic_for_avatar_page.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_avatar.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
@@ -77,7 +76,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                 ],
               )),
           CustomText(
-            text: "$userRank",
+            text: userRank,
             fontSize: 70,
             fontWeight: FontWeight.bold,
             italicEnable: false,

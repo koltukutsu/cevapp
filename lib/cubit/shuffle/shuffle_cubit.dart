@@ -2,15 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:cevapp/models/questionObject.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import "package:equatable/equatable.dart";
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uuid/uuid.dart';
-
 part "shuffle_state.dart";
 
 class ShuffleCubit extends Cubit<ShuffleState> {
@@ -42,7 +38,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     return file.writeAsString(toBeWritten);
   }
   printQuestion() async{
-    print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
+    // print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
   }
   setQuestionObjectsState() async {
     final prefs = await SharedPreferences.getInstance();

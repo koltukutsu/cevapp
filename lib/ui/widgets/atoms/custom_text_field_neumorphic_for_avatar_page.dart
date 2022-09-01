@@ -1,5 +1,4 @@
 import 'package:cevapp/ui/theme/colors.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CustomTextFieldNeumorphicForAvatarPage extends StatelessWidget {
@@ -45,19 +44,19 @@ class CustomTextFieldNeumorphicForAvatarPage extends StatelessWidget {
               fontWeight: labelFontWeight,
               fontFamily: labelFontFamily),
           // keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             // focusedBorder:,
-            disabledBorder: const OutlineInputBorder(
+            disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),
               borderSide:
                   BorderSide(color: AppColors.disabledBorderColor, width: 2),
             ),
-            enabledBorder: const OutlineInputBorder(
+            enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),
               borderSide:
                   BorderSide(color: AppColors.disabledBorderColor, width: 2),
             ),
-            border: const OutlineInputBorder(
+            border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),
               borderSide: BorderSide(color: AppColors.borderColor, width: 2),
             ),

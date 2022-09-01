@@ -83,7 +83,7 @@ class AvatarCubit extends Cubit<AvatarState> {
     final prefs = await SharedPreferences.getInstance();
     avatarMoney = avatarMoney + amount;
     await prefs.setInt("avatarMoney", avatarMoney);
-    print(avatarMoney);
+    // print(avatarMoney);
   }
 
   decreaseMoney() async {

@@ -1,4 +1,3 @@
-import 'package:cevapp/ui/screens/login/components/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {

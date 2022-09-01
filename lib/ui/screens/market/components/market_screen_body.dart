@@ -1,13 +1,10 @@
 import 'package:cevapp/ui/constants/app_paths.dart';
-import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
-import 'package:cevapp/ui/widgets/atoms/avatar_button.dart';
 import 'package:cevapp/ui/widgets/atoms/avatar_button_market.dart';
 import 'package:cevapp/ui/widgets/atoms/avatar_button_market_place_holder.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class MarketScreenBody extends StatefulWidget {
@@ -88,7 +85,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
           clipBehavior: Clip.none,
           children: [
             Align(
-                alignment: Alignment(0.0, -0.86),
+                alignment: const Alignment(0.0, -0.86),
                 child: CustomText(
                     text: avatarType == "unchosen" ? "Choose" : avatarType,
                     italicEnable: false,
@@ -205,9 +202,6 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             Align(
               alignment: const Alignment(0.0, -0.185),
               child: Neumorphic(
-                style: NeumorphicStyle(
-                    // color: AppColors.magenta
-                    ),
                 child: Container(
                     height: MediaQuery.of(context).size.height * 0.05,
                     width: MediaQuery.of(context).size.width * 0.95,
@@ -334,7 +328,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             AnimatedOpacity(
               opacity: avatarType == "unchosen" ? 1 : 0,
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               // curve: Curves.bounceOut,
               child: Visibility(
                 visible: avatarType == "unchosen",

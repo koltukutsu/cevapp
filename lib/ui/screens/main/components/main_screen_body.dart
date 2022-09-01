@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -9,7 +6,6 @@ import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -170,17 +166,16 @@ class _MainScreenBodyState extends State<MainScreenBody> {
 
 _showDialogSuccess(BuildContext context, Color color, String text) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Container(
-          child: Row(
+      content: Row(
     children: [
       Icon(
         Icons.verified,
         color: color,
       ),
-      SizedBox(
+      const SizedBox(
         width: 25,
       ),
       Text(text),
     ],
-  ))));
+  )));
 }

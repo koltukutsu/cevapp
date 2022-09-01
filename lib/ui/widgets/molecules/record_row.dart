@@ -73,7 +73,7 @@ class _RecordRowState extends State<RecordRow> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * AppRatios.recordRowWidthRatio,
       height:
           MediaQuery.of(context).size.height * AppRatios.recordRowHeightRatio,
@@ -120,18 +120,15 @@ class _RecordRowState extends State<RecordRow> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
-                  child: Container(
-                    // color: AppColors.questionTextBackgroundColor,
-                    child: CustomText(
-                        text: widget.question.length > 20
-                            ? "${widget.question.substring(0, 23)}..."
-                            : widget.question,
-                        textColor: AppColors.white,
-                        fontSize: 16,
-                        fontFamily: "Montserrat",
-                        fontWeight: FontWeight.normal,
-                        italicEnable: false),
-                  ),
+                  child: CustomText(
+                      text: widget.question.length > 20
+                          ? "${widget.question.substring(0, 23)}..."
+                          : widget.question,
+                      textColor: AppColors.white,
+                      fontSize: 16,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.normal,
+                      italicEnable: false),
                 ),
               ),
             ],

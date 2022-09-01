@@ -72,7 +72,7 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * AppRatios.recordRowWidthRatio,
       height:
           MediaQuery.of(context).size.height * AppRatios.recordRowHeightRatio,
