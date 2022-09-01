@@ -88,12 +88,12 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
           clipBehavior: Clip.none,
           children: [
             Align(
-                alignment: Alignment(0.0, -0.90),
+                alignment: Alignment(0.0, -0.86),
                 child: CustomText(
                     text: avatarType == "unchosen" ? "Choose" : avatarType,
                     italicEnable: false,
                     fontWeight: FontWeight.bold,
-                    fontSize: 60)),
+                    fontSize: 55)),
             Align(
                 alignment: Alignment.topCenter,
                 child: Row(
