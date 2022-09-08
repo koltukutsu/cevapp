@@ -1,5 +1,6 @@
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
+import 'package:cevapp/ui/screens/profile/profile_screen.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
@@ -60,6 +61,10 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                   width: 41,
                   height: 41,
                   function: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const ProfileScreen()));
                     Navigator.of(context).pushNamed(ROUTE_PROFILE_SCREEN);
                   })),
           const CustomText(
@@ -117,8 +122,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   }
 
   // sound related functions
-  Future<void> onSoundProcesses(String mode,
-      {String? id}) async {
+  Future<void> onSoundProcesses(String mode, {String? id}) async {
     PermissionStatus status = await Permission.microphone.request();
 
     if (status == PermissionStatus.granted) {
@@ -139,7 +143,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // stop succesfully
       else if (mode == "finish" && recorder.isRecording) {
         final pathFinished = await recorder.stopRecorder();
-         // TODO: take it inside
+        // TODO: take it inside
         stateOfRecorder = 0;
         // final audioFile = File(pathFinished!);
       }

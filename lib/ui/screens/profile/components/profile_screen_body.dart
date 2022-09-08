@@ -4,6 +4,7 @@ import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/user_ranks.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
+import 'package:cevapp/ui/screens/market/market_screen.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
@@ -64,6 +65,10 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       height: 41,
                       function: () {
                         // Navigator.of(context).pop();
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => const MarketScreen()));
                         Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(
@@ -125,30 +130,36 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   //     labelColor: AppColors.black,
                   //     labelFontSize: 15,
                   //     height: 1),
-                  CustomGeneralUseNeumorphicTextField(
-                    text: context.read<AvatarCubit>().avatarName,
-                    neumorphicBoxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
-                    widthRatio: 0.4,
-                    heightRatio: 0.05,
-                    fontWeight: FontWeight.bold,
-                    italicEnable: false,
-                    leftPadding: 10,
-                    bottomPadding: 0,
+                  BlocBuilder<AvatarCubit, AvatarState>(
+                    builder: (context, state) =>
+                        CustomGeneralUseNeumorphicTextField(
+                      text: context.read<AvatarCubit>().avatarName,
+                      neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(5)),
+                      widthRatio: 0.4,
+                      heightRatio: 0.05,
+                      fontWeight: FontWeight.bold,
+                      italicEnable: false,
+                      leftPadding: 10,
+                      bottomPadding: 0,
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.015,
                   ),
-                  CustomGeneralUseNeumorphicTextField(
-                    text: context.read<AvatarCubit>().avatarSurname,
-                    neumorphicBoxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(5)),
-                    widthRatio: 0.4,
-                    heightRatio: 0.05,
-                    fontWeight: FontWeight.bold,
-                    italicEnable: false,
-                    leftPadding: 10,
-                    bottomPadding: 0,
+                  BlocBuilder<AvatarCubit, AvatarState>(
+                    builder: (context, state) =>
+                        CustomGeneralUseNeumorphicTextField(
+                      text: context.read<AvatarCubit>().avatarSurname,
+                      neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(5)),
+                      widthRatio: 0.4,
+                      heightRatio: 0.05,
+                      fontWeight: FontWeight.bold,
+                      italicEnable: false,
+                      leftPadding: 10,
+                      bottomPadding: 0,
+                    ),
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height *
@@ -179,18 +190,22 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      CustomGeneralUseNeumorphicTextField(
-                          text:
-                              "${context.read<ShuffleCubit>().shuffledQuestions.length}",
-                          neumorphicBoxShape: NeumorphicBoxShape.roundRect(
-                              BorderRadius.circular(5)),
-                          widthRatio: 0.3,
-                          heightRatio: 0.1,
-                          italicEnable: false,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          leftPadding: 10,
-                          bottomPadding: 10),
+                      BlocBuilder<ShuffleCubit, ShuffleState>(
+                        builder: (context, state) =>
+                            CustomGeneralUseNeumorphicTextField(
+                                text:
+                                    "${context.read<ShuffleCubit>().shuffledQuestions.length}",
+                                neumorphicBoxShape:
+                                    NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(5)),
+                                widthRatio: 0.3,
+                                heightRatio: 0.1,
+                                italicEnable: false,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                leftPadding: 10,
+                                bottomPadding: 10),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -207,18 +222,22 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      CustomGeneralUseNeumorphicTextField(
-                          text:
-                              "${context.read<RecordsCubit>().currentLengthOfRecords}",
-                          neumorphicBoxShape: NeumorphicBoxShape.roundRect(
-                              BorderRadius.circular(5)),
-                          widthRatio: 0.3,
-                          heightRatio: 0.1,
-                          italicEnable: false,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          leftPadding: 10,
-                          bottomPadding: 10),
+                      BlocBuilder<RecordsCubit, RecordsState>(
+                        builder: (context, state) =>
+                            CustomGeneralUseNeumorphicTextField(
+                                text:
+                                    "${context.read<RecordsCubit>().currentLengthOfRecords}",
+                                neumorphicBoxShape:
+                                    NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(5)),
+                                widthRatio: 0.3,
+                                heightRatio: 0.1,
+                                italicEnable: false,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                leftPadding: 10,
+                                bottomPadding: 10),
+                      ),
                     ],
                   ),
                 ],
@@ -238,18 +257,22 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      CustomGeneralUseNeumorphicTextField(
-                          text:
-                              "${context.read<ShuffleCubit>().recordedQuestions.length}",
-                          neumorphicBoxShape: NeumorphicBoxShape.roundRect(
-                              BorderRadius.circular(5)),
-                          widthRatio: 0.3,
-                          heightRatio: 0.1,
-                          italicEnable: false,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          leftPadding: 10,
-                          bottomPadding: 10),
+                      BlocBuilder<ShuffleCubit, ShuffleState>(
+                        builder: (context, state) =>
+                            CustomGeneralUseNeumorphicTextField(
+                                text:
+                                    "${context.read<ShuffleCubit>().recordedQuestions.length}",
+                                neumorphicBoxShape:
+                                    NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(5)),
+                                widthRatio: 0.3,
+                                heightRatio: 0.1,
+                                italicEnable: false,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                leftPadding: 10,
+                                bottomPadding: 10),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -266,18 +289,22 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      CustomGeneralUseNeumorphicTextField(
-                          text:
-                              "${context.read<ShuffleCubit>().deletedQuestions.length}",
-                          neumorphicBoxShape: NeumorphicBoxShape.roundRect(
-                              BorderRadius.circular(5)),
-                          widthRatio: 0.3,
-                          heightRatio: 0.1,
-                          italicEnable: false,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                          leftPadding: 10,
-                          bottomPadding: 10),
+                      BlocBuilder<ShuffleCubit, ShuffleState>(
+                        builder: (context, state) =>
+                            CustomGeneralUseNeumorphicTextField(
+                                text:
+                                    "${context.read<ShuffleCubit>().deletedQuestions.length}",
+                                neumorphicBoxShape:
+                                    NeumorphicBoxShape.roundRect(
+                                        BorderRadius.circular(5)),
+                                widthRatio: 0.3,
+                                heightRatio: 0.1,
+                                italicEnable: false,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                leftPadding: 10,
+                                bottomPadding: 10),
+                      ),
                     ],
                   ),
                 ],

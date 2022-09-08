@@ -1,3 +1,4 @@
+import 'package:cevapp/data/avatar_prices_per_level.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/avatar_button_market.dart';
@@ -242,6 +243,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "NOVICE"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.novice,
                       ),
                     ),
                     Align(
@@ -255,6 +257,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "BEGINNER"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.beginner,
                       ),
                     ),
                     Align(
@@ -268,6 +271,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "COMPETENT"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.competent,
                       ),
                     ),
                     Align(
@@ -281,6 +285,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "PROFICIENT"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.proficient,
                       ),
                     ),
                     Align(
@@ -294,6 +299,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "EXPERT"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.expert,
                       ),
                     ),
                     Align(
@@ -307,6 +313,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "MASTER"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.master,
                       ),
                     ),
                     Align(
@@ -320,6 +327,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         widthRatio: marketAvatarType == "UNIMAGINED"
                             ? onPressedMarketWidthRatio
                             : smallMarketWidthRatio,
+                        price: AvatarPrices.unimagined,
                       ),
                     ),
                   ],

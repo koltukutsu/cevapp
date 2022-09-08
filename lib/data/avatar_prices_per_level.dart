@@ -1,7 +1,9 @@
 class AvatarPrices {
-  static const int elementary = 25;
-  static const int intermediate = 75;
-  static const int advanced = 150;
-  static const int proficient = 250;
-  static const int fluent = 500;
+  static const int novice = 25;
+  static const int beginner = 75;
+  static const int competent = 150;
+  static const int proficient = 200;
+  static const int expert = 300;
+  static const int master = 400;
+  static const int unimagined = 500;
 }

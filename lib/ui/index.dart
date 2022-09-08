@@ -28,8 +28,8 @@ class MainApp extends StatelessWidget {
         initialRoute: ROUTE_ANIMATED_SPLASH_SCREEN,
 
         routes: {
-          ROUTE_MARKET: (context) => const MarketScreen(),
           // ROUTE_LOGIN: (context) => const LoginScreen(),
+          ROUTE_MARKET: (context) => const MarketScreen(),
           ROUTE_MAIN: (context) => const MainScreen(),
           ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen(),
           ROUTE_ANIMATED_SPLASH_SCREEN: (context) =>

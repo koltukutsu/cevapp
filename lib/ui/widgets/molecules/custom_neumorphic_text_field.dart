@@ -48,14 +48,16 @@ class CustomNeumorphicTextField extends StatelessWidget {
                       italicEnable: true,
                     );
                   } else if (state is GotQuestion || true) { // TODO: control this condition
-                    return CustomText(
-                      text: context.read<ShuffleCubit>().shuffledQuestion["question"], // TODO: contorl
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      textColor: AppColors.secondaryTextColor,
-                      fontMaxLines: 5,
-                      italicEnable: true,
+                    return BlocBuilder<ShuffleCubit, ShuffleState>(
+                      builder:(context, state) => CustomText(
+                        text: context.read<ShuffleCubit>().shuffledQuestion["question"], // TODO: contorl
+                        fontFamily: "Roboto",
+                        fontWeight: FontWeight.normal,
+                        fontSize: 20,
+                        textColor: AppColors.secondaryTextColor,
+                        fontMaxLines: 5,
+                        italicEnable: true,
+                      ),
                     );
                   }
                 },
