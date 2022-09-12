@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import "package:equatable/equatable.dart";
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 part "shuffle_state.dart";
 
 class ShuffleCubit extends Cubit<ShuffleState> {
@@ -16,6 +17,11 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   var deletedQuestions = [];
   var unTouchedQuestions = [];
   var shuffledQuestions = [];
+
+  // var questionLevel = [];
+  // var questionCategory = [];
+  var questionLevel = "";
+  var questionCategory = "";
 
   final String QUESTIONS_JSON_FILE_NAME = "questions";
 
@@ -37,9 +43,11 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     // Write the file
     return file.writeAsString(toBeWritten);
   }
-  printQuestion() async{
+
+  printQuestion() async {
     // print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
   }
+
   setQuestionObjectsState() async {
     final prefs = await SharedPreferences.getInstance();
     final isUserLoggedInBefore = prefs.getBool('isUserLoggedInBefore');
@@ -112,9 +120,10 @@ class ShuffleCubit extends Cubit<ShuffleState> {
         randomSeed.nextInt(unTouchedQuestions.length);
 
     shuffledQuestion = {
-        "id": unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
-        "question":
-            unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]};
+      "id": unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
+      "question":
+          unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]
+    };
 
     updateShuffledQuestionsObject();
     emit(const GotQuestion());
@@ -185,4 +194,9 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   }
 
   getRecordText() async {}
+
+  setQuestionLevel({required String chosen}) async => questionLevel = chosen;
+
+  setQUestionCategory({required String chosen}) async =>
+      questionCategory = chosen;
 }

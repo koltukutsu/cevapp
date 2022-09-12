@@ -9,7 +9,7 @@ class MarketScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: MarketScreenBody(comingFromMain: comingFromMain!),
+      body: MarketScreenBody(comingFromMain: comingFromMain),
     );
   }
 }

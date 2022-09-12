@@ -9,6 +9,7 @@ import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
+import 'package:cevapp/ui/widgets/molecules/dropdown_button.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -70,7 +71,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MarketScreen(comingFromMain: true,)));
+                                builder: (context) => const MarketScreen(
+                                      comingFromMain: true,
+                                    )));
                         // Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(
@@ -94,6 +97,23 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.08,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const DropdownButtonExample(list: <String>[
+                'Beginner',
+                'Intermediate',
+                'Advanced',
+                'Native-Like'
+              ]),
+              const DropdownButtonExample(list: <String>[
+                'Philosophy',
+                'Technology',
+                'French',
+                'Native-Like'
+              ]),
+            ],
           ),
           const CustomNeumorphicTextField(),
           // recording time live
