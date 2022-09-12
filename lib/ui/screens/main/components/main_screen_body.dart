@@ -1,11 +1,13 @@
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
+import 'package:cevapp/ui/screens/market/market_screen.dart';
 import 'package:cevapp/ui/screens/profile/profile_screen.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_during_record.dart';
 import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
+import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
@@ -55,18 +57,34 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           //   height: MediaQuery.of(context).size.height * 0.1,
           // ),
           Align(
-              alignment: Alignment.topRight,
-              child: CustomNeumorphicButton(
-                  imagePath: AppPaths.profilePath,
-                  width: 41,
-                  height: 41,
-                  function: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const ProfileScreen()));
-                    Navigator.of(context).pushNamed(ROUTE_PROFILE_SCREEN);
-                  })),
+              alignment: Alignment.topCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomNeumorphicMarketButton(
+                      imagePath: AppPaths.market,
+                      width: 41,
+                      height: 41,
+                      function: () {
+                        // Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MarketScreen(comingFromMain: true,)));
+                        // Navigator.of(context).pushNamed(ROUTE_MARKET);
+                      }),
+                  CustomNeumorphicButton(
+                      imagePath: AppPaths.profilePath,
+                      width: 41,
+                      height: 41,
+                      function: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ProfileScreen()));
+                      }),
+                ],
+              )),
           const CustomText(
             text: "cevapp",
             fontFamily: "Montserrat",

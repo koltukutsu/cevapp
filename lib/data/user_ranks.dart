@@ -7,7 +7,7 @@ class UserRank {
   UserRank({required this.rank, required this.avatarPath});
 }
 
-class userRankLevels {
+class UserRankLevels {
   static const int novice = 0;
   static const int beginner = 5;
   static const int competent = 15;

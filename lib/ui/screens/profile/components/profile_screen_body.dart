@@ -65,11 +65,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       height: 41,
                       function: () {
                         // Navigator.of(context).pop();
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => const MarketScreen()));
-                        Navigator.of(context).pushNamed(ROUTE_MARKET);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MarketScreen()));
+                        // Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(
                       imagePath: AppPaths.homePath,
@@ -130,10 +130,10 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   //     labelColor: AppColors.black,
                   //     labelFontSize: 15,
                   //     height: 1),
-                  BlocBuilder<AvatarCubit, AvatarState>(
-                    builder: (context, state) =>
+                  Builder(
+                    builder: (context) =>
                         CustomGeneralUseNeumorphicTextField(
-                      text: context.read<AvatarCubit>().avatarName,
+                      text: context.watch<AvatarCubit>().avatarName,
                       neumorphicBoxShape: NeumorphicBoxShape.roundRect(
                           BorderRadius.circular(5)),
                       widthRatio: 0.4,
@@ -147,10 +147,10 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.015,
                   ),
-                  BlocBuilder<AvatarCubit, AvatarState>(
-                    builder: (context, state) =>
+                  Builder(
+                    builder: (context) =>
                         CustomGeneralUseNeumorphicTextField(
-                      text: context.read<AvatarCubit>().avatarSurname,
+                      text: context.watch<AvatarCubit>().avatarSurname,
                       neumorphicBoxShape: NeumorphicBoxShape.roundRect(
                           BorderRadius.circular(5)),
                       widthRatio: 0.4,
@@ -190,11 +190,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      BlocBuilder<ShuffleCubit, ShuffleState>(
-                        builder: (context, state) =>
+                      Builder(
+                        builder: (context) =>
                             CustomGeneralUseNeumorphicTextField(
                                 text:
-                                    "${context.read<ShuffleCubit>().shuffledQuestions.length}",
+                                    "${context.watch<ShuffleCubit>().shuffledQuestions.length}",
                                 neumorphicBoxShape:
                                     NeumorphicBoxShape.roundRect(
                                         BorderRadius.circular(5)),
@@ -222,11 +222,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      BlocBuilder<RecordsCubit, RecordsState>(
-                        builder: (context, state) =>
+                      Builder(
+                        builder: (context) =>
                             CustomGeneralUseNeumorphicTextField(
                                 text:
-                                    "${context.read<RecordsCubit>().currentLengthOfRecords}",
+                                    "${context.watch<RecordsCubit>().currentLengthOfRecords}",
                                 neumorphicBoxShape:
                                     NeumorphicBoxShape.roundRect(
                                         BorderRadius.circular(5)),
@@ -257,11 +257,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      BlocBuilder<ShuffleCubit, ShuffleState>(
-                        builder: (context, state) =>
+                      Builder(
+                        builder: (context) =>
                             CustomGeneralUseNeumorphicTextField(
                                 text:
-                                    "${context.read<ShuffleCubit>().recordedQuestions.length}",
+                                    "${context.watch<ShuffleCubit>().recordedQuestions.length}",
                                 neumorphicBoxShape:
                                     NeumorphicBoxShape.roundRect(
                                         BorderRadius.circular(5)),
@@ -289,11 +289,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
-                      BlocBuilder<ShuffleCubit, ShuffleState>(
-                        builder: (context, state) =>
+                      Builder(
+                        builder: (context) =>
                             CustomGeneralUseNeumorphicTextField(
                                 text:
-                                    "${context.read<ShuffleCubit>().deletedQuestions.length}",
+                                    "${context.watch<ShuffleCubit>().deletedQuestions.length}",
                                 neumorphicBoxShape:
                                     NeumorphicBoxShape.roundRect(
                                         BorderRadius.circular(5)),
@@ -324,43 +324,43 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
     // print(userAvatarChoice);
     // print(userRecordedQuestions);
 
-    if (userRecordedQuestions >= userRankLevels.unimagined) {
+    if (userRecordedQuestions >= UserRankLevels.unimagined) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["unimagined$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["unimagined$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.master) {
+    } else if (userRecordedQuestions >= UserRankLevels.master) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["master$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["master$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.expert) {
+    } else if (userRecordedQuestions >= UserRankLevels.expert) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["expert$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["expert$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.proficient) {
+    } else if (userRecordedQuestions >= UserRankLevels.proficient) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["proficient$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["proficient$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.competent) {
+    } else if (userRecordedQuestions >= UserRankLevels.competent) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["competent$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["competent$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.beginner) {
+    } else if (userRecordedQuestions >= UserRankLevels.beginner) {
       setState(() {
         userAvatarImagePath =
             userRanksObject["beginner$userAvatarChoice"]!.avatarPath;
         userRank = userRanksObject["beginner$userAvatarChoice"]!.rank;
       });
-    } else if (userRecordedQuestions >= userRankLevels.novice) {
+    } else if (userRecordedQuestions >= UserRankLevels.novice) {
       // print("state control");
       // print("novice$userAvatarChoice");
       setState(() {

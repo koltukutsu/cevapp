@@ -29,9 +29,9 @@ class MainApp extends StatelessWidget {
 
         routes: {
           // ROUTE_LOGIN: (context) => const LoginScreen(),
-          ROUTE_MARKET: (context) => const MarketScreen(),
-          ROUTE_MAIN: (context) => const MainScreen(),
-          ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen(),
+          // ROUTE_MARKET: (context) => const MarketScreen(),
+          // ROUTE_MAIN: (context) => const MainScreen(),
+          // ROUTE_PROFILE_SCREEN: (context) => const ProfileScreen(),
           ROUTE_ANIMATED_SPLASH_SCREEN: (context) =>
               const CevappAnimatedSplashScreen(),
           // ROUTE_MAIN: (context) => const SecondScreen(),

@@ -14,12 +14,14 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
   final double leftMargin;
   final double rightMargin;
   final double paddingAllAsDouble;
+  final bool comingFromMain;
 
   const CustomNeumorphicMarketButton({
     Key? key,
     required this.imagePath,
     required this.width,
     required this.height,
+    this.comingFromMain = false,
     this.function,
     this.topMargin = 6,
     this.bottomMargin = 0,
@@ -52,11 +54,13 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
             )),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: CustomText(
-            text: context.read<AvatarCubit>().avatarMoney.toString(),
-            fontWeight: FontWeight.bold,
-            italicEnable: false,
-            fontSize: 45,
+          child: Builder(
+            builder: (context) => CustomText(
+              text: context.watch<AvatarCubit>().avatarMoney.toString(),
+              fontWeight: FontWeight.bold,
+              italicEnable: false,
+              fontSize: 45,
+            ),
           ),
         )
       ],

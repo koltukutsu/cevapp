@@ -1,16 +1,20 @@
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/avatar_prices_per_level.dart';
+import 'package:cevapp/data/user_ranks.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/avatar_button_market.dart';
 import 'package:cevapp/ui/widgets/atoms/avatar_button_market_place_holder.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
+import 'package:cevapp/ui/widgets/atoms/avatar_category_button_market.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class MarketScreenBody extends StatefulWidget {
-  const MarketScreenBody({Key? key}) : super(key: key);
-
+  const MarketScreenBody({Key? key, required this.comingFromMain}) : super(key: key);
+final bool comingFromMain;
   @override
   State<MarketScreenBody> createState() => _MarketScreenBodyState();
 }
@@ -105,7 +109,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                           // Navigator.of(context).pushNamed(ROUTE_MARKET);
                         }),
                     CustomNeumorphicButton(
-                        imagePath: AppPaths.profilePath,
+                        imagePath: widget.comingFromMain? AppPaths.homePath : AppPaths.profilePath,
                         width: 41,
                         height: 41,
                         function: () {
@@ -125,7 +129,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
 
             Align(
               alignment: const Alignment(-0.9, -0.7),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.noviceLION,
                 type: "LION",
@@ -138,7 +142,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             Align(
               alignment: const Alignment(0, -0.7),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.noviceELEPHANT,
                 type: "ELEPHANT",
@@ -151,7 +155,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             Align(
               alignment: const Alignment(0.9, -0.7),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.noviceOWL,
                 type: "OWL",
@@ -163,7 +167,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             Align(
               alignment: const Alignment(-0.9, -0.4),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.noviceBIRD,
                 type: "BIRD",
@@ -176,7 +180,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             Align(
               alignment: const Alignment(0.0, -0.4),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.expertDRAGON,
                 type: "DRAGON",
@@ -189,7 +193,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
             ),
             Align(
               alignment: const Alignment(0.9, -0.4),
-              child: AvatarButtonMarket(
+              child: AvatarCategoryButtonMarket(
                 triggerFunction: onChange,
                 imagePath: AppPaths.noviceDOLPHIN,
                 type: "DOLPHIN",
@@ -231,103 +235,151 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                 visible: avatarType != "unchosen",
                 child: Stack(
                   children: [
-                    Align(
-                      alignment: const Alignment(-0.93, 0.05),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getNoviceAvatarPath(type: avatarType),
-                        type: "NOVICE",
-
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "NOVICE",
-                        widthRatio: marketAvatarType == "NOVICE"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.novice,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(-0.93, 0.05),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getNoviceAvatarPath(type: avatarType),
+                          type: "NOVICE",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.novice,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "NOVICE",
+                          widthRatio: marketAvatarType == "NOVICE"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.novice,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(0, 0.05),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getBeginnerAvatarPath(type: avatarType),
-                        type: "BEGINNER",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "BEGINNER",
-                        widthRatio: marketAvatarType == "BEGINNER"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.beginner,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(0, 0.05),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getBeginnerAvatarPath(type: avatarType),
+                          type: "BEGINNER",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.beginner,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "BEGINNER",
+                          widthRatio: marketAvatarType == "BEGINNER"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.beginner,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(0.93, 0.05),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getCompetentAvatarPath(type: avatarType),
-                        type: "COMPETENT",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "COMPETENT",
-                        widthRatio: marketAvatarType == "COMPETENT"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.competent,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(0.93, 0.05),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getCompetentAvatarPath(type: avatarType),
+                          type: "COMPETENT",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.competent,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "COMPETENT",
+                          widthRatio: marketAvatarType == "COMPETENT"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.competent,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(-0.93, 0.4),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getProficientAvatarPath(type: avatarType),
-                        type: "PROFICIENT",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "PROFICIENT",
-                        widthRatio: marketAvatarType == "PROFICIENT"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.proficient,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(-0.93, 0.4),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getProficientAvatarPath(type: avatarType),
+                          type: "PROFICIENT",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.proficient,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "PROFICIENT",
+                          widthRatio: marketAvatarType == "PROFICIENT"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.proficient,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(0, 0.4),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getExpertAvatarPath(type: avatarType),
-                        type: "EXPERT",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "EXPERT",
-                        widthRatio: marketAvatarType == "EXPERT"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.expert,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(0, 0.4),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getExpertAvatarPath(type: avatarType),
+                          type: "EXPERT",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.expert,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "EXPERT",
+                          widthRatio: marketAvatarType == "EXPERT"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.expert,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(0.93, 0.4),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getMasterAvatarPath(type: avatarType),
-                        type: "MASTER",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "MASTER",
-                        widthRatio: marketAvatarType == "MASTER"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.master,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(0.93, 0.4),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getMasterAvatarPath(type: avatarType),
+                          type: "MASTER",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.master,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "MASTER",
+                          widthRatio: marketAvatarType == "MASTER"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.master,
+                        ),
                       ),
                     ),
-                    Align(
-                      alignment: const Alignment(0, 0.8),
-                      child: AvatarButtonMarket(
-                        triggerFunction: onChangeMarket,
-                        imagePath: getUnimaginedAvatarPath(type: avatarType),
-                        type: "UNIMAGINED",
-                        // giveTypeItsType: giveTypeItsType,
-                        pressed: marketAvatarType == "UNIMAGINED",
-                        widthRatio: marketAvatarType == "UNIMAGINED"
-                            ? onPressedMarketWidthRatio
-                            : smallMarketWidthRatio,
-                        price: AvatarPrices.unimagined,
+                    Builder(
+                      builder: (context) => Align(
+                        alignment: const Alignment(0, 0.8),
+                        child: AvatarButtonMarket(
+                          triggerFunction: onChangeMarket,
+                          imagePath: getUnimaginedAvatarPath(type: avatarType),
+                          type: "UNIMAGINED",
+                          enabled: context
+                                  .watch<ShuffleCubit>()
+                                  .recordedQuestions
+                                  .length >=
+                              UserRankLevels.unimagined,
+                          // giveTypeItsType: giveTypeItsType,
+                          pressed: marketAvatarType == "UNIMAGINED",
+                          widthRatio: marketAvatarType == "UNIMAGINED"
+                              ? onPressedMarketWidthRatio
+                              : smallMarketWidthRatio,
+                          price: AvatarPrices.unimagined,
+                        ),
                       ),
                     ),
                   ],
