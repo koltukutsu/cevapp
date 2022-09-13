@@ -27,7 +27,6 @@ class ShuffleCubit extends Cubit<ShuffleState> {
 
   Future<String> get _localPath async {
     final directory = await getApplicationDocumentsDirectory();
-
     return directory.path;
   }
 

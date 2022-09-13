@@ -13,9 +13,11 @@ class RecordRowSecond extends StatefulWidget {
   final String index;
   final File path;
   final String question;
+  final AudioPlayer audioPlayer;
 
   const RecordRowSecond(
       {Key? key,
+      required this.audioPlayer,
       required this.index,
       required this.path,
       required this.question})
@@ -26,7 +28,7 @@ class RecordRowSecond extends StatefulWidget {
 }
 
 class _RecordRowSecondState extends State<RecordRowSecond> {
-  final audioPlayer = AudioPlayer();
+  // final audioPlayer = widget.audioPlayer;
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
@@ -42,19 +44,19 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
     super.initState();
     setAudio();
 
-    audioPlayer.onPlayerStateChanged.listen((state) {
+    widget.audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
         isPlaying = state == PlayerState.playing;
       });
     });
 
-    audioPlayer.onDurationChanged.listen((newDuration) {
+    widget.audioPlayer.onDurationChanged.listen((newDuration) {
       setState(() {
         duration = newDuration;
       });
     });
 
-    audioPlayer.onDurationChanged.listen((newPosition) {
+    widget.audioPlayer.onDurationChanged.listen((newPosition) {
       setState(() {
         position = newPosition;
       });
@@ -63,9 +65,9 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
 
   Future<void> setAudio() async {
     // repeat the song when completed
-    audioPlayer.setReleaseMode(ReleaseMode.loop);
+    widget.audioPlayer.setReleaseMode(ReleaseMode.loop);
 
-    audioPlayer.setSourceDeviceFile(widget.path.path);
+    widget.audioPlayer.setSourceDeviceFile(widget.path.path);
     // audioPlayer.setSourceAsset(widget.path.path);
     // audioPlayer.setSource(widget.path.path);
   }
@@ -76,24 +78,19 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
       width: MediaQuery.of(context).size.width * AppRatios.recordRowWidthRatio,
       height:
           MediaQuery.of(context).size.height * AppRatios.recordRowHeightRatio,
-      child: Stack(
-        alignment: Alignment.centerRight,
+      child: Column(
         // mainAxisAlignment: MainAxisAlignment.end,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Stack(
-            alignment: Alignment.centerLeft,
+          Row(
             children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: CustomText(
-                    text: "${widget.index}. ",
-                    textColor: AppColors.white,
-                    fontSize: 30,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.bold,
-                    italicEnable: false),
-              ),
+              CustomText(
+                  text: "${widget.index}. ",
+                  textColor: AppColors.white,
+                  fontSize: 30,
+                  fontFamily: "Montserrat",
+                  fontWeight: FontWeight.bold,
+                  italicEnable: false),
               GestureDetector(
                 onTapDown: _storePosition,
                 onTap: () async {
@@ -121,15 +118,19 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
-                  child: CustomText(
-                      text: widget.question.length > 23
-                          ? "${widget.question.substring(0, 23)}..."
-                          : widget.question,
-                      textColor: AppColors.white,
-                      fontSize: 16,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.normal,
-                      italicEnable: false),
+                  child: SizedBox(
+                    child: CustomText(
+                        // text: widget.question.length > 23
+                        //     ? "${widget.question.substring(0, 23)}..."
+                        //     :
+                        text: widget.question,
+                        textColor: AppColors.white,
+                        fontMaxLines: 4,
+                        fontSize: 16,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.normal,
+                        italicEnable: false),
+                  ),
                 ),
               ),
             ],
@@ -145,10 +146,10 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
                           postFixIconAsImagePath: AppPaths.playButton,
                           onPressed: () async {
                             if (isPlaying) {
-                              audioPlayer.stop();
+                              widget.audioPlayer.stop();
                             } else {
                               // await audioPlayer.play(widget.path.path);
-                              audioPlayer.resume();
+                              widget.audioPlayer.resume();
                             }
                           },
                           fontSize: 18,
@@ -173,9 +174,9 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
                               onChanged: (value) async {
                                 final position =
                                     Duration(seconds: value.toInt());
-                                await audioPlayer.seek(position);
+                                await widget.audioPlayer.seek(position);
                                 // can be changed to not resume
-                                await audioPlayer.resume();
+                                await widget.audioPlayer.resume();
                               },
                             ),
                             Row(
@@ -194,8 +195,8 @@ class _RecordRowSecondState extends State<RecordRowSecond> {
                     label: "delete",
                     postFixIconAsImagePath: AppPaths.deleteButton,
                     onPressed: () {
-                      audioPlayer.stop();
-                      audioPlayer.dispose();
+                      widget.audioPlayer.stop();
+                      widget.audioPlayer.dispose();
                       widget.path.delete();
                       context.read<RecordsCubit>().GetCurrentRecords();
                     },

@@ -7,16 +7,15 @@ import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
-import 'package:cevapp/ui/widgets/molecules/record_row_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class RecordRow extends StatefulWidget {
+class RecordRowNew extends StatefulWidget {
   final String index;
   final File path;
   final String question;
 
-  const RecordRow(
+  const RecordRowNew(
       {Key? key,
       required this.index,
       required this.path,
@@ -24,18 +23,17 @@ class RecordRow extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<RecordRow> createState() => _RecordRowState();
+  State<RecordRowNew> createState() => _RecordRowNewState();
 }
 
-class _RecordRowState extends State<RecordRow> {
+class _RecordRowNewState extends State<RecordRowNew> {
   final audioPlayer = AudioPlayer();
-  final int limitQuestion = 20;
-  final int limitQuestionSubString = 23;
+  final int limitQuestion = 50;
+  final int limitQuestionSubString = 53;
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
   late var _tapPosition;
-  var isMine = false;
 
   void _storePosition(TapDownDetails details) {
     _tapPosition = details.globalPosition;
@@ -45,10 +43,6 @@ class _RecordRowState extends State<RecordRow> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // context.watch<RecordsCubit>().getCurrentPlayingIndex;
-    // setState((){
-    //   isMine =
-    // });
     setAudio();
 
     audioPlayer.onPlayerStateChanged.listen((state) {
@@ -79,94 +73,73 @@ class _RecordRowState extends State<RecordRow> {
     // audioPlayer.setSource(widget.path.path);
   }
 
-  initiateAudioPossessorFunction({required int currentIndex}) {
-    // if (currentIndex == -1) {
-    //   setAudioPossessor(mine: true);
-    // } else {
-    //   if (currentIndex == int.parse(widget.index)) {
-    //   setAudioPossessor(mine: true);
-    // } else {
-    //   setAudioPossessor(mine: false);
-    // }
-    // }
-    if (currentIndex == int.parse(widget.index) && currentIndex == -1) {
-      setAudioPossessor(mine: true);
-    } else {
-      setAudioPossessor(mine: false);
-    }
-  }
-
-  setAudioPossessor({required bool mine}) {
-    setState(() {
-      isMine = mine;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    // initiateAudioPossessorFunction();
-
     return SizedBox(
       width: MediaQuery.of(context).size.width * AppRatios.recordRowWidthRatio,
       height:
           MediaQuery.of(context).size.height * AppRatios.recordRowHeightRatio,
-      child: Stack(
-        alignment: Alignment.centerRight,
-        // mainAxisAlignment: MainAxisAlignment.end,
-        // crossAxisAlignment: CrossAxisAlignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomText(
-                  text: "${widget.index}. ",
-                  textColor: AppColors.white,
-                  fontSize: 30,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.bold,
-                  italicEnable: false),
-              GestureDetector(
-                onTapDown: _storePosition,
-                onTap: () async {
-                  final RenderBox overlay = Overlay.of(context)!
-                      .context
-                      .findRenderObject() as RenderBox;
-
-                  await showMenu(
-                    context: context,
-                    position: RelativeRect.fromRect(
-                        _tapPosition & const Size(40, 40),
-                        // smaller rect, the touch area
-                        Offset.zero &
-                            overlay.size // Bigger rect, the entire screen
-                        ),
-                    items: [
-                      PopupMenuItem<String>(
-                        child: Text(widget.question),
-                      ),
-                    ],
-                    elevation: 8.0,
-                  );
-
-                  // widget.onItemSelected(value);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 0.0),
-                  child: CustomText(
-                      text: widget.question.length > limitQuestion
-                          ? "${widget.question.substring(0, limitQuestionSubString)}..."
-                          : widget.question,
-                      textColor: AppColors.white,
-                      fontMaxLines: 3,
-                      fontSize: 16,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.normal,
-                      italicEnable: false),
-                ),
-              ),
-            ],
-          ),
+          CustomText(
+              text: "${widget.index}. ",
+              textColor: AppColors.white,
+              fontSize: 30,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.bold,
+              italicEnable: false),
+          CustomText(
+              text: widget.question.length > limitQuestion
+                  ? "${widget.question.substring(0, limitQuestionSubString)}..."
+                  : widget.question,
+              textColor: AppColors.white,
+              fontMaxLines: 3,
+              fontSize: 16,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.normal,
+              italicEnable: false),
+          // GestureDetector(
+          //   onTapDown: _storePosition,
+          //   onTap: () async {
+          //     final RenderBox overlay =
+          //         Overlay.of(context)!.context.findRenderObject() as RenderBox;
+          //
+          //     await showMenu(
+          //       context: context,
+          //       position: RelativeRect.fromRect(
+          //           _tapPosition & const Size(40, 40),
+          //           // smaller rect, the touch area
+          //           Offset.zero & overlay.size // Bigger rect, the entire screen
+          //           ),
+          //       items: [
+          //         PopupMenuItem<String>(
+          //           child: Text(widget.question),
+          //         ),
+          //       ],
+          //       elevation: 8.0,
+          //     );
+          //
+          //     // widget.onItemSelected(value);
+          //   },
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(bottom: 0.0),
+          //     child: SizedBox(
+          //       width: AppRatios.recordRowQuestionWidthRatio,
+          //       child: CustomText(
+          //           text: widget.question.length > limitQuestion
+          //               ? "${widget.question.substring(0, limitQuestionSubString)}..."
+          //               : widget.question,
+          //           textColor: AppColors.white,
+          //           fontMaxLines: 3,
+          //           fontSize: 16,
+          //           fontFamily: "Montserrat",
+          //           fontWeight: FontWeight.normal,
+          //           italicEnable: false),
+          //     ),
+          //   ),
+          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -184,33 +157,17 @@ class _RecordRowState extends State<RecordRow> {
               // CustomText(text: position.toString()),
               // CustomText(text: (duration - position).toString()),
               CustomButtonAnimated(
-                label: !isPlaying && !isMine ? "play" : "stop",
+                label: !isPlaying ? "play" : "stop",
                 postFixIconAsImagePath:
                     !isPlaying ? AppPaths.playButton : AppPaths.pauseIconPath,
-                onPressed: () {
-                  // final int currentIndex =
-                  //     context.watch<RecordsCubit>().playingIndex;
-
-                  context
-                      .read<RecordsCubit>()
-                      .setCurrentPlayingIndex(index: int.parse(widget.index));
-                  //
-                  // print("currentIndex $currentIndex");
-                  //
-                  // initiateAudioPossessorFunction(currentIndex: currentIndex);
-                  print(isPlaying ||
-                      context.read<RecordsCubit>().getCurrentPlayingIndex !=
-                          int.parse(widget.index));
-                  if (isPlaying ||
-                      context.read<RecordsCubit>().getCurrentPlayingIndex !=
-                          int.parse(widget.index)) {
+                onPressed: () async {
+                  if (isPlaying) {
                     audioPlayer.stop();
                   } else {
                     // await audioPlayer.play(widget.path.path);
                     audioPlayer.resume();
                   }
                 },
-
                 fontSize: 18,
                 iconWidth: 20,
                 iconHeight: 20,
@@ -226,9 +183,8 @@ class _RecordRowState extends State<RecordRow> {
                 iconPaddingLeft: 5,
                 insets: 7,
               ),
-
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.03,
+                width: MediaQuery.of(context).size.width * 0.01,
               ),
               CustomButtonAnimated(
                 label: "delete",

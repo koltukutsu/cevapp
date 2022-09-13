@@ -58,7 +58,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                   width: 93,
                   height: 93,
                   paddingAllAsDouble: 0,
-                  function: () {
+                  function: () async {
                     // TODO: solve the problem
                     if (context.read<RecordsCubit>().getCurrentRecordingTime >=
                         recordingThreshold) {
@@ -66,13 +66,25 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                       onChangePauseAndContinueButton(false);
                       widget.recordFunction("finish");
 
-                      context.read<ShuffleCubit>().printQuestion();
-                      context
-                          .read<ShuffleCubit>()
-                          .updateRecordedQuestionsObject();
-                      context.read<RecordsCubit>().GetCurrentRecords();
-                      context.read<AvatarCubit>().increaseMoney();
-                      context.read<ShuffleCubit>().getQuestion();
+                      final bool questionIsRecorded = await context
+                          .read<RecordsCubit>()
+                          .getWhetherTheQuestionIsRecorded(
+                              id: context
+                                  .read<ShuffleCubit>()
+                                  .shuffledQuestion["id"]);
+                      if (!questionIsRecorded) {
+                        context.read<ShuffleCubit>().printQuestion();
+                        context
+                            .read<ShuffleCubit>()
+                            .updateRecordedQuestionsObject();
+                        context.read<RecordsCubit>().GetCurrentRecords();
+                        context.read<AvatarCubit>().increaseMoney();
+                        context.read<ShuffleCubit>().getQuestion();
+                      } else {
+                        _showDialogSuccess(context, AppColors.magenta,
+                            "Try another record");
+                      }
+
                     } else {
                       _showDialogSuccess(context, AppColors.magenta,
                           "To finish, must be more than $recordingThreshold seconds!");
@@ -121,12 +133,18 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
           Padding(
             padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.025),
-            child: CustomText(
-              text: widget.takenTime,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Montserrat",
-              fontSize: 82,
-              italicEnable: false,
+            child: Builder(
+              builder: (context) => CustomText(
+                text: widget.takenTime,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Montserrat",
+                fontSize: 82,
+                italicEnable: false,
+                textColor:
+                    context.watch<RecordsCubit>().getCurrentRecordingTime >= 30
+                        ? AppColors.acceptFinishColor
+                        : AppColors.rejectFinishColor,
+              ),
             ),
           )
         ],

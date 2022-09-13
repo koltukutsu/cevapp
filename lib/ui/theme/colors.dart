@@ -74,4 +74,7 @@ class AppColors {
 
   static const Color pauseColor = Color(0xFFffb242);
   static Color questionTextBackgroundColor = Colors.grey.shade100;
+
+  static const Color acceptFinishColor = Color(0xFF06FF00);
+  static const Color rejectFinishColor = Color(0xFFFF1700);
 }

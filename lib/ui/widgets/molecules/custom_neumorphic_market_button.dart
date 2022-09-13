@@ -55,12 +55,15 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
           child: Builder(
-            builder: (context) => CustomText(
-              text: context.watch<AvatarCubit>().avatarMoney.toString(),
-              fontWeight: FontWeight.bold,
-              italicEnable: false,
-              fontSize: 45,
-            ),
+            builder: (context) {
+              final String avatarMoney = context.select((AvatarCubit state) => state.avatarMoney.toString());
+              return CustomText(
+                text: avatarMoney,
+                fontWeight: FontWeight.bold,
+                italicEnable: false,
+                fontSize: 45,
+              );
+            }
           ),
         )
       ],

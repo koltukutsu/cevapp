@@ -19,6 +19,7 @@ class AppRatios {
 
   static const double recordRowHeightRatio = 0.08;
   static const double recordRowWidthRatio = 0.95;
+  static const double recordRowQuestionWidthRatio = 0.4;
 
   static const double swipeDockMiddleTextPosition = 0.10;
 
