@@ -2,6 +2,7 @@ import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
+import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,8 @@ class ButtonsDuringRecord extends StatefulWidget {
 }
 
 class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
+  final int recordingThreshold =
+      30; // to be able to finish the recording process, the recording time must be larger than 30 seconds
   CrossFadeState _crossFadeStateSecond = CrossFadeState.showFirst;
 
   void onChangePauseAndContinueButton(bool isPaused) {
@@ -56,19 +59,24 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                   height: 93,
                   paddingAllAsDouble: 0,
                   function: () {
-                    widget.crossFadeStateChangerFunction(false);
-                    onChangePauseAndContinueButton(false);
-                    widget.recordFunction("finish");
-                     // TODO: solve the problem
-                    context.read<ShuffleCubit>().printQuestion();
-                    context
-                        .read<ShuffleCubit>()
-                        .updateRecordedQuestionsObject();
-                    context.read<RecordsCubit>().GetCurrentRecords();
-                    context.read<AvatarCubit>().increaseMoney();
-                    context
-                        .read<ShuffleCubit>()
-                        .getQuestion();
+                    // TODO: solve the problem
+                    if (context.read<RecordsCubit>().getCurrentRecordingTime >=
+                        recordingThreshold) {
+                      widget.crossFadeStateChangerFunction(false);
+                      onChangePauseAndContinueButton(false);
+                      widget.recordFunction("finish");
+
+                      context.read<ShuffleCubit>().printQuestion();
+                      context
+                          .read<ShuffleCubit>()
+                          .updateRecordedQuestionsObject();
+                      context.read<RecordsCubit>().GetCurrentRecords();
+                      context.read<AvatarCubit>().increaseMoney();
+                      context.read<ShuffleCubit>().getQuestion();
+                    } else {
+                      _showDialogSuccess(context, AppColors.magenta,
+                          "To finish, must be more than $recordingThreshold seconds!");
+                    }
                   }),
               AnimatedCrossFade(
                 crossFadeState: _crossFadeStateSecond,
@@ -125,4 +133,23 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
       ),
     );
   }
+}
+
+_showDialogSuccess(BuildContext context, Color color, String text) {
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    backgroundColor: AppColors.white,
+    behavior: SnackBarBehavior.floating,
+    content: Row(
+      children: [
+        Icon(
+          Icons.verified,
+          color: color,
+        ),
+        const SizedBox(
+          width: 25,
+        ),
+        Text(text, style: const TextStyle(color: AppColors.leftSwipeDockColor)),
+      ],
+    ),
+  ));
 }

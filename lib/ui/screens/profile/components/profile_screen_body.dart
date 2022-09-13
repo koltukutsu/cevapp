@@ -4,6 +4,7 @@ import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/user_ranks.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
+import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/screens/market/market_screen.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
@@ -65,10 +66,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                       height: 41,
                       function: () {
                         // Navigator.of(context).pop();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const MarketScreen()));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => const MarketScreen()));
+                        Navigator.of(context).push(createPageRoute(pageRouteType:PageRouteTypes.fromProfileToMarket));
                         // Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(

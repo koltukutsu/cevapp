@@ -17,25 +17,79 @@ class StartingScreen extends StatefulWidget {
 class _StartingScreenState extends State<StartingScreen> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AvatarCubit, AvatarState>(
-      builder: (context, state) {
-        // print(state);
-        if (state is NoUserName){
-          return const TakeUserNameScreenBody();
-        }
-        else if (state is NoAvatars) {
-          return const AvatarScreenBody();
-        } else if (state is GotAvatars) {
-          return const MainScreen();
-        } else {
-          return Container(
-            color: AppColors.magenta,
-          );
-        }
-      },
-      // child: Container(
-      //   child: ,
-      // ),
+    return Scaffold(
+      backgroundColor: AppColors.mainBackgroundColor,
+      body: BlocBuilder<AvatarCubit, AvatarState>(
+        builder: (context, state) {
+          // print(state);
+          if (state is NoUserName) {
+            return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 280),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                            begin: const Offset(1, 0),
+                            end: const Offset(0.0, 0))
+                        .animate(animation),
+                    child: child,
+                  );
+                },
+                switchInCurve: Curves.ease,
+                switchOutCurve: Curves.ease,
+                child: const TakeUserNameScreenBody());
+          } else if (state is NoAvatars) {
+            return AnimatedSwitcher(
+                switchInCurve: Curves.ease,
+                switchOutCurve: Curves.ease,
+                duration: const Duration(milliseconds: 280),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                            begin: const Offset(1, 0),
+                            end: const Offset(0.0, 0))
+                        .animate(animation),
+                    child: child,
+                  );
+                },
+                child: const AvatarScreenBody());
+          } else if (state is GotAvatars) {
+            return AnimatedSwitcher(
+                switchInCurve: Curves.ease,
+                switchOutCurve: Curves.ease,
+                duration: const Duration(milliseconds: 280),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                            begin: const Offset(1, 0),
+                            end: const Offset(0.0, 0))
+                        .animate(animation),
+                    child: child,
+                  );
+                },
+                child: const MainScreen());
+          } else {
+            return AnimatedSwitcher(
+                switchInCurve: Curves.ease,
+                switchOutCurve: Curves.ease,
+                duration: const Duration(milliseconds: 280),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return SlideTransition(
+                    position: Tween<Offset>(
+                            begin: const Offset(1, 0),
+                            end: const Offset(0.0, 0))
+                        .animate(animation),
+                    child: child,
+                  );
+                },
+                child: Container(
+                  color: AppColors.magenta,
+                ));
+          }
+        },
+        // child: Container(
+        //   child: ,
+        // ),
+      ),
     );
   }
 }

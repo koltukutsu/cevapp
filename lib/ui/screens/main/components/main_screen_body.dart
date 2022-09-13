@@ -1,7 +1,6 @@
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
-import 'package:cevapp/ui/navigation/navigation_names.dart';
-import 'package:cevapp/ui/screens/market/market_screen.dart';
-import 'package:cevapp/ui/screens/profile/profile_screen.dart';
+import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:cevapp/ui/widgets/atoms/neumorphic_button.dart';
@@ -10,6 +9,7 @@ import 'package:cevapp/ui/widgets/molecules/buttons_section.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_market_button.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_neumorphic_text_field.dart';
 import 'package:cevapp/ui/widgets/molecules/dropdown_button.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -68,12 +68,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                       height: 41,
                       function: () {
                         // Navigator.of(context).pop();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const MarketScreen(
-                                      comingFromMain: true,
-                                    )));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => const MarketScreen(
+                        //               comingFromMain: true,
+                        //             )));
+                        Navigator.of(context).push(createPageRoute(
+                            pageRouteType: PageRouteTypes.fromMainToMarket));
                         // Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(
@@ -81,10 +83,12 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                       width: 41,
                       height: 41,
                       function: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ProfileScreen()));
+                        Navigator.of(context).push(createPageRoute(
+                            pageRouteType: PageRouteTypes.fromMainToProfile));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => const ProfileScreen()));
                       }),
                 ],
               )),
@@ -100,14 +104,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              const DropdownButtonExample(list: <String>[
+            children: const [
+              DropdownButtonExample(list: <String>[
                 'Beginner',
                 'Intermediate',
                 'Advanced',
                 'Native-Like'
               ]),
-              const DropdownButtonExample(list: <String>[
+              DropdownButtonExample(list: <String>[
                 'Philosophy',
                 'Technology',
                 'French',
@@ -119,12 +123,17 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           // recording time live
           StreamBuilder<RecordingDisposition>(
               stream: recorder.onProgress,
-              builder: (context, snapshot) {
+              builder: (contextSecond, snapshot) {
                 final duration =
                     snapshot.hasData ? snapshot.data!.duration : Duration.zero;
                 final int minutes = duration.inSeconds ~/ 60;
                 final int seconds = duration.inSeconds % 60;
                 debugPrint(duration.toString());
+
+                context
+                    .read<RecordsCubit>()
+                    .setCurrentRecordingTime(time: duration.inSeconds);
+
                 return AnimatedCrossFade(
                   crossFadeState: _crossFadeState,
                   duration: const Duration(milliseconds: 300),
