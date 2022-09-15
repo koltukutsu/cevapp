@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
+import 'package:cevapp/models/questionObject.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_column_linear_gradient_filled.dart';
@@ -29,7 +30,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
     return Container(
       // margin: const EdgeInsets.only(right: 2, left: 2),
       decoration: const BoxDecoration(
-          // color: AppColors.swipeDockColor,
+        // color: AppColors.swipeDockColor,
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.topRight,
@@ -55,71 +56,49 @@ class _RecordsScreenState extends State<RecordsScreen> {
                   child: CustomColumnLinearGradientFilled(),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height *
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height *
                       (AppRatios
                           .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar),
                 ),
                 if (state.recordPathsAsFileList.isNotEmpty &&
-                    context.read<ShuffleCubit>().recordedQuestions.isNotEmpty)
+                    context
+                        .read<ShuffleCubit>()
+                        .recordedQuestions
+                        .isNotEmpty)
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.625,
+                    height: MediaQuery
+                        .of(context)
+                        .size
+                        .height * 0.625,
                     child: SingleChildScrollView(
                       child: ListView.builder(
                         itemCount: state.recordPathsAsFileList.length,
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) => RecordRow(
-                            index: index.toString(),
-                            path: state.recordPathsAsFileList[index],
-                            question: context
-                                .read<ShuffleCubit>()
-                                .recordedQuestions
-                                .firstWhere((element) {
-                              // debugPrint("\nCONTROL - $index");
-                              // debugPrint(
-                              //     "coming from recordedQuestions: ${element.toString()}");
-                              // debugPrint("state: ${state.recordPathsAsFileList}");
-
-                              final File indexFile =
-                                  state.recordPathsAsFileList[index];
-                              final String indexFilePath = indexFile.path;
-
-                              // debugPrint("state path indexed: $indexFile");
-                              // debugPrint("index file Path: $indexFilePath");
-
-                              final List<String> splittedIndexFilePath =
-                                  indexFilePath.split("/");
-
-                              // debugPrint(
-                              //     "splitted Index File Path: $splittedIndexFilePath");
-
-                              final String lastOfIt =
-                                  splittedIndexFilePath.last;
-
-                              // debugPrint("last of the splitted list: $lastOfIt");
-
-                              final String replacedAndFinalUUid =
-                                  lastOfIt.replaceFirst(".aac", "");
-
-                              // debugPrint(
-                              //     "final UUid from file directory: $replacedAndFinalUUid");
-                              // debugPrint(
-                              //     "uuid from the questionsRecord: ${element['id']}");
-                              //
-                              final bool theCondition =
-                                  element["id"] == replacedAndFinalUUid;
-
-                              debugPrint(
-                                  "and finally the RESULT: $theCondition");
-                              return theCondition;
-                            })["question"]),
+                        itemBuilder: (context, index) =>
+                            RecordRow(
+                                index: index.toString(),
+                                path: state.recordPathsAsFileList[index],
+                                question: giveQuestionObject(
+                                    recordedQuestions: context
+                                        .read<ShuffleCubit>()
+                                        .recordedQuestions,
+                                    recordedPathsAsFileList: state
+                                        .recordPathsAsFileList,
+                                    index: index)),
                       ),
                     ),
                   )
                 else
                   Padding(
                     padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height *
+                        top: MediaQuery
+                            .of(context)
+                            .size
+                            .height *
                             AppRatios.swipeDockMiddleTextPosition),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,5 +167,29 @@ class _RecordsScreenState extends State<RecordsScreen> {
         // child: ,
       ),
     );
+  }
+
+  QuestionObject giveQuestionObject(
+      {required List recordedQuestions, required List recordedPathsAsFileList, required int index}) {
+    final Map taken = context
+        .read<ShuffleCubit>()
+        .recordedQuestions
+        .firstWhere((element) {
+      final File indexFile =
+      recordedPathsAsFileList[index];
+      final String indexFilePath = indexFile.path;
+      final List<String> splittedIndexFilePath =
+      indexFilePath.split("/");
+      final String lastOfIt =
+          splittedIndexFilePath.last;
+      final String replacedAndFinalUUid =
+      lastOfIt.replaceFirst(".aac", "");
+      final bool theCondition =
+          element["id"] == replacedAndFinalUUid;
+      debugPrint(
+          "and finally the RESULT: $theCondition");
+      return theCondition;
+    });
+    return QuestionObject(id: taken["id"], question: taken["question"]);
   }
 }

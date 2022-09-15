@@ -2,19 +2,19 @@ import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
+import 'package:cevapp/models/questionObject.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
-import 'package:cevapp/ui/widgets/molecules/record_row_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RecordRow extends StatefulWidget {
   final String index;
   final File path;
-  final String question;
+  final QuestionObject question;
 
   const RecordRow(
       {Key? key,
@@ -29,8 +29,8 @@ class RecordRow extends StatefulWidget {
 
 class _RecordRowState extends State<RecordRow> {
   final audioPlayer = AudioPlayer();
-  final int limitQuestion = 20;
-  final int limitQuestionSubString = 23;
+  final int limitQuestion = 23;
+  // final int limitQuestionSubString = 5;
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
@@ -143,7 +143,7 @@ class _RecordRowState extends State<RecordRow> {
                         ),
                     items: [
                       PopupMenuItem<String>(
-                        child: Text(widget.question),
+                        child: Text(widget.question.question),
                       ),
                     ],
                     elevation: 8.0,
@@ -154,9 +154,7 @@ class _RecordRowState extends State<RecordRow> {
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 0.0),
                   child: CustomText(
-                      text: widget.question.length > limitQuestion
-                          ? "${widget.question.substring(0, limitQuestionSubString)}..."
-                          : widget.question,
+                      text: giveMeText(),
                       textColor: AppColors.white,
                       fontMaxLines: 3,
                       fontSize: 16,
@@ -259,6 +257,14 @@ class _RecordRowState extends State<RecordRow> {
         ],
       ),
     );
+  }
+
+  String giveMeText(){
+    if (widget.question.question.length > limitQuestion){
+      return "${widget.question.question.substring(0, limitQuestion)}...";
+    } else {
+    return widget.question.question;
+    }
   }
 }
 

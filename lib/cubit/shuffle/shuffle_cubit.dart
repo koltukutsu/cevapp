@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import "package:equatable/equatable.dart";
@@ -43,8 +44,9 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     return file.writeAsString(toBeWritten);
   }
 
-  printQuestion() async {
+  printRecordedQuestion() async {
     // print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
+    debugPrint("recorded questions length:${recordedQuestions.length} \nrecorded questions: ${recordedQuestions.toString()}");
   }
 
   setQuestionObjectsState() async {

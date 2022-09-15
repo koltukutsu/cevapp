@@ -30,6 +30,10 @@ class _MainScreenState extends State<MainScreen> {
     } else {
       var result = await permission.request();
       if (result == PermissionStatus.granted) {
+        if (!mounted) {
+          print("Its mounted");
+          return false;
+        }
         context.read<RecordsCubit>().GetCurrentRecords();
         return true;
       }

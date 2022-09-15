@@ -33,11 +33,11 @@ class _RecordRowNewState extends State<RecordRowNew> {
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
-  late var _tapPosition;
-
-  void _storePosition(TapDownDetails details) {
-    _tapPosition = details.globalPosition;
-  }
+  // late var _tapPosition;
+  //
+  // void _storePosition(TapDownDetails details) {
+  //   _tapPosition = details.globalPosition;
+  // }
 
   @override
   void initState() {

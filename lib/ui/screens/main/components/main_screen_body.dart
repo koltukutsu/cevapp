@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -250,11 +251,13 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           ),
           const CustomNeumorphicTextField(),
           // recording time live
-          // TextButton(
-          //     onPressed: () {
-          //       final String = saveProcess(id: "12313");
-          //     },
-          //     child: CustomText(text: "DENEME")),
+          TextButton(
+              onPressed: () async {
+                await context.read<RecordsCubit>().getList();
+                if(!mounted) return;
+                await context.read<ShuffleCubit>().printRecordedQuestion();
+              },
+              child: CustomText(text: "DENEME")),
           StreamBuilder<RecordingDisposition>(
               stream: recorder.onProgress,
               builder: (contextSecond, snapshot) {
@@ -355,12 +358,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   }
 
   Future<String> saveProcess({required String id}) async {
-    Directory? directory = await getExternalStorageDirectory();
+    print("file process is started");
+    Directory? directory = await getApplicationDocumentsDirectory();
     try {
       if (Platform.isAndroid) {
         if (await _requestPermission(Permission.storage)) {
-          directory = await getExternalStorageDirectory();
+          directory = await getApplicationDocumentsDirectory();
         } else {
+          if (!mounted) return "";
           _showDialogSuccess(context, AppColors.magenta,
               "You didn't grant Storage Permission");
           return "";
@@ -370,12 +375,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           directory =
               await getTemporaryDirectory(); // IOS await getApplicationSupportDirectory()
         } else {
+          if (!mounted) return "";
           _showDialogSuccess(context, AppColors.magenta,
               "You didn't grant Storage Permission");
           return "";
         }
       }
-      directory = Directory("${directory!.path}/recordedAudios/");
+      // directory = Directory("${directory!.path}/recordedAudios/");
+      directory = Directory("${directory!.path}/audio_files/");
       if (!await directory.exists()) {
         print("directory exists: ${await directory.exists()}");
         await directory.create(recursive: true);
@@ -390,6 +397,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
     } catch (e) {
       print(e);
       // return false;
+      if (!mounted) return "";
       _showDialogSuccess(context, AppColors.magenta,
           "The Audio file couldn't be created properly!");
       return "";
@@ -413,7 +421,8 @@ Future<bool> _requestPermission(Permission permission) async {
   return false;
 }
 
-_showDialogSuccess(BuildContext context, Color color, String text) {
+_showDialogSuccess(BuildContext context, Color color, String text,
+    {Color textColor = AppColors.leftSwipeDockColor}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
@@ -426,7 +435,7 @@ _showDialogSuccess(BuildContext context, Color color, String text) {
         const SizedBox(
           width: 25,
         ),
-        Text(text, style: const TextStyle(color: AppColors.leftSwipeDockColor)),
+        Text(text, style: TextStyle(color: textColor)),
       ],
     ),
   ));

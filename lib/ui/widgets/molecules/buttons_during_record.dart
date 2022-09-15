@@ -26,7 +26,7 @@ class ButtonsDuringRecord extends StatefulWidget {
 
 class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
   final int recordingThreshold =
-      30; // to be able to finish the recording process, the recording time must be larger than 30 seconds
+      0; // to be able to finish the recording process, the recording time must be larger than 30 seconds
   CrossFadeState _crossFadeStateSecond = CrossFadeState.showFirst;
 
   void onChangePauseAndContinueButton(bool isPaused) {
@@ -72,19 +72,27 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                               id: context
                                   .read<ShuffleCubit>()
                                   .shuffledQuestion["id"]);
-                      if (!questionIsRecorded) {
-                        context.read<ShuffleCubit>().printQuestion();
+                      print("question is recorded?: $questionIsRecorded");
+                      if (questionIsRecorded) {
+                        if (!mounted) {
+                          print("inside the finish button");
+                          return;
+                        }
+                        // context.read<ShuffleCubit>().printQuestion();
                         context
                             .read<ShuffleCubit>()
                             .updateRecordedQuestionsObject();
                         context.read<RecordsCubit>().GetCurrentRecords();
                         context.read<AvatarCubit>().increaseMoney();
                         context.read<ShuffleCubit>().getQuestion();
+                        _showDialogSuccess(context, AppColors.acceptFinishColor,
+                            "Your record is saved!",
+                            textColor: AppColors.acceptFinishColor);
                       } else {
-                        _showDialogSuccess(context, AppColors.magenta,
-                            "Try another record");
+                        if (!mounted) return;
+                        _showDialogSuccess(
+                            context, AppColors.magenta, "Try another record");
                       }
-
                     } else {
                       _showDialogSuccess(context, AppColors.magenta,
                           "To finish, must be more than $recordingThreshold seconds!");
@@ -153,7 +161,8 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
   }
 }
 
-_showDialogSuccess(BuildContext context, Color color, String text) {
+_showDialogSuccess(BuildContext context, Color color, String text,
+    {Color textColor = AppColors.leftSwipeDockColor}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
@@ -166,7 +175,7 @@ _showDialogSuccess(BuildContext context, Color color, String text) {
         const SizedBox(
           width: 25,
         ),
-        Text(text, style: const TextStyle(color: AppColors.leftSwipeDockColor)),
+        Text(text, style: TextStyle(color: textColor)),
       ],
     ),
   ));

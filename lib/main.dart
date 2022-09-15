@@ -4,7 +4,8 @@ import 'package:flutter/services.dart';
 
 void main() {
   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   // FlutterNativeSplash.remove();
 
