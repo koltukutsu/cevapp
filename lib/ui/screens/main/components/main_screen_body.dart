@@ -251,13 +251,13 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           ),
           const CustomNeumorphicTextField(),
           // recording time live
-          TextButton(
-              onPressed: () async {
-                await context.read<RecordsCubit>().getList();
-                if(!mounted) return;
-                await context.read<ShuffleCubit>().printRecordedQuestion();
-              },
-              child: CustomText(text: "DENEME")),
+          // TextButton(
+          //     onPressed: () async {
+          //       await context.read<RecordsCubit>().getList();
+          //       if(!mounted) return;
+          //       await context.read<ShuffleCubit>().printRecordedQuestion();
+          //     },
+          //     child: CustomText(text: "DENEME")),
           StreamBuilder<RecordingDisposition>(
               stream: recorder.onProgress,
               builder: (contextSecond, snapshot) {
