@@ -366,8 +366,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
           directory = await getApplicationDocumentsDirectory();
         } else {
           if (!mounted) return "";
-          _showDialogSuccess(context, AppColors.magenta,
-              "You didn't grant Storage Permission");
+          _showDialogSuccess(
+              context, AppColors.magenta, "You didn't grant Storage Permission",
+              icon: Icons.report_problem);
           return "";
         }
       } else {
@@ -376,8 +377,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
               await getTemporaryDirectory(); // IOS await getApplicationSupportDirectory()
         } else {
           if (!mounted) return "";
-          _showDialogSuccess(context, AppColors.magenta,
-              "You didn't grant Storage Permission");
+          _showDialogSuccess(
+              context, AppColors.magenta, "You didn't grant Storage Permission",
+              icon: Icons.report_problem);
           return "";
         }
       }
@@ -399,7 +401,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // return false;
       if (!mounted) return "";
       _showDialogSuccess(context, AppColors.magenta,
-          "The Audio file couldn't be created properly!");
+          "The Audio file couldn't be created properly!",
+          icon: Icons.report_problem);
       return "";
     }
   }
@@ -422,14 +425,15 @@ Future<bool> _requestPermission(Permission permission) async {
 }
 
 _showDialogSuccess(BuildContext context, Color color, String text,
-    {Color textColor = AppColors.leftSwipeDockColor}) {
+    {Color textColor = AppColors.leftSwipeDockColor,
+    IconData icon = Icons.verified}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
     content: Row(
       children: [
         Icon(
-          Icons.verified,
+          icon,
           color: color,
         ),
         const SizedBox(

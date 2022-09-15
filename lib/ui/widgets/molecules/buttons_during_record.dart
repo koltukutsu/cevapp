@@ -91,11 +91,11 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                       } else {
                         if (!mounted) return;
                         _showDialogSuccess(
-                            context, AppColors.magenta, "Try another record");
+                            context, AppColors.magenta, "Try another record", icon: Icons.report_problem);
                       }
                     } else {
                       _showDialogSuccess(context, AppColors.magenta,
-                          "To finish, must be more than $recordingThreshold seconds!");
+                          "To finish, must be more than $recordingThreshold seconds!", icon: Icons.report_problem);
                     }
                   }),
               AnimatedCrossFade(
@@ -162,14 +162,14 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
 }
 
 _showDialogSuccess(BuildContext context, Color color, String text,
-    {Color textColor = AppColors.leftSwipeDockColor}) {
+    {Color textColor = AppColors.leftSwipeDockColor, IconData icon=Icons.verified}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
     content: Row(
       children: [
         Icon(
-          Icons.verified,
+          icon,
           color: color,
         ),
         const SizedBox(
@@ -180,3 +180,4 @@ _showDialogSuccess(BuildContext context, Color color, String text,
     ),
   ));
 }
+

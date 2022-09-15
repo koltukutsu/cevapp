@@ -9,6 +9,7 @@ import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RecordRow extends StatefulWidget {
@@ -30,6 +31,7 @@ class RecordRow extends StatefulWidget {
 class _RecordRowState extends State<RecordRow> {
   final audioPlayer = AudioPlayer();
   final int limitQuestion = 23;
+
   // final int limitQuestionSubString = 5;
   bool isPlaying = false;
   Duration duration = Duration.zero;
@@ -144,6 +146,17 @@ class _RecordRowState extends State<RecordRow> {
                     items: [
                       PopupMenuItem<String>(
                         child: Text(widget.question.question),
+                        onTap: () {
+                          Clipboard.setData(ClipboardData(
+                              text: "Question: ${widget.question.question}"));
+
+                          _showDialogSuccess(
+                              context,
+                              icon: Icons.info,
+                              AppColors.rightSwipeDockColor,
+                              "The question is coppied",
+                              textColor: AppColors.rightSwipeDockColor);
+                        },
                       ),
                     ],
                     elevation: 8.0,
@@ -259,11 +272,11 @@ class _RecordRowState extends State<RecordRow> {
     );
   }
 
-  String giveMeText(){
-    if (widget.question.question.length > limitQuestion){
+  String giveMeText() {
+    if (widget.question.question.length > limitQuestion) {
       return "${widget.question.question.substring(0, limitQuestion)}...";
     } else {
-    return widget.question.question;
+      return widget.question.question;
     }
   }
 }
@@ -274,3 +287,23 @@ class _RecordRowState extends State<RecordRow> {
 // context,
 // AppColors.swipeDockColor,
 // "${widget.index}. question is copied");
+
+_showDialogSuccess(BuildContext context, Color color, String text,
+    {Color textColor = AppColors.leftSwipeDockColor, IconData icon=Icons.verified}) {
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    backgroundColor: AppColors.white,
+    behavior: SnackBarBehavior.floating,
+    content: Row(
+      children: [
+        Icon(
+          icon,
+          color: color,
+        ),
+        const SizedBox(
+          width: 25,
+        ),
+        Text(text, style: TextStyle(color: textColor)),
+      ],
+    ),
+  ));
+}
