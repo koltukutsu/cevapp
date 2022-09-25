@@ -1,3 +1,4 @@
+import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/avatar_prices_per_level.dart';
 import 'package:cevapp/data/user_ranks.dart';
@@ -13,8 +14,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class MarketScreenBody extends StatefulWidget {
-  const MarketScreenBody({Key? key, required this.comingFromMain}) : super(key: key);
-final bool comingFromMain;
+  const MarketScreenBody({Key? key, required this.comingFromMain})
+      : super(key: key);
+  final bool comingFromMain;
+
   @override
   State<MarketScreenBody> createState() => _MarketScreenBodyState();
 }
@@ -80,6 +83,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> boughAvatars =
+        context.read<AvatarCubit>().boughtUserAvatars;
+
     return Container(
       color: AppColors.mainBackgroundColor,
       width: MediaQuery.of(context).size.width,
@@ -109,7 +115,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                           // Navigator.of(context).pushNamed(ROUTE_MARKET);
                         }),
                     CustomNeumorphicButton(
-                        imagePath: widget.comingFromMain? AppPaths.homePath : AppPaths.profilePath,
+                        imagePath: widget.comingFromMain
+                            ? AppPaths.homePath
+                            : AppPaths.profilePath,
                         width: 41,
                         height: 41,
                         function: () {
@@ -240,6 +248,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         alignment: const Alignment(-0.93, 0.05),
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("NOVICE_$avatarType"),
                           imagePath: getNoviceAvatarPath(type: avatarType),
                           type: "NOVICE",
                           enabled: context
@@ -261,6 +272,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         alignment: const Alignment(0, 0.05),
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("BEGINNER_$avatarType"),
                           imagePath: getBeginnerAvatarPath(type: avatarType),
                           type: "BEGINNER",
                           enabled: context
@@ -284,6 +298,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                           triggerFunction: onChangeMarket,
                           imagePath: getCompetentAvatarPath(type: avatarType),
                           type: "COMPETENT",
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("COMPETENT_$avatarType"),
                           enabled: context
                                   .watch<ShuffleCubit>()
                                   .recordedQuestions
@@ -303,6 +320,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         alignment: const Alignment(-0.93, 0.4),
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("PROFICIENT_$avatarType"),
                           imagePath: getProficientAvatarPath(type: avatarType),
                           type: "PROFICIENT",
                           enabled: context
@@ -325,6 +345,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
                           imagePath: getExpertAvatarPath(type: avatarType),
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("EXPERT_$avatarType"),
                           type: "EXPERT",
                           enabled: context
                                   .watch<ShuffleCubit>()
@@ -345,6 +368,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         alignment: const Alignment(0.93, 0.4),
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("MASTER_$avatarType"),
                           imagePath: getMasterAvatarPath(type: avatarType),
                           type: "MASTER",
                           enabled: context
@@ -366,6 +392,9 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                         alignment: const Alignment(0, 0.8),
                         child: AvatarButtonMarket(
                           triggerFunction: onChangeMarket,
+                          avatarType: avatarType,
+                          alreadyBought:
+                              boughAvatars.contains("UNIMAGINED_$avatarType"),
                           imagePath: getUnimaginedAvatarPath(type: avatarType),
                           type: "UNIMAGINED",
                           enabled: context

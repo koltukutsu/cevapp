@@ -11,6 +11,7 @@ class AvatarCubit extends Cubit<AvatarState> {
   var avatarSurname = "";
   var avatarMoney = 0;
   var avatarProperties = {};
+  List<String> boughtUserAvatars = [];
 
   // so there are 4 states, I know i made it a bit complicated
   // 1. noName that triggers the initiation section
@@ -29,11 +30,14 @@ class AvatarCubit extends Cubit<AvatarState> {
       final String? _avatarName = prefs.getString("userName");
       final String? _avatarUsername = prefs.getString("userSurname");
       final int? _avatarMoney = prefs.getInt("avatarMoney");
+      final List<String>? _boughtUserAvatars =
+          prefs.getStringList("userAvatarsList");
 
       avatarType = _avatarType!;
       avatarName = _avatarName!;
       avatarSurname = _avatarUsername!;
       avatarMoney = _avatarMoney!;
+      boughtUserAvatars = _boughtUserAvatars!;
 
       emit(GotAvatars());
     }
@@ -55,11 +59,17 @@ class AvatarCubit extends Cubit<AvatarState> {
   getUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
-    // print("this is inside of the getUserAvatar: $type");
     avatarType = type;
-    // print(avatarType);
+    // boughtUserAvatars.add(type);
+    // await prefs.setStringList("userAvatarsList", boughtUserAvatars);
+  }
 
-    // emit(GotAvatars());
+  buyUserAvatar({required String type}) async {
+    final prefs = await SharedPreferences.getInstance();
+    // await prefs.setString("avatarType", type);
+    // avatarType = type;
+    boughtUserAvatars.add(type);
+    await prefs.setStringList("userAvatarsList", boughtUserAvatars);
   }
 
   setUserAvatar({required String type}) async {
@@ -72,6 +82,8 @@ class AvatarCubit extends Cubit<AvatarState> {
     // print("got: $type");
 
     avatarType = type;
+    boughtUserAvatars.add(type);
+    await prefs.setStringList("userAvatarsList", boughtUserAvatars);
     await prefs.setInt("avatarMoney", 0);
     // print("user's Avatar in Cubit: $avatarType");
 
@@ -79,17 +91,19 @@ class AvatarCubit extends Cubit<AvatarState> {
   }
 
   increaseMoney() async {
-    const int amount = 5;
+    const int amount = 500;
     final prefs = await SharedPreferences.getInstance();
     avatarMoney = avatarMoney + amount;
     await prefs.setInt("avatarMoney", avatarMoney);
     // print(avatarMoney);
+    emit(IncreaseMoney());
   }
 
-  decreaseMoney() async {
-    const int amount = 5;
+  decreaseMoney({required int amount}) async {
+    // const int amount = 5;
     final prefs = await SharedPreferences.getInstance();
     avatarMoney -= amount;
     await prefs.setInt("avatarMoney", avatarMoney);
+    emit(DecreaseMoney());
   }
 }

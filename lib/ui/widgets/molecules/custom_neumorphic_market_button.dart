@@ -54,17 +54,19 @@ class CustomNeumorphicMarketButton extends StatelessWidget {
             )),
         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: Builder(
-            builder: (context) {
-              final String avatarMoney = context.select((AvatarCubit state) => state.avatarMoney.toString());
-              return CustomText(
-                text: avatarMoney,
-                fontWeight: FontWeight.bold,
-                italicEnable: false,
-                fontSize: 45,
-              );
-            }
-          ),
+          child: BlocBuilder<AvatarCubit, AvatarState>(
+              buildWhen: (previous, current) => previous != current,
+              builder: (context, state) {
+                // final String avatarMoney = context.select((AvatarCubit state) => state.avatarMoney.toString());
+                final String avatarMoney =
+                    context.read<AvatarCubit>().avatarMoney.toString();
+                return CustomText(
+                  text: avatarMoney,
+                  fontWeight: FontWeight.bold,
+                  italicEnable: false,
+                  fontSize: 45,
+                );
+              }),
         )
       ],
     );

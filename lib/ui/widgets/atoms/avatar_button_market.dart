@@ -14,6 +14,8 @@ class AvatarButtonMarket extends StatelessWidget {
   final double heightRatio;
   final double widthRatio;
   final int? price;
+  final String avatarType;
+  final bool alreadyBought;
 
   // final double depth;
   final bool pressed;
@@ -27,6 +29,8 @@ class AvatarButtonMarket extends StatelessWidget {
       required this.imagePath,
       required this.type,
       // required this.giveTypeItsType,
+      required this.avatarType,
+      required this.alreadyBought,
       this.enabled = true,
       this.pressed = true,
       this.widthRatio = 0.35,
@@ -34,9 +38,9 @@ class AvatarButtonMarket extends StatelessWidget {
       this.price})
       : super(key: key);
 
-  void chosenAvatarType(BuildContext context, {required String type}) {
-    context.read<AvatarCubit>().getUserAvatar(type: type);
-  }
+  // void chosenAvatarType({required String type}) {
+  //   context.read<AvatarCubit>().getUserAvatar(type: type);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -100,26 +104,83 @@ class AvatarButtonMarket extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        width: MediaQuery.of(context).size.width * widthRatio,
-                        height:
-                            MediaQuery.of(context).size.width * widthRatio / 3,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.8),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: const CustomText(
-                            text: "Buy",
-                            fontWeight: FontWeight.w900,
-                            fontSize: 24,
-                            italicEnable: false,
+                    if (!alreadyBought)
+                      Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * widthRatio,
+                          height: MediaQuery.of(context).size.width *
+                              widthRatio /
+                              3,
+                          decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.8),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: TextButton(
+                            onPressed: () {
+                              int avatarMoney =
+                                  context.read<AvatarCubit>().avatarMoney;
+                              avatarMoney = avatarMoney - price!;
+                              if (avatarMoney < 0) {
+                                _showDialogSuccess(context, AppColors.magenta,
+                                    "You don't have enough money to buy the avatar!",
+                                    icon: Icons.report_problem);
+                              } else {
+                                context
+                                    .read<AvatarCubit>()
+                                    .buyUserAvatar(type: "${type}_$avatarType");
+                                context
+                                    .read<AvatarCubit>()
+                                    .decreaseMoney(amount: price!);
+                                print("BOUGHT USER AVATARS");
+                                print(context
+                                    .read<AvatarCubit>()
+                                    .boughtUserAvatars);
+                                _showDialogSuccess(
+                                    context,
+                                    AppColors.acceptFinishColor,
+                                    "You bought the avatar!",
+                                    textColor: AppColors.acceptFinishColor);
+                                triggerFunction(type);
+                                // setState(() {});
+                              }
+                            },
+                            child: const CustomText(
+                              text: "Buy",
+                              fontWeight: FontWeight.w900,
+                              fontSize: 24,
+                              italicEnable: false,
+                            ),
                           ),
                         ),
-                      ),
-                    ),
+                      )
+                    else
+                      Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * widthRatio,
+                          height: MediaQuery.of(context).size.width *
+                              widthRatio /
+                              3,
+                          decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.8),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: TextButton(
+                            onPressed: () {
+                              context
+                                  .read<AvatarCubit>()
+                                  .setUserAvatar(type: "${type}_$avatarType");
+                              print("Set User Avatar");
+                              print(context.read<AvatarCubit>().avatarType);
+                            },
+                            child: const CustomText(
+                              text: "Use",
+                              fontWeight: FontWeight.w900,
+                              fontSize: 24,
+                              italicEnable: false,
+                            ),
+                          ),
+                        ),
+                      )
                   ],
                 ),
               ),
@@ -139,5 +200,26 @@ class AvatarButtonMarket extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _showDialogSuccess(BuildContext context, Color color, String text,
+      {Color textColor = AppColors.leftSwipeDockColor,
+      IconData icon = Icons.verified}) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      backgroundColor: AppColors.white,
+      behavior: SnackBarBehavior.floating,
+      content: Row(
+        children: [
+          Icon(
+            icon,
+            color: color,
+          ),
+          const SizedBox(
+            width: 25,
+          ),
+          Text(text, style: TextStyle(color: textColor)),
+        ],
+      ),
+    ));
   }
 }

@@ -52,7 +52,7 @@ class _StartingScreenState extends State<StartingScreen> {
                   );
                 },
                 child: const AvatarScreenBody());
-          } else if (state is GotAvatars) {
+          } else if ((state is GotAvatars) || (state is DecreaseMoney) || (state is IncreaseMoney)) {
             return AnimatedSwitcher(
                 switchInCurve: Curves.ease,
                 switchOutCurve: Curves.ease,
