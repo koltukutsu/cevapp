@@ -67,10 +67,10 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.noviceLION,
-                    type: "LION",
+                    type: "NOVICE_LION",
                     // giveTypeItsType: giveTypeItsType,
 
-                    pressed: avatarType == "LION",
+                    pressed: avatarType == "NOVICE_LION",
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.05,
@@ -78,9 +78,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.noviceELEPHANT,
-                    type: "ELEPHANT",
+                    type: "NOVICE_ELEPHANT",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: avatarType == "ELEPHANT",
+                    pressed: avatarType == "NOVICE_ELEPHANT",
                   ),
                 ],
               ),
@@ -93,9 +93,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.noviceOWL,
-                    type: "OWL",
+                    type: "NOVICE_OWL",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: avatarType == "OWL",
+                    pressed: avatarType == "NOVICE_OWL",
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.05,
@@ -103,9 +103,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.noviceBIRD,
-                    type: "BIRD",
+                    type: "NOVICE_BIRD",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: avatarType == "BIRD",
+                    pressed: avatarType == "NOVICE_BIRD",
                   ),
                 ],
               ),
@@ -118,9 +118,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.expertDRAGON,
-                    type: "DRAGON",
+                    type: "NOVICE_DRAGON",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: avatarType == "DRAGON",
+                    pressed: avatarType == "NOVICE_DRAGON",
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.05,
@@ -128,9 +128,9 @@ class _AvatarScreenBodyState extends State<AvatarScreenBody> {
                   AvatarButton(
                     triggerFunction: onChange,
                     imagePath: AppPaths.noviceDOLPHIN,
-                    type: "DOLPHIN",
+                    type: "NOVICE_DOLPHIN",
                     // giveTypeItsType: giveTypeItsType,
-                    pressed: avatarType == "DOLPHIN",
+                    pressed: avatarType == "NOVICE_DOLPHIN",
                   ),
                 ],
               ),

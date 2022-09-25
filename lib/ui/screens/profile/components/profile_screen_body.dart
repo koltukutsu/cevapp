@@ -98,16 +98,26 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     userAvatarImagePath;
                   });
                 },
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  child: CustomNeumorphicAvatar(
-                      text: "STERN LOOKING OWL",
-                      useImage: userAvatarImagePath,
-                      neumorphicBoxShape:
-                          NeumorphicBoxShape.beveled(BorderRadius.circular(50)),
-                      widthRatio: 0.52,
-                      heightRatio: 0.29),
-                ),
+                child: BlocBuilder<AvatarCubit, AvatarState>(
+                    buildWhen: (previous, current) => previous != current,
+                    builder: (context, state) {
+                      final String userAvatarChoice =
+                          context.read<AvatarCubit>().avatarType;
+                      userAvatarImagePath =
+                          userRanksObject[userAvatarChoice.trim()]!.avatarPath;
+                      userRank = userRanksObject[userAvatarChoice]!.rank;
+
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: CustomNeumorphicAvatar(
+                            text: "STERN LOOKING OWL",
+                            useImage: userAvatarImagePath,
+                            neumorphicBoxShape: NeumorphicBoxShape.beveled(
+                                BorderRadius.circular(50)),
+                            widthRatio: 0.52,
+                            heightRatio: 0.29),
+                      );
+                    }),
               ),
               Column(
                 children: [
@@ -310,11 +320,11 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   void setUserAvatarAndRank() {
     // final int userRecordedQuestions =
     //     context.read<ShuffleCubit>().recordedQuestions.length;
-    final String userAvatarChoice = context.read<AvatarCubit>().avatarType;
-    setState(() {
-      userAvatarImagePath =
-          userRanksObject[userAvatarChoice.trim()]!.avatarPath;
-      userRank = userRanksObject[userAvatarChoice]!.rank;
-    });
+    // final String userAvatarChoice = context.read<AvatarCubit>().avatarType;
+    // setState(() {
+    //   userAvatarImagePath =
+    //       userRanksObject[userAvatarChoice.trim()]!.avatarPath;
+    //   userRank = userRanksObject[userAvatarChoice]!.rank;
+    // });
   }
 }
