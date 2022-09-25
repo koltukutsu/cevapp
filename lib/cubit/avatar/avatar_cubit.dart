@@ -91,7 +91,7 @@ class AvatarCubit extends Cubit<AvatarState> {
   }
 
   increaseMoney() async {
-    const int amount = 10;
+    const int amount = 50;
     final prefs = await SharedPreferences.getInstance();
     avatarMoney = avatarMoney + amount;
     await prefs.setInt("avatarMoney", avatarMoney);

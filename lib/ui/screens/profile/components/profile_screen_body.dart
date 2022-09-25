@@ -68,7 +68,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                         //     context,
                         //     MaterialPageRoute(
                         //         builder: (context) => const MarketScreen()));
-                        Navigator.of(context).push(createPageRoute(pageRouteType:PageRouteTypes.fromProfileToMarket));
+                        Navigator.of(context).push(createPageRoute(
+                            pageRouteType: PageRouteTypes.fromProfileToMarket));
                         // Navigator.of(context).pushNamed(ROUTE_MARKET);
                       }),
                   CustomNeumorphicButton(
@@ -131,8 +132,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   //     labelFontSize: 15,
                   //     height: 1),
                   Builder(
-                    builder: (context) =>
-                        CustomGeneralUseNeumorphicTextField(
+                    builder: (context) => CustomGeneralUseNeumorphicTextField(
                       text: context.watch<AvatarCubit>().avatarName,
                       neumorphicBoxShape: NeumorphicBoxShape.roundRect(
                           BorderRadius.circular(5)),
@@ -148,8 +148,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     height: MediaQuery.of(context).size.height * 0.015,
                   ),
                   Builder(
-                    builder: (context) =>
-                        CustomGeneralUseNeumorphicTextField(
+                    builder: (context) => CustomGeneralUseNeumorphicTextField(
                       text: context.watch<AvatarCubit>().avatarSurname,
                       neumorphicBoxShape: NeumorphicBoxShape.roundRect(
                           BorderRadius.circular(5)),
@@ -191,20 +190,18 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
                       Builder(
-                        builder: (context) =>
-                            CustomGeneralUseNeumorphicTextField(
-                                text:
-                                    "${context.watch<ShuffleCubit>().shuffledQuestions.length}",
-                                neumorphicBoxShape:
-                                    NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(5)),
-                                widthRatio: 0.3,
-                                heightRatio: 0.1,
-                                italicEnable: false,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                leftPadding: 10,
-                                bottomPadding: 10),
+                        builder: (context) => CustomGeneralUseNeumorphicTextField(
+                            text:
+                                "${context.watch<ShuffleCubit>().shuffledQuestions.length}",
+                            neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(5)),
+                            widthRatio: 0.3,
+                            heightRatio: 0.1,
+                            italicEnable: false,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            leftPadding: 10,
+                            bottomPadding: 10),
                       ),
                     ],
                   ),
@@ -223,20 +220,18 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
                       Builder(
-                        builder: (context) =>
-                            CustomGeneralUseNeumorphicTextField(
-                                text:
-                                    "${context.watch<RecordsCubit>().currentLengthOfRecords}",
-                                neumorphicBoxShape:
-                                    NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(5)),
-                                widthRatio: 0.3,
-                                heightRatio: 0.1,
-                                italicEnable: false,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                leftPadding: 10,
-                                bottomPadding: 10),
+                        builder: (context) => CustomGeneralUseNeumorphicTextField(
+                            text:
+                                "${context.watch<RecordsCubit>().currentLengthOfRecords}",
+                            neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(5)),
+                            widthRatio: 0.3,
+                            heightRatio: 0.1,
+                            italicEnable: false,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            leftPadding: 10,
+                            bottomPadding: 10),
                       ),
                     ],
                   ),
@@ -258,20 +253,18 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
                       Builder(
-                        builder: (context) =>
-                            CustomGeneralUseNeumorphicTextField(
-                                text:
-                                    "${context.watch<ShuffleCubit>().recordedQuestions.length}",
-                                neumorphicBoxShape:
-                                    NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(5)),
-                                widthRatio: 0.3,
-                                heightRatio: 0.1,
-                                italicEnable: false,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                leftPadding: 10,
-                                bottomPadding: 10),
+                        builder: (context) => CustomGeneralUseNeumorphicTextField(
+                            text:
+                                "${context.watch<ShuffleCubit>().recordedQuestions.length}",
+                            neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(5)),
+                            widthRatio: 0.3,
+                            heightRatio: 0.1,
+                            italicEnable: false,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            leftPadding: 10,
+                            bottomPadding: 10),
                       ),
                     ],
                   ),
@@ -290,20 +283,18 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                         height: MediaQuery.of(context).size.height * 0.005,
                       ),
                       Builder(
-                        builder: (context) =>
-                            CustomGeneralUseNeumorphicTextField(
-                                text:
-                                    "${context.watch<ShuffleCubit>().deletedQuestions.length}",
-                                neumorphicBoxShape:
-                                    NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(5)),
-                                widthRatio: 0.3,
-                                heightRatio: 0.1,
-                                italicEnable: false,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                leftPadding: 10,
-                                bottomPadding: 10),
+                        builder: (context) => CustomGeneralUseNeumorphicTextField(
+                            text:
+                                "${context.watch<ShuffleCubit>().deletedQuestions.length}",
+                            neumorphicBoxShape: NeumorphicBoxShape.roundRect(
+                                BorderRadius.circular(5)),
+                            widthRatio: 0.3,
+                            heightRatio: 0.1,
+                            italicEnable: false,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            leftPadding: 10,
+                            bottomPadding: 10),
                       ),
                     ],
                   ),
@@ -317,57 +308,13 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   }
 
   void setUserAvatarAndRank() {
-    final int userRecordedQuestions =
-        context.read<ShuffleCubit>().recordedQuestions.length;
+    // final int userRecordedQuestions =
+    //     context.read<ShuffleCubit>().recordedQuestions.length;
     final String userAvatarChoice = context.read<AvatarCubit>().avatarType;
-    // print("set user avatar and rank");
-    // print(userAvatarChoice);
-    // print(userRecordedQuestions);
-
-    if (userRecordedQuestions >= UserRankLevels.unimagined) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["unimagined$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["unimagined$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.master) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["master$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["master$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.expert) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["expert$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["expert$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.proficient) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["proficient$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["proficient$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.competent) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["competent$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["competent$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.beginner) {
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["beginner$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["beginner$userAvatarChoice"]!.rank;
-      });
-    } else if (userRecordedQuestions >= UserRankLevels.novice) {
-      // print("state control");
-      // print("novice$userAvatarChoice");
-      setState(() {
-        userAvatarImagePath =
-            userRanksObject["novice$userAvatarChoice"]!.avatarPath;
-        userRank = userRanksObject["novice$userAvatarChoice"]!.rank;
-      });
-    }
+    setState(() {
+      userAvatarImagePath =
+          userRanksObject[userAvatarChoice.trim()]!.avatarPath;
+      userRank = userRanksObject[userAvatarChoice]!.rank;
+    });
   }
 }

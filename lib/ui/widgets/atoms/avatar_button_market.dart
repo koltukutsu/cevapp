@@ -165,11 +165,12 @@ class AvatarButtonMarket extends StatelessWidget {
                               color: Colors.grey.withOpacity(0.8),
                               borderRadius: BorderRadius.circular(10)),
                           child: TextButton(
-                            onPressed: () {
-                              context
+                            onPressed: () async {
+                              await context
                                   .read<AvatarCubit>()
                                   .setUserAvatar(type: "${type}_$avatarType");
                               print("Set User Avatar");
+
                               print(context.read<AvatarCubit>().avatarType);
                             },
                             child: const CustomText(

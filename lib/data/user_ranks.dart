@@ -19,83 +19,88 @@ class UserRankLevels {
 
 final Map<String, UserRank> userRanksObject = {
   // novice
-  "noviceLION": UserRank(rank: "Novice", avatarPath: AppPaths.noviceLION),
-  "noviceOWL": UserRank(rank: "Novice", avatarPath: AppPaths.noviceOWL),
-  "noviceDOLPHIN": UserRank(rank: "Novice", avatarPath: AppPaths.noviceDOLPHIN),
-  "noviceDRAGON": UserRank(rank: "Novice", avatarPath: AppPaths.noviceDRAGON),
-  "noviceBIRD": UserRank(rank: "Novice", avatarPath: AppPaths.noviceBIRD),
-  "noviceELEPHANT":
+  "NOVICE_LION": UserRank(rank: "Novice", avatarPath: AppPaths.noviceLION),
+  "NOVICE_OWL": UserRank(rank: "Novice", avatarPath: AppPaths.noviceOWL),
+  "NOVICE_DOLPHIN":
+      UserRank(rank: "Novice", avatarPath: AppPaths.noviceDOLPHIN),
+  "NOVICE_DRAGON": UserRank(rank: "Novice", avatarPath: AppPaths.noviceDRAGON),
+  "NOVICE_BIRD": UserRank(rank: "Novice", avatarPath: AppPaths.noviceBIRD),
+  "NOVICE_ELEPHANT":
       UserRank(rank: "Novice", avatarPath: AppPaths.noviceELEPHANT),
 
   // beginner
-  "beginnerLION": UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerLION),
-  "beginnerOWL": UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerOWL),
-  "beginnerDOLPHIN":
+  "BEGINNER_LION":
+      UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerLION),
+  "BEGINNER_OWL": UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerOWL),
+  "BEGINNER_DOLPHIN":
       UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerDOLPHIN),
-  "beginnerDRAGON":
+  "BEGINNER_DRAGON":
       UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerDRAGON),
-  "beginnerBIRD": UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerBIRD),
-  "beginnerELEPHANT":
+  "BEGINNER_BIRD":
+      UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerBIRD),
+  "BEGINNER_ELEPHANT":
       UserRank(rank: "Beginner", avatarPath: AppPaths.beginnerELEPHANT),
 
   // competent
-  "competentLION":
+  "COMPETENT_LION":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentLION),
-  "competentOWL":
+  "COMPETENT_OWL":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentOWL),
-  "competentDOLPHIN":
+  "COMPETENT_DOLPHIN":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentDOLPHIN),
-  "competentDRAGON":
+  "COMPETENT_DRAGON":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentDRAGON),
-  "competentBIRD":
+  "COMPETENT_BIRD":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentBIRD),
-  "competentELEPHANT":
+  "COMPETENT_ELEPHANT":
       UserRank(rank: "Competent", avatarPath: AppPaths.competentELEPHANT),
 
   // proficient
 
-  "proficientLION":
+  "PROFICIENT_LION":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientLION),
-  "proficientOWL":
+  "PROFICIENT_OWL":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientOWL),
-  "proficientDOLPHIN":
+  "PROFICIENT_DOLPHIN":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientDOLPHIN),
-  "proficientDRAGON":
+  "PROFICIENT_DRAGON":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientDRAGON),
-  "proficientBIRD":
+  "PROFICIENT_BIRD":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientBIRD),
-  "proficientELEPHANT":
+  "PROFICIENT_ELEPHANT":
       UserRank(rank: "Proficient", avatarPath: AppPaths.proficientELEPHANT),
 
   // expert
-  "expertLION": UserRank(rank: "Expert", avatarPath: AppPaths.expertLION),
-  "expertOWL": UserRank(rank: "Expert", avatarPath: AppPaths.expertOWL),
-  "expertDOLPHIN": UserRank(rank: "Expert", avatarPath: AppPaths.expertDOLPHIN),
-  "expertDRAGON": UserRank(rank: "Expert", avatarPath: AppPaths.expertDRAGON),
-  "expertBIRD": UserRank(rank: "Expert", avatarPath: AppPaths.expertBIRD),
-  "expertELEPHANT":
+  "EXPERT_LION": UserRank(rank: "Expert", avatarPath: AppPaths.expertLION),
+  "EXPERT_OWL": UserRank(rank: "Expert", avatarPath: AppPaths.expertOWL),
+  "EXPERT_DOLPHIN":
+      UserRank(rank: "Expert", avatarPath: AppPaths.expertDOLPHIN),
+  "EXPERT_DRAGON": UserRank(rank: "Expert", avatarPath: AppPaths.expertDRAGON),
+  "EXPERT_BIRD": UserRank(rank: "Expert", avatarPath: AppPaths.expertBIRD),
+  "EXPERT_ELEPHANT":
       UserRank(rank: "Expert", avatarPath: AppPaths.expertELEPHANT),
 
   // master
-  "masterLION": UserRank(rank: "Master", avatarPath: AppPaths.masterLION),
-  "masterOWL": UserRank(rank: "Master", avatarPath: AppPaths.masterOWL),
-  "masterDOLPHIN": UserRank(rank: "Master", avatarPath: AppPaths.masterDOLPHIN),
-  "masterDRAGON": UserRank(rank: "Master", avatarPath: AppPaths.masterDRAGON),
-  "masterBIRD": UserRank(rank: "Master", avatarPath: AppPaths.masterBIRD),
-  "masterELEPHANT":
+  "MASTER_LION": UserRank(rank: "Master", avatarPath: AppPaths.masterLION),
+  "MASTER_OWL": UserRank(rank: "Master", avatarPath: AppPaths.masterOWL),
+  "MASTER_DOLPHIN":
+      UserRank(rank: "Master", avatarPath: AppPaths.masterDOLPHIN),
+  "MASTER_DRAGON": UserRank(rank: "Master", avatarPath: AppPaths.masterDRAGON),
+  "MASTER_BIRD": UserRank(rank: "Master", avatarPath: AppPaths.masterBIRD),
+  "MASTER_ELEPHANT":
       UserRank(rank: "Master", avatarPath: AppPaths.masterELEPHANT),
 
   // unimagined
-  "unimaginedLION":
+  "UNIMAGINED_LION":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedLION),
-  "unimaginedOWL":
+  "UNIMAGINED_OWL":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedOWL),
-  "unimaginedDOLPHIN":
+  "UNIMAGINED_DOLPHIN":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedDOLPHIN),
-  "unimaginedDRAGON":
+  "UNIMAGINED_DRAGON":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedDRAGON),
-  "unimaginedBIRD":
+  "UNIMAGINED_BIRD":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedBIRD),
-  "unimaginedELEPHANT":
+  "UNIMAGINED_ELEPHANT":
       UserRank(rank: "Unimagined", avatarPath: AppPaths.unimaginedELEPHANT),
 };
