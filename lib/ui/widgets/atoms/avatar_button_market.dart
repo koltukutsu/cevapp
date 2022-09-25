@@ -131,10 +131,6 @@ class AvatarButtonMarket extends StatelessWidget {
                                 context
                                     .read<AvatarCubit>()
                                     .decreaseMoney(amount: price!);
-                                print("BOUGHT USER AVATARS");
-                                print(context
-                                    .read<AvatarCubit>()
-                                    .boughtUserAvatars);
                                 _showDialogSuccess(
                                     context,
                                     AppColors.acceptFinishColor,
@@ -168,7 +164,7 @@ class AvatarButtonMarket extends StatelessWidget {
                             onPressed: () {
                               context
                                   .read<AvatarCubit>()
-                                  .setUserAvatar(type: "${type}_$avatarType");
+                                  .setUserAvatarMarket(type: "${type}_$avatarType");
 
                               _showDialogSuccess(
                                   context,

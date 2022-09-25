@@ -62,6 +62,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                     // TODO: solve the problem
                     if (context.read<RecordsCubit>().getCurrentRecordingTime >=
                         recordingThreshold) {
+                      context.read<RecordsCubit>().changeActionAllowance();
                       widget.crossFadeStateChangerFunction(false);
                       onChangePauseAndContinueButton(false);
                       widget.recordFunction("finish");
@@ -133,6 +134,7 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                   height: 93,
                   paddingAllAsDouble: 0,
                   function: () {
+                    context.read<RecordsCubit>().changeActionAllowance();
                     widget.crossFadeStateChangerFunction(false);
                     onChangePauseAndContinueButton(false);
                     widget.recordFunction("delete");

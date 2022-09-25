@@ -123,16 +123,28 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                       width: 41,
                       height: 41,
                       function: () {
-                        Navigator.of(context).push(createPageRoute(
-                            pageRouteType: PageRouteTypes.fromMainToMarket));
+                        if (context.read<RecordsCubit>().allowToAction) {
+                          Navigator.of(context).push(createPageRoute(
+                              pageRouteType: PageRouteTypes.fromMainToMarket));
+                        } else {
+                          _showDialogSuccess(
+                              context, AppColors.magenta, "You are recording!",
+                              icon: Icons.report_problem);
+                        }
                       }),
                   CustomNeumorphicButton(
                       imagePath: AppPaths.profilePath,
                       width: 41,
                       height: 41,
                       function: () {
-                        Navigator.of(context).push(createPageRoute(
-                            pageRouteType: PageRouteTypes.fromMainToProfile));
+                        if (context.read<RecordsCubit>().allowToAction) {
+                          Navigator.of(context).push(createPageRoute(
+                              pageRouteType: PageRouteTypes.fromMainToProfile));
+                        } else {
+                          _showDialogSuccess(
+                              context, AppColors.magenta, "You are recording!",
+                              icon: Icons.report_problem);
+                        }
                         // Navigator.push(
                         //     context,
                         //     MaterialPageRoute(

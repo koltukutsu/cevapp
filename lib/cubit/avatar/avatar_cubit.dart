@@ -76,17 +76,26 @@ class AvatarCubit extends Cubit<AvatarState> {
   setUserAvatar({required String type}) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool("didUserChoseAnAvatar", true);
-    // final prefs = await SharedPreferences.getInstance();
     await prefs.setString("avatarType", type);
-
-    // print("user's Avatar in Cubit: $avatarType");
-    // print("got: $type");
 
     avatarType = type;
     boughtUserAvatars.add(type);
     await prefs.setStringList("userAvatarsList", boughtUserAvatars);
     await prefs.setInt("avatarMoney", 0);
-    // print("user's Avatar in Cubit: $avatarType");
+    emit(GotAvatars());
+
+  }
+
+  setUserAvatarMarket({required String type}) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool("didUserChoseAnAvatar", true);
+    await prefs.setString("avatarType", type);
+
+    avatarType = type;
+    if (!boughtUserAvatars.contains(type)){
+      boughtUserAvatars.add(type);
+      await prefs.setStringList("userAvatarsList", boughtUserAvatars);
+    }
 
     if (state is IncreaseMoney) {
       emit(DecreaseMoney());
@@ -94,6 +103,7 @@ class AvatarCubit extends Cubit<AvatarState> {
       emit(IncreaseMoney());
     }
   }
+
 
   increaseMoney() async {
     const int amount = 5;

@@ -17,3 +17,4 @@ class GetRecords extends RecordsState {
   // TODO: implement props
   List<Object?> get props => [recordPathsAsFileList];
 }
+

@@ -12,6 +12,7 @@ class RecordsCubit extends Cubit<RecordsState> {
   int currentLengthOfRecords = 0;
   int currentRecordingTime = 0;
   int playingIndex = -1;
+  bool allowToAction = true;
 
   Future<void> GetCurrentRecords() async {
     // const String path = '/data/user/0/com.example.cevapp/app_flutter';
@@ -73,5 +74,11 @@ class RecordsCubit extends Cubit<RecordsState> {
     }
     debugPrint(
         "recorded questions length:${recordPathsAsFileList.length} \nrecorded questions from the dir: ${recordPathsAsFileList.toString()}");
+  }
+
+  changeActionAllowance() {
+    allowToAction = !allowToAction;
+
+    print("allow to action : $allowToAction");
   }
 }

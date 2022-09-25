@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/constants/app_sounds.dart';
@@ -60,6 +61,7 @@ class _ButtonsSectionState extends State<ButtonsSection> {
             label: "record",
             postFixIconAsImagePath: AppPaths.recordIconPath,
             onPressed: () {
+              context.read<RecordsCubit>().changeActionAllowance();
               widget.crossFadeStateChangerFunction(true);
               widget.recordFunction("start",
                   id: context.read<ShuffleCubit>().shuffledQuestion["id"]);
