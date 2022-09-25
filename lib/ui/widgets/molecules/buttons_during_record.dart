@@ -26,7 +26,7 @@ class ButtonsDuringRecord extends StatefulWidget {
 
 class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
   final int recordingThreshold =
-      0; // to be able to finish the recording process, the recording time must be larger than 30 seconds
+      30; // to be able to finish the recording process, the recording time must be larger than 30 seconds
   CrossFadeState _crossFadeStateSecond = CrossFadeState.showFirst;
 
   void onChangePauseAndContinueButton(bool isPaused) {
@@ -91,11 +91,13 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                       } else {
                         if (!mounted) return;
                         _showDialogSuccess(
-                            context, AppColors.magenta, "Try another record", icon: Icons.report_problem);
+                            context, AppColors.magenta, "Try another record",
+                            icon: Icons.report_problem);
                       }
                     } else {
                       _showDialogSuccess(context, AppColors.magenta,
-                          "To finish, must be more than $recordingThreshold seconds!", icon: Icons.report_problem);
+                          "To finish, must be more than $recordingThreshold seconds!",
+                          icon: Icons.report_problem);
                     }
                   }),
               AnimatedCrossFade(
@@ -162,7 +164,8 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
 }
 
 _showDialogSuccess(BuildContext context, Color color, String text,
-    {Color textColor = AppColors.leftSwipeDockColor, IconData icon=Icons.verified}) {
+    {Color textColor = AppColors.leftSwipeDockColor,
+    IconData icon = Icons.verified}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
@@ -180,4 +183,3 @@ _showDialogSuccess(BuildContext context, Color color, String text,
     ),
   ));
 }
-
