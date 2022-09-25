@@ -100,33 +100,33 @@ class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
                           icon: Icons.report_problem);
                     }
                   }),
-              AnimatedCrossFade(
-                crossFadeState: _crossFadeStateSecond,
-                duration: const Duration(milliseconds: 250),
-                firstCurve: Curves.easeOut,
-                secondCurve: Curves.easeIn,
-                firstChild: CustomNeumorphicButton(
-                    imagePath: AppPaths.pauseIconPath,
-                    width: 93,
-                    height: 93,
-                    paddingAllAsDouble: 0,
-                    function: () {
-                      onChangePauseAndContinueButton(true);
-                      widget.recordFunction("pause");
-                      // widget.onSoundProcesses("pause_record");
-                    }),
-                secondChild: CustomNeumorphicButton(
-                    imagePath: AppPaths.continueIconPath,
-                    width: 93,
-                    height: 93,
-                    paddingAllAsDouble: 0,
-                    function: () {
-                      onChangePauseAndContinueButton(false);
-                      // widget.recordFunction("continue");
-
-                      // widget.onSoundProcesses("continue_record");
-                    }),
-              ),
+              // AnimatedCrossFade(
+              //   crossFadeState: _crossFadeStateSecond,
+              //   duration: const Duration(milliseconds: 250),
+              //   firstCurve: Curves.easeOut,
+              //   secondCurve: Curves.easeIn,
+              //   firstChild: CustomNeumorphicButton(
+              //       imagePath: AppPaths.pauseIconPath,
+              //       width: 93,
+              //       height: 93,
+              //       paddingAllAsDouble: 0,
+              //       function: () {
+              //         onChangePauseAndContinueButton(true);
+              //         widget.recordFunction("pause");
+              //         // widget.onSoundProcesses("pause_record");
+              //       }),
+              //   secondChild: CustomNeumorphicButton(
+              //       imagePath: AppPaths.continueIconPath,
+              //       width: 93,
+              //       height: 93,
+              //       paddingAllAsDouble: 0,
+              //       function: () {
+              //         onChangePauseAndContinueButton(false);
+              //         // widget.recordFunction("continue");
+              //
+              //         // widget.onSoundProcesses("continue_record");
+              //       }),
+              // ),
               CustomNeumorphicButton(
                   imagePath: AppPaths.removetIconPath,
                   width: 93,

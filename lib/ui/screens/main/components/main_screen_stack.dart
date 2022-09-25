@@ -1,3 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
+import 'package:cevapp/ui/constants/app_sounds.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
 import 'package:cevapp/ui/widgets/molecules/custom_swipe_dock.dart';
@@ -20,6 +22,11 @@ class _MainScreenStackState extends State<MainScreenStack> {
           AppRatios.swipdeDockFullHeightRatio,
       renderPanelSheet: false,
       backdropEnabled: true,
+      // onPanelOpened: () =>
+      //     AudioPlayer().play(AssetSource(AppSounds.swipeDockOpenSoundPath)),
+
+      // onPanelClosed: () =>
+      //     AudioPlayer().play(AssetSource(AppSounds.swipeDockCloseSoundPath)),
       // backdropColor: AppColors.mainBackgroundColor,
       parallaxEnabled: true,
 

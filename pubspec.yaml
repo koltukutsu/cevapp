@@ -49,6 +49,7 @@ dependencies:
   flutter_bloc: ^8.1.1
   url_launcher_web: ^2.0.13
   multi_select_flutter: ^4.1.2
+  vibration: ^1.7.6
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +89,7 @@ flutter:
     - assets/profile_images/ELEPHANT/
     - assets/profile_images/LION/
     - assets/profile_images/OWL/
+    - assets/audio/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

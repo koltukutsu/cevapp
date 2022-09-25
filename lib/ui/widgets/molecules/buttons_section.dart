@@ -1,10 +1,13 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
+import 'package:cevapp/ui/constants/app_sounds.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vibration/vibration.dart';
 
 class ButtonsSection extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
@@ -32,7 +35,8 @@ class _ButtonsSectionState extends State<ButtonsSection> {
         CustomButtonAnimated(
           label: "shuffle",
           postFixIconAsImagePath: AppPaths.shuffleIconPath,
-          onPressed: () {
+          onPressed: () async {
+            AudioPlayer().play(AssetSource(AppSounds.recordSoundPath));
             context.read<ShuffleCubit>().getQuestion();
             setState(() {
               isShuffleButtonClicked = true;
