@@ -80,5 +80,8 @@ class RecordsCubit extends Cubit<RecordsState> {
     allowToAction = !allowToAction;
 
     print("allow to action : $allowToAction");
+    if (allowToAction == false) {
+      emit(RecordingNow());
+    }
   }
 }

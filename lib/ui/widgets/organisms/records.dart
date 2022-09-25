@@ -30,7 +30,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
     return Container(
       // margin: const EdgeInsets.only(right: 2, left: 2),
       decoration: const BoxDecoration(
-        // color: AppColors.swipeDockColor,
+          // color: AppColors.swipeDockColor,
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.topRight,
@@ -56,49 +56,36 @@ class _RecordsScreenState extends State<RecordsScreen> {
                   child: CustomColumnLinearGradientFilled(),
                 ),
                 SizedBox(
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height *
+                  height: MediaQuery.of(context).size.height *
                       (AppRatios
                           .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar),
                 ),
                 if (state.recordPathsAsFileList.isNotEmpty &&
-                    context
-                        .read<ShuffleCubit>()
-                        .recordedQuestions
-                        .isNotEmpty)
+                    context.read<ShuffleCubit>().recordedQuestions.isNotEmpty)
                   SizedBox(
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height * 0.625,
+                    height: MediaQuery.of(context).size.height * 0.625,
                     child: SingleChildScrollView(
                       child: ListView.builder(
                         itemCount: state.recordPathsAsFileList.length,
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) =>
-                            RecordRow(
-                                index: index.toString(),
-                                path: state.recordPathsAsFileList[index],
-                                question: giveQuestionObject(
-                                    recordedQuestions: context
-                                        .read<ShuffleCubit>()
-                                        .recordedQuestions,
-                                    recordedPathsAsFileList: state
-                                        .recordPathsAsFileList,
-                                    index: index)),
+                        itemBuilder: (context, index) => RecordRow(
+                            index: index.toString(),
+                            path: state.recordPathsAsFileList[index],
+                            question: giveQuestionObject(
+                                recordedQuestions: context
+                                    .read<ShuffleCubit>()
+                                    .recordedQuestions,
+                                recordedPathsAsFileList:
+                                    state.recordPathsAsFileList,
+                                index: index)),
                       ),
                     ),
                   )
                 else
                   Padding(
                     padding: EdgeInsets.only(
-                        top: MediaQuery
-                            .of(context)
-                            .size
-                            .height *
+                        top: MediaQuery.of(context).size.height *
                             AppRatios.swipeDockMiddleTextPosition),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -128,6 +115,55 @@ class _RecordsScreenState extends State<RecordsScreen> {
                       ],
                     ),
                   )
+              ],
+            );
+          } else if (state is RecordingNow) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              // mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.only(top: 28.0),
+                  child: CustomColumnLinearGradientFilled(),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height *
+                      (AppRatios
+                          .swipeDockHeightRatioBetweenListOfQuestionsAndHorizontalBar),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height *
+                          AppRatios.swipeDockMiddleTextPosition),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      CustomText(
+                        text: "you are",
+                        textColor: AppColors.white,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 82,
+                      ),
+                      CustomText(
+                        text: "in",
+                        textColor: AppColors.white,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 62,
+                      ),
+                      CustomText(
+                        text: "record",
+                        textColor: AppColors.white,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 112,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             );
           } else {
@@ -170,24 +206,18 @@ class _RecordsScreenState extends State<RecordsScreen> {
   }
 
   QuestionObject giveQuestionObject(
-      {required List recordedQuestions, required List recordedPathsAsFileList, required int index}) {
-    final Map taken = context
-        .read<ShuffleCubit>()
-        .recordedQuestions
-        .firstWhere((element) {
-      final File indexFile =
-      recordedPathsAsFileList[index];
+      {required List recordedQuestions,
+      required List recordedPathsAsFileList,
+      required int index}) {
+    final Map taken =
+        context.read<ShuffleCubit>().recordedQuestions.firstWhere((element) {
+      final File indexFile = recordedPathsAsFileList[index];
       final String indexFilePath = indexFile.path;
-      final List<String> splittedIndexFilePath =
-      indexFilePath.split("/");
-      final String lastOfIt =
-          splittedIndexFilePath.last;
-      final String replacedAndFinalUUid =
-      lastOfIt.replaceFirst(".aac", "");
-      final bool theCondition =
-          element["id"] == replacedAndFinalUUid;
-      debugPrint(
-          "and finally the RESULT: $theCondition");
+      final List<String> splittedIndexFilePath = indexFilePath.split("/");
+      final String lastOfIt = splittedIndexFilePath.last;
+      final String replacedAndFinalUUid = lastOfIt.replaceFirst(".aac", "");
+      final bool theCondition = element["id"] == replacedAndFinalUUid;
+      debugPrint("and finally the RESULT: $theCondition");
       return theCondition;
     });
     return QuestionObject(id: taken["id"], question: taken["question"]);

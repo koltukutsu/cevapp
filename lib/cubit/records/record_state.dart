@@ -18,3 +18,9 @@ class GetRecords extends RecordsState {
   List<Object?> get props => [recordPathsAsFileList];
 }
 
+class RecordingNow extends RecordsState{
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+
+}
