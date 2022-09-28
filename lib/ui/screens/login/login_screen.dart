@@ -1,4 +1,3 @@
-import 'package:cevapp/ui/screens/login/components/login_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -13,7 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       resizeToAvoidBottomInset: true,
-      body: LoginScreenBody(),
+      // body: LoginScreenBody(),
     );
   }
 }

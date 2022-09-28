@@ -20,7 +20,7 @@ class CustomButtonAnimated extends StatefulWidget {
     this.labelColor = AppColors.white,
     this.fontWeight = FontWeight.bold,
     this.fontSize = 19,
-    this.fontFamily = "Montserrat",
+    this.fontFamily = "`Montserrat`",
     this.insets = Insets.s,
   }) : super(key: key);
   final double iconPaddingLeft;

@@ -1,0 +1,847 @@
+{
+  "untouched": [
+    {
+      "id": "a9092888-2489-11ed-98a0-f74024505d08",
+      "question": "Who are you?"
+    },
+    {
+      "id": "a9092889-2489-11ed-98a0-f74024505d08",
+      "question": "How would you describe yourself?"
+    },
+    {
+      "id": "a909288a-2489-11ed-98a0-f74024505d08",
+      "question": "What are you passionate about?"
+    },
+    {
+      "id": "a909288b-2489-11ed-98a0-f74024505d08",
+      "question": "What personal achievements are you most proud of?"
+    },
+    {
+      "id": "a909288c-2489-11ed-98a0-f74024505d08",
+      "question": "What are you most grateful for?"
+    },
+    {
+      "id": "a909288d-2489-11ed-98a0-f74024505d08",
+      "question": "What are the most important things to you in life?"
+    },
+    {
+      "id": "a909288e-2489-11ed-98a0-f74024505d08",
+      "question": "What are your values?"
+    },
+    {
+      "id": "a909288f-2489-11ed-98a0-f74024505d08",
+      "question": " What do you represent?"
+    },
+    {
+      "id": "a9092890-2489-11ed-98a0-f74024505d08",
+      "question": " What do you want to embody?"
+    },
+    {
+      "id": "a9092891-2489-11ed-98a0-f74024505d08",
+      "question": "Do you love yourself?"
+    },
+    {
+      "id": "a9092892-2489-11ed-98a0-f74024505d08",
+      "question": "Why or why not?"
+    },
+    {
+      "id": "a9092893-2489-11ed-98a0-f74024505d08",
+      "question": " What do you love most about yourself?"
+    },
+    {
+      "id": "a9092894-2489-11ed-98a0-f74024505d08",
+      "question": "How can you love yourself more today?"
+    },
+    {
+      "id": "a9092895-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal self?"
+    },
+    {
+      "id": "a9092896-2489-11ed-98a0-f74024505d08",
+      "question": "Look at your life now. Are you living the life of your dreams?"
+    },
+    {
+      "id": "a9092897-2489-11ed-98a0-f74024505d08",
+      "question": " Why or why not?"
+    },
+    {
+      "id": "a9092898-2489-11ed-98a0-f74024505d08",
+      "question": "If you have one year left to live, what would you do?"
+    },
+    {
+      "id": "a9092899-2489-11ed-98a0-f74024505d08",
+      "question": "If you have one week left to live, what would you do?"
+    },
+    {
+      "id": "a909289a-2489-11ed-98a0-f74024505d08",
+      "question": "If you have one day left to live, what would you do?"
+    },
+    {
+      "id": "a909289b-2489-11ed-98a0-f74024505d08",
+      "question": "If you have one minute left to live, what would you do?"
+    },
+    {
+      "id": "a909289c-2489-11ed-98a0-f74024505d08",
+      "question": "What would you do today if there were no tomorrow?"
+    },
+    {
+      "id": "a909289d-2489-11ed-98a0-f74024505d08",
+      "question": "What are the biggest things you\u2019ve learned in life to date?"
+    },
+    {
+      "id": "a909289e-2489-11ed-98a0-f74024505d08",
+      "question": "What advice would you give to your younger self?"
+    },
+    {
+      "id": "a909289f-2489-11ed-98a0-f74024505d08",
+      "question": "Let\u2019s say you are your future self. What advice would you give to your present self?"
+    },
+    {
+      "id": "a90928a0-2489-11ed-98a0-f74024505d08",
+      "question": "Is there something you\u2019re still holding on to?"
+    },
+    {
+      "id": "a90928a1-2489-11ed-98a0-f74024505d08",
+      "question": " Is it time to let it go?"
+    },
+    {
+      "id": "a90928a2-2489-11ed-98a0-f74024505d08",
+      "question": "What are you busy with today?"
+    },
+    {
+      "id": "a90928a3-2489-11ed-98a0-f74024505d08",
+      "question": " Will this matter in 1 year?"
+    },
+    {
+      "id": "a90928a4-2489-11ed-98a0-f74024505d08",
+      "question": " 3 years?"
+    },
+    {
+      "id": "a90928a5-2489-11ed-98a0-f74024505d08",
+      "question": " 5 years?"
+    },
+    {
+      "id": "a90928a6-2489-11ed-98a0-f74024505d08",
+      "question": "What are your Quadrant 2 tasks?"
+    },
+    {
+      "id": "a90928a7-2489-11ed-98a0-f74024505d08",
+      "question": " How can you start working on them?"
+    },
+    {
+      "id": "a90928a8-2489-11ed-98a0-f74024505d08",
+      "question": "What opportunities are you looking for now?"
+    },
+    {
+      "id": "a90928a9-2489-11ed-98a0-f74024505d08",
+      "question": "How can you create these opportunities?"
+    },
+    {
+      "id": "a90928aa-2489-11ed-98a0-f74024505d08",
+      "question": "What are your biggest goals and dreams?"
+    },
+    {
+      "id": "a90928ab-2489-11ed-98a0-f74024505d08",
+      "question": "Is there anything stopping you from pursuing them?"
+    },
+    {
+      "id": "a90928ac-2489-11ed-98a0-f74024505d08",
+      "question": " Why?"
+    },
+    {
+      "id": "a90928ad-2489-11ed-98a0-f74024505d08",
+      "question": " How can you address these factors?"
+    },
+    {
+      "id": "a90928ae-2489-11ed-98a0-f74024505d08",
+      "question": "If you were to do something for free for the rest of your life, what would you want to do?"
+    },
+    {
+      "id": "a90928af-2489-11ed-98a0-f74024505d08",
+      "question": "What would you do if you cannot fail; if there were no limitations in money, resources, time, or networks?"
+    },
+    {
+      "id": "a90928b0-2489-11ed-98a0-f74024505d08",
+      "question": "What do you want to achieve in 1 year?"
+    },
+    {
+      "id": "a90928b1-2489-11ed-98a0-f74024505d08",
+      "question": "What do you want to achieve in 3 years?"
+    },
+    {
+      "id": "a90928b2-2489-11ed-98a0-f74024505d08",
+      "question": "What do you want to achieve in 5 years?"
+    },
+    {
+      "id": "a90928b3-2489-11ed-98a0-f74024505d08",
+      "question": "What do you want to achieve in 10 years?"
+    },
+    {
+      "id": "a90928b4-2489-11ed-98a0-f74024505d08",
+      "question": "How important are these goals to you?"
+    },
+    {
+      "id": "a90928b5-2489-11ed-98a0-f74024505d08",
+      "question": "What if these goals are doubled?"
+    },
+    {
+      "id": "a90928b6-2489-11ed-98a0-f74024505d08",
+      "question": " Tripled?"
+    },
+    {
+      "id": "a90928b7-2489-11ed-98a0-f74024505d08",
+      "question": " Magnified by 10?"
+    },
+    {
+      "id": "a90928b8-2489-11ed-98a0-f74024505d08",
+      "question": " How would you feel?"
+    },
+    {
+      "id": "a90928b9-2489-11ed-98a0-f74024505d08",
+      "question": " Would you prefer to achieve these or your previous goals?"
+    },
+    {
+      "id": "a90928ba-2489-11ed-98a0-f74024505d08",
+      "question": "Who are the people who have achieved similar goals?"
+    },
+    {
+      "id": "a90928bb-2489-11ed-98a0-f74024505d08",
+      "question": " What can you learn from them?"
+    },
+    {
+      "id": "a90928bc-2489-11ed-98a0-f74024505d08",
+      "question": "Are you putting any parts of your life on hold?"
+    },
+    {
+      "id": "a90928bd-2489-11ed-98a0-f74024505d08",
+      "question": " Why?"
+    },
+    {
+      "id": "a90928be-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the top priority in your life right now?"
+    },
+    {
+      "id": "a90928bf-2489-11ed-98a0-f74024505d08",
+      "question": " What are you doing about it?"
+    },
+    {
+      "id": "a90928c0-2489-11ed-98a0-f74024505d08",
+      "question": "If you were to die tomorrow, what would be your biggest regret?"
+    },
+    {
+      "id": "a90928c1-2489-11ed-98a0-f74024505d08",
+      "question": " What can you do now to make sure that it doesn\u2019t happen?"
+    },
+    {
+      "id": "a90928c2-2489-11ed-98a0-f74024505d08",
+      "question": "Looking back on your life, have you made any mistakes before?"
+    },
+    {
+      "id": "a90928c3-2489-11ed-98a0-f74024505d08",
+      "question": " What happened, and why?"
+    },
+    {
+      "id": "a90928c4-2489-11ed-98a0-f74024505d08",
+      "question": "What have you learned from those episodes?"
+    },
+    {
+      "id": "a90928c5-2489-11ed-98a0-f74024505d08",
+      "question": "What is your biggest frustration right now?"
+    },
+    {
+      "id": "a90928c6-2489-11ed-98a0-f74024505d08",
+      "question": " What can you do about it?"
+    },
+    {
+      "id": "a90928c7-2489-11ed-98a0-f74024505d08",
+      "question": "What is the biggest thing you can do now, that will change your life for the better?"
+    },
+    {
+      "id": "a90928c8-2489-11ed-98a0-f74024505d08",
+      "question": "\u2026How can you start working on that?"
+    },
+    {
+      "id": "a90928c9-2489-11ed-98a0-f74024505d08",
+      "question": "If you had a million dollars, what would you do with it?"
+    },
+    {
+      "id": "a90928ca-2489-11ed-98a0-f74024505d08",
+      "question": "Do you love your job?"
+    },
+    {
+      "id": "a90928cb-2489-11ed-98a0-f74024505d08",
+      "question": " Why or why not?"
+    },
+    {
+      "id": "a90928cc-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal career?"
+    },
+    {
+      "id": "a90928cd-2489-11ed-98a0-f74024505d08",
+      "question": "How can you start to create your ideal career starting today?"
+    },
+    {
+      "id": "a90928ce-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal diet?"
+    },
+    {
+      "id": "a90928cf-2489-11ed-98a0-f74024505d08",
+      "question": "What do you need to do to achieve your ideal diet?"
+    },
+    {
+      "id": "a90928d0-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal home like?"
+    },
+    {
+      "id": "a90928d1-2489-11ed-98a0-f74024505d08",
+      "question": "What do you need to do to achieve your ideal home?"
+    },
+    {
+      "id": "a90928d2-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal physical look?"
+    },
+    {
+      "id": "a90928d3-2489-11ed-98a0-f74024505d08",
+      "question": "What do you need to do to achieve your ideal physical look?"
+    },
+    {
+      "id": "a90928d4-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal life?"
+    },
+    {
+      "id": "a90928d5-2489-11ed-98a0-f74024505d08",
+      "question": "What can you do to start living your ideal life?"
+    },
+    {
+      "id": "a90928d6-2489-11ed-98a0-f74024505d08",
+      "question": "What would you want to say to yourself in 1 year\u2019s time?"
+    },
+    {
+      "id": "a90928d7-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you think you will be in 3 years?"
+    },
+    {
+      "id": "a90928d8-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you think you will be in 5 years?"
+    },
+    {
+      "id": "a90928d9-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you think you will be in 10 years?"
+    },
+    {
+      "id": "a90928da-2489-11ed-98a0-f74024505d08",
+      "question": "What do you fear most in life?"
+    },
+    {
+      "id": "a90928db-2489-11ed-98a0-f74024505d08",
+      "question": " Why?"
+    },
+    {
+      "id": "a90928dc-2489-11ed-98a0-f74024505d08",
+      "question": "Is there anything you are running away from?"
+    },
+    {
+      "id": "a90928dd-2489-11ed-98a0-f74024505d08",
+      "question": "Are you settling for less than what you are worth?"
+    },
+    {
+      "id": "a90928de-2489-11ed-98a0-f74024505d08",
+      "question": " Why?"
+    },
+    {
+      "id": "a90928df-2489-11ed-98a0-f74024505d08",
+      "question": "What is your inner dialogue like?"
+    },
+    {
+      "id": "a90928e0-2489-11ed-98a0-f74024505d08",
+      "question": "What limiting beliefs are you holding on to?"
+    },
+    {
+      "id": "a90928e1-2489-11ed-98a0-f74024505d08",
+      "question": "Are they helping you achieve your goals?"
+    },
+    {
+      "id": "a90928e2-2489-11ed-98a0-f74024505d08",
+      "question": "If not, is it time to let them go?"
+    },
+    {
+      "id": "a90928e3-2489-11ed-98a0-f74024505d08",
+      "question": "What empowering beliefs can you take on to help you achieve your goals?"
+    },
+    {
+      "id": "a90928e4-2489-11ed-98a0-f74024505d08",
+      "question": "What bad habits do you want to break?"
+    },
+    {
+      "id": "a90928e5-2489-11ed-98a0-f74024505d08",
+      "question": "What good habits do you want to cultivate?"
+    },
+    {
+      "id": "a90928e6-2489-11ed-98a0-f74024505d08",
+      "question": "What are the biggest actions you can take now to create the biggest results in your life?"
+    },
+    {
+      "id": "a90928e7-2489-11ed-98a0-f74024505d08",
+      "question": "Where are you living right now \u2014 in the past, future, or present?"
+    },
+    {
+      "id": "a90928e8-2489-11ed-98a0-f74024505d08",
+      "question": "Are you living your life to the fullest right now?"
+    },
+    {
+      "id": "a90928e9-2489-11ed-98a0-f74024505d08",
+      "question": "What is the meaning of life?"
+    },
+    {
+      "id": "a90928ea-2489-11ed-98a0-f74024505d08",
+      "question": "What is your life purpose?"
+    },
+    {
+      "id": "a90928eb-2489-11ed-98a0-f74024505d08",
+      "question": " Why do you exist?"
+    },
+    {
+      "id": "a90928ec-2489-11ed-98a0-f74024505d08",
+      "question": " What is your mission?"
+    },
+    {
+      "id": "a90928ed-2489-11ed-98a0-f74024505d08",
+      "question": "How can you make your life more meaningful, starting today?"
+    },
+    {
+      "id": "a90928ee-2489-11ed-98a0-f74024505d08",
+      "question": "What drives you?"
+    },
+    {
+      "id": "a90928ef-2489-11ed-98a0-f74024505d08",
+      "question": "What are the times you are most inspired, most motivated, most charged up?"
+    },
+    {
+      "id": "a90928f0-2489-11ed-98a0-f74024505d08",
+      "question": "What did you do during those times?"
+    },
+    {
+      "id": "a90928f1-2489-11ed-98a0-f74024505d08",
+      "question": " How can you do more of that starting today?"
+    },
+    {
+      "id": "a90928f2-2489-11ed-98a0-f74024505d08",
+      "question": "How can you change someone\u2019s life for the better today?"
+    },
+    {
+      "id": "a90928f3-2489-11ed-98a0-f74024505d08",
+      "question": "Who are the 5 people you spend the most time with?"
+    },
+    {
+      "id": "a90928f4-2489-11ed-98a0-f74024505d08",
+      "question": "Are these people enabling you or holding you back?"
+    },
+    {
+      "id": "a90928f5-2489-11ed-98a0-f74024505d08",
+      "question": "What qualities do you want to embody?"
+    },
+    {
+      "id": "a90928f6-2489-11ed-98a0-f74024505d08",
+      "question": " (Refer to Q7: Values and Q11: Ideal Self) Where can you meet people who embody these qualities?"
+    },
+    {
+      "id": "a90928f7-2489-11ed-98a0-f74024505d08",
+      "question": "Who inspire you the most?"
+    },
+    {
+      "id": "a90928f8-2489-11ed-98a0-f74024505d08",
+      "question": "How can you be like them?"
+    },
+    {
+      "id": "a90928f9-2489-11ed-98a0-f74024505d08",
+      "question": "What is your ideal life partner like?"
+    },
+    {
+      "id": "a90928fa-2489-11ed-98a0-f74024505d08",
+      "question": "Where can you find him/her?"
+    },
+    {
+      "id": "a90928fb-2489-11ed-98a0-f74024505d08",
+      "question": "How can you get to know him/her?"
+    },
+    {
+      "id": "a90928fc-2489-11ed-98a0-f74024505d08",
+      "question": "Are you afraid of letting others get close to you and why?"
+    },
+    {
+      "id": "a90928fd-2489-11ed-98a0-f74024505d08",
+      "question": "Who is/are the most important person(s) to you in the world?"
+    },
+    {
+      "id": "a90928fe-2489-11ed-98a0-f74024505d08",
+      "question": "Are you giving them the attention you want to give?"
+    },
+    {
+      "id": "a90928ff-2489-11ed-98a0-f74024505d08",
+      "question": "How can you spend more time with them starting today?"
+    },
+    {
+      "id": "a9092900-2489-11ed-98a0-f74024505d08",
+      "question": "What kind of person do you enjoy spending time with?"
+    },
+    {
+      "id": "a9092901-2489-11ed-98a0-f74024505d08",
+      "question": "How can you be this person to others?"
+    },
+    {
+      "id": "a9092902-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you want to be like in 1 year?"
+    },
+    {
+      "id": "a9092903-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you want to be like in 3 years?"
+    },
+    {
+      "id": "a9092904-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you want to be like in 5 years?"
+    },
+    {
+      "id": "a9092905-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you want to be like in 10 years?"
+    },
+    {
+      "id": "a9092906-2489-11ed-98a0-f74024505d08",
+      "question": "Who are your mentors in life?"
+    },
+    {
+      "id": "a9092907-2489-11ed-98a0-f74024505d08",
+      "question": "What is one thing you\u2019re going to do differently after reading this article?"
+    },
+    {
+      "id": "a9092908-2489-11ed-98a0-f74024505d08",
+      "question": "Are you doing what you truly want to do?"
+    },
+    {
+      "id": "a9092909-2489-11ed-98a0-f74024505d08",
+      "question": "Do you have a dream to follow?"
+    },
+    {
+      "id": "a909290a-2489-11ed-98a0-f74024505d08",
+      "question": "Are you proud of what you\u2019re doing or what you\u2019ve done?"
+    },
+    {
+      "id": "a909290b-2489-11ed-98a0-f74024505d08",
+      "question": "How many promises have you made and how many of them have you fulfilled?"
+    },
+    {
+      "id": "a909290c-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the one thing you really want to do but have never done so, and why?"
+    },
+    {
+      "id": "a909290d-2489-11ed-98a0-f74024505d08",
+      "question": "Have you ever failed anyone who you loved or loved you?"
+    },
+    {
+      "id": "a909290e-2489-11ed-98a0-f74024505d08",
+      "question": "Will you take a shot if the chance of failure and success is 50-50?"
+    },
+    {
+      "id": "a909290f-2489-11ed-98a0-f74024505d08",
+      "question": "If you could travel to the past in a time machine, what advice would you give to the 6-year-old you?"
+    },
+    {
+      "id": "a9092910-2489-11ed-98a0-f74024505d08",
+      "question": "Will you break the rules because of something/someone you care about?"
+    },
+    {
+      "id": "a9092911-2489-11ed-98a0-f74024505d08",
+      "question": "Have you ever abandoned a creative idea that you believed because others thought you were a fool?"
+    },
+    {
+      "id": "a9092912-2489-11ed-98a0-f74024505d08",
+      "question": "What would you prefer?"
+    },
+    {
+      "id": "a9092913-2489-11ed-98a0-f74024505d08",
+      "question": " Stable but boring works or interesting works with lots of workload?"
+    },
+    {
+      "id": "a9092914-2489-11ed-98a0-f74024505d08",
+      "question": "Are you afraid of making mistakes even though there\u2019s no punishments at all?"
+    },
+    {
+      "id": "a9092915-2489-11ed-98a0-f74024505d08",
+      "question": "If you would clone yourself, which of your characteristics you wouldn\u2019t want to be cloned?"
+    },
+    {
+      "id": "a9092916-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the difference between you and most of the other people?"
+    },
+    {
+      "id": "a9092917-2489-11ed-98a0-f74024505d08",
+      "question": "Are you making some influences on the world or constantly being influenced by the world?"
+    },
+    {
+      "id": "a9092918-2489-11ed-98a0-f74024505d08",
+      "question": "The thing you cried for last time, does it matter to you now or will it matter to you 5 years later?"
+    },
+    {
+      "id": "a9092919-2489-11ed-98a0-f74024505d08",
+      "question": "Is there anything you can\u2019t let go of but you know you should?"
+    },
+    {
+      "id": "a909291a-2489-11ed-98a0-f74024505d08",
+      "question": "Do you remember anyone you hated 10 years ago?"
+    },
+    {
+      "id": "a909291b-2489-11ed-98a0-f74024505d08",
+      "question": " Does it matter now?"
+    },
+    {
+      "id": "a909291c-2489-11ed-98a0-f74024505d08",
+      "question": "Which makes you happier, to forgive someone or to hate someone forever?"
+    },
+    {
+      "id": "a909291d-2489-11ed-98a0-f74024505d08",
+      "question": "What are you worrying about and what\u2019s the difference if you stop worrying about it?"
+    },
+    {
+      "id": "a909291e-2489-11ed-98a0-f74024505d08",
+      "question": "If you\u2019d die now, would you have any regrets?"
+    },
+    {
+      "id": "a909291f-2489-11ed-98a0-f74024505d08",
+      "question": "Which one would you prefer, having a luxurious trip alone or having a picnic with people you love?"
+    },
+    {
+      "id": "a9092920-2489-11ed-98a0-f74024505d08",
+      "question": "Who do you admire and why?"
+    },
+    {
+      "id": "a9092921-2489-11ed-98a0-f74024505d08",
+      "question": "Is there anyone who inspired you and made you who you are today?"
+    },
+    {
+      "id": "a9092922-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the thing you\u2019re most satisfied with?"
+    },
+    {
+      "id": "a9092923-2489-11ed-98a0-f74024505d08",
+      "question": "When was the last time you laughed and what did you laugh at?"
+    },
+    {
+      "id": "a9092924-2489-11ed-98a0-f74024505d08",
+      "question": "Are you doing anything which makes you and people around you happy?"
+    },
+    {
+      "id": "a9092925-2489-11ed-98a0-f74024505d08",
+      "question": "Is there anyone who you love or loves you?"
+    },
+    {
+      "id": "a9092926-2489-11ed-98a0-f74024505d08",
+      "question": "When was the last time you really talked with your parents/family?"
+    },
+    {
+      "id": "a9092927-2489-11ed-98a0-f74024505d08",
+      "question": "If happiness is a currency, how rich do you think you are?"
+    },
+    {
+      "id": "a9092928-2489-11ed-98a0-f74024505d08",
+      "question": "If today\u2019d be the end of the world, what\u2019d you do?"
+    },
+    {
+      "id": "a9092929-2489-11ed-98a0-f74024505d08",
+      "question": "Is there something that you\u2019ve dreamt of doing for a long time?"
+    },
+    {
+      "id": "a909292a-2489-11ed-98a0-f74024505d08",
+      "question": " Why haven\u2019t you done it?"
+    },
+    {
+      "id": "a909292b-2489-11ed-98a0-f74024505d08",
+      "question": "What would you like to change about your family?"
+    },
+    {
+      "id": "a909292c-2489-11ed-98a0-f74024505d08",
+      "question": "What was a place or event that transformed your ideas, thinking, perspective, or made you come alive in a new way?"
+    },
+    {
+      "id": "a909292d-2489-11ed-98a0-f74024505d08",
+      "question": " What changed?"
+    },
+    {
+      "id": "a909292e-2489-11ed-98a0-f74024505d08",
+      "question": "What one thing you would do if it would be impossible to fail?"
+    },
+    {
+      "id": "a909292f-2489-11ed-98a0-f74024505d08",
+      "question": "What is something you love now, that you never could have imagined you would like in the past?"
+    },
+    {
+      "id": "a9092930-2489-11ed-98a0-f74024505d08",
+      "question": "If you could invite anyone, living or dead to dinner, who would that be and why?"
+    },
+    {
+      "id": "a9092931-2489-11ed-98a0-f74024505d08",
+      "question": "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?"
+    },
+    {
+      "id": "a9092932-2489-11ed-98a0-f74024505d08",
+      "question": "What are you addicted to?"
+    },
+    {
+      "id": "a9092933-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the milestone you\u2019re working towards right now in your personal and professional life?"
+    },
+    {
+      "id": "a9092934-2489-11ed-98a0-f74024505d08",
+      "question": "What was the most bizarre encounter you\u2019ve had in your life?"
+    },
+    {
+      "id": "a9092935-2489-11ed-98a0-f74024505d08",
+      "question": "What are you most likely very wrong about?"
+    },
+    {
+      "id": "a9092936-2489-11ed-98a0-f74024505d08",
+      "question": "What chapters would you separate your autobiography into?"
+    },
+    {
+      "id": "a9092937-2489-11ed-98a0-f74024505d08",
+      "question": "What are some things you\u2019ve had to unlearn?"
+    },
+    {
+      "id": "a9092938-2489-11ed-98a0-f74024505d08",
+      "question": "What could you give a 40-minute presentation on with absolutely no preparation?"
+    },
+    {
+      "id": "a9092939-2489-11ed-98a0-f74024505d08",
+      "question": "What question would you most like to know the answer to?"
+    },
+    {
+      "id": "a909293a-2489-11ed-98a0-f74024505d08",
+      "question": "If you didn\u2019t have to sleep, what would you do with the extra time?"
+    },
+    {
+      "id": "a909293b-2489-11ed-98a0-f74024505d08",
+      "question": "Why did you decide to do what you are doing now in your life?"
+    },
+    {
+      "id": "a909293c-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the best and worst piece of advice you\u2019ve ever received?"
+    },
+    {
+      "id": "a909293d-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s the most impactful \u2018no\u2019 you\u2019ve said recently?"
+    },
+    {
+      "id": "a909293e-2489-11ed-98a0-f74024505d08",
+      "question": "What was the most stressful experience of your life?"
+    },
+    {
+      "id": "a909293f-2489-11ed-98a0-f74024505d08",
+      "question": "If you were to die this evening with no opportunity to communicate with anyone, what would you most regret not having told someone?"
+    },
+    {
+      "id": "a9092940-2489-11ed-98a0-f74024505d08",
+      "question": " Why haven\u2019t you told them yet?"
+    },
+    {
+      "id": "a9092941-2489-11ed-98a0-f74024505d08",
+      "question": "What do you spend too much time doing?"
+    },
+    {
+      "id": "a9092942-2489-11ed-98a0-f74024505d08",
+      "question": " What don\u2019t you spend enough time doing?"
+    },
+    {
+      "id": "a9092943-2489-11ed-98a0-f74024505d08",
+      "question": "What makes you feel most alive?"
+    },
+    {
+      "id": "a9092944-2489-11ed-98a0-f74024505d08",
+      "question": "What is something you know you do differently than most people?"
+    },
+    {
+      "id": "a9092945-2489-11ed-98a0-f74024505d08",
+      "question": "What advice would you offer to yourself five years ago?"
+    },
+    {
+      "id": "a9092946-2489-11ed-98a0-f74024505d08",
+      "question": " One year ago?"
+    },
+    {
+      "id": "a9092947-2489-11ed-98a0-f74024505d08",
+      "question": "What small gesture from a stranger made a big impact on you?"
+    },
+    {
+      "id": "a9092948-2489-11ed-98a0-f74024505d08",
+      "question": "What are you looking forward to in the coming months?"
+    },
+    {
+      "id": "a9092949-2489-11ed-98a0-f74024505d08",
+      "question": "Did you ever feel lost in your life path?"
+    },
+    {
+      "id": "a909294a-2489-11ed-98a0-f74024505d08",
+      "question": " How did you find your way again?"
+    },
+    {
+      "id": "a909294b-2489-11ed-98a0-f74024505d08",
+      "question": "What do you want your epitaph to be?"
+    },
+    {
+      "id": "a909294c-2489-11ed-98a0-f74024505d08",
+      "question": "What do you regret not doing?"
+    },
+    {
+      "id": "a909294d-2489-11ed-98a0-f74024505d08",
+      "question": " Why haven\u2019t you done it?"
+    },
+    {
+      "id": "a909294e-2489-11ed-98a0-f74024505d08",
+      "question": "What would constitute a perfect day for you?"
+    },
+    {
+      "id": "a909294f-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s something you love about yourself?"
+    },
+    {
+      "id": "a9092950-2489-11ed-98a0-f74024505d08",
+      "question": "When do you feel truly alive?"
+    },
+    {
+      "id": "a9092951-2489-11ed-98a0-f74024505d08",
+      "question": "When people come to you for help, what do they usually want help with?"
+    },
+    {
+      "id": "a9092952-2489-11ed-98a0-f74024505d08",
+      "question": "What do you consider as your biggest achievement in the last 5 years?"
+    },
+    {
+      "id": "a9092953-2489-11ed-98a0-f74024505d08",
+      "question": "What is the most challenging part of your job?"
+    },
+    {
+      "id": "a9092954-2489-11ed-98a0-f74024505d08",
+      "question": " How do you handle it?"
+    },
+    {
+      "id": "a9092955-2489-11ed-98a0-f74024505d08",
+      "question": "What was a major turning point in your life?"
+    },
+    {
+      "id": "a9092956-2489-11ed-98a0-f74024505d08",
+      "question": "What\u2019s one thing that could happen today that would make it great?"
+    },
+    {
+      "id": "a9092957-2489-11ed-98a0-f74024505d08",
+      "question": "If you knew that in one year you would die suddenly, would you change anything about the way you are now living?"
+    },
+    {
+      "id": "a9092958-2489-11ed-98a0-f74024505d08",
+      "question": " Why?"
+    },
+    {
+      "id": "a9092959-2489-11ed-98a0-f74024505d08",
+      "question": "What would you like to ask yourself?"
+    }
+  ],
+  "shuffled": [],
+  "deleted": [],
+  "recorded": []
+}

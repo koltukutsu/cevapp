@@ -1,12 +1,10 @@
-import 'package:cevapp/ui/main_app.dart';
+import 'package:cevapp/ui/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-  ));
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
+      overlays: [SystemUiOverlay.bottom]);
   runApp(const MainApp());
 }

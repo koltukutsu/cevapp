@@ -11,13 +11,13 @@ class IdleState extends ShuffleState{
   List<Object> get props => [];
 }
 
-class GettingText extends ShuffleState {
+class GettingQuestion extends ShuffleState {
   @override
   List<Object> get props => [];
 }
 
-class GotText extends ShuffleState {
-  const GotText();
+class GotQuestion extends ShuffleState {
+  const GotQuestion();
   @override
   List<Object> get props => [];
 }

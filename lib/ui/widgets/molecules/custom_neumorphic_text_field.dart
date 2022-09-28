@@ -2,7 +2,6 @@ import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_text.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -38,7 +37,7 @@ class CustomNeumorphicTextField extends StatelessWidget {
                       fontMaxLines: 5,
                       italicEnable: true,
                     );
-                  } else if (state is GettingText) {
+                  } else if (state is GettingQuestion) {
                     return const CustomText(
                       text: "C'mon, Let's shuffle!",
                       fontFamily: "Roboto",
@@ -48,15 +47,17 @@ class CustomNeumorphicTextField extends StatelessWidget {
                       fontMaxLines: 5,
                       italicEnable: true,
                     );
-                  } else if (state is GotText || true) {
-                    return CustomText(
-                      text: context.read<ShuffleCubit>().shuffledQuestion,
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      textColor: AppColors.secondaryTextColor,
-                      fontMaxLines: 5,
-                      italicEnable: true,
+                  } else if (state is GotQuestion || true) { // TODO: control this condition
+                    return Builder(
+                      builder:(context) => CustomText(
+                        text: context.watch<ShuffleCubit>().shuffledQuestion["question"], // TODO: contorl
+                        fontFamily: "Roboto",
+                        fontWeight: FontWeight.normal,
+                        fontSize: 20,
+                        textColor: AppColors.secondaryTextColor,
+                        fontMaxLines: 5,
+                        italicEnable: true,
+                      ),
                     );
                   }
                 },

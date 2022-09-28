@@ -1,20 +1,31 @@
+import 'package:audioplayers/audioplayers.dart';
+import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
-import 'package:cevapp/ui/constants/icons.dart';
+import 'package:cevapp/ui/constants/app_paths.dart';
+import 'package:cevapp/ui/constants/app_sounds.dart';
 import 'package:cevapp/ui/constants/widget_ratios.dart';
 import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vibration/vibration.dart';
 
-class ButtonsSection extends StatelessWidget {
+class ButtonsSection extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;
-  final Future<void> Function(String) recordFunction;
+  final Future<void> Function(String mode, {String? id}) recordFunction;
 
   const ButtonsSection(
       {Key? key,
       required this.crossFadeStateChangerFunction,
       required this.recordFunction})
       : super(key: key);
+
+  @override
+  State<ButtonsSection> createState() => _ButtonsSectionState();
+}
+
+class _ButtonsSectionState extends State<ButtonsSection> {
+  var isShuffleButtonClicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +36,12 @@ class ButtonsSection extends StatelessWidget {
         CustomButtonAnimated(
           label: "shuffle",
           postFixIconAsImagePath: AppPaths.shuffleIconPath,
-          onPressed: () {
-            context.read<ShuffleCubit>().getText();
+          onPressed: () async {
+            AudioPlayer().play(AssetSource(AppSounds.recordSoundPath));
+            context.read<ShuffleCubit>().getQuestion();
+            setState(() {
+              isShuffleButtonClicked = true;
+            });
           },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,
@@ -41,24 +56,27 @@ class ButtonsSection extends StatelessWidget {
           iconPaddingLeft: 10,
           insets: 30,
         ),
-        CustomButtonAnimated(
-          label: "record",
-          postFixIconAsImagePath: AppPaths.recordIconPath,
-          onPressed: () {
-            crossFadeStateChangerFunction(true);
-            recordFunction("start");
-          },
-          fontSize: 48,
-          widthRatio: AppRatios.shuffleButtonWidthRatio,
-          height: MediaQuery.of(context).size.height *
-              AppRatios.shuffleButtonHeightRatio,
-          buttonColor: AppColors.recordButtonColor,
-          labelColor: AppColors.black,
-          fontFamily: "Montserrat",
-          filled: true,
-          iconPaddingLeft: 5,
-          insets: 7,
-        )
+        if (isShuffleButtonClicked)
+          CustomButtonAnimated(
+            label: "record",
+            postFixIconAsImagePath: AppPaths.recordIconPath,
+            onPressed: () {
+              context.read<RecordsCubit>().changeActionAllowance();
+              widget.crossFadeStateChangerFunction(true);
+              widget.recordFunction("start",
+                  id: context.read<ShuffleCubit>().shuffledQuestion["id"]);
+            },
+            fontSize: 48,
+            widthRatio: AppRatios.shuffleButtonWidthRatio,
+            height: MediaQuery.of(context).size.height *
+                AppRatios.shuffleButtonHeightRatio,
+            buttonColor: AppColors.recordButtonColor,
+            labelColor: AppColors.black,
+            fontFamily: "Montserrat",
+            filled: true,
+            iconPaddingLeft: 5,
+            insets: 7,
+          )
       ],
     );
   }

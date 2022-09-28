@@ -22,6 +22,13 @@ class AppColors {
   static const Color leftGradientButtonColor = Color(0xFF2F80ED);
   static const Color rightGradientButtonColor = Color(0xFF56CCF2);
 
+  // buttons of
+  static const Color playButtonColor = Color(0xFFFFFFFF);
+  static const Color deleteButtonColor = Color(0xFFFFFFFF);
+
+  static const Color playButtonLabelColor = Color(0xFF48bf53);
+  static const Color deleteButtonLabelColor = Color(0xFFEA4335);
+  static const Color marketMiddleSeparatorColumnColor = Colors.black;
   // SECOND - from previous
   // primary colors
   static const Color primary = Colors.white;
@@ -58,10 +65,16 @@ class AppColors {
   static const Color textFieldGradientRight = Color(0xff383978);
 
   // text field border colors
-  static const Color borderColor = Color(0xFFFFFFFF);
-  static const Color errorBorderColor = Color(0xFF171930);
-  static const Color focusedErrorBorderColor = Color(0xFF171930);
-  static const Color enabledBorderColor = Color(0xFF171930);
-  static const Color disabledBorderColor = Color(0xFF171930);
-  static const Color focusedBorderColor = Color(0xFF171930);
+  static const Color borderColor = Color(0xFF48B0B9);
+  static const Color errorBorderColor = Color(0xFF48B0B9);
+  static const Color focusedErrorBorderColor = Color(0xFF48B0B9);
+  static const Color enabledBorderColor = Color(0xFF48B0B9);
+  static const Color disabledBorderColor = Color(0xFF48B0B9);
+  static const Color focusedBorderColor = Color(0xFF48B0B9);
+
+  static const Color pauseColor = Color(0xFFffb242);
+  static Color questionTextBackgroundColor = Colors.grey.shade100;
+
+  static const Color acceptFinishColor = Color(0xFF06FF00);
+  static const Color rejectFinishColor = Color(0xFFFF1700);
 }
