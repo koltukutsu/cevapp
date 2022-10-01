@@ -34,6 +34,10 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
   var onPressedMarketWidthRatio = 0.35;
   var smallMarketWidthRatio = 0.25;
 
+  void updateTheWidget() {
+    setState(() {});
+  }
+
   void onChange(String type) {
     setState(() {
       avatarType = type;
@@ -247,6 +251,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(-0.93, 0.05),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           avatarType: avatarType,
                           alreadyBought:
@@ -271,6 +276,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(0, 0.05),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           avatarType: avatarType,
                           alreadyBought:
@@ -295,6 +301,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(0.93, 0.05),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           imagePath: getCompetentAvatarPath(type: avatarType),
                           type: "COMPETENT",
@@ -319,6 +326,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(-0.93, 0.4),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           avatarType: avatarType,
                           alreadyBought:
@@ -343,6 +351,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(0, 0.4),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           imagePath: getExpertAvatarPath(type: avatarType),
                           avatarType: avatarType,
@@ -367,6 +376,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(0.93, 0.4),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           avatarType: avatarType,
                           alreadyBought:
@@ -391,6 +401,7 @@ class _MarketScreenBodyState extends State<MarketScreenBody> {
                       builder: (context) => Align(
                         alignment: const Alignment(0, 0.8),
                         child: AvatarButtonMarket(
+                          updateParentWidget: updateTheWidget,
                           triggerFunction: onChangeMarket,
                           avatarType: avatarType,
                           alreadyBought:

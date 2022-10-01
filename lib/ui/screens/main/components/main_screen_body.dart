@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:cevapp/cubit/records/record_cubit.dart';
-import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -59,14 +58,14 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   static List<QuestionCategory> questionCategories = [
     QuestionCategory(id: 1, name: "Literature"),
     QuestionCategory(id: 2, name: "Philosophy"),
-    QuestionCategory(id: 3, name: "Trivial"),
-    QuestionCategory(id: 4, name: "Politics"),
-    QuestionCategory(id: 5, name: "Life"),
-    QuestionCategory(id: 6, name: "Health"),
-    QuestionCategory(id: 7, name: "Technology"),
-    QuestionCategory(id: 8, name: "Books"),
-    QuestionCategory(id: 9, name: "Authors"),
-    QuestionCategory(id: 10, name: "History"),
+    // QuestionCategory(id: 3, name: "Trivial"),
+    QuestionCategory(id: 3, name: "Politics"),
+    QuestionCategory(id: 4, name: "Life"),
+    QuestionCategory(id: 5, name: "Health"),
+    QuestionCategory(id: 6, name: "Technology"),
+    QuestionCategory(id: 7, name: "Books"),
+    QuestionCategory(id: 8, name: "Authors"),
+    QuestionCategory(id: 9, name: "History"),
   ];
 
   final itemsLevels = questionLevels

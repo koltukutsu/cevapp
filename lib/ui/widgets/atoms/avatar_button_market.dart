@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -11,6 +10,7 @@ class AvatarButtonMarket extends StatelessWidget {
   final String imagePath;
   final String type;
   final Function(String type) triggerFunction;
+  final Function() updateParentWidget;
   final double heightRatio;
   final double widthRatio;
   final int? price;
@@ -31,6 +31,7 @@ class AvatarButtonMarket extends StatelessWidget {
       // required this.giveTypeItsType,
       required this.avatarType,
       required this.alreadyBought,
+      required this.updateParentWidget,
       this.enabled = true,
       this.pressed = true,
       this.widthRatio = 0.35,
@@ -143,6 +144,7 @@ class AvatarButtonMarket extends StatelessWidget {
                             child: const CustomText(
                               text: "Buy",
                               fontWeight: FontWeight.w900,
+                              // textColor:
                               fontSize: 24,
                               italicEnable: false,
                             ),
@@ -162,18 +164,30 @@ class AvatarButtonMarket extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10)),
                           child: TextButton(
                             onPressed: () {
-                              context
-                                  .read<AvatarCubit>()
-                                  .setUserAvatarMarket(type: "${type}_$avatarType");
+                              print(context.read<AvatarCubit>().avatarType);
+                              if (context.read<AvatarCubit>().avatarType !=
+                                  "${type}_$avatarType") {
+                                context.read<AvatarCubit>().setUserAvatarMarket(
+                                    type: "${type}_$avatarType");
 
-                              _showDialogSuccess(
-                                  context,
-                                  AppColors.acceptFinishColor,
-                                  "You chose your new avatar!",
-                                  textColor: AppColors.acceptFinishColor);
+                                _showDialogSuccess(
+                                    context,
+                                    AppColors.acceptFinishColor,
+                                    "You chose your new avatar!",
+                                    textColor: AppColors.acceptFinishColor);
+                                updateParentWidget();
+                              }
                             },
-                            child: const CustomText(
-                              text: "Use",
+                            child: CustomText(
+                              text: context.read<AvatarCubit>().avatarType ==
+                                      "${type}_$avatarType"
+                                  ? "Selected"
+                                  : "Use",
+                              textColor:
+                                  context.read<AvatarCubit>().avatarType ==
+                                          "${type}_$avatarType"
+                                      ? AppColors.acceptFinishColor
+                                      : AppColors.white,
                               fontWeight: FontWeight.w900,
                               fontSize: 24,
                               italicEnable: false,
