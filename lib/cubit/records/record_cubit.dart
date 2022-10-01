@@ -28,9 +28,9 @@ class RecordsCubit extends Cubit<RecordsState> {
       debugPrint("$dirToList dir is not created yet");
       recordPathsAsFileList = [];
     }
-    print(recordPathsAsFileList);
+    // print(recordPathsAsFileList);
     currentLengthOfRecords = recordPathsAsFileList.length;
-    print("general control: ${await Directory(path.path).list().toList()}");
+    // print("general control: ${await Directory(path.path).list().toList()}");
     // print(recordPathsAsFileList);
     emit(GetRecords(recordPathsAsFileList: recordPathsAsFileList));
   }
@@ -51,9 +51,9 @@ class RecordsCubit extends Cubit<RecordsState> {
     final Directory path = await getApplicationDocumentsDirectory();
     final List recordPathsAsFileList =
         await Directory("${path!.path}/audio_files/").list().toList();
-    print("recorded path file: $recordPathsAsFileList");
+    // print("recorded path file: $recordPathsAsFileList");
     for (File filePath in recordPathsAsFileList) {
-      print(filePath.runtimeType);
+      // print(filePath.runtimeType);
       final String comparisonFilePath = filePath.path.split("/").last;
       debugPrint("comparison File Path: $comparisonFilePath\nid File: $id.aac");
       if (comparisonFilePath == "$id.aac") {
@@ -79,7 +79,7 @@ class RecordsCubit extends Cubit<RecordsState> {
   changeActionAllowance() {
     allowToAction = !allowToAction;
 
-    print("allow to action : $allowToAction");
+    // print("allow to action : $allowToAction");
     if (allowToAction == false) {
       emit(RecordingNow());
     }

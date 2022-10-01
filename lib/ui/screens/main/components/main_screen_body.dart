@@ -184,9 +184,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                 items: itemsCategories,
                 initialValue: questionCategories,
                 onConfirm: (values) {
-                  print(values);
+                  // print(values);
                   selectedQuestionCategories = values as List<Object>;
-                  print(selectedQuestionCategories);
+                  // print(selectedQuestionCategories);
                 },
                 selectedColor: AppColors.rightSwipeDockColor,
                 buttonIcon:
@@ -328,6 +328,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       }
       // start
       if (mode == "start") {
+
         path = id!; // TODO: control
         final String externalPath = await saveProcess(id: id);
         if (externalPath.isEmpty) {
@@ -369,7 +370,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   }
 
   Future<String> saveProcess({required String id}) async {
-    print("file process is started");
+    // print("file process is started");
     Directory? directory = await getApplicationDocumentsDirectory();
     try {
       if (Platform.isAndroid) {
@@ -397,18 +398,18 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       // directory = Directory("${directory!.path}/recordedAudios/");
       directory = Directory("${directory!.path}/audio_files/");
       if (!await directory.exists()) {
-        print("directory exists: ${await directory.exists()}");
+        // print("directory exists: ${await directory.exists()}");
         await directory.create(recursive: true);
-        print("created directory: ${directory.path}$id");
+        // print("created directory: ${directory.path}$id");
         final String fileName = "${directory.path}$id";
         return fileName;
       } else {
-        print("${directory.path}$id");
+        // print("${directory.path}$id");
         final String fileName = "${directory.path}$id";
         return fileName;
       }
     } catch (e) {
-      print(e);
+      // print(e);
       // return false;
       if (!mounted) return "";
       _showDialogSuccess(context, AppColors.magenta,
@@ -421,8 +422,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
 
 Future<bool> _requestPermission(Permission permission) async {
   if (await permission.isGranted) {
-    print(await permission.status);
-    print(await permission.isGranted);
+    // print(await permission.status);
+    // print(await permission.isGranted);
 
     return true;
   } else {
@@ -431,7 +432,7 @@ Future<bool> _requestPermission(Permission permission) async {
       return true;
     }
   }
-  print(await permission.status);
+  // print(await permission.status);
   return false;
 }
 

@@ -31,14 +31,14 @@ class _MainScreenState extends State<MainScreen> {
       var result = await permission.request();
       if (result == PermissionStatus.granted) {
         if (!mounted) {
-          print("Its mounted");
+          // print("Its mounted");
           return false;
         }
         context.read<RecordsCubit>().GetCurrentRecords();
         return true;
       }
     }
-    print(await permission.status);
+    // print(await permission.status);
     return false;
   }
 

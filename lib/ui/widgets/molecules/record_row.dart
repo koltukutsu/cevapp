@@ -145,8 +145,8 @@ class _RecordRowState extends State<RecordRow> {
                       context.read<AudioPlayerCubit>().playingIndex) {
                     context.read<AudioPlayerCubit>().setAudioAndPlay(
                         path: widget.path.path, index: int.parse(widget.index));
-                    print(context.read<AudioPlayerCubit>().playingIndex);
-                    print("\n");
+                    // print(context.read<AudioPlayerCubit>().playingIndex);
+                    // print("\n");
                   }
 
                   if (isPlaying) {
@@ -155,11 +155,11 @@ class _RecordRowState extends State<RecordRow> {
                           context.read<AudioPlayerCubit>().playingIndex;
                       isPlaying = false;
                     });
-                    print("playing is stopped");
-                    print(isPlaying && isMine);
-                    print("is playing: $isPlaying");
-                    print("is mine: $isMine");
-                    print(isPlaying && isMine);
+                    // print("playing is stopped");
+                    // print(isPlaying && isMine);
+                    // print("is playing: $isPlaying");
+                    // print("is mine: $isMine");
+                    // print(isPlaying && isMine);
                     context.read<AudioPlayerCubit>().stopAudio();
                   } else {
                     setState(() {
@@ -167,12 +167,12 @@ class _RecordRowState extends State<RecordRow> {
                           context.read<AudioPlayerCubit>().playingIndex;
                       isPlaying = true;
                     });
-                    print("playing is resumed");
-                    print(isPlaying && isMine);
-                    print("is playing: $isPlaying");
-                    print(isPlaying && isMine);
-                    print("is mine: $isMine");
-                    print(isPlaying && isMine);
+                    // print("playing is resumed");
+                    // print(isPlaying && isMine);
+                    // print("is playing: $isPlaying");
+                    // print(isPlaying && isMine);
+                    // print("is mine: $isMine");
+                    // print(isPlaying && isMine);
                     context.read<AudioPlayerCubit>().resumeAudio();
                   }
                 },
