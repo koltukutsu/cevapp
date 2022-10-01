@@ -68,10 +68,13 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       var allQuestionsRelatedObject = await json.decode(questionsPath);
 
       // 2.
+      print("SETTING OBJECTS");
       unTouchedQuestions = allQuestionsRelatedObject["untouched"];
       recordedQuestions = allQuestionsRelatedObject["recorded"];
       deletedQuestions = allQuestionsRelatedObject["deleted"];
       shuffledQuestions = allQuestionsRelatedObject["shuffled"];
+      print(shuffledQuestions);
+
 
       // 3.
       await prefs.setBool("isUserLoggedInBefore", true);

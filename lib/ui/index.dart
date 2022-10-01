@@ -1,3 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
+import 'package:cevapp/cubit/audio_player/audio_player_cubit.dart';
 import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/navigation/navigation_names.dart';
@@ -17,6 +19,8 @@ class MainApp extends StatelessWidget {
         BlocProvider(create: (context) => ShuffleCubit()),
         BlocProvider(create: (context) => RecordsCubit()),
         BlocProvider(create: (context) => AvatarCubit()),
+        BlocProvider(
+            create: (context) => AudioPlayerCubit(audioPlayer: AudioPlayer())),
       ],
       child: MaterialApp(
         // theme: darkTheme,

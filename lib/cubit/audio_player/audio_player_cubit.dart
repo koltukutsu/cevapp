@@ -6,32 +6,41 @@ part "audio_player_state.dart";
 
 class AudioPlayerCubit extends Cubit<AudioPlayerState> {
   final AudioPlayer audioPlayer;
-  var isPlaying;
+  var isPlaying = false;
   var duration;
   var position;
+  var playingIndex = -1;
 
   AudioPlayerCubit({required this.audioPlayer}) : super(IdleState());
 
-  Future<void> setAudioAndPlay({required String path}) async {
-    if (isPlaying == PlayerState.playing ) {
+  Future<void> setAudioAndPlay(
+      {required String path, required int index}) async {
+    if (isPlaying == PlayerState.playing) {
       audioPlayer.stop();
       // audioPlayer.dispose();
     }
+    playingIndex = index;
     audioPlayer.setReleaseMode(ReleaseMode.loop);
     audioPlayer.setSourceDeviceFile(path);
 
     audioPlayer.onPlayerStateChanged.listen((state) {
-        isPlaying = state == PlayerState.playing;
+      isPlaying = state == PlayerState.playing;
     });
 
     audioPlayer.onDurationChanged.listen((newDuration) {
-        duration = newDuration;
+      duration = newDuration;
     });
 
     audioPlayer.onDurationChanged.listen((newPosition) {
-        position = newPosition;
+      position = newPosition;
     });
   }
 
+  stopAudio() {
+    audioPlayer.stop();
+  }
 
+  resumeAudio() {
+    audioPlayer.resume();
+  }
 }

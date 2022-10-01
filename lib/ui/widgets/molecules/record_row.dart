@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:cevapp/cubit/audio_player/audio_player_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/models/questionObject.dart';
@@ -47,61 +48,14 @@ class _RecordRowState extends State<RecordRow> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // context.watch<RecordsCubit>().getCurrentPlayingIndex;
-    // setState((){
-    //   isMine =
-    // });
-    setAudio();
-
-    audioPlayer.onPlayerStateChanged.listen((state) {
-      setState(() {
-        isPlaying = state == PlayerState.playing;
-      });
-    });
-
-    audioPlayer.onDurationChanged.listen((newDuration) {
-      setState(() {
-        duration = newDuration;
-      });
-    });
-
-    audioPlayer.onDurationChanged.listen((newPosition) {
-      setState(() {
-        position = newPosition;
-      });
-    });
+    // setAudio();
   }
 
-  Future<void> setAudio() async {
-    // repeat the song when completed
-    audioPlayer.setReleaseMode(ReleaseMode.loop);
-    debugPrint("what is this: ${widget.path}");
-    audioPlayer.setSourceDeviceFile(widget.path.path);
-    // audioPlayer.setSourceAsset(widget.path.path);
-    // audioPlayer.setSource(widget.path.path);
-  }
-
-  // initiateAudioPossessorFunction({required int currentIndex}) {
-  //   // if (currentIndex == -1) {
-  //   //   setAudioPossessor(mine: true);
-  //   // } else {
-  //   //   if (currentIndex == int.parse(widget.index)) {
-  //   //   setAudioPossessor(mine: true);
-  //   // } else {
-  //   //   setAudioPossessor(mine: false);
-  //   // }
-  //   // }
-  //   if (currentIndex == int.parse(widget.index) && currentIndex == -1) {
-  //     setAudioPossessor(mine: true);
-  //   } else {
-  //     setAudioPossessor(mine: false);
-  //   }
-  // }
-
-  // setAudioPossessor({required bool mine}) {
-  //   setState(() {
-  //     isMine = mine;
-  //   });
+  // Future<void> setAudio() async {
+  //   // repeat the song when completed
+  //   audioPlayer.setReleaseMode(ReleaseMode.loop);
+  //   debugPrint("what is this: ${widget.path}");
+  //   audioPlayer.setSourceDeviceFile(widget.path.path);
   // }
 
   @override
@@ -181,44 +135,45 @@ class _RecordRowState extends State<RecordRow> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              // Slider(
-              //   min: 0,
-              //   max: duration.inSeconds.toDouble(),
-              //   value: position.inSeconds.toDouble(),
-              //   onChanged: (value) async {
-              //     final position = Duration(seconds: value.toInt());
-              //     await audioPlayer.seek(position);
-              //     // can be changed to not resume
-              //     await audioPlayer.resume();
-              //   },
-              // ),
-              // CustomText(text: position.toString()),
-              // CustomText(text: (duration - position).toString()),
               CustomButtonAnimated(
-                label: !isPlaying && !isMine ? "play" : "stop",
-                postFixIconAsImagePath:
-                    !isPlaying ? AppPaths.playButton : AppPaths.pauseIconPath,
+                label: isPlaying && isMine ? "stop" : "play",
+                postFixIconAsImagePath: isPlaying && isMine
+                    ? AppPaths.pauseIconPath
+                    : AppPaths.playButton,
                 onPressed: () {
-                  // final int currentIndex =
-                  //     context.watch<RecordsCubit>().playingIndex;
+                  if (int.parse(widget.index) !=
+                      context.read<AudioPlayerCubit>().playingIndex) {
+                    context.read<AudioPlayerCubit>().setAudioAndPlay(
+                        path: widget.path.path, index: int.parse(widget.index));
+                    print(context.read<AudioPlayerCubit>().playingIndex);
+                    print("\n");
+                  }
 
-                  context
-                      .read<RecordsCubit>()
-                      .setCurrentPlayingIndex(index: int.parse(widget.index));
-                  //
-                  // print("currentIndex $currentIndex");
-                  //
-                  // initiateAudioPossessorFunction(currentIndex: currentIndex);
-                  print(isPlaying ||
-                      context.read<RecordsCubit>().getCurrentPlayingIndex !=
-                          int.parse(widget.index));
-                  if (isPlaying ||
-                      context.read<RecordsCubit>().getCurrentPlayingIndex !=
-                          int.parse(widget.index)) {
-                    audioPlayer.stop();
+                  if (isPlaying) {
+                    setState(() {
+                      isMine = int.parse(widget.index) ==
+                          context.read<AudioPlayerCubit>().playingIndex;
+                      isPlaying = false;
+                    });
+                    print("playing is stopped");
+                    print(isPlaying && isMine);
+                    print("is playing: $isPlaying");
+                    print("is mine: $isMine");
+                    print(isPlaying && isMine);
+                    context.read<AudioPlayerCubit>().stopAudio();
                   } else {
-                    // await audioPlayer.play(widget.path.path);
-                    audioPlayer.resume();
+                    setState(() {
+                      isMine = int.parse(widget.index) ==
+                          context.read<AudioPlayerCubit>().playingIndex;
+                      isPlaying = true;
+                    });
+                    print("playing is resumed");
+                    print(isPlaying && isMine);
+                    print("is playing: $isPlaying");
+                    print(isPlaying && isMine);
+                    print("is mine: $isMine");
+                    print(isPlaying && isMine);
+                    context.read<AudioPlayerCubit>().resumeAudio();
                   }
                 },
 
@@ -229,15 +184,14 @@ class _RecordRowState extends State<RecordRow> {
                 height: MediaQuery.of(context).size.height *
                     AppRatios.playButtonHeightRatio,
                 buttonColor: AppColors.playButtonColor,
-                labelColor: !isPlaying
-                    ? AppColors.playButtonLabelColor
-                    : AppColors.pauseColor,
+                labelColor: isPlaying && isMine
+                    ? AppColors.pauseColor
+                    : AppColors.playButtonLabelColor,
                 // fontFamily: "Montserrat",
                 filled: true,
                 iconPaddingLeft: 5,
                 insets: 7,
               ),
-
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.03,
               ),
@@ -245,8 +199,8 @@ class _RecordRowState extends State<RecordRow> {
                 label: "delete",
                 postFixIconAsImagePath: AppPaths.deleteButton,
                 onPressed: () {
-                  audioPlayer.stop();
-                  audioPlayer.dispose();
+                  context.read<AudioPlayerCubit>().stopAudio();
+                  // audioPlayer.dispose();
                   widget.path.delete();
                   context.read<RecordsCubit>().GetCurrentRecords();
                   context.read<ShuffleCubit>().updateDeletedQuestionsObject();
@@ -289,7 +243,8 @@ class _RecordRowState extends State<RecordRow> {
 // "${widget.index}. question is copied");
 
 _showDialogSuccess(BuildContext context, Color color, String text,
-    {Color textColor = AppColors.leftSwipeDockColor, IconData icon=Icons.verified}) {
+    {Color textColor = AppColors.leftSwipeDockColor,
+    IconData icon = Icons.verified}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     backgroundColor: AppColors.white,
     behavior: SnackBarBehavior.floating,
