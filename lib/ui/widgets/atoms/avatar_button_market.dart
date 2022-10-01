@@ -164,7 +164,7 @@ class AvatarButtonMarket extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10)),
                           child: TextButton(
                             onPressed: () {
-                              print(context.read<AvatarCubit>().avatarType);
+                              // print(context.read<AvatarCubit>().avatarType);
                               if (context.read<AvatarCubit>().avatarType !=
                                   "${type}_$avatarType") {
                                 context.read<AvatarCubit>().setUserAvatarMarket(
