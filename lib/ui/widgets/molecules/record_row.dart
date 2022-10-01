@@ -71,66 +71,69 @@ class _RecordRowState extends State<RecordRow> {
         // mainAxisAlignment: MainAxisAlignment.end,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomText(
-                  text: "${widget.index}. ",
-                  textColor: AppColors.white,
-                  fontSize: 30,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.bold,
-                  italicEnable: false),
-              GestureDetector(
-                onTapDown: _storePosition,
-                onTap: () async {
-                  final RenderBox overlay = Overlay.of(context)!
-                      .context
-                      .findRenderObject() as RenderBox;
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CustomText(
+                    text: "${widget.index}. ",
+                    textColor: AppColors.white,
+                    fontSize: 30,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.bold,
+                    italicEnable: false),
+                GestureDetector(
+                  onTapDown: _storePosition,
+                  onTap: () async {
+                    final RenderBox overlay = Overlay.of(context)!
+                        .context
+                        .findRenderObject() as RenderBox;
 
-                  await showMenu(
-                    context: context,
-                    position: RelativeRect.fromRect(
-                        _tapPosition & const Size(40, 40),
-                        // smaller rect, the touch area
-                        Offset.zero &
-                            overlay.size // Bigger rect, the entire screen
+                    await showMenu(
+                      context: context,
+                      position: RelativeRect.fromRect(
+                          _tapPosition & const Size(40, 40),
+                          // smaller rect, the touch area
+                          Offset.zero &
+                              overlay.size // Bigger rect, the entire screen
+                          ),
+                      items: [
+                        PopupMenuItem<String>(
+                          child: Text(widget.question.question),
+                          onTap: () {
+                            Clipboard.setData(ClipboardData(
+                                text: "Question: ${widget.question.question}"));
+
+                            _showDialogSuccess(
+                                context,
+                                icon: Icons.info,
+                                AppColors.rightSwipeDockColor,
+                                "The question is coppied",
+                                textColor: AppColors.rightSwipeDockColor);
+                          },
                         ),
-                    items: [
-                      PopupMenuItem<String>(
-                        child: Text(widget.question.question),
-                        onTap: () {
-                          Clipboard.setData(ClipboardData(
-                              text: "Question: ${widget.question.question}"));
+                      ],
+                      elevation: 8.0,
+                    );
 
-                          _showDialogSuccess(
-                              context,
-                              icon: Icons.info,
-                              AppColors.rightSwipeDockColor,
-                              "The question is coppied",
-                              textColor: AppColors.rightSwipeDockColor);
-                        },
-                      ),
-                    ],
-                    elevation: 8.0,
-                  );
-
-                  // widget.onItemSelected(value);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 0.0),
-                  child: CustomText(
-                      text: giveMeText(),
-                      textColor: AppColors.white,
-                      fontMaxLines: 3,
-                      fontSize: 16,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.normal,
-                      italicEnable: false),
+                    // widget.onItemSelected(value);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 0.0),
+                    child: CustomText(
+                        text: giveMeText(),
+                        textColor: AppColors.white,
+                        fontMaxLines: 3,
+                        fontSize: 16,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.normal,
+                        italicEnable: false),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -195,29 +198,32 @@ class _RecordRowState extends State<RecordRow> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.03,
               ),
-              CustomButtonAnimated(
-                label: "delete",
-                postFixIconAsImagePath: AppPaths.deleteButton,
-                onPressed: () {
-                  context.read<AudioPlayerCubit>().stopAudio();
-                  // audioPlayer.dispose();
-                  widget.path.delete();
-                  context.read<RecordsCubit>().GetCurrentRecords();
-                  context.read<ShuffleCubit>().updateDeletedQuestionsObject();
-                },
-                fontSize: 18,
-                iconHeight: 20,
-                iconWidth: 20,
-                widthRatio: AppRatios.deleteButtonWidthRatio,
-                height: MediaQuery.of(context).size.height *
-                    AppRatios.deleteButtonHeightRatio,
-                buttonColor: AppColors.deleteButtonColor,
-                // labelColor: AppColors.black,
-                // fontFamily: "Montserrat",
-                labelColor: AppColors.deleteButtonLabelColor,
-                filled: true,
-                iconPaddingLeft: 5,
-                insets: 7,
+              Padding(
+                padding: const EdgeInsets.only(right:4.0),
+                child: CustomButtonAnimated(
+                  label: "delete",
+                  postFixIconAsImagePath: AppPaths.deleteButton,
+                  onPressed: () {
+                    context.read<AudioPlayerCubit>().stopAudio();
+                    // audioPlayer.dispose();
+                    widget.path.delete();
+                    context.read<RecordsCubit>().GetCurrentRecords();
+                    context.read<ShuffleCubit>().updateDeletedQuestionsObject();
+                  },
+                  fontSize: 18,
+                  iconHeight: 20,
+                  iconWidth: 20,
+                  widthRatio: AppRatios.deleteButtonWidthRatio,
+                  height: MediaQuery.of(context).size.height *
+                      AppRatios.deleteButtonHeightRatio,
+                  buttonColor: AppColors.deleteButtonColor,
+                  // labelColor: AppColors.black,
+                  // fontFamily: "Montserrat",
+                  labelColor: AppColors.deleteButtonLabelColor,
+                  filled: true,
+                  iconPaddingLeft: 5,
+                  insets: 7,
+                ),
               ),
             ],
           ),
