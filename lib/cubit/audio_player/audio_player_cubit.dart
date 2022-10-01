@@ -7,15 +7,15 @@ part "audio_player_state.dart";
 class AudioPlayerCubit extends Cubit<AudioPlayerState> {
   final AudioPlayer audioPlayer;
   var isPlaying = false;
-  var duration;
-  var position;
+  var duration = 0.0;
+  var position = 0.0;
   var playingIndex = -1;
 
   AudioPlayerCubit({required this.audioPlayer}) : super(IdleState());
 
   Future<void> setAudioAndPlay(
       {required String path, required int index}) async {
-    if (isPlaying == PlayerState.playing) {
+    if (isPlaying) {
       audioPlayer.stop();
       // audioPlayer.dispose();
     }
@@ -28,11 +28,11 @@ class AudioPlayerCubit extends Cubit<AudioPlayerState> {
     });
 
     audioPlayer.onDurationChanged.listen((newDuration) {
-      duration = newDuration;
+      duration = newDuration as double;
     });
 
     audioPlayer.onDurationChanged.listen((newPosition) {
-      position = newPosition;
+      position = newPosition as double;
     });
   }
 
@@ -42,5 +42,13 @@ class AudioPlayerCubit extends Cubit<AudioPlayerState> {
 
   resumeAudio() {
     audioPlayer.resume();
+  }
+
+  resetAudioPlayer() {
+    stopAudio();
+    isPlaying = false;
+    playingIndex = -1;
+    duration = 0.0;
+    position = 0.0;
   }
 }
