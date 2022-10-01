@@ -51,7 +51,7 @@ class AppPaths {
   static const String competentLION =
       "assets/profile_images/LION/lion-competent.png";
   static const String competentOWL =
-      "assets/profile_images/OWL/owl-competent.png";
+      "assets/profile_images/OWL/owl-competent.jpeg";
   static const String competentDOLPHIN =
       "assets/profile_images/DOLPHIN/dolphin-competent.png";
   static const String competentDRAGON =
