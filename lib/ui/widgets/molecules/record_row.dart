@@ -81,28 +81,28 @@ class _RecordRowState extends State<RecordRow> {
     // audioPlayer.setSource(widget.path.path);
   }
 
-  initiateAudioPossessorFunction({required int currentIndex}) {
-    // if (currentIndex == -1) {
-    //   setAudioPossessor(mine: true);
-    // } else {
-    //   if (currentIndex == int.parse(widget.index)) {
-    //   setAudioPossessor(mine: true);
-    // } else {
-    //   setAudioPossessor(mine: false);
-    // }
-    // }
-    if (currentIndex == int.parse(widget.index) && currentIndex == -1) {
-      setAudioPossessor(mine: true);
-    } else {
-      setAudioPossessor(mine: false);
-    }
-  }
+  // initiateAudioPossessorFunction({required int currentIndex}) {
+  //   // if (currentIndex == -1) {
+  //   //   setAudioPossessor(mine: true);
+  //   // } else {
+  //   //   if (currentIndex == int.parse(widget.index)) {
+  //   //   setAudioPossessor(mine: true);
+  //   // } else {
+  //   //   setAudioPossessor(mine: false);
+  //   // }
+  //   // }
+  //   if (currentIndex == int.parse(widget.index) && currentIndex == -1) {
+  //     setAudioPossessor(mine: true);
+  //   } else {
+  //     setAudioPossessor(mine: false);
+  //   }
+  // }
 
-  setAudioPossessor({required bool mine}) {
-    setState(() {
-      isMine = mine;
-    });
-  }
+  // setAudioPossessor({required bool mine}) {
+  //   setState(() {
+  //     isMine = mine;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
