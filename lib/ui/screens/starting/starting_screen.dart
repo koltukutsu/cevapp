@@ -19,7 +19,8 @@ class _StartingScreenState extends State<StartingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.mainBackgroundColor,
-      body: BlocBuilder<AvatarCubit, AvatarState>(
+      body: BlocConsumer<AvatarCubit, AvatarState>(
+        listener: (context, state) {},
         builder: (context, state) {
           // print(state);
           if (state is NoUserName) {
@@ -52,7 +53,9 @@ class _StartingScreenState extends State<StartingScreen> {
                   );
                 },
                 child: const AvatarScreenBody());
-          } else if ((state is GotAvatars) || (state is DecreaseMoney) || (state is IncreaseMoney)) {
+          } else if ((state is GotAvatars) ||
+              (state is DecreaseMoney) ||
+              (state is IncreaseMoney)) {
             return AnimatedSwitcher(
                 switchInCurve: Curves.ease,
                 switchOutCurve: Curves.ease,
@@ -68,6 +71,7 @@ class _StartingScreenState extends State<StartingScreen> {
                 },
                 child: const MainScreen());
           } else {
+            context.read<AvatarCubit>().setToInitialState();
             return AnimatedSwitcher(
                 switchInCurve: Curves.ease,
                 switchOutCurve: Curves.ease,

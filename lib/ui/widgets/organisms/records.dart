@@ -77,7 +77,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
                           try {
                             return RecordRow(
                                 updateTheParent: updateTheWidget,
-                                index: index.toString(),
+                                index: (index + 1).toString(),
                                 path: state.recordPathsAsFileList[index],
                                 question: giveQuestionObject(
                                     recordedQuestions: context
