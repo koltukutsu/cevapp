@@ -17,9 +17,11 @@ class RecordRow extends StatefulWidget {
   final String index;
   final File path;
   final QuestionObject question;
+  final Function updateTheParent;
 
   const RecordRow(
       {Key? key,
+      required this.updateTheParent,
       required this.index,
       required this.path,
       required this.question})
@@ -60,7 +62,8 @@ class _RecordRowState extends State<RecordRow> {
 
   @override
   Widget build(BuildContext context) {
-    // initiateAudioPossessorFunction();
+    isMine = int.parse(widget.index) ==
+        context.read<AudioPlayerCubit>().playingIndex;
 
     return SizedBox(
       width: MediaQuery.of(context).size.width * AppRatios.recordRowWidthRatio,
@@ -148,8 +151,7 @@ class _RecordRowState extends State<RecordRow> {
                       context.read<AudioPlayerCubit>().playingIndex) {
                     context.read<AudioPlayerCubit>().setAudioAndPlay(
                         path: widget.path.path, index: int.parse(widget.index));
-                    // print(context.read<AudioPlayerCubit>().playingIndex);
-                    // print("\n");
+                    widget.updateTheParent();
                   }
 
                   if (isPlaying) {
@@ -158,11 +160,6 @@ class _RecordRowState extends State<RecordRow> {
                           context.read<AudioPlayerCubit>().playingIndex;
                       isPlaying = false;
                     });
-                    // print("playing is stopped");
-                    // print(isPlaying && isMine);
-                    // print("is playing: $isPlaying");
-                    // print("is mine: $isMine");
-                    // print(isPlaying && isMine);
                     context.read<AudioPlayerCubit>().stopAudio();
                   } else {
                     setState(() {
@@ -170,12 +167,6 @@ class _RecordRowState extends State<RecordRow> {
                           context.read<AudioPlayerCubit>().playingIndex;
                       isPlaying = true;
                     });
-                    // print("playing is resumed");
-                    // print(isPlaying && isMine);
-                    // print("is playing: $isPlaying");
-                    // print(isPlaying && isMine);
-                    // print("is mine: $isMine");
-                    // print(isPlaying && isMine);
                     context.read<AudioPlayerCubit>().resumeAudio();
                   }
                 },
@@ -199,7 +190,7 @@ class _RecordRowState extends State<RecordRow> {
                 width: MediaQuery.of(context).size.width * 0.03,
               ),
               Padding(
-                padding: const EdgeInsets.only(right:4.0),
+                padding: const EdgeInsets.only(right: 4.0),
                 child: CustomButtonAnimated(
                   label: "delete",
                   postFixIconAsImagePath: AppPaths.deleteButton,

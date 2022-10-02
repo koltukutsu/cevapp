@@ -25,6 +25,10 @@ class _RecordsScreenState extends State<RecordsScreen> {
     super.initState();
   }
 
+  void updateTheWidget() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,16 +73,34 @@ class _RecordsScreenState extends State<RecordsScreen> {
                         itemCount: state.recordPathsAsFileList.length,
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) => RecordRow(
-                            index: index.toString(),
-                            path: state.recordPathsAsFileList[index],
-                            question: giveQuestionObject(
-                                recordedQuestions: context
-                                    .read<ShuffleCubit>()
-                                    .recordedQuestions,
-                                recordedPathsAsFileList:
-                                    state.recordPathsAsFileList,
-                                index: index)),
+                        itemBuilder: (context, index) {
+                          try {
+                            return RecordRow(
+                                updateTheParent: updateTheWidget,
+                                index: index.toString(),
+                                path: state.recordPathsAsFileList[index],
+                                question: giveQuestionObject(
+                                    recordedQuestions: context
+                                        .read<ShuffleCubit>()
+                                        .recordedQuestions,
+                                    recordedPathsAsFileList:
+                                        state.recordPathsAsFileList,
+                                    index: index));
+                          } catch (e) {
+                            debugPrint("A problem occured");
+                            debugPrint(context
+                                .read<ShuffleCubit>()
+                                .recordedQuestions
+                                .toString());
+                            debugPrint(state.recordPathsAsFileList.toString());
+
+                            return Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                ));
+                          }
+                        },
                       ),
                     ),
                   )

@@ -26,7 +26,7 @@ class ButtonsDuringRecord extends StatefulWidget {
 
 class _ButtonsDuringRecordState extends State<ButtonsDuringRecord> {
   final int recordingThreshold =
-      3; // to be able to finish the recording process, the recording time must be larger than 30 seconds
+      30; // to be able to finish the recording process, the recording time must be larger than 30 seconds
   CrossFadeState _crossFadeStateSecond = CrossFadeState.showFirst;
 
   void onChangePauseAndContinueButton(bool isPaused) {
