@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:cevapp/cubit/records/record_cubit.dart';
+import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
+import 'package:cevapp/data/user_ranks.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -347,6 +349,33 @@ class _MainScreenBodyState extends State<MainScreenBody> {
         // TODO: take it inside
         stateOfRecorder = 0;
         setState(() {});
+        // show the user, user's rank update
+
+        // Dialogs.materialDialog(
+        //     msg: 'Its fabulous to see you getting better\n',
+        //     msgAlign: TextAlign.center,
+        //     title: "Horray, you leveled up!",
+        //     color: Colors.white,
+        //     context: context,
+        //     actions: [
+        //       // IconsOutlineButton(
+        //       //   onPressed: () {},
+        //       //   text: 'Very Well',
+        //       //   iconData: Icons.cancel_outlined,
+        //       //   textStyle: const TextStyle(color: Colors.grey),
+        //       //   iconColor: Colors.grey,
+        //       // ),
+        //       IconsButton(
+        //         onPressed: () {
+        //           Navigator.of(context).pop();
+        //         },
+        //         text: 'Very Well',
+        //         // iconData: Icons.add,
+        //         color: Colors.green,
+        //         textStyle: const TextStyle(color: Colors.white),
+        //         iconColor: Colors.white,
+        //       ),
+        //     ]);
         // final audioFile = File(pathFinished!);
       }
       // pause
@@ -418,7 +447,28 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       return "";
     }
   }
-}
+
+  void setUserAvatarAndRank() {
+    final int userRecordedQuestions =
+        context.read<ShuffleCubit>().recordedQuestions.length;
+    String userRank = "";
+    if (userRecordedQuestions >= UserRankLevels.unimagined) {
+      userRank = 'Unimagined';
+    } else if (userRecordedQuestions >= UserRankLevels.master) {
+      userRank = 'Master';
+    } else if (userRecordedQuestions >= UserRankLevels.expert) {
+      userRank = 'Expert';
+    } else if (userRecordedQuestions >= UserRankLevels.proficient) {
+      userRank = 'Proficient';
+    } else if (userRecordedQuestions >= UserRankLevels.competent) {
+      userRank = 'Competent';
+    } else if (userRecordedQuestions >= UserRankLevels.beginner) {
+      userRank = 'Beginner';
+    } else if (userRecordedQuestions >= UserRankLevels.novice) {
+      userRank = 'Novice';
+    }
+  }
+}//seem
 
 Future<bool> _requestPermission(Permission permission) async {
   if (await permission.isGranted) {
@@ -456,3 +506,5 @@ _showDialogSuccess(BuildContext context, Color color, String text,
     ),
   ));
 }
+
+
