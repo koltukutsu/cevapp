@@ -4,6 +4,7 @@ import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/user_ranks.dart';
+import 'package:cevapp/models/questionObject.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
@@ -25,13 +26,6 @@ import 'package:multi_select_flutter/util/multi_select_list_type.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class MainScreenBody extends StatefulWidget {
-  const MainScreenBody({Key? key}) : super(key: key);
-
-  @override
-  State<MainScreenBody> createState() => _MainScreenBodyState();
-}
-
 class QuestionLevel {
   final int id;
   final String name;
@@ -52,25 +46,32 @@ class QuestionCategory {
   });
 }
 
+class MainScreenBody extends StatefulWidget {
+  const MainScreenBody({Key? key}) : super(key: key);
+
+  @override
+  State<MainScreenBody> createState() => _MainScreenBodyState();
+}
+
 class _MainScreenBodyState extends State<MainScreenBody> {
   static List<QuestionLevel> questionLevels = [
     QuestionLevel(id: 1, name: "Beginner"),
     QuestionLevel(id: 2, name: "Intermediate"),
-    QuestionLevel(id: 3, name: "Upper-Intermediate"),
-    QuestionLevel(id: 4, name: "Advanced"),
-    QuestionLevel(id: 5, name: "Fluent"),
-    QuestionLevel(id: 6, name: "Native-Like"),
+    // QuestionLevel(id: 3, name: "Upper-Intermediate"),
+    QuestionLevel(id: 3, name: "Advanced"),
+    // QuestionLevel(id: 5, name: "Fluent"),
+    QuestionLevel(id: 4, name: "Native-Like"),
   ];
   static List<QuestionCategory> questionCategories = [
     QuestionCategory(id: 1, name: "Literature"),
     QuestionCategory(id: 2, name: "Philosophy"),
     // QuestionCategory(id: 3, name: "Trivial"),
-    QuestionCategory(id: 3, name: "Politics"),
+    QuestionCategory(id: 3, name: "Science"),
     QuestionCategory(id: 4, name: "Life"),
     QuestionCategory(id: 5, name: "Health"),
     QuestionCategory(id: 6, name: "Technology"),
     QuestionCategory(id: 7, name: "Books"),
-    QuestionCategory(id: 8, name: "Authors"),
+    QuestionCategory(id: 8, name: "Musics"),
     QuestionCategory(id: 9, name: "History"),
   ];
 
@@ -84,8 +85,8 @@ class _MainScreenBodyState extends State<MainScreenBody> {
       .toList();
 
   //List<Animal> _selectedAnimals = [];
-  List<Object> selectedQuestionLevels = questionLevels.sublist(0);
-  List<Object> selectedQuestionCategories = questionCategories.sublist(0);
+  List<dynamic> selectedQuestionLevels = questionLevels.sublist(0);
+  List<dynamic> selectedQuestionCategories = questionCategories.sublist(0);
   CrossFadeState _crossFadeState = CrossFadeState.showFirst;
   final recorder = FlutterSoundRecorder();
 
@@ -190,8 +191,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                 items: itemsCategories,
                 initialValue: questionCategories,
                 onConfirm: (values) {
-                  // print(values);
-                  selectedQuestionCategories = values as List<Object>;
+                  selectedQuestionCategories = values;
+                  context.read<ShuffleCubit>().setChosenCategories(
+                      takenCategories: selectedQuestionCategories);
                   // print(selectedQuestionCategories);
                 },
                 selectedColor: AppColors.rightSwipeDockColor,
@@ -199,7 +201,6 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                     const Icon(Icons.menu_sharp, color: AppColors.black),
                 selectedItemsTextStyle: const TextStyle(color: AppColors.black),
                 chipDisplay: MultiSelectChipDisplay.none(),
-
                 // chipDisplay: MultiSelectChipDisplay(
                 //   onTap: (value) {
                 //     setState(() {
@@ -239,7 +240,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                     borderRadius: BorderRadius.all(Radius.circular(10))),
                 initialValue: questionLevels,
                 onConfirm: (values) {
-                  selectedQuestionLevels = values as List<Object>;
+                  selectedQuestionLevels = values;
+                  context.read<ShuffleCubit>().setChosenCategories(
+                      takenCategories: selectedQuestionLevels);
                 },
                 selectedColor: AppColors.rightSwipeDockColor,
                 selectedItemsTextStyle: const TextStyle(color: AppColors.black),

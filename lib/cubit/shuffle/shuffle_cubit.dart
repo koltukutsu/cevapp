@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:cevapp/models/questionObject.dart';
+import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +20,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   var deletedQuestions = [];
   var unTouchedQuestions = [];
   var shuffledQuestions = [];
+  var chosenCategories = [];
+  var chosenLevels = [];
 
   // var questionLevel = [];
   // var questionCategory = [];
@@ -46,7 +50,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
 
   printRecordedQuestion() async {
     // print("question: ${shuffledQuestion["question"]}\nid:${shuffledQuestion["id"]}");
-    debugPrint("recorded questions length:${recordedQuestions.length} \nrecorded questions: ${recordedQuestions.toString()}");
+    debugPrint(
+        "recorded questions length:${recordedQuestions.length} \nrecorded questions: ${recordedQuestions.toString()}");
   }
 
   setQuestionObjectsState() async {
@@ -74,7 +79,6 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       deletedQuestions = allQuestionsRelatedObject["deleted"];
       shuffledQuestions = allQuestionsRelatedObject["shuffled"];
       // print(shuffledQuestions);
-
 
       // 3.
       await prefs.setBool("isUserLoggedInBefore", true);
@@ -119,14 +123,29 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     // and emits the state as GotQuestion
 
     emit(GettingQuestion());
+    final randomSeedForCategory = Random();
+    final int randomValueForCategory =
+        randomSeedForCategory.nextInt(chosenCategories.length);
+    final String category =
+        chosenCategories.elementAt(randomValueForCategory);
+
+    final randomSeedForLevel = Random();
+    final int randomValueForLevel =
+        randomSeedForLevel.nextInt(chosenLevels.length);
+    final String level =
+        chosenLevels.elementAt(randomValueForLevel);
+    // filter the untouched questions based on the level and the category
+    var untouchedQuestionsWCategoryAndLevel = unTouchedQuestions.where((element) => element["category"] == category).toList();
+    untouchedQuestionsWCategoryAndLevel = untouchedQuestionsWCategoryAndLevel.where((element) => element["level"] == level).toList();
+
     final randomSeed = Random();
     final int randomValueFromTheLength =
-        randomSeed.nextInt(unTouchedQuestions.length);
+        randomSeed.nextInt(untouchedQuestionsWCategoryAndLevel.length);
 
     shuffledQuestion = {
-      "id": unTouchedQuestions.elementAt(randomValueFromTheLength)["id"],
+      "id": untouchedQuestionsWCategoryAndLevel.elementAt(randomValueFromTheLength)["id"],
       "question":
-          unTouchedQuestions.elementAt(randomValueFromTheLength)["question"]
+      untouchedQuestionsWCategoryAndLevel.elementAt(randomValueFromTheLength)["question"]
     };
 
     updateShuffledQuestionsObject();
@@ -203,4 +222,18 @@ class ShuffleCubit extends Cubit<ShuffleState> {
 
   setQUestionCategory({required String chosen}) async =>
       questionCategory = chosen;
+
+  setChosenCategories({required List<dynamic> takenCategories}) {
+    for (QuestionCategory item in takenCategories) {
+      print(item.name);
+      chosenCategories.add(item.name);
+    }
+  }
+
+  setChosenLevels({required List<dynamic> takenLevels}) {
+    for (QuestionLevel item in takenLevels) {
+      print(item.name);
+      chosenLevels.add(item.name);
+    }
+  }
 }
