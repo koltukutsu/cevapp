@@ -239,7 +239,7 @@ class _RecordsScreenState extends State<RecordsScreen> {
       final String lastOfIt = splittedIndexFilePath.last;
       final String replacedAndFinalUUid = lastOfIt.replaceFirst(".aac", "");
       final bool theCondition = element["id"] == replacedAndFinalUUid;
-      debugPrint("and finally the RESULT: $theCondition");
+      // debugPrint("and finally the RESULT: $theCondition");
       return theCondition;
     });
     return QuestionObject(id: taken["id"], question: taken["question"]);

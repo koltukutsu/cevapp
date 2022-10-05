@@ -34,6 +34,9 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
     setUserAvatarAndRank();
     nameController.text = context.read<AvatarCubit>().avatarName;
     surnameController.text = context.read<AvatarCubit>().avatarSurname;
+    setState(() {
+      userRank = context.read<AvatarCubit>().avatarRank;
+    });
   }
 
   @override
@@ -105,8 +108,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                           context.read<AvatarCubit>().avatarType;
                       userAvatarImagePath =
                           userRanksObject[userAvatarChoice.trim()]!.avatarPath;
-                      userRank = userRanksObject[userAvatarChoice]!.rank;
-
+                      // userRank = userRanksObject[userAvatarChoice]!.rank;
+                      // userRank =
                       return Padding(
                         padding: const EdgeInsets.only(left: 8.0),
                         child: CustomNeumorphicAvatar(

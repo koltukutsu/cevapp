@@ -86,6 +86,7 @@ class AvatarCubit extends Cubit<AvatarState> {
     await prefs.setBool("didUserChoseAnAvatar", true);
     await prefs.setString("avatarType", type);
 
+    await prefs.setString("avatarRank", "Novice");
     avatarType = type;
     boughtUserAvatars.add(type);
     await prefs.setStringList("userAvatarsList", boughtUserAvatars);

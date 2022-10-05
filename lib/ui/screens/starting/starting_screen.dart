@@ -20,7 +20,17 @@ class _StartingScreenState extends State<StartingScreen> {
     return Scaffold(
       backgroundColor: AppColors.mainBackgroundColor,
       body: BlocConsumer<AvatarCubit, AvatarState>(
-        listener: (context, state) {},
+        listener: (context, state) {
+          if (state is NoUserName){
+
+          } else if (state is NoAvatars) {
+
+          } else if (state is GotAvatars) {
+
+          } else {
+
+          }
+        },
         builder: (context, state) {
           // print(state);
           if (state is NoUserName) {

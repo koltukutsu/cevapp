@@ -9,12 +9,12 @@ class UserRank {
 
 class UserRankLevels {
   static const int novice = 0;
-  static const int beginner = 5;
-  static const int competent = 15;
-  static const int proficient = 30;
-  static const int expert = 50;
-  static const int master = 75;
-  static const int unimagined = 100;
+  static const int beginner = 1; // 5
+  static const int competent = 2; // 15
+  static const int proficient = 3; // 30
+  static const int expert = 4; // 50
+  static const int master = 5; // 75
+  static const int unimagined = 7; // 100
 }
 
 final Map<String, UserRank> userRanksObject = {

@@ -1,4 +1,7 @@
 class AppPaths {
+  // animations
+  static const String successLottieAnimationPath = "assets/animations/success.json";
+  //
   static const String acceptIconPath = "assets/images/colorful_accept.png";
   static const String pauseIconPath = "assets/images/colorful_pause.png";
   static const String continueIconPath = "assets/images/colorful_continue.png";

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
@@ -471,32 +472,74 @@ class _MainScreenBodyState extends State<MainScreenBody> {
     } else if (userRecordedQuestions >= UserRankLevels.novice) {
       userRank = 'Novice';
     }
+    // userRank = "$userRank+";
     if (userRank != currentUserRank) {
       context.read<AvatarCubit>().setUserRank(currentAvatarRank: userRank);
+      final String avatarType2 = context.read<AvatarCubit>().avatarType;
+      final List<String> acceptingTexts = [
+        "Marvellous!",
+        "Lovely!",
+        "Magnificent!",
+        "Superb!",
+        "Wonderful!"
+      ];
+      final randomSeed = Random();
+      final int randomValueFromTheLength =
+          randomSeed.nextInt(acceptingTexts.length);
+      final String avatarTypeAnimal = avatarType2.split("_")[1];
+      final String avatarFinal = "${userRank.toUpperCase()}_$avatarTypeAnimal";
+      print(avatarFinal);
+      final String userAvatarImagePath =
+          userRanksObject[avatarFinal]!.avatarPath;
+
+      // print(userAvatarImagePath);
+      print(userAvatarImagePath);
       Dialogs.materialDialog(
           msg:
-              'Its fabulous to see you getting better\n"$userRank"\nis your new rank',
+              'Its fabulous to see you getting better\n"$userRank" is your new rank\nYou can buy the new avatars\nfrom the Market',
           msgAlign: TextAlign.center,
-          title: "Horray, you leveled up!",
+          title: "Horray, Your Rank Has Been Risen!",
           color: Colors.white,
           context: context,
+          // lottieBuilder: Lottie.asset(
+          //   "assets/animations/success.json",
+          //   width: 200,
+          //   height: 200,
+          //   fit: BoxFit.fill,
+          //   repeat: false,
+          // ),
+
           actions: [
-            // IconsOutlineButton(
-            //   onPressed: () {},
-            //   text: 'Very Well',
-            //   iconData: Icons.cancel_outlined,
-            //   textStyle: const TextStyle(color: Colors.grey),
-            //   iconColor: Colors.grey,
-            // ),
-            IconsButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              text: 'Very Well',
-              // iconData: Icons.add,
-              color: Colors.green,
-              textStyle: const TextStyle(color: Colors.white),
-              iconColor: Colors.white,
+            Column(
+              children: [
+                Stack(children: [
+                  ClipOval(
+                    child: Image(
+                      image: AssetImage(userAvatarImagePath),
+                      width: 200,
+                      height: 200,
+                      // height: MediaQuery.of(context).size.height * heightRatio ,
+                    ),
+                  ),
+                  Lottie.asset(
+                    AppPaths.successLottieAnimationPath,
+                    width: 200,
+                    height: 200,
+                    fit: BoxFit.fill,
+                    repeat: true,
+                  ),
+                ]),
+                IconsButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  text: acceptingTexts.elementAt(randomValueFromTheLength),
+                  // iconData: Icons.add,
+                  color: Colors.green,
+                  textStyle: const TextStyle(color: Colors.white),
+                  iconColor: Colors.white,
+                ),
+              ],
             ),
           ]);
     }
