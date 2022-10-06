@@ -161,7 +161,9 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     if (unTouchedQuestions.isEmpty) {
       unTouchedQuestions.add({
         "id": DateTime.now().toString(),
-        "question": "We ran out of questions :DD"
+        "question": "We ran out of questions :DD",
+        "category": "no",
+        "level": "no"
       });
     }
 

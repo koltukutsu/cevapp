@@ -1,0 +1,4831 @@
+{
+   "untouched": [
+      {
+         "id": "f66a395c-4584-11ed-9557-bc17b8019234",
+         "question": "Do you have a favourite book or author?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a395d-4584-11ed-afc9-bc17b8019234",
+         "question": "What genre of books to you like to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a395e-4584-11ed-abc9-bc17b8019234",
+         "question": "At what time of day do you like to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a395f-4584-11ed-b438-bc17b8019234",
+         "question": "How do you choose what books to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3960-4584-11ed-82a4-bc17b8019234",
+         "question": "Do you like reading e-books? Do you think they are the future?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3961-4584-11ed-b36f-bc17b8019234",
+         "question": "Have you ever read a book in a foreign language? Would you like to?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3962-4584-11ed-95fb-bc17b8019234",
+         "question": "If you were to be stranded on a desert island, which three books would you take?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3963-4584-11ed-9c7e-bc17b8019234",
+         "question": "Do you enjoy reading poetry? Do you have a favourite poem?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3964-4584-11ed-8b40-bc17b8019234",
+         "question": "Why do you think poetry is not as popular as it used to be?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3965-4584-11ed-b4fd-bc17b8019234",
+         "question": "Is it possible to read a play or do you need to see it performed?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3966-4584-11ed-a088-bc17b8019234",
+         "question": "Who would you say is the greatest writer in your country\u2019s history?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3967-4584-11ed-8146-bc17b8019234",
+         "question": "Who do you think is the greatest writer in world history?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3968-4584-11ed-a893-bc17b8019234",
+         "question": "Is literature important or is it just a collection of made up stories?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3969-4584-11ed-ba32-bc17b8019234",
+         "question": "What are the ingredients of a great novel?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396a-4584-11ed-9c36-bc17b8019234",
+         "question": "Would you like to write a poem, play or novel yourself?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396b-4584-11ed-92f7-bc17b8019234",
+         "question": "Do prefer to read classical or modern literature?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396c-4584-11ed-baa1-bc17b8019234",
+         "question": "Do you think a historical novel should tell the truth about history?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396d-4584-11ed-9ff9-bc17b8019234",
+         "question": "What books do you think children should read at school?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396e-4584-11ed-89a9-bc17b8019234",
+         "question": "How important is it to read to children when they are very young?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a396f-4584-11ed-8fc2-bc17b8019234",
+         "question": "Do you think a book can change the world? How?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3970-4584-11ed-8f80-bc17b8019234",
+         "question": "How many books do you read every year? Is it enough?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3971-4584-11ed-9f13-bc17b8019234",
+         "question": "What\u2019s the first book you remember reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3972-4584-11ed-8296-bc17b8019234",
+         "question": "What are you reading right now?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3973-4584-11ed-9fe6-bc17b8019234",
+         "question": "What was the last book you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3974-4584-11ed-bc69-bc17b8019234",
+         "question": "What book will you read next?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3975-4584-11ed-9215-bc17b8019234",
+         "question": "Have you read a book more than once? If so, what was the title? How many times have you read it?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3976-4584-11ed-a187-bc17b8019234",
+         "question": "What is the longest book you\u2019ve ever read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3977-4584-11ed-a5c6-bc17b8019234",
+         "question": "What is the shortest book you\u2019ve ever read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3978-4584-11ed-9b5f-bc17b8019234",
+         "question": "What is the funniest book you\u2019ve ever read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3979-4584-11ed-a166-bc17b8019234",
+         "question": "What is the saddest book you\u2019ve ever read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397a-4584-11ed-a991-bc17b8019234",
+         "question": "What is the scariest book you\u2019ve ever read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397b-4584-11ed-ab5f-bc17b8019234",
+         "question": "Have you ever read a book that made you laugh out loud?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397c-4584-11ed-a0c0-bc17b8019234",
+         "question": "Have you ever read a book that made you cry?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397d-4584-11ed-9342-bc17b8019234",
+         "question": "Have you ever read a book that you just couldn\u2019t make yourself finish? If so, what book and why?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397e-4584-11ed-b387-bc17b8019234",
+         "question": "How do you choose what books you want to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a397f-4584-11ed-b2ee-bc17b8019234",
+         "question": "Do you prefer reading old books or modern ones?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3980-4584-11ed-ae56-bc17b8019234",
+         "question": "Do you prefer to read one book at a time or several at once?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3981-4584-11ed-8277-bc17b8019234",
+         "question": "What is your favorite book of all time?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3982-4584-11ed-a4aa-bc17b8019234",
+         "question": "Who is your favorite author of all time?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3983-4584-11ed-ad5c-bc17b8019234",
+         "question": "What is your all-time favorite genre to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3984-4584-11ed-a387-bc17b8019234",
+         "question": "Who is your all-time favorite character from a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3985-4584-11ed-834c-bc17b8019234",
+         "question": "What are your favorite book tropes?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3986-4584-11ed-a759-bc17b8019234",
+         "question": "What was your favorite book when you were a kid?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3987-4584-11ed-9f76-bc17b8019234",
+         "question": "Where is your favorite place to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3988-4584-11ed-aba0-bc17b8019234",
+         "question": "What is your favorite book cover?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3989-4584-11ed-a4ee-bc17b8019234",
+         "question": "What is your favorite quote from a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398a-4584-11ed-8624-bc17b8019234",
+         "question": "What is your favorite scene in a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398b-4584-11ed-b859-bc17b8019234",
+         "question": "What is your favorite snack to eat while reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398c-4584-11ed-a1ed-bc17b8019234",
+         "question": "What genres do you love?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398d-4584-11ed-aeb7-bc17b8019234",
+         "question": "What genres do you dislike?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398e-4584-11ed-b497-bc17b8019234",
+         "question": "What makes you love a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a398f-4584-11ed-8dbe-bc17b8019234",
+         "question": "What makes you recommend a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3990-4584-11ed-917b-bc17b8019234",
+         "question": "Do you enjoy reading aloud?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3991-4584-11ed-b839-bc17b8019234",
+         "question": "Did anyone read to you when you were a kid?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3992-4584-11ed-b306-bc17b8019234",
+         "question": "Have you ever met a famous author face-to-face? If so, who was it?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3993-4584-11ed-bcb4-bc17b8019234",
+         "question": "What living author would you love to meet?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3994-4584-11ed-b6cf-bc17b8019234",
+         "question": "What deceased author would you love to have met?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3995-4584-11ed-9994-bc17b8019234",
+         "question": "Do you prefer reading physical books or ebooks?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3996-4584-11ed-9d1a-bc17b8019234",
+         "question": "Do you prefer paperback books or hardcover books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3997-4584-11ed-9f76-bc17b8019234",
+         "question": "Do your prefer used or new books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3998-4584-11ed-a1eb-bc17b8019234",
+         "question": "Do you judge a book by its cover?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a3999-4584-11ed-9e14-bc17b8019234",
+         "question": "Has a book ever changed your life? If so, how?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399a-4584-11ed-ab14-bc17b8019234",
+         "question": "Have you ever been part of a book club?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399b-4584-11ed-8f0a-bc17b8019234",
+         "question": "What\u2019s the last book you bought? Was it an ebook or physical book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399c-4584-11ed-a877-bc17b8019234",
+         "question": "Do you check out books from the library? How many do you check out at a time?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399d-4584-11ed-9f18-bc17b8019234",
+         "question": "What books do you recommend to others?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399e-4584-11ed-8981-bc17b8019234",
+         "question": "What book or series would you die to see turned into a movie or TV show?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a399f-4584-11ed-b88b-bc17b8019234",
+         "question": "Do you think there are any movies/TV shows based on books that are actually better than the book is? If so, which ones?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a0-4584-11ed-a8e7-bc17b8019234",
+         "question": "Are there any super popular books that you dislike?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a1-4584-11ed-8152-bc17b8019234",
+         "question": "Are there any books that are considered terrible but you love?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a2-4584-11ed-bb59-bc17b8019234",
+         "question": "Have you ever had a crush on a book character? If so, who?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a3-4584-11ed-8143-bc17b8019234",
+         "question": "Are you good at guessing plot twists?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a4-4584-11ed-86df-bc17b8019234",
+         "question": "How long is your TBR (To Be Read) list?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a5-4584-11ed-8cbd-bc17b8019234",
+         "question": "Would you rather read a book with terrible writing but a good story OR a book with a terrible story but good writing?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a6-4584-11ed-b160-bc17b8019234",
+         "question": "Would you rather not be able to read any new books OR not be able to reread any books ever again?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a7-4584-11ed-a8f0-bc17b8019234",
+         "question": "Would you rather be able to only read the first page of a book OR only read the last page of a book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a8-4584-11ed-a411-bc17b8019234",
+         "question": "Would you rather accidentally set your favorite book on fire OR accidentally drop it in the ocean?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39a9-4584-11ed-808b-bc17b8019234",
+         "question": "Would you rather be able to read 1 book a year for the rest of your life OR be able to read 100 books this year but never touch a book again?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39aa-4584-11ed-bffb-bc17b8019234",
+         "question": "Would you rather listen to an audiobook with a terrible reader but an amazing story OR listen to an audiobook with an amazing reader but a terrible story?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ab-4584-11ed-aca1-bc17b8019234",
+         "question": "Would you rather have your all-time favorite character erased from their story OR 10 of your other favorite characters erased from their stories?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ac-4584-11ed-9107-bc17b8019234",
+         "question": "Would you rather have a book\u2019s ending spoiled for you OR never know the ending?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ad-4584-11ed-8aa7-bc17b8019234",
+         "question": "Would you rather read only one genre for the rest of your life OR read any and all genres except for your all-time favorite genre?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ae-4584-11ed-a24a-bc17b8019234",
+         "question": "Would you rather be stuck on an island without a book OR be stuck in a room full of books you don\u2019t like?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39af-4584-11ed-adc2-bc17b8019234",
+         "question": "Would you rather have to read your favorite book every month OR never read it again?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b0-4584-11ed-9e29-bc17b8019234",
+         "question": "Would you rather bring any one character from a book into our world OR live in a book\u2019s world but never meet your favorite character?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b1-4584-11ed-b8ac-bc17b8019234",
+         "question": "Would you rather never read a book again OR never watch a movie ever again?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b2-4584-11ed-b0de-bc17b8019234",
+         "question": "What book had the biggest impact on your life and why?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b3-4584-11ed-b8f3-bc17b8019234",
+         "question": "What book would you recommend to a friend?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b4-4584-11ed-b79f-bc17b8019234",
+         "question": "When did you realize reading is good for you?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b5-4584-11ed-a918-bc17b8019234",
+         "question": "Why are you reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b6-4584-11ed-82d7-bc17b8019234",
+         "question": "What book should your mother read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b7-4584-11ed-8877-bc17b8019234",
+         "question": "How has reading changed your life?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b8-4584-11ed-91e8-bc17b8019234",
+         "question": "What was the book you read in the least amount of time?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39b9-4584-11ed-a9d5-bc17b8019234",
+         "question": "What was the book you read the longest?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ba-4584-11ed-b7f3-bc17b8019234",
+         "question": "What was the book you hated?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39bb-4584-11ed-a6c7-bc17b8019234",
+         "question": "Your favorite fiction book? And non-fiction? Could you describe it?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39bc-4584-11ed-b748-bc17b8019234",
+         "question": "Do you enjoy reading or Netflix more?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39bd-4584-11ed-bafc-bc17b8019234",
+         "question": "What\u2019s the book you think everybody should read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39be-4584-11ed-9bc5-bc17b8019234",
+         "question": "What book are you reading right now?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39bf-4584-11ed-b5c5-bc17b8019234",
+         "question": "What\u2019s your next read going to be?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c0-4584-11ed-8fa5-bc17b8019234",
+         "question": "How many books are on your current TBR list?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c1-4584-11ed-86a6-bc17b8019234",
+         "question": "What\u2019s the first book you read in your life?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c2-4584-11ed-8dff-bc17b8019234",
+         "question": "What\u2019s your favorite childhood book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c3-4584-11ed-a6e2-bc17b8019234",
+         "question": "Can you remember what your parents used to read you before bedtime?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c4-4584-11ed-a56f-bc17b8019234",
+         "question": "What\u2019s the longest / shortest book you managed to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c5-4584-11ed-bd20-bc17b8019234",
+         "question": "How many different books did you manage to read at once?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c6-4584-11ed-80be-bc17b8019234",
+         "question": "Can you name a book that kept you up at night? \n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c7-4584-11ed-b815-bc17b8019234",
+         "question": "What novel caused you the worst book hangover?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c8-4584-11ed-968e-bc17b8019234",
+         "question": "What is the saddest book you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39c9-4584-11ed-be23-bc17b8019234",
+         "question": " Did a book ever make you cry with laughter? Which one?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ca-4584-11ed-80bd-bc17b8019234",
+         "question": " How do you pick the next book you want to read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39cb-4584-11ed-874b-bc17b8019234",
+         "question": " Are you using a reading app to track your reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39cc-4584-11ed-9c86-bc17b8019234",
+         "question": " What were the last three books you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39cd-4584-11ed-b6eb-bc17b8019234",
+         "question": " How many books have you read so far this year?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ce-4584-11ed-9a8a-bc17b8019234",
+         "question": " How much are you planning to read this year?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39cf-4584-11ed-8a19-bc17b8019234",
+         "question": " What\u2019s the book you read the most times? How many times did you read it?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d0-4584-11ed-a2da-bc17b8019234",
+         "question": " Which horror book did you find the scariest?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d1-4584-11ed-9bd5-bc17b8019234",
+         "question": " Who\u2019s your favorite author?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d2-4584-11ed-89ce-bc17b8019234",
+         "question": " What\u2019s your least favorite book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d3-4584-11ed-b62e-bc17b8019234",
+         "question": " Is there a book you just couldn\u2019t finish?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d4-4584-11ed-a6ff-bc17b8019234",
+         "question": " Do you prefer to read classics or modern books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d5-4584-11ed-94bf-bc17b8019234",
+         "question": " What book was turned into a movie and turned out to be as good or even better than the book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d6-4584-11ed-ab64-bc17b8019234",
+         "question": " Do you have a favorite quote from any of the books you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d7-4584-11ed-b114-bc17b8019234",
+         "question": " Have you ever met a writer in real life?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d8-4584-11ed-920e-bc17b8019234",
+         "question": " What is the book that changed or influenced you the most?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39d9-4584-11ed-ba50-bc17b8019234",
+         "question": " How many books would you say you own?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39da-4584-11ed-977c-bc17b8019234",
+         "question": " How much do you think your book collection is worth today?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39db-4584-11ed-91a0-bc17b8019234",
+         "question": " What\u2019s the most you spent on a single book or series?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39dc-4584-11ed-8bc9-bc17b8019234",
+         "question": "Is there a particular author you would like to meet in real life?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39dd-4584-11ed-b3f5-bc17b8019234",
+         "question": "Is there a character in one of your books you would like to meet?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39de-4584-11ed-ac36-bc17b8019234",
+         "question": "Where do you like to do your reading the most?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39df-4584-11ed-841d-bc17b8019234",
+         "question": "What\u2019s the most awkward situation you were put in because you were reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e0-4584-11ed-b9a3-bc17b8019234",
+         "question": "Did you ever read in a completely inappropriate location or situation?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e1-4584-11ed-a821-bc17b8019234",
+         "question": "Did you ever have to call in sick because you couldn\u2019t put a book down? What book?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e2-4584-11ed-a40f-bc17b8019234",
+         "question": "Which book cover made you read the book only to find out you actually hate it?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e3-4584-11ed-bba8-bc17b8019234",
+         "question": "What book do you think nobody should die without reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e4-4584-11ed-a60f-bc17b8019234",
+         "question": "Which book do you think is the most overrated?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e5-4584-11ed-9562-bc17b8019234",
+         "question": " Have you ever had a crush on a book character?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e6-4584-11ed-aed2-bc17b8019234",
+         "question": " Did you ever buy a book you had already read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e7-4584-11ed-8022-bc17b8019234",
+         "question": " Is there a book that is extremely popular but you somehow skipped on reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e8-4584-11ed-a939-bc17b8019234",
+         "question": "Did you ever visit a city or place just because you read about it in a book you loved?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39e9-4584-11ed-92d6-bc17b8019234",
+         "question": " If you could change one book and save one character\u2019s life, which book would you change and what character would you save?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ea-4584-11ed-b16f-bc17b8019234",
+         "question": " What skill or special ability would you want to have if you could choose one from one the characters in a book you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39eb-4584-11ed-99a1-bc17b8019234",
+         "question": "Do you prefer e-books or physical books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ec-4584-11ed-9099-bc17b8019234",
+         "question": "Do you enjoy audiobooks?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ed-4584-11ed-ab54-bc17b8019234",
+         "question": "Do you read more at night or during the day?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ee-4584-11ed-b06e-bc17b8019234",
+         "question": "Do you prefer to buy new books or purchase used ones?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39ef-4584-11ed-a3b0-bc17b8019234",
+         "question": "Do you read out loud?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f0-4584-11ed-98ab-bc17b8019234",
+         "question": "How late into a book do you realize it will be one that you will recommend others to read as well?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f1-4584-11ed-aaad-bc17b8019234",
+         "question": "What is your favorite or least favorite genre?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f2-4584-11ed-b29d-bc17b8019234",
+         "question": "Is there a snack or drink you indulge yourself in during reading sessions?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f3-4584-11ed-a255-bc17b8019234",
+         "question": "Do you have more than one reading list? \n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f4-4584-11ed-86e1-bc17b8019234",
+         "question": " Do you prefer to read fiction or non-fiction books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f5-4584-11ed-809e-bc17b8019234",
+         "question": " Do you ever annotate books?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f6-4584-11ed-aba4-bc17b8019234",
+         "question": " Do you write reviews about the books you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f7-4584-11ed-a632-bc17b8019234",
+         "question": " Do you listen to music while you read?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f8-4584-11ed-91e5-bc17b8019234",
+         "question": " How do you keep track of your reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66a39f9-4584-11ed-9727-bc17b8019234",
+         "question": " What\u2019s the longest you went without reading?\n",
+         "category": "Books",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb636-4584-11ed-b95e-bc17b8019234",
+         "question": "Why do I get sick?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb637-4584-11ed-9770-bc17b8019234",
+         "question": "How do the disease-causing germs invade my body?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb638-4584-11ed-8ce4-bc17b8019234",
+         "question": "What does the immune system do?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb639-4584-11ed-a0e8-bc17b8019234",
+         "question": "What is the difference between bacteria and viruses?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63a-4584-11ed-9e35-bc17b8019234",
+         "question": "Do our intestines contain germs?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63b-4584-11ed-b663-bc17b8019234",
+         "question": "Where are some other places that germs hide?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63c-4584-11ed-9d1b-bc17b8019234",
+         "question": "What are allergies?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63d-4584-11ed-8806-bc17b8019234",
+         "question": "What are antibiotics?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63e-4584-11ed-bf5f-bc17b8019234",
+         "question": "How was penicillin developed?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb63f-4584-11ed-ab20-bc17b8019234",
+         "question": "How were vaccines invented?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb640-4584-11ed-8d9a-bc17b8019234",
+         "question": "Can chicken soup help a cold go away?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb641-4584-11ed-8c45-bc17b8019234",
+         "question": "Why is exercise important to health?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb642-4584-11ed-8c73-bc17b8019234",
+         "question": "Why is sleep necessary for good health?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb643-4584-11ed-96b2-bc17b8019234",
+         "question": "How does substance abuse affect a person\u2019s health?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb644-4584-11ed-8bd5-bc17b8019234",
+         "question": "Can alcohol be bad for your health?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb645-4584-11ed-99cb-bc17b8019234",
+         "question": "Why is smoking cigarettes unhealthy?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb646-4584-11ed-9a94-bc17b8019234",
+         "question": "Is secondhand smoke bad?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb647-4584-11ed-8d39-bc17b8019234",
+         "question": "Should I Go Gluten-Free?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb648-4584-11ed-b880-bc17b8019234",
+         "question": "Are Short Workouts Worth It?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb649-4584-11ed-806f-bc17b8019234",
+         "question": "Is Tap Water Safe to Drink?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64a-4584-11ed-9d46-bc17b8019234",
+         "question": "Sugar or High Fructose Corn Syrup?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64b-4584-11ed-967c-bc17b8019234",
+         "question": "Does Cholesterol in Food Count?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64c-4584-11ed-9ee7-bc17b8019234",
+         "question": "Do Vaccines Cause Autism Spectrum Disorder?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64d-4584-11ed-afe6-bc17b8019234",
+         "question": "Is Microwaved Food Unsafe?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64e-4584-11ed-bb35-bc17b8019234",
+         "question": "Do Cell Phones Cause Brain Cancer?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66cb64f-4584-11ed-843c-bc17b8019234",
+         "question": "Can I Be Fat and Healthy?\n",
+         "category": "Health",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de35e-4584-11ed-b517-bc17b8019234",
+         "question": "Why is it important to learn history at school?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de35f-4584-11ed-9d98-bc17b8019234",
+         "question": "Did you enjoy studying history at school?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de360-4584-11ed-a978-bc17b8019234",
+         "question": "Do you feel you have a good knowledge of history?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de361-4584-11ed-8573-bc17b8019234",
+         "question": "Can you think of a great historical film you have seen?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de362-4584-11ed-aa36-bc17b8019234",
+         "question": "What is more important, world history or your own nation\u2019s history?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de363-4584-11ed-83ee-bc17b8019234",
+         "question": "If you could meet one historical figure, who would it be?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de364-4584-11ed-aeb6-bc17b8019234",
+         "question": "Who is your nation\u2019s greatest hero?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de365-4584-11ed-aee9-bc17b8019234",
+         "question": "Who is the most influential person in history, for better or for worse?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de366-4584-11ed-add9-bc17b8019234",
+         "question": "Should we learn about the great heroes of history or about ordinary people?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de367-4584-11ed-b0e6-bc17b8019234",
+         "question": "Are you proud of your country\u2019s history?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de368-4584-11ed-a046-bc17b8019234",
+         "question": "What is the most important historical site in your country?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de369-4584-11ed-bb8a-bc17b8019234",
+         "question": "How much of the history we know about can we really trust?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36a-4584-11ed-ac21-bc17b8019234",
+         "question": "If you could travel back in time, which period would you visit?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36b-4584-11ed-bdae-bc17b8019234",
+         "question": "Are you happy you were born at this moment in history?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36c-4584-11ed-8bc6-bc17b8019234",
+         "question": "What has been the most important historical event in the past 30 years?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36d-4584-11ed-b18f-bc17b8019234",
+         "question": "Was the 20th century a great century?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36e-4584-11ed-84c1-bc17b8019234",
+         "question": "Is there anyone alive today who will be remembered in a thousand years?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de36f-4584-11ed-b7a8-bc17b8019234",
+         "question": "If you could erase one event from history, what would it be?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de370-4584-11ed-b5a4-bc17b8019234",
+         "question": "Do you think human beings have made progress over the course of history?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de371-4584-11ed-95b9-bc17b8019234",
+         "question": "Have you ever witnessed a historical event? What about on television?\n",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66de372-4584-11ed-ae19-bc17b8019234",
+         "question": "Do you think that history repeats itself?",
+         "category": "History",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5a-4584-11ed-ae6b-bc17b8019234",
+         "question": "What is Art?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5b-4584-11ed-a9bf-bc17b8019234",
+         "question": "What differentiates a good piece of art from a bad one?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5c-4584-11ed-8b82-bc17b8019234",
+         "question": "What is Creativity?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5d-4584-11ed-b951-bc17b8019234",
+         "question": "Why are some people creative and others are not?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5e-4584-11ed-bb16-bc17b8019234",
+         "question": "Could I ever be good at the art I am pursuing? \n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e5f-4584-11ed-ab33-bc17b8019234",
+         "question": "Am I a dilettante?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e60-4584-11ed-8ec0-bc17b8019234",
+         "question": "Did I start asking the good questions too late?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e61-4584-11ed-a71d-bc17b8019234",
+         "question": "Do I repent something? (One of the many of life\u2019s biggest questions)\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e62-4584-11ed-9682-bc17b8019234",
+         "question": "Am I learning from my mistakes?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e63-4584-11ed-ae54-bc17b8019234",
+         "question": "Why letting go is hard?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e64-4584-11ed-8ff4-bc17b8019234",
+         "question": "Do I forgive people?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e65-4584-11ed-bb2f-bc17b8019234",
+         "question": "Why can we never forgive some people even though we know that by thinking about how they hurt us we will only harm ourselves? Wouldn\u2019t it be easier if we just let go?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e66-4584-11ed-bd64-bc17b8019234",
+         "question": "Should I forgive people?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e67-4584-11ed-9960-bc17b8019234",
+         "question": "What matters?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e68-4584-11ed-94cc-bc17b8019234",
+         "question": "Why do I let my emotions puppeteer me when I know that I should act more logically?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e69-4584-11ed-ab6f-bc17b8019234",
+         "question": "Why do I stay stuck in a situation when I should step out of it and observe it from a distance?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6a-4584-11ed-8494-bc17b8019234",
+         "question": "Do I love prestige?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6b-4584-11ed-8acc-bc17b8019234",
+         "question": "What is so special about food?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6c-4584-11ed-bad1-bc17b8019234",
+         "question": "Would I commit a crime if the judiciary wasn\u2019t a scene?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6d-4584-11ed-b8e1-bc17b8019234",
+         "question": "What is a good routine?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6e-4584-11ed-acd2-bc17b8019234",
+         "question": "Is it a good expectation to always have a smooth and perfect routine? (What are the challenges I face with a creative routine?)\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e6f-4584-11ed-92e7-bc17b8019234",
+         "question": "Can I be more productive by being restless about productivity?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e70-4584-11ed-93fc-bc17b8019234",
+         "question": "Why am I unsatisfied with my day even though I know that I could only do so much?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e71-4584-11ed-a9ec-bc17b8019234",
+         "question": "How to set the right expectations from a workday?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e72-4584-11ed-ba26-bc17b8019234",
+         "question": "Are schedules for weak people?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e73-4584-11ed-9fe0-bc17b8019234",
+         "question": "Are we all doing our best now?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e74-4584-11ed-ac21-bc17b8019234",
+         "question": "Do I make excuses?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e75-4584-11ed-8cc9-bc17b8019234",
+         "question": "Everything is fine until I compare my life to others\u2019. Though I know this, why do I stop being grateful for what I have almost every other second?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e76-4584-11ed-b054-bc17b8019234",
+         "question": "Is it okay if I compare my life to someone else\u2019s? (One of the very important personal questions)\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e77-4584-11ed-946e-bc17b8019234",
+         "question": "Why do the people who show-off more than they do or live a self-oriented life shine more than the ones who are working with their head down and bringing a real difference to people\u2019s lives?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e78-4584-11ed-82b4-bc17b8019234",
+         "question": "If everyone knew the best ways to live life \u2014 read the right books and given all the wisdom \u2014 then would we all do the best we can?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e79-4584-11ed-b895-bc17b8019234",
+         "question": "Should we care about society?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7a-4584-11ed-85cc-bc17b8019234",
+         "question": "Is there a god?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7b-4584-11ed-8f3b-bc17b8019234",
+         "question": "Why is the process so hard? When there is no other way to learn apart from following a process, why do many of us want to take short cuts only to suffer or fail later?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7c-4584-11ed-9921-bc17b8019234",
+         "question": "How would we be if we didn\u2019t have any goals?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7d-4584-11ed-97ad-bc17b8019234",
+         "question": "How did disempowering the harassed one became an accepted way to deal with the tormentors?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7e-4584-11ed-8ac5-bc17b8019234",
+         "question": "How can I stop judging people?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e7f-4584-11ed-a9d9-bc17b8019234",
+         "question": "Why do people always think that they are all right?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e80-4584-11ed-b627-bc17b8019234",
+         "question": "Should we pretend to know even when we don\u2019t?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e81-4584-11ed-a64f-bc17b8019234",
+         "question": "Even though I know that life is not only about the things of consequence(something that would lead us somewhere) and we all just need \u201cto be\u201d more often than not, why do I rush to make every moment count?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e82-4584-11ed-9ca0-bc17b8019234",
+         "question": "Am I happy?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e83-4584-11ed-8c3c-bc17b8019234",
+         "question": "What helps me go through each day of my life? What is my driving force?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e84-4584-11ed-84b3-bc17b8019234",
+         "question": "Am I honest with myself?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e85-4584-11ed-9260-bc17b8019234",
+         "question": "Would I be doing the same thing I am doing now if money was not a thing? If I was asked to do one thing for the rest of my life without limiting myself by any constraints, what would that be? And why? \n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e86-4584-11ed-9c6d-bc17b8019234",
+         "question": "Are we, humans, overall, getting more tolerant, or are we becoming more rigid?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e87-4584-11ed-aa46-bc17b8019234",
+         "question": "Do all beautiful things come with thorns? Are the behavioral and emotional drawbacks and sensitivities of the most sincere human beings their spiky guards against the world?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e88-4584-11ed-b1e0-bc17b8019234",
+         "question": "How would it be if money didn\u2019t lead to prestige but only served its primitive purpose?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e89-4584-11ed-a71f-bc17b8019234",
+         "question": "Humans can adapt to almost any change. Then why do we fret and cry when we see even the tiniest part of our day or life move in an unexpected direction?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8a-4584-11ed-9f61-bc17b8019234",
+         "question": "Is working less really such an amazing thing as people say it is?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8b-4584-11ed-a8c6-bc17b8019234",
+         "question": "Now we put ourselves before anyone else. But what if we were made to do it the other way round? Would the system work?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8c-4584-11ed-8358-bc17b8019234",
+         "question": "Do the problems of a human evolve or do we keep thinking about the same things?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8d-4584-11ed-a760-bc17b8019234",
+         "question": "Is having problems bad?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8e-4584-11ed-b23f-bc17b8019234",
+         "question": "Am I learning every day?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e8f-4584-11ed-9620-bc17b8019234",
+         "question": "How would you know what is useful and what is not until you try?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e90-4584-11ed-aa7f-bc17b8019234",
+         "question": "If I had to choose between only telling lies all my life or had to only speak the truth for the rest of my life, what would I choose?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e91-4584-11ed-a2eb-bc17b8019234",
+         "question": "Does anger help me put across my point of view or the course of action to be taken by the other person or show the earnestness of the issue at hand clearly?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e92-4584-11ed-8385-bc17b8019234",
+         "question": "Immediate fun or longer purpose \u2014 how to choose?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e93-4584-11ed-a6f9-bc17b8019234",
+         "question": "Am I getting affected by people and are my decisions influenced by them?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e94-4584-11ed-9ecf-bc17b8019234",
+         "question": "Can there be a balance between conventional and unconventional? Is your conventional side a social response or the real you? Do your unconventional traits define you or can they be attributed to peer influence?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e95-4584-11ed-abec-bc17b8019234",
+         "question": "Who are my friends?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e96-4584-11ed-969b-bc17b8019234",
+         "question": "Who should we consider family?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e97-4584-11ed-a775-bc17b8019234",
+         "question": "Am I easy on myself?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e98-4584-11ed-b62b-bc17b8019234",
+         "question": "How can I quantify effort?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e99-4584-11ed-9f74-bc17b8019234",
+         "question": "Do I like life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9a-4584-11ed-aea8-bc17b8019234",
+         "question": "Do I like my life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9b-4584-11ed-9de0-bc17b8019234",
+         "question": "What is the meaning of life? When we leave empty-handed, why do we go on living as if there is no end when the next moment could be the finale?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9c-4584-11ed-8c09-bc17b8019234",
+         "question": "What will happen after I go?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9d-4584-11ed-9bd0-bc17b8019234",
+         "question": "Why do I go on living like I\u2019m the nucleus of the world?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9e-4584-11ed-be12-bc17b8019234",
+         "question": "Is my meditation of \u201cbeing\u201d stronger than the animals? Does solipsism exist for nonhuman animals?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6e9f-4584-11ed-bdbd-bc17b8019234",
+         "question": "What if time wasn\u2019t linear? How can we be advancing forward always?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea0-4584-11ed-a2f4-bc17b8019234",
+         "question": "Do I love enough?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea1-4584-11ed-aba1-bc17b8019234",
+         "question": "What is the one thing you would pass on if we all disappeared tomorrow?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea2-4584-11ed-bf07-bc17b8019234",
+         "question": "Do I have a guardian angel?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea3-4584-11ed-9025-bc17b8019234",
+         "question": "Am I a guardian angel for someone?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea4-4584-11ed-b664-bc17b8019234",
+         "question": "If staying quiet makes things easier, should we not say anything in a personal or general situation even when we strongly disagree?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea5-4584-11ed-b3ff-bc17b8019234",
+         "question": "Does life seem to give everything I wish for?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea6-4584-11ed-aee2-bc17b8019234",
+         "question": "Who are you?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea7-4584-11ed-8eff-bc17b8019234",
+         "question": "How would you describe yourself?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea8-4584-11ed-927b-bc17b8019234",
+         "question": "What are you passionate about?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ea9-4584-11ed-ba13-bc17b8019234",
+         "question": "What personal achievements are you most proud of?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eaa-4584-11ed-94a1-bc17b8019234",
+         "question": "What are you most grateful for? \n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eab-4584-11ed-af82-bc17b8019234",
+         "question": "What are the most important things to you in life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eac-4584-11ed-b381-bc17b8019234",
+         "question": "What are your values? What do you represent? What do you want to embody? \n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ead-4584-11ed-8b41-bc17b8019234",
+         "question": "Do you love yourself?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eae-4584-11ed-8e53-bc17b8019234",
+         "question": "Why or why not? What do you love most about yourself?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eaf-4584-11ed-bfba-bc17b8019234",
+         "question": "How can you love yourself more today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb0-4584-11ed-8580-bc17b8019234",
+         "question": "What is your ideal self?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb1-4584-11ed-b477-bc17b8019234",
+         "question": "Look at your life now. Are you living the life of your dreams? Why or why not?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb2-4584-11ed-8417-bc17b8019234",
+         "question": "If you have one year left to live, what would you do?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb3-4584-11ed-9a33-bc17b8019234",
+         "question": "If you have one week left to live, what would you do?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb4-4584-11ed-9398-bc17b8019234",
+         "question": "If you have one day left to live, what would you do?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb5-4584-11ed-9c95-bc17b8019234",
+         "question": "If you have one minute left to live, what would you do?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb6-4584-11ed-852e-bc17b8019234",
+         "question": "What would you do today if there were no tomorrow?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb7-4584-11ed-adda-bc17b8019234",
+         "question": "What are the biggest things you\u2019ve learned in life to date?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb8-4584-11ed-95d2-bc17b8019234",
+         "question": "What advice would you give to your younger self?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eb9-4584-11ed-bac7-bc17b8019234",
+         "question": "Let\u2019s say you are your future self. What advice would you give to your present self?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eba-4584-11ed-81a2-bc17b8019234",
+         "question": "Is there something you\u2019re still holding on to? Is it time to let it go?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ebb-4584-11ed-baf5-bc17b8019234",
+         "question": "What are you busy with today? Will this matter in 1 year? 3 years? 5 years?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ebc-4584-11ed-9f3c-bc17b8019234",
+         "question": "What opportunities are you looking for now?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ebd-4584-11ed-b178-bc17b8019234",
+         "question": "How can you create these opportunities?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ebe-4584-11ed-bda6-bc17b8019234",
+         "question": "What are your biggest goals and dreams?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ebf-4584-11ed-883f-bc17b8019234",
+         "question": "Is there anything stopping you from pursuing them? Why? How can you address these factors?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec0-4584-11ed-9247-bc17b8019234",
+         "question": "If you were to do something for free for the rest of your life, what would you want to do?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec1-4584-11ed-bd4e-bc17b8019234",
+         "question": "What would you do if you cannot fail; if there were no limitations in money, resources, time, or networks?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec2-4584-11ed-a865-bc17b8019234",
+         "question": "What do you want to achieve in 1 year?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec3-4584-11ed-b32d-bc17b8019234",
+         "question": "What do you want to achieve in 3 years?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec4-4584-11ed-a79f-bc17b8019234",
+         "question": "What do you want to achieve in 5 years?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec5-4584-11ed-a060-bc17b8019234",
+         "question": "What do you want to achieve in 10 years?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec6-4584-11ed-8404-bc17b8019234",
+         "question": "How important are these goals to you?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec7-4584-11ed-893e-bc17b8019234",
+         "question": "What if these goals are doubled? Tripled? Magnified by 10? How would you feel? Would you prefer to achieve these or your previous goals?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec8-4584-11ed-821e-bc17b8019234",
+         "question": "Who are the people who have achieved similar goals? What can you learn from them?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ec9-4584-11ed-937f-bc17b8019234",
+         "question": "Are you putting any parts of your life on hold? Why?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eca-4584-11ed-a31a-bc17b8019234",
+         "question": "What\u2019s the top priority in your life right now? What are you doing about it?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ecb-4584-11ed-9791-bc17b8019234",
+         "question": "If you were to die tomorrow, what would be your biggest regret? What can you do now to make sure that it doesn\u2019t happen?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ecc-4584-11ed-9f6b-bc17b8019234",
+         "question": "Looking back on your life, have you made any mistakes before? What happened, and why?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ecd-4584-11ed-8dbd-bc17b8019234",
+         "question": "What have you learned from those episodes?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ece-4584-11ed-8fbc-bc17b8019234",
+         "question": "What is your biggest frustration right now? What can you do about it?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ecf-4584-11ed-ae4e-bc17b8019234",
+         "question": "What is the biggest thing you can do now, that will change your life for the better?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed0-4584-11ed-8243-bc17b8019234",
+         "question": "If you had a million dollars, what would you do with it?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed1-4584-11ed-a2a9-bc17b8019234",
+         "question": "Do you love your job? Why or why not?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed2-4584-11ed-93d7-bc17b8019234",
+         "question": "What is your ideal career?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed3-4584-11ed-96ac-bc17b8019234",
+         "question": "How can you start to create your ideal career starting today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed4-4584-11ed-a028-bc17b8019234",
+         "question": "What is your ideal diet?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed5-4584-11ed-8451-bc17b8019234",
+         "question": "What do you need to do to achieve your ideal diet?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed6-4584-11ed-b76e-bc17b8019234",
+         "question": "What is your ideal home like?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed7-4584-11ed-b047-bc17b8019234",
+         "question": "What do you need to do to achieve your ideal home?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed8-4584-11ed-9a10-bc17b8019234",
+         "question": "What is your ideal physical look?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ed9-4584-11ed-90e1-bc17b8019234",
+         "question": "What do you need to do to achieve your ideal physical look?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eda-4584-11ed-bffe-bc17b8019234",
+         "question": "What is your ideal life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6edb-4584-11ed-8b9b-bc17b8019234",
+         "question": "What can you do to start living your ideal life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6edc-4584-11ed-a849-bc17b8019234",
+         "question": "What would you want to say to yourself in 1 year\u2019s time?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6edd-4584-11ed-83d5-bc17b8019234",
+         "question": "What would you want to say to yourself in 3 year\u2019s time?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ede-4584-11ed-9301-bc17b8019234",
+         "question": "What would you want to say to yourself in 5 year\u2019s time?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6edf-4584-11ed-8c78-bc17b8019234",
+         "question": "What would you want to say to yourself in 10 year\u2019s time?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee0-4584-11ed-a151-bc17b8019234",
+         "question": "What do you fear most in life? Why?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee1-4584-11ed-a1cb-bc17b8019234",
+         "question": "Is there anything you are running away from?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee2-4584-11ed-a42a-bc17b8019234",
+         "question": "Are you settling for less than what you are worth? Why?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee3-4584-11ed-a6fa-bc17b8019234",
+         "question": "What is your inner dialogue like? (Day 26 of Be a Better Me in 30 Days Program is about uncovering your limiting thoughts.)\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee4-4584-11ed-8f24-bc17b8019234",
+         "question": "What limiting beliefs are you holding on to?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee5-4584-11ed-9cfd-bc17b8019234",
+         "question": "Are they helping you achieve your goals?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee6-4584-11ed-be3f-bc17b8019234",
+         "question": "If not, is it time to let them go?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee7-4584-11ed-bbf9-bc17b8019234",
+         "question": "What empowering beliefs can you take on to help you achieve your goals?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee8-4584-11ed-9565-bc17b8019234",
+         "question": "What bad habits do you want to break?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ee9-4584-11ed-8593-bc17b8019234",
+         "question": "What good habits do you want to cultivate?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eea-4584-11ed-b3f7-bc17b8019234",
+         "question": "What are the biggest actions you can take now to create the biggest results in your life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eeb-4584-11ed-8e7b-bc17b8019234",
+         "question": "Where are you living right now \u2014 in the past, future, or present?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eec-4584-11ed-b773-bc17b8019234",
+         "question": "Are you living your life to the fullest right now?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eed-4584-11ed-beab-bc17b8019234",
+         "question": "What is the meaning of life?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eee-4584-11ed-b153-bc17b8019234",
+         "question": "What is your life purpose? Why do you exist? What is your mission?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eef-4584-11ed-a29a-bc17b8019234",
+         "question": "How can you make your life more meaningful, starting today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef0-4584-11ed-8a9a-bc17b8019234",
+         "question": "What drives you?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef1-4584-11ed-b9fe-bc17b8019234",
+         "question": "What are the times you are most inspired, most motivated, most charged up?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef2-4584-11ed-8669-bc17b8019234",
+         "question": "What did you do during those times? How can you do more of that starting today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef3-4584-11ed-8462-bc17b8019234",
+         "question": "How can you change someone\u2019s life for the better today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef4-4584-11ed-a344-bc17b8019234",
+         "question": "Who are the 5 people you spend the most time with?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef5-4584-11ed-b345-bc17b8019234",
+         "question": "Are these people enabling you or holding you back?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef6-4584-11ed-b5b9-bc17b8019234",
+         "question": "What qualities do you want to embody? (Refer to Q7: Values and Q11: Ideal Self) Where can you meet people who embody these qualities?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef7-4584-11ed-9d80-bc17b8019234",
+         "question": "Who inspire you the most?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef8-4584-11ed-91a5-bc17b8019234",
+         "question": "How can you be like them?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6ef9-4584-11ed-88cf-bc17b8019234",
+         "question": "What is your ideal life partner like?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6efa-4584-11ed-82b0-bc17b8019234",
+         "question": "Where can you find him/her?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6efb-4584-11ed-9050-bc17b8019234",
+         "question": "How can you get to know him/her?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6efc-4584-11ed-b932-bc17b8019234",
+         "question": "Are you afraid of letting others get close to you?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6efd-4584-11ed-87da-bc17b8019234",
+         "question": "Who is/are the most important person(s) to you in the world?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6efe-4584-11ed-99c0-bc17b8019234",
+         "question": "Are you giving them the attention you want to give?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6eff-4584-11ed-bb1d-bc17b8019234",
+         "question": "How can you spend more time with them starting today?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f00-4584-11ed-9b72-bc17b8019234",
+         "question": "What kind of person do you enjoy spending time with?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f01-4584-11ed-b49d-bc17b8019234",
+         "question": "How can you be this person to others?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f02-4584-11ed-af09-bc17b8019234",
+         "question": "Who do you want to be like in 1 year?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f03-4584-11ed-9f91-bc17b8019234",
+         "question": "Who do you want to be like in 3 year?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f04-4584-11ed-b956-bc17b8019234",
+         "question": "Who do you want to be like in 5 year?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f05-4584-11ed-90fb-bc17b8019234",
+         "question": "Who do you want to be like in 10 year?\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f06-4584-11ed-9ed3-bc17b8019234",
+         "question": "Who are your mentors in life? (formal or informal)\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f66f6f07-4584-11ed-ac22-bc17b8019234",
+         "question": "\n",
+         "category": "Life",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790a-4584-11ed-9383-bc17b8019234",
+         "question": "Do you have a favourite musician or band?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790b-4584-11ed-b6a1-bc17b8019234",
+         "question": "Can you play a musical instrument?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790c-4584-11ed-a17f-bc17b8019234",
+         "question": "Which musical instrument would you like to learn to play?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790d-4584-11ed-aa1e-bc17b8019234",
+         "question": "Where and when do you listen to music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790e-4584-11ed-9a8a-bc17b8019234",
+         "question": "Do you enjoy going to concerts?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671790f-4584-11ed-b810-bc17b8019234",
+         "question": "Have you ever downloaded music illegally? Is it right to do so?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717910-4584-11ed-afa5-bc17b8019234",
+         "question": "Should every child learn to play a musical instrument?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717911-4584-11ed-ab18-bc17b8019234",
+         "question": "Who is the greatest musician in history?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717912-4584-11ed-acb3-bc17b8019234",
+         "question": "Who is the greatest musician from your country?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717913-4584-11ed-b31f-bc17b8019234",
+         "question": "Which decade of the 20th and 21st centuries produced the best music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717914-4584-11ed-9001-bc17b8019234",
+         "question": "What do you think about the music produced in the last 5 years?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717915-4584-11ed-8b5d-bc17b8019234",
+         "question": "In general, would you say modern music is better than classical music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717916-4584-11ed-955d-bc17b8019234",
+         "question": "Does classical music have a future?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717917-4584-11ed-9139-bc17b8019234",
+         "question": "Are national anthems important? Do you like yours?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f6717918-4584-11ed-8450-bc17b8019234",
+         "question": "Which country produces the greatest music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08a-4584-11ed-a75f-bc17b8019234",
+         "question": "Can anybody learn to sing?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08b-4584-11ed-9f10-bc17b8019234",
+         "question": "Do you need to be able to read music to play music well?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08c-4584-11ed-b91f-bc17b8019234",
+         "question": "Why do people listen to music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08d-4584-11ed-b654-bc17b8019234",
+         "question": "How important is a good soundtrack to a good movie?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08e-4584-11ed-9091-bc17b8019234",
+         "question": "Is it possible to communicate emotion through music?\n",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f671a08f-4584-11ed-abcd-bc17b8019234",
+         "question": "Are the lyrics to a song important? Do you listen to them?",
+         "category": "Musics",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c0-4584-11ed-9356-bc17b8019234",
+         "question": "Why do you think people commit crimes?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c1-4584-11ed-b1d5-bc17b8019234",
+         "question": "What is the worst crime in your opinion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c2-4584-11ed-adda-bc17b8019234",
+         "question": "Have you ever been the victim of a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c3-4584-11ed-8f7d-bc17b8019234",
+         "question": "Does your neighbourhood have a problem with crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c4-4584-11ed-92f7-bc17b8019234",
+         "question": "Do you think you could ever commit a crime yourself?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c5-4584-11ed-b2f5-bc17b8019234",
+         "question": "Have you ever downloaded music illegally from the internet?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c6-4584-11ed-9462-bc17b8019234",
+         "question": "Should adultery be a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c7-4584-11ed-b252-bc17b8019234",
+         "question": "Do you think prison sentences are too strict or too lenient in your country?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c8-4584-11ed-898f-bc17b8019234",
+         "question": "What is the purpose of prison?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1c9-4584-11ed-a90f-bc17b8019234",
+         "question": "Are modern day prisons too comfortable in your opinion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1ca-4584-11ed-954a-bc17b8019234",
+         "question": "Do you believe in the death penalty?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1cb-4584-11ed-8b53-bc17b8019234",
+         "question": "Do you think security cameras in our cities is a good thing?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1cc-4584-11ed-8398-bc17b8019234",
+         "question": "Would you be happy if there was a national DNA database?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1cd-4584-11ed-b8c1-bc17b8019234",
+         "question": "Do you worry about cybercrime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1ce-4584-11ed-9e25-bc17b8019234",
+         "question": "Should taking drugs be a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1cf-4584-11ed-8c74-bc17b8019234",
+         "question": "Do you think prostitution should be a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d0-4584-11ed-82f4-bc17b8019234",
+         "question": "Would you say we need more police on the streets?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d1-4584-11ed-8fc3-bc17b8019234",
+         "question": "Do you trust the police in your country?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d2-4584-11ed-aae7-bc17b8019234",
+         "question": "What could be done to improve police work in your country?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d3-4584-11ed-b3b7-bc17b8019234",
+         "question": "If everybody had a gun, there would be less crime. Do you agree with this?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d4-4584-11ed-8aa8-bc17b8019234",
+         "question": "What would you do if you witnessed a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f672e1d5-4584-11ed-88f0-bc17b8019234",
+         "question": "What is the main religion of your country? How has this changed over history?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731246-4584-11ed-943e-bc17b8019234",
+         "question": "Why do so many cultures have religions?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731247-4584-11ed-b279-bc17b8019234",
+         "question": "In many Western nations, church attendance is in decline. Why is this?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731248-4584-11ed-8115-bc17b8019234",
+         "question": "Is there one true religion in your opinion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731249-4584-11ed-93c1-bc17b8019234",
+         "question": "Is it possible for people of different religions to live together peacefully?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124a-4584-11ed-8da3-bc17b8019234",
+         "question": "Are people naturally good or do they need a moral education?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124b-4584-11ed-bcdc-bc17b8019234",
+         "question": "Do you know anybody who is deeply religious? Has their religion helped them?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124c-4584-11ed-85c4-bc17b8019234",
+         "question": "Can we learn lessons from the stories of Jesus or other religious figures?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124d-4584-11ed-8c7a-bc17b8019234",
+         "question": "Should religion be taught in schools? In what way should it be taught?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124e-4584-11ed-89dc-bc17b8019234",
+         "question": "Is religion really compatible with a scientific world view?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673124f-4584-11ed-8047-bc17b8019234",
+         "question": "Should the Bible and the Koran be treated as historical documents or sacred texts?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731250-4584-11ed-b076-bc17b8019234",
+         "question": "Is it possible to prove the existence of God?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731251-4584-11ed-9b9a-bc17b8019234",
+         "question": "Is atheism a kind of religion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731252-4584-11ed-ab59-bc17b8019234",
+         "question": "Have you read the stories of the Greek Gods? Can we learn anything from them?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731253-4584-11ed-9f88-bc17b8019234",
+         "question": "Would you vote for a politician who believed in a religion different from your own?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731254-4584-11ed-93eb-bc17b8019234",
+         "question": "Should the church influence the state or should they be separate?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731255-4584-11ed-be20-bc17b8019234",
+         "question": "Is religious teaching needed in a consumer society?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731256-4584-11ed-aded-bc17b8019234",
+         "question": "Religion has been with us for millennia. Will it survive a thousand years more?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731257-4584-11ed-8d41-bc17b8019234",
+         "question": "If a religion has survived for centuries, does this mean there is something good in it?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731258-4584-11ed-9b83-bc17b8019234",
+         "question": "On balance, do you think that religions have made the world a better place?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731259-4584-11ed-a29f-bc17b8019234",
+         "question": "Would you consider changing your religion? Do any other religions appeal to you?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125a-4584-11ed-90dc-bc17b8019234",
+         "question": "Do you think the death penalty should be used to help reduce crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125b-4584-11ed-8b45-bc17b8019234",
+         "question": "Should every citizen have the right to own a gun?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125c-4584-11ed-9130-bc17b8019234",
+         "question": "Should human cloning be legalised? What about to clone vital organs?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125d-4584-11ed-a3b3-bc17b8019234",
+         "question": "What do you think about legalising drugs, including the most dangerous?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125e-4584-11ed-a0b3-bc17b8019234",
+         "question": "How big a threat is climate change to our society? What should we do about it?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673125f-4584-11ed-8f6f-bc17b8019234",
+         "question": "Should social media companies ban users who use offensive language?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731260-4584-11ed-85aa-bc17b8019234",
+         "question": "Is it right to test drugs needed for medical purposes on animals?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731261-4584-11ed-be5a-bc17b8019234",
+         "question": "Should people be free to believe in any religion they want?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731262-4584-11ed-ac5c-bc17b8019234",
+         "question": "Should religion be taught in schools?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731263-4584-11ed-92c1-bc17b8019234",
+         "question": "Are you in favour of prostitution being fully legalised?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731264-4584-11ed-a0a0-bc17b8019234",
+         "question": "Should a minimum wage law be used to help the poorest workers?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731265-4584-11ed-b5ae-bc17b8019234",
+         "question": "Do you think every young man should be made to do national service?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731266-4584-11ed-90ab-bc17b8019234",
+         "question": "Do you think violent video games should be banned?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6731267-4584-11ed-97b9-bc17b8019234",
+         "question": "Would it be a good idea if we all became vegetarians?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a98-4584-11ed-bb93-bc17b8019234",
+         "question": "Should we abandon our national currencies and use a cryptocurrency instead?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a99-4584-11ed-ac99-bc17b8019234",
+         "question": "Do you think that euthanasia should be legal under certain circumstances?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9a-4584-11ed-9ed7-bc17b8019234",
+         "question": "Do you believe in free university education?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9b-4584-11ed-a20d-bc17b8019234",
+         "question": "Should businesses be made to hire 50% male and 50% female employees?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9c-4584-11ed-b13e-bc17b8019234",
+         "question": "Do you believe that genetically modified foods are a good idea?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9d-4584-11ed-a328-bc17b8019234",
+         "question": "Were governments around the world right to close businesses during COVID 19?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9e-4584-11ed-a18f-bc17b8019234",
+         "question": "Should gay marriage be legalised in every country?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732a9f-4584-11ed-a285-bc17b8019234",
+         "question": "Are humans innately good or evil?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa0-4584-11ed-a9b4-bc17b8019234",
+         "question": "Can humans change their behavior if given enough time?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa1-4584-11ed-b645-bc17b8019234",
+         "question": "Do humans need God to exist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa2-4584-11ed-b397-bc17b8019234",
+         "question": "What happens when we die?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa3-4584-11ed-97b5-bc17b8019234",
+         "question": "Does consciousness continue after physical death?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa4-4584-11ed-8788-bc17b8019234",
+         "question": "Why does suffering happen?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa5-4584-11ed-92cb-bc17b8019234",
+         "question": "Should we try to prevent bad events from happening? If so, then how would we go about doing that?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa6-4584-11ed-b4c8-bc17b8019234",
+         "question": "What makes human life so valuable?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa7-4584-11ed-90fd-bc17b8019234",
+         "question": "What makes us human?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa8-4584-11ed-9c92-bc17b8019234",
+         "question": "Why does it matter if we\u2019re alive?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aa9-4584-11ed-b3b2-bc17b8019234",
+         "question": "Is there anything wrong with being selfish?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aaa-4584-11ed-8036-bc17b8019234",
+         "question": "Do humans need other people in order to live?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aab-4584-11ed-b463-bc17b8019234",
+         "question": "Can animals feel pain? If so, why don\u2019t they try to avoid hurting each other?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aac-4584-11ed-bb27-bc17b8019234",
+         "question": "Are children born good or evil?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aad-4584-11ed-9ca7-bc17b8019234",
+         "question": "Is it okay to lie to protect yourself?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aae-4584-11ed-bc2b-bc17b8019234",
+         "question": "What is beauty?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aaf-4584-11ed-a705-bc17b8019234",
+         "question": "Do all people deserve respect?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab0-4584-11ed-a953-bc17b8019234",
+         "question": "Did you exist before you were born?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab1-4584-11ed-9d70-bc17b8019234",
+         "question": "Where do emotions come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab2-4584-11ed-87e9-bc17b8019234",
+         "question": "Can we choose our emotions or do they just happen?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab3-4584-11ed-b241-bc17b8019234",
+         "question": "At what age are children held accountable for their actions? How do you determine that?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab4-4584-11ed-9035-bc17b8019234",
+         "question": "Where does self-worth come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab5-4584-11ed-acbd-bc17b8019234",
+         "question": "How do you determine one\u2019s self-worth?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab6-4584-11ed-bfa6-bc17b8019234",
+         "question": "Is one human life worth more than another?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab7-4584-11ed-9adf-bc17b8019234",
+         "question": "Is ignorance really bliss?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab8-4584-11ed-8e88-bc17b8019234",
+         "question": "What is the goal of humanity?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ab9-4584-11ed-a16c-bc17b8019234",
+         "question": "Can predestination and free will coexist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aba-4584-11ed-b4cd-bc17b8019234",
+         "question": "What does it mean to be happy?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732abb-4584-11ed-adc8-bc17b8019234",
+         "question": "Can I be happy when faced with suffering?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732abc-4584-11ed-bb86-bc17b8019234",
+         "question": "Is happiness universal or a matter of perspective?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732abd-4584-11ed-a29e-bc17b8019234",
+         "question": "How much should we care about making ourselves happy?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732abe-4584-11ed-b19a-bc17b8019234",
+         "question": "Is it possible to feel happy and sad at the same time?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732abf-4584-11ed-aa3a-bc17b8019234",
+         "question": "Is it really necessary to pursue happiness?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac0-4584-11ed-a998-bc17b8019234",
+         "question": "Are we happier now as a society than in times past? Why or why not?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac1-4584-11ed-89a0-bc17b8019234",
+         "question": "Does anyone else\u2019s happiness affect my own?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac2-4584-11ed-995e-bc17b8019234",
+         "question": "If someone has less material wealth than me, does this automatically make him unhappy? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac3-4584-11ed-8baf-bc17b8019234",
+         "question": "What brings true happiness?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac4-4584-11ed-8913-bc17b8019234",
+         "question": "Can happiness be measured or quantified, like money and power?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac5-4584-11ed-9fb3-bc17b8019234",
+         "question": "Are certain types of experiences inherently \u201chappier\u201d than others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac6-4584-11ed-a87a-bc17b8019234",
+         "question": "Is it always best to seek out pleasure over avoiding pain?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac7-4584-11ed-b6cb-bc17b8019234",
+         "question": "Is happiness just the product of chemical reactions in the brain?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac8-4584-11ed-bc27-bc17b8019234",
+         "question": "Is morality relative or absolute?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ac9-4584-11ed-b69b-bc17b8019234",
+         "question": "Where do morals come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aca-4584-11ed-b2a0-bc17b8019234",
+         "question": "Is it possible to make moral judgments without religion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732acb-4584-11ed-9e4f-bc17b8019234",
+         "question": "Is killing justified under certain conditions?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732acc-4584-11ed-bd37-bc17b8019234",
+         "question": "What makes something immoral?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732acd-4584-11ed-8fcb-bc17b8019234",
+         "question": "How do you define \u201cgood\u201d and \u201cevil\u201d?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ace-4584-11ed-bc94-bc17b8019234",
+         "question": "Why do most people think that lying is bad?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732acf-4584-11ed-b2e3-bc17b8019234",
+         "question": "Should all actions have equal consequences?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad0-4584-11ed-a411-bc17b8019234",
+         "question": "Does every human life count equally?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad1-4584-11ed-b3a2-bc17b8019234",
+         "question": "Is it ever justified to hurt others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad2-4584-11ed-94ef-bc17b8019234",
+         "question": "Is it fair to punish criminals with death?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad3-4584-11ed-b391-bc17b8019234",
+         "question": "Does morality come from within or outside ourselves?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad4-4584-11ed-ac4d-bc17b8019234",
+         "question": "Is stealing ever permissible? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad5-4584-11ed-a787-bc17b8019234",
+         "question": "Is it ever permissible to deceive others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad6-4584-11ed-8d98-bc17b8019234",
+         "question": "Should we judge acts based on their outcomes alone?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad7-4584-11ed-9497-bc17b8019234",
+         "question": "Should we always follow the rules even if doing so causes harm?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad8-4584-11ed-a111-bc17b8019234",
+         "question": "Is slavery ever ethically defensible?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ad9-4584-11ed-8195-bc17b8019234",
+         "question": "Is dishonesty always wrong?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ada-4584-11ed-8abf-bc17b8019234",
+         "question": "Would you kill one person in order to save 1,000?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732adb-4584-11ed-9046-bc17b8019234",
+         "question": "Are lies permissible if they protect someone\u2019s feelings?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732adc-4584-11ed-83cf-bc17b8019234",
+         "question": "What defines a person?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732add-4584-11ed-b77e-bc17b8019234",
+         "question": "Are we obligated to help others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ade-4584-11ed-9849-bc17b8019234",
+         "question": "Is it wrong to kill animals?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732adf-4584-11ed-9491-bc17b8019234",
+         "question": "Are humans replaceable?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae0-4584-11ed-831e-bc17b8019234",
+         "question": "What is virtue?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae1-4584-11ed-83bf-bc17b8019234",
+         "question": "Which is more important: love or money? Why?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae2-4584-11ed-a42e-bc17b8019234",
+         "question": "Is there such thing as true love? If yes, where does it come from? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae3-4584-11ed-aa1f-bc17b8019234",
+         "question": "Do all human beings want to be loved?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae4-4584-11ed-99c3-bc17b8019234",
+         "question": "Can anyone ever really understand another\u2019s feelings?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae5-4584-11ed-a8bc-bc17b8019234",
+         "question": "Are children born with an innate love for their parents? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae6-4584-11ed-a011-bc17b8019234",
+         "question": "Are some relationships better than others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae7-4584-11ed-a214-bc17b8019234",
+         "question": "Can life without love exist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae8-4584-11ed-8431-bc17b8019234",
+         "question": "What makes someone fall in love?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732ae9-4584-11ed-a588-bc17b8019234",
+         "question": "Why do people get married?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aea-4584-11ed-a5d4-bc17b8019234",
+         "question": "Is there a difference between love and lust?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aeb-4584-11ed-957e-bc17b8019234",
+         "question": "Is marriage necessary?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aec-4584-11ed-9ee9-bc17b8019234",
+         "question": "Does love last forever?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aed-4584-11ed-b437-bc17b8019234",
+         "question": "Is it okay to love yourself?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aee-4584-11ed-bcb2-bc17b8019234",
+         "question": "Is love natural or a choice to be made?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aef-4584-11ed-92bc-bc17b8019234",
+         "question": "Where do we find love?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af0-4584-11ed-bf88-bc17b8019234",
+         "question": "Why do people fear death?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af1-4584-11ed-8784-bc17b8019234",
+         "question": "Can we know for certain if there is life after death?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af2-4584-11ed-be0a-bc17b8019234",
+         "question": "How would you like to be remembered after you die?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af3-4584-11ed-a954-bc17b8019234",
+         "question": "What happens to the body after you die?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af4-4584-11ed-81a1-bc17b8019234",
+         "question": "Does \u201cgood death\u201d exist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af5-4584-11ed-b856-bc17b8019234",
+         "question": "What would happen if we lived forever?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af6-4584-11ed-99f4-bc17b8019234",
+         "question": "Should we try to prolong our lives at any cost?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af7-4584-11ed-b8c7-bc17b8019234",
+         "question": "Could immortality be possible?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af8-4584-11ed-bdc9-bc17b8019234",
+         "question": "Is euthanasia wrong in all circumstances?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732af9-4584-11ed-aabc-bc17b8019234",
+         "question": "Is death actually the beginning?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732afa-4584-11ed-bf79-bc17b8019234",
+         "question": "Why is it acceptable to kill insects?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732afb-4584-11ed-90a2-bc17b8019234",
+         "question": "Should terminally ill patients be able to choose death?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732afc-4584-11ed-b38a-bc17b8019234",
+         "question": "What makes something a human right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732afd-4584-11ed-9033-bc17b8019234",
+         "question": "Do you believe human rights even exist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732afe-4584-11ed-a228-bc17b8019234",
+         "question": "Are human rights actually universal?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732aff-4584-11ed-8788-bc17b8019234",
+         "question": "Are humans rights and entitlement the same thing? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6732b00-4584-11ed-9ab6-bc17b8019234",
+         "question": "Can torture be justified?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377dc-4584-11ed-b9a7-bc17b8019234",
+         "question": "Is liberty a human right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377dd-4584-11ed-8b44-bc17b8019234",
+         "question": "Is personal autonomy a right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377de-4584-11ed-9111-bc17b8019234",
+         "question": "Do governments have the authority to regulate what people do?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377df-4584-11ed-8bf5-bc17b8019234",
+         "question": "Does democracy guarantee individual liberty?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e0-4584-11ed-9d53-bc17b8019234",
+         "question": "How much control should individuals have over their own bodies?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e1-4584-11ed-8b31-bc17b8019234",
+         "question": "If someone commits murder, do they still have the right to life?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e2-4584-11ed-ad5e-bc17b8019234",
+         "question": "Who has the ultimate responsibility for protecting human rights?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e3-4584-11ed-804c-bc17b8019234",
+         "question": "Has modern technology made us more or less humane?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e4-4584-11ed-adcc-bc17b8019234",
+         "question": "Is education a human right for all people?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e5-4584-11ed-8fa1-bc17b8019234",
+         "question": "Is war ever justifiable?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e6-4584-11ed-b279-bc17b8019234",
+         "question": "Is due process a universal right no matter the crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e7-4584-11ed-bfab-bc17b8019234",
+         "question": "Is capital punishment ever appropriate?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e8-4584-11ed-8572-bc17b8019234",
+         "question": "Are there any downsides to universal human rights?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377e9-4584-11ed-b5db-bc17b8019234",
+         "question": "Is free speech a universal right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ea-4584-11ed-88cd-bc17b8019234",
+         "question": "What makes a country democratic?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377eb-4584-11ed-b077-bc17b8019234",
+         "question": "What responsibilities does a government have to its constituents?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ec-4584-11ed-aaf9-bc17b8019234",
+         "question": "Do democracies always make better decisions than dictatorships?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ed-4584-11ed-a00b-bc17b8019234",
+         "question": "What constitutes good governance?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ee-4584-11ed-91ab-bc17b8019234",
+         "question": "Is rebellion against government ever justified?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ef-4584-11ed-8db4-bc17b8019234",
+         "question": "Is socialism fair? What is \u201cfair\u201d?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f0-4584-11ed-a858-bc17b8019234",
+         "question": "If you rob from the rich and give to the poor, is it wrong?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f1-4584-11ed-869e-bc17b8019234",
+         "question": "Are laws always good?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f2-4584-11ed-b607-bc17b8019234",
+         "question": "Is taxation justified?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f3-4584-11ed-9993-bc17b8019234",
+         "question": "What is the ideal government? Why?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f4-4584-11ed-8862-bc17b8019234",
+         "question": "Should the will of the people always be followed?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f5-4584-11ed-bbe6-bc17b8019234",
+         "question": "What role do political parties play?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f6-4584-11ed-bd76-bc17b8019234",
+         "question": "Who defines corruption?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f7-4584-11ed-bd8d-bc17b8019234",
+         "question": "How do I know whether my views are correct?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f8-4584-11ed-a366-bc17b8019234",
+         "question": "Is voting compulsory?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377f9-4584-11ed-8cc8-bc17b8019234",
+         "question": "Is there such a thing as too much freedom?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377fa-4584-11ed-870f-bc17b8019234",
+         "question": "Is bribery always bad?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377fb-4584-11ed-8bff-bc17b8019234",
+         "question": "Are police officers obligated to protect criminals?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377fc-4584-11ed-aeeb-bc17b8019234",
+         "question": "Should citizens obey unjust laws?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377fd-4584-11ed-94c2-bc17b8019234",
+         "question": "Who decides which laws apply to whom?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377fe-4584-11ed-b28e-bc17b8019234",
+         "question": "Where do we draw the line between criminal behavior and civil disobedience?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f67377ff-4584-11ed-80e5-bc17b8019234",
+         "question": "Does the state have the moral duty to provide healthcare for its citizens?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737800-4584-11ed-9e79-bc17b8019234",
+         "question": "Is wealth redistribution morally correct?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737801-4584-11ed-a7ed-bc17b8019234",
+         "question": "Should college be free for all? What about grade school or high school?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737802-4584-11ed-88bc-bc17b8019234",
+         "question": "Are freedom and liberty the same thing?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737803-4584-11ed-9da0-bc17b8019234",
+         "question": "What makes someone free?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737804-4584-11ed-862e-bc17b8019234",
+         "question": "What makes a crime a crime?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737805-4584-11ed-8f11-bc17b8019234",
+         "question": "Is it right to govern the number of children families can have to control the world\u2019s population?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737806-4584-11ed-bbc6-bc17b8019234",
+         "question": "What is reality?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737807-4584-11ed-bb4a-bc17b8019234",
+         "question": "What are the limits of science?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737808-4584-11ed-a5d6-bc17b8019234",
+         "question": "Where did all matter come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737809-4584-11ed-8139-bc17b8019234",
+         "question": "Can I trust my senses?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780a-4584-11ed-addc-bc17b8019234",
+         "question": "Is there an innnate moral code?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780b-4584-11ed-a559-bc17b8019234",
+         "question": "Does time exist objectively?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780c-4584-11ed-8c8f-bc17b8019234",
+         "question": "Who created God?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780d-4584-11ed-99e6-bc17b8019234",
+         "question": "Is there a soul?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780e-4584-11ed-8179-bc17b8019234",
+         "question": "Are perceptions real?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673780f-4584-11ed-b876-bc17b8019234",
+         "question": "Is \u201cfair\u201d the same for everyone? Who determines whether or not something is \u201cfair\u201d?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737810-4584-11ed-873c-bc17b8019234",
+         "question": "What is time?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737811-4584-11ed-ab51-bc17b8019234",
+         "question": "What makes you \u2026 you?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737812-4584-11ed-b40e-bc17b8019234",
+         "question": "What is truth?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737813-4584-11ed-88f1-bc17b8019234",
+         "question": "Is truth reality?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737814-4584-11ed-ab88-bc17b8019234",
+         "question": "What gives life meaning?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737815-4584-11ed-991c-bc17b8019234",
+         "question": "What determines success vs. failure?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737816-4584-11ed-add1-bc17b8019234",
+         "question": "Why do bad things happen to good people?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737817-4584-11ed-8bee-bc17b8019234",
+         "question": "How do I know what\u2019s true?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737818-4584-11ed-baf0-bc17b8019234",
+         "question": "Should we judge others by their actions?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737819-4584-11ed-a8a2-bc17b8019234",
+         "question": "What\u2019s the purpose of life?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781a-4584-11ed-b8a8-bc17b8019234",
+         "question": "Where do ideas come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781b-4584-11ed-925f-bc17b8019234",
+         "question": "What is justice?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781c-4584-11ed-b1bd-bc17b8019234",
+         "question": "What is evil?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781d-4584-11ed-a08e-bc17b8019234",
+         "question": "What makes someone \u201cgood\u201d or \u201cbad\u201d?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781e-4584-11ed-9ef6-bc17b8019234",
+         "question": "Can something be true without evidence?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673781f-4584-11ed-b74c-bc17b8019234",
+         "question": "Is fate real?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737820-4584-11ed-a22c-bc17b8019234",
+         "question": "At what point does consciousness begin?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737821-4584-11ed-a056-bc17b8019234",
+         "question": "Can time be altered?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737822-4584-11ed-b94b-bc17b8019234",
+         "question": "Is there a cause for every effect?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737823-4584-11ed-a861-bc17b8019234",
+         "question": "Is time travel possible? Why or why not?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737824-4584-11ed-9134-bc17b8019234",
+         "question": "Do memories still exist if you forget them?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737825-4584-11ed-84a8-bc17b8019234",
+         "question": "Are animals freer than man?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737826-4584-11ed-944c-bc17b8019234",
+         "question": "Are twins unique?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737827-4584-11ed-9c8d-bc17b8019234",
+         "question": "Are animals like people?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737828-4584-11ed-aa41-bc17b8019234",
+         "question": "Do trees feel pain?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737829-4584-11ed-8890-bc17b8019234",
+         "question": "How do you know you\u2019re not dreaming right now?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782a-4584-11ed-b12c-bc17b8019234",
+         "question": "Are insects conscious of life?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782b-4584-11ed-ac8a-bc17b8019234",
+         "question": "What makes something humorous to some and not to others?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782c-4584-11ed-9518-bc17b8019234",
+         "question": "If you save time on something, what happens to that time?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782d-4584-11ed-a133-bc17b8019234",
+         "question": "Why do we talk to ourselves?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782e-4584-11ed-a6d3-bc17b8019234",
+         "question": "If you try to fail and do, did you actually succeed?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673782f-4584-11ed-a1cb-bc17b8019234",
+         "question": "Can 2+2 ever be something other than 4?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737830-4584-11ed-ae77-bc17b8019234",
+         "question": "How does knowledge work?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737831-4584-11ed-93cb-bc17b8019234",
+         "question": "Why do we need it?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737832-4584-11ed-a315-bc17b8019234",
+         "question": "What kind of things count as knowledge?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737833-4584-11ed-856a-bc17b8019234",
+         "question": "How do we determine if something is certain?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737834-4584-11ed-835a-bc17b8019234",
+         "question": "How do you know if you know something?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737835-4584-11ed-a005-bc17b8019234",
+         "question": "Does anyone ever truly learn anything?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737836-4584-11ed-8c91-bc17b8019234",
+         "question": "Who decides what counts as true knowledge?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737837-4584-11ed-887e-bc17b8019234",
+         "question": "Who determines the difference between fact and fiction?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737838-4584-11ed-9e0b-bc17b8019234",
+         "question": "What is the relationship between facts and opinions?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737839-4584-11ed-9756-bc17b8019234",
+         "question": "What is the source of human knowledge?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783a-4584-11ed-8429-bc17b8019234",
+         "question": "What is knowledge?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783b-4584-11ed-a840-bc17b8019234",
+         "question": "What is the nature of certainty?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783c-4584-11ed-b193-bc17b8019234",
+         "question": "What is the basis of our confidence in claims made by other people?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783d-4584-11ed-949e-bc17b8019234",
+         "question": "What is the role of reason in determining what\u2019s true?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783e-4584-11ed-b9e0-bc17b8019234",
+         "question": "What is the relation between logic and reasoning?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673783f-4584-11ed-b3a7-bc17b8019234",
+         "question": "What is the connection between language and thought?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737840-4584-11ed-88ec-bc17b8019234",
+         "question": "What is the distinction between perception and imagination?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737841-4584-11ed-bd58-bc17b8019234",
+         "question": "What is intuition?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737842-4584-11ed-9478-bc17b8019234",
+         "question": "What is the function of intuition?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737843-4584-11ed-8008-bc17b8019234",
+         "question": "What are thoughts?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737844-4584-11ed-9f41-bc17b8019234",
+         "question": "What is the purpose of thinking?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737845-4584-11ed-be50-bc17b8019234",
+         "question": "If two people understand things differently, who is right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737846-4584-11ed-92fe-bc17b8019234",
+         "question": "If we had 1000 years to learn, could we know everything?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737847-4584-11ed-b425-bc17b8019234",
+         "question": "Is there an end of knowledge?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737848-4584-11ed-a605-bc17b8019234",
+         "question": "Is everything subjective?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737849-4584-11ed-8d21-bc17b8019234",
+         "question": "Can order come from chaos?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784a-4584-11ed-a6b4-bc17b8019234",
+         "question": "Can something be created from nothing?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784b-4584-11ed-9522-bc17b8019234",
+         "question": "Where did matter come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784c-4584-11ed-b662-bc17b8019234",
+         "question": "Is everything relative?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784d-4584-11ed-bae3-bc17b8019234",
+         "question": "Is there only one universe? How do we know?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784e-4584-11ed-8616-bc17b8019234",
+         "question": "Is there such thing as absolute truth?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673784f-4584-11ed-a90f-bc17b8019234",
+         "question": "Are there different levels of existence?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737850-4584-11ed-8ee7-bc17b8019234",
+         "question": "Do we live forever?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737851-4584-11ed-8482-bc17b8019234",
+         "question": "Was the Big Bang a real event?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737852-4584-11ed-858b-bc17b8019234",
+         "question": "Is space finite?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737853-4584-11ed-9077-bc17b8019234",
+         "question": "Is time eternal?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737854-4584-11ed-8b9e-bc17b8019234",
+         "question": "Is logic a created concept?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737855-4584-11ed-9b15-bc17b8019234",
+         "question": "What time is it really?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737856-4584-11ed-9db3-bc17b8019234",
+         "question": "Is the mind the same as the brain?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737857-4584-11ed-a960-bc17b8019234",
+         "question": "What are numbers? \n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737858-4584-11ed-b10d-bc17b8019234",
+         "question": "Does the universe end?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737859-4584-11ed-b8bc-bc17b8019234",
+         "question": "Is there such a thing as perfection?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785a-4584-11ed-af7f-bc17b8019234",
+         "question": "Does sound exist without hearing?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785b-4584-11ed-98d8-bc17b8019234",
+         "question": "Are people in a different timezone in the past (or future)?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785c-4584-11ed-90cb-bc17b8019234",
+         "question": "Where does fear come from?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785d-4584-11ed-92d1-bc17b8019234",
+         "question": "Does pain exist in itself or just our perception of it?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785e-4584-11ed-a7d6-bc17b8019234",
+         "question": "What is hope?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673785f-4584-11ed-94f4-bc17b8019234",
+         "question": "Could there be a parallel universe?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737860-4584-11ed-a45e-bc17b8019234",
+         "question": "Does God exist?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737861-4584-11ed-9474-bc17b8019234",
+         "question": "Does God\u2019s existence depend on our belief in him?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737862-4584-11ed-8a76-bc17b8019234",
+         "question": "Can love exist without God?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737863-4584-11ed-8b02-bc17b8019234",
+         "question": "What constitutes religion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737864-4584-11ed-ac4a-bc17b8019234",
+         "question": "Are miracles real?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737865-4584-11ed-9cfe-bc17b8019234",
+         "question": "Is religion compatible with science?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737866-4584-11ed-9076-bc17b8019234",
+         "question": "Why does faith matter?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737867-4584-11ed-9c67-bc17b8019234",
+         "question": "Who decides which religions are right?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737868-4584-11ed-90e2-bc17b8019234",
+         "question": "What makes a person a Christian?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f6737869-4584-11ed-a6e3-bc17b8019234",
+         "question": "Should I follow my beliefs blindly?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673786a-4584-11ed-8b55-bc17b8019234",
+         "question": "Is God a created being?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673786b-4584-11ed-8373-bc17b8019234",
+         "question": "Can morality exist without religion?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f673786c-4584-11ed-bc20-bc17b8019234",
+         "question": "Is there a higher power?\n",
+         "category": "Philosophy",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb36-4584-11ed-bb3a-bc17b8019234",
+         "question": "Did you enjoy science lessons at school?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb37-4584-11ed-b9d9-bc17b8019234",
+         "question": "Which of the sciences interests you most?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb38-4584-11ed-ad65-bc17b8019234",
+         "question": "Which science do you think is the most important?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb39-4584-11ed-95e0-bc17b8019234",
+         "question": "Would you like to work as a scientific researcher?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3a-4584-11ed-b9f7-bc17b8019234",
+         "question": "Is science relevant to our everyday lives?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3b-4584-11ed-a5ee-bc17b8019234",
+         "question": "What are the greatest scientific achievements in history?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3c-4584-11ed-9881-bc17b8019234",
+         "question": "What major scientific breakthroughs have there been in the last 50 years?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3d-4584-11ed-a237-bc17b8019234",
+         "question": "Who is the greatest scientist in your country\u2019s history?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3e-4584-11ed-9470-bc17b8019234",
+         "question": "Who is the greatest living scientist in the world?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb3f-4584-11ed-9c03-bc17b8019234",
+         "question": "What is there left to discover?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb40-4584-11ed-9008-bc17b8019234",
+         "question": "What would you say is the purpose of science?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb41-4584-11ed-baef-bc17b8019234",
+         "question": "Who were the first human beings to do science?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb42-4584-11ed-85c9-bc17b8019234",
+         "question": "What do you understand by the scientific method?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb43-4584-11ed-b213-bc17b8019234",
+         "question": "Is science capable of providing us with absolute truth?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb44-4584-11ed-a486-bc17b8019234",
+         "question": "Are there any questions which science cannot answer?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb45-4584-11ed-b144-bc17b8019234",
+         "question": "Can science and religion live alongside each other?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb46-4584-11ed-85cf-bc17b8019234",
+         "question": "According to science, a human being is just a material object. Do you agree?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb47-4584-11ed-9b8e-bc17b8019234",
+         "question": "Can science be dangerous?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb48-4584-11ed-a29e-bc17b8019234",
+         "question": "Would you be happy to donate your body to medical science?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb49-4584-11ed-ad76-bc17b8019234",
+         "question": "Do you enjoy science-fiction novels and movies?\n",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f674fb4a-4584-11ed-b524-bc17b8019234",
+         "question": "Should your government spend more or less money on scientific research?",
+         "category": "Science",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609fa-4584-11ed-8dc7-bc17b8019234",
+         "question": "What is technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609fb-4584-11ed-8ce0-bc17b8019234",
+         "question": "What do you think of when you hear the word \u2018technology\u2019?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609fc-4584-11ed-9776-bc17b8019234",
+         "question": "How has technology changed in the past?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609fd-4584-11ed-9f0c-bc17b8019234",
+         "question": "How has technology changed your life?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609fe-4584-11ed-890a-bc17b8019234",
+         "question": "Could you live without technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f67609ff-4584-11ed-ae4f-bc17b8019234",
+         "question": "What technological achievement was the best?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a00-4584-11ed-a4d6-bc17b8019234",
+         "question": "What do you think technology will be like in the future?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a01-4584-11ed-bfe5-bc17b8019234",
+         "question": "What are the advantages of technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a02-4584-11ed-9fe7-bc17b8019234",
+         "question": "What are the disadvantages of technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a03-4584-11ed-8666-bc17b8019234",
+         "question": "Which new technological tool are you looking forward to?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a04-4584-11ed-ac07-bc17b8019234",
+         "question": "What do you think will be the next biggest technological advance?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a05-4584-11ed-ba41-bc17b8019234",
+         "question": "At what age should children get a cell phone?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a06-4584-11ed-9b50-bc17b8019234",
+         "question": "How many hours a day should children be allowed to use electric devices?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a07-4584-11ed-a886-bc17b8019234",
+         "question": "What are the disadvantages of using technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a08-4584-11ed-a009-bc17b8019234",
+         "question": "Do you think people rely too much on technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a09-4584-11ed-b703-bc17b8019234",
+         "question": "What do you think about online shopping?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0a-4584-11ed-8047-bc17b8019234",
+         "question": "Does technology make society lazy?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0b-4584-11ed-ae8f-bc17b8019234",
+         "question": "Do you prefer Windows or Apple computers?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0c-4584-11ed-84d0-bc17b8019234",
+         "question": "Do you prefer to text your friends or call them?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0d-4584-11ed-981e-bc17b8019234",
+         "question": "What do you think of today\u2019s technology? Do we use it the right way?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0e-4584-11ed-9ae5-bc17b8019234",
+         "question": "Do you think that technology controls and spies on us?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a0f-4584-11ed-ac97-bc17b8019234",
+         "question": "How can countries help to create more inventors?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a10-4584-11ed-8f65-bc17b8019234",
+         "question": "Is there a piece of technology that you are afraid of that might exist in the future? (artificial intelligence, flying cars)\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a11-4584-11ed-9ea4-bc17b8019234",
+         "question": "Which technology has made the world worse?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a12-4584-11ed-928f-bc17b8019234",
+         "question": "What are the possibilities of technology in clothing?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a13-4584-11ed-946f-bc17b8019234",
+         "question": "What is the future of transportation?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a14-4584-11ed-8a12-bc17b8019234",
+         "question": "What do you think very old people think of modern technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a15-4584-11ed-b395-bc17b8019234",
+         "question": "How has technology changed society?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a16-4584-11ed-bfa1-bc17b8019234",
+         "question": "Do you think modern technology reduces or increases stress? Why?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a17-4584-11ed-b738-bc17b8019234",
+         "question": "Do you think robots will cause unemployment in the future? Why? Why not?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a18-4584-11ed-827c-bc17b8019234",
+         "question": "What do you think about GMO (genetically modified organisms) food?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a19-4584-11ed-b2cc-bc17b8019234",
+         "question": "What changes would you like to see science make to the world?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a1a-4584-11ed-88ad-bc17b8019234",
+         "question": "At what age did you have your first cell phone? Which one was it? What did you like about it?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6760a1b-4584-11ed-b614-bc17b8019234",
+         "question": "What is the most important technology device in your daily life?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764da6-4584-11ed-bb71-bc17b8019234",
+         "question": "How often do you use a cell phone?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764da7-4584-11ed-8fe8-bc17b8019234",
+         "question": "Do you think you are addicted to technology, like social media or your cell phone?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764da8-4584-11ed-9110-bc17b8019234",
+         "question": "Which social networks do you use? Why?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764da9-4584-11ed-80d3-bc17b8019234",
+         "question": "Are you shopping online? Why and how often?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764daa-4584-11ed-81b1-bc17b8019234",
+         "question": "What device do you use to watch TV, Netflix or other TV shows?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dab-4584-11ed-8d10-bc17b8019234",
+         "question": "How much time do you spend online every day?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dac-4584-11ed-8c3a-bc17b8019234",
+         "question": "How often do you play video games?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dad-4584-11ed-9ff2-bc17b8019234",
+         "question": "Do you usually buy apps in GoogleStore or AppStore?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dae-4584-11ed-b9db-bc17b8019234",
+         "question": "What is your favorite website?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764daf-4584-11ed-b34f-bc17b8019234",
+         "question": "Do you stream music? Why? Why not?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db0-4584-11ed-a868-bc17b8019234",
+         "question": "Do you use a smartwatch? Why? Why not? \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db1-4584-11ed-8f76-bc17b8019234",
+         "question": "What moment do you remember, when you were let down by technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db2-4584-11ed-8411-bc17b8019234",
+         "question": "Are you afraid of technology in the future?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db3-4584-11ed-b13a-bc17b8019234",
+         "question": "Are you giving out lots of personal data?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db4-4584-11ed-9a3f-bc17b8019234",
+         "question": "What do you know about Artificial Intelligence (AI)?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db5-4584-11ed-8d37-bc17b8019234",
+         "question": "Have you used the Internet to learn English?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db6-4584-11ed-b54a-bc17b8019234",
+         "question": "How have technological advances affected our life?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db7-4584-11ed-9c49-bc17b8019234",
+         "question": "What science fiction movies have you seen? Which ones did you like? Why?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db8-4584-11ed-a2ba-bc17b8019234",
+         "question": "What are some of the greatest technological achievements?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764db9-4584-11ed-afb4-bc17b8019234",
+         "question": "How do we make sure that technology serves us, and not the other way around?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dba-4584-11ed-b410-bc17b8019234",
+         "question": "Can you name a country or culture that is using technology in an interesting or unique way right now?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dbb-4584-11ed-a9fc-bc17b8019234",
+         "question": "How does technology affect the economy?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dbc-4584-11ed-a22e-bc17b8019234",
+         "question": "Why should we care about technology in schools? \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dbd-4584-11ed-86d0-bc17b8019234",
+         "question": "What are the advantages of technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dbe-4584-11ed-af51-bc17b8019234",
+         "question": "What are the disadvantages of technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dbf-4584-11ed-82f7-bc17b8019234",
+         "question": "What kinds of technology are you most excited about?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc0-4584-11ed-9032-bc17b8019234",
+         "question": "Which technologies make your life easier, and which ones make it harder?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc1-4584-11ed-a246-bc17b8019234",
+         "question": "What does it mean to be \u201csmarter\u201d than a machine? \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc2-4584-11ed-83a5-bc17b8019234",
+         "question": "Why do we want smarter machines or computers or robots?  \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc3-4584-11ed-ae42-bc17b8019234",
+         "question": "How could smarter technology help people who are sick or disabled?  \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc4-4584-11ed-a355-bc17b8019234",
+         "question": "How has science impacted our daily lives?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc5-4584-11ed-b368-bc17b8019234",
+         "question": "What are some advantages of having GPS technology?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc6-4584-11ed-90e9-bc17b8019234",
+         "question": "Has the new advances in technology made learning easier?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc7-4584-11ed-b85c-bc17b8019234",
+         "question": "What are the benefits of having satellites?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc8-4584-11ed-a8e5-bc17b8019234",
+         "question": "What\u2019s the favorite piece of technology you own?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dc9-4584-11ed-8566-bc17b8019234",
+         "question": "What is the most impactful piece of technology in our lives?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dca-4584-11ed-bb29-bc17b8019234",
+         "question": "How might developments in technology change the way schools are run? \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dcb-4584-11ed-8fc0-bc17b8019234",
+         "question": "How might technology change in the future?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dcc-4584-11ed-bb5d-bc17b8019234",
+         "question": "How will technology make our lives better in the next ten years?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dcd-4584-11ed-873e-bc17b8019234",
+         "question": "What kinds of technology are you most excited about? \n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dce-4584-11ed-a5e1-bc17b8019234",
+         "question": "What do you think will be the next biggest technological advance?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6764dcf-4584-11ed-90e0-bc17b8019234",
+         "question": "How will I consume information 20 years from now?\n",
+         "category": "Technology",
+         "level": "set-level"
+      },
+      {
+         "id": "f6766f36-4584-11ed-87cf-bc17b8019234",
+         "question": "What will be the greatest challenge for humans in the future?\n",
+         "category": "Technology",
+         "level": "set-level"
+      }
+   ],
+   "shuffled": [],
+   "deleted": [],
+   "recorded": []
+}
