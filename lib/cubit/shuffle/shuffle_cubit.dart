@@ -28,7 +28,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   var questionLevel = "";
   var questionCategory = "";
 
-  final String QUESTIONS_JSON_FILE_NAME = "questions";
+  final String QUESTIONS_JSON_FILE_NAME = "questions_second";
 
   Future<String> get _localPath async {
     final directory = await getApplicationDocumentsDirectory();
@@ -67,7 +67,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       // debugPrint("FIRST LOGIN");
 
       // 1.
-      const String JSON_ASSETS_PATH = "assets/data/questions.json";
+      const String JSON_ASSETS_PATH = "assets/data/questions_second.json";
       final String questionsPath =
           await rootBundle.loadString(JSON_ASSETS_PATH);
       var allQuestionsRelatedObject = await json.decode(questionsPath);
@@ -121,31 +121,39 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   getQuestion() async {
     // picks a random index from the untouched questions list and updates shuffledQuestion variable
     // and emits the state as GotQuestion
-
+    print(chosenLevels);
+    print(chosenCategories);
     emit(GettingQuestion());
     final randomSeedForCategory = Random();
     final int randomValueForCategory =
         randomSeedForCategory.nextInt(chosenCategories.length);
-    final String category =
-        chosenCategories.elementAt(randomValueForCategory);
+    final String category = chosenCategories.elementAt(randomValueForCategory);
 
     final randomSeedForLevel = Random();
     final int randomValueForLevel =
         randomSeedForLevel.nextInt(chosenLevels.length);
-    final String level =
-        chosenLevels.elementAt(randomValueForLevel);
+    final String level = chosenLevels.elementAt(randomValueForLevel);
     // filter the untouched questions based on the level and the category
-    var untouchedQuestionsWCategoryAndLevel = unTouchedQuestions.where((element) => element["category"] == category).toList();
-    untouchedQuestionsWCategoryAndLevel = untouchedQuestionsWCategoryAndLevel.where((element) => element["level"] == level).toList();
-
+    var untouchedQuestionsWCategoryAndLevel = unTouchedQuestions
+        .where((element) => element["category"] == category)
+        .toList();
+    untouchedQuestionsWCategoryAndLevel = untouchedQuestionsWCategoryAndLevel
+        .where((element2) => element2["level"] == level)
+        .toList();
+    print("random level: $level");
+    print("random category: $category");
+    print(untouchedQuestionsWCategoryAndLevel);
     final randomSeed = Random();
     final int randomValueFromTheLength =
         randomSeed.nextInt(untouchedQuestionsWCategoryAndLevel.length);
 
     shuffledQuestion = {
-      "id": untouchedQuestionsWCategoryAndLevel.elementAt(randomValueFromTheLength)["id"],
-      "question":
-      untouchedQuestionsWCategoryAndLevel.elementAt(randomValueFromTheLength)["question"]
+      "id": untouchedQuestionsWCategoryAndLevel
+          .elementAt(randomValueFromTheLength)["id"],
+      "question": untouchedQuestionsWCategoryAndLevel
+          .elementAt(randomValueFromTheLength)["question"],
+      "level": level,
+      "category": category
     };
 
     updateShuffledQuestionsObject();
@@ -224,6 +232,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
       questionCategory = chosen;
 
   setChosenCategories({required List<dynamic> takenCategories}) {
+    chosenCategories = [];
     for (QuestionCategory item in takenCategories) {
       print(item.name);
       chosenCategories.add(item.name);
@@ -231,6 +240,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   }
 
   setChosenLevels({required List<dynamic> takenLevels}) {
+    chosenLevels = [];
     for (QuestionLevel item in takenLevels) {
       print(item.name);
       chosenLevels.add(item.name);

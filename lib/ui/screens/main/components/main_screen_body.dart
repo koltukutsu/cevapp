@@ -54,6 +54,8 @@ class MainScreenBody extends StatefulWidget {
 }
 
 class _MainScreenBodyState extends State<MainScreenBody> {
+
+
   static List<QuestionLevel> questionLevels = [
     QuestionLevel(id: 1, name: "Beginner"),
     QuestionLevel(id: 2, name: "Intermediate"),
@@ -63,7 +65,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
     QuestionLevel(id: 4, name: "Native-Like"),
   ];
   static List<QuestionCategory> questionCategories = [
-    QuestionCategory(id: 1, name: "Literature"),
+    // QuestionCategory(id: 1, name: "Literature"),
     QuestionCategory(id: 2, name: "Philosophy"),
     // QuestionCategory(id: 3, name: "Trivial"),
     QuestionCategory(id: 3, name: "Science"),
@@ -98,6 +100,10 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    context.read<ShuffleCubit>().setChosenCategories(
+        takenCategories: selectedQuestionCategories);
+    context.read<ShuffleCubit>().setChosenLevels(
+        takenLevels: selectedQuestionLevels);
     // status = Permission.microphone.request();
   }
 
@@ -192,6 +198,7 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                 initialValue: questionCategories,
                 onConfirm: (values) {
                   selectedQuestionCategories = values;
+
                   context.read<ShuffleCubit>().setChosenCategories(
                       takenCategories: selectedQuestionCategories);
                   // print(selectedQuestionCategories);
