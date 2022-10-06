@@ -106,6 +106,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                     builder: (context, state) {
                       final String userAvatarChoice =
                           context.read<AvatarCubit>().avatarType;
+                      print("user avatar choice: $userAvatarChoice");
                       userAvatarImagePath =
                           userRanksObject[userAvatarChoice.trim()]!.avatarPath;
                       // userRank = userRanksObject[userAvatarChoice]!.rank;
