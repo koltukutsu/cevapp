@@ -28,11 +28,11 @@ class AudioPlayerCubit extends Cubit<AudioPlayerState> {
     });
 
     audioPlayer.onDurationChanged.listen((newDuration) {
-      duration = newDuration as double;
+      // duration = newDuration as double;
     });
 
     audioPlayer.onDurationChanged.listen((newPosition) {
-      position = newPosition as double;
+      // position = newPosition as double;
     });
   }
 

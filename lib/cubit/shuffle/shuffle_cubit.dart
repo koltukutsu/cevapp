@@ -102,7 +102,7 @@ class ShuffleCubit extends Cubit<ShuffleState> {
 
       // 1.
       final File takenQuestionsFileJsonFromTempPath =
-          await _localFile(fileName: "questions");
+          await _localFile(fileName: "questions_second");
       // 2.
       var allQuestionRelatedObjectsTakenAsMap = await json
           .decode(takenQuestionsFileJsonFromTempPath.readAsStringSync());
