@@ -130,6 +130,8 @@ class ShuffleCubit extends Cubit<ShuffleState> {
         randomSeedForLevel.nextInt(chosenLevels.length);
     final String level = chosenLevels.elementAt(randomValueForLevel);
     // filter the untouched questions based on the level and the category
+    print("category: $category");
+    print("level: $level");
     var untouchedQuestionsWCategoryAndLevel = unTouchedQuestions
         .where((element) => element["category"] == category)
         .toList();

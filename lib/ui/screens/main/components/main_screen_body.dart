@@ -53,27 +53,21 @@ class MainScreenBody extends StatefulWidget {
 }
 
 class _MainScreenBodyState extends State<MainScreenBody> {
-
-
   static List<QuestionLevel> questionLevels = [
     QuestionLevel(id: 1, name: "Beginner"),
     QuestionLevel(id: 2, name: "Intermediate"),
-    // QuestionLevel(id: 3, name: "Upper-Intermediate"),
     QuestionLevel(id: 3, name: "Advanced"),
-    // QuestionLevel(id: 5, name: "Fluent"),
     QuestionLevel(id: 4, name: "Native-Like"),
   ];
   static List<QuestionCategory> questionCategories = [
-    // QuestionCategory(id: 1, name: "Literature"),
-    QuestionCategory(id: 2, name: "Philosophy"),
-    // QuestionCategory(id: 3, name: "Trivial"),
-    QuestionCategory(id: 3, name: "Science"),
-    QuestionCategory(id: 4, name: "Life"),
-    QuestionCategory(id: 5, name: "Health"),
-    QuestionCategory(id: 6, name: "Technology"),
-    QuestionCategory(id: 7, name: "Books"),
-    QuestionCategory(id: 8, name: "Musics"),
-    QuestionCategory(id: 9, name: "History"),
+    QuestionCategory(id: 1, name: "Philosophy"),
+    QuestionCategory(id: 2, name: "Science"),
+    QuestionCategory(id: 3, name: "Life"),
+    QuestionCategory(id: 4, name: "Health"),
+    QuestionCategory(id: 5, name: "Technology"),
+    QuestionCategory(id: 6, name: "Books"),
+    QuestionCategory(id: 7, name: "Musics"),
+    QuestionCategory(id: 8, name: "History"),
   ];
 
   final itemsLevels = questionLevels
@@ -99,10 +93,12 @@ class _MainScreenBodyState extends State<MainScreenBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    context.read<ShuffleCubit>().setChosenCategories(
-        takenCategories: selectedQuestionCategories);
-    context.read<ShuffleCubit>().setChosenLevels(
-        takenLevels: selectedQuestionLevels);
+    context
+        .read<ShuffleCubit>()
+        .setChosenCategories(takenCategories: selectedQuestionCategories);
+    context
+        .read<ShuffleCubit>()
+        .setChosenLevels(takenLevels: selectedQuestionLevels);
     // status = Permission.microphone.request();
   }
 
@@ -247,8 +243,9 @@ class _MainScreenBodyState extends State<MainScreenBody> {
                 initialValue: questionLevels,
                 onConfirm: (values) {
                   selectedQuestionLevels = values;
-                  context.read<ShuffleCubit>().setChosenCategories(
-                      takenCategories: selectedQuestionLevels);
+                  context
+                      .read<ShuffleCubit>()
+                      .setChosenLevels(takenLevels: selectedQuestionLevels);
                 },
                 selectedColor: AppColors.rightSwipeDockColor,
                 selectedItemsTextStyle: const TextStyle(color: AppColors.black),

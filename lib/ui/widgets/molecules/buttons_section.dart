@@ -37,12 +37,23 @@ class _ButtonsSectionState extends State<ButtonsSection> {
           label: "shuffle",
           postFixIconAsImagePath: AppPaths.shuffleIconPath,
           onPressed: () async {
-            AudioPlayer().play(AssetSource(AppSounds.recordSoundPath));
-            context.read<ShuffleCubit>().getQuestion();
-            setState(() {
-              isShuffleButtonClicked = true;
-            });
-
+            if (context.read<ShuffleCubit>().chosenCategories.isNotEmpty) {
+              if (context.read<ShuffleCubit>().chosenLevels.isNotEmpty) {
+                AudioPlayer().play(AssetSource(AppSounds.recordSoundPath));
+                context.read<ShuffleCubit>().getQuestion();
+                setState(() {
+                  isShuffleButtonClicked = true;
+                });
+              } else {
+                _showDialogSuccess(context, AppColors.magenta,
+                    "You need to chose at least one Level!",
+                    icon: Icons.report_problem);
+              }
+            } else {
+              _showDialogSuccess(context, AppColors.magenta,
+                  "You need to chose at least one Category!",
+                  icon: Icons.report_problem);
+            }
           },
           fontSize: 48,
           widthRatio: AppRatios.shuffleButtonWidthRatio,
@@ -81,5 +92,26 @@ class _ButtonsSectionState extends State<ButtonsSection> {
           )
       ],
     );
+  }
+
+  _showDialogSuccess(BuildContext context, Color color, String text,
+      {Color textColor = AppColors.leftSwipeDockColor,
+      IconData icon = Icons.verified}) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      backgroundColor: AppColors.white,
+      behavior: SnackBarBehavior.floating,
+      content: Row(
+        children: [
+          Icon(
+            icon,
+            color: color,
+          ),
+          const SizedBox(
+            width: 25,
+          ),
+          Text(text, style: TextStyle(color: textColor), maxLines: 3),
+        ],
+      ),
+    ));
   }
 }
