@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
-
-import 'package:cevapp/models/questionObject.dart';
 import 'package:cevapp/ui/screens/main/components/main_screen_body.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -121,8 +119,6 @@ class ShuffleCubit extends Cubit<ShuffleState> {
   getQuestion() async {
     // picks a random index from the untouched questions list and updates shuffledQuestion variable
     // and emits the state as GotQuestion
-    print(chosenLevels);
-    print(chosenCategories);
     emit(GettingQuestion());
     final randomSeedForCategory = Random();
     final int randomValueForCategory =
@@ -140,9 +136,6 @@ class ShuffleCubit extends Cubit<ShuffleState> {
     untouchedQuestionsWCategoryAndLevel = untouchedQuestionsWCategoryAndLevel
         .where((element2) => element2["level"] == level)
         .toList();
-    print("random level: $level");
-    print("random category: $category");
-    print(untouchedQuestionsWCategoryAndLevel);
     final randomSeed = Random();
     final int randomValueFromTheLength =
         randomSeed.nextInt(untouchedQuestionsWCategoryAndLevel.length);

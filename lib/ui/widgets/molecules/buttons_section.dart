@@ -1,6 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cevapp/cubit/audio_player/audio_player_cubit.dart';
-import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
@@ -10,9 +9,6 @@ import 'package:cevapp/ui/theme/colors.dart';
 import 'package:cevapp/ui/widgets/atoms/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:material_dialogs/material_dialogs.dart';
-import 'package:material_dialogs/widgets/buttons/icon_button.dart';
-import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 
 class ButtonsSection extends StatefulWidget {
   final void Function(bool) crossFadeStateChangerFunction;

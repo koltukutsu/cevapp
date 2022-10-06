@@ -4,7 +4,6 @@ import 'package:cevapp/cubit/avatar/avatar_cubit.dart';
 import 'package:cevapp/cubit/records/record_cubit.dart';
 import 'package:cevapp/cubit/shuffle/shuffle_cubit.dart';
 import 'package:cevapp/data/user_ranks.dart';
-import 'package:cevapp/models/questionObject.dart';
 import 'package:cevapp/ui/constants/app_paths.dart';
 import 'package:cevapp/ui/navigation/route_page.dart';
 import 'package:cevapp/ui/theme/colors.dart';
